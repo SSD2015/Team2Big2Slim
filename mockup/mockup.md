@@ -1,14 +1,14 @@
 #Mock-up  
 ##Login  
-[](/Login.jpg)  
+![Login](/Login.jpg)  
 ##Rate  
-[](/rate1.jpg)  
-[](/rate2.jpg)  
+![Rate1](/rate1.jpg)  
+![Rate2](/rate2.jpg)  
 ##Vote  
-[](/vote.jpg)  
+![Vote](/vote.jpg)  
 ##Logout  
-[](/Logout.jpg)  
+![Logout](/Logout.jpg)  
 ##Accessing camera  
-[](/AccessingCamera.jpg)  
+![AccessingCamera](/AccessingCamera.jpg)  
 ##Mainmenu  
-[](/Mainmenu.jpg)  
+![Mainmenu](/Mainmenu.jpg)  
