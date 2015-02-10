@@ -1,6 +1,6 @@
 #Mock-up  
 ##Note  
-- Our group will not have the registration page. Because, the responsibility of creating account is belong to the administrator. 
+- Our group will not have the registration page. Because, the responsibility of creating account is belong to the administrator. - Account creating page and group profile editing page will be at the backend side of system and will have a different user interface which will be provided later.
   
 ##Login  
 ![Login](/mockup/Login.jpg)  
