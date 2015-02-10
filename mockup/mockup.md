@@ -1,6 +1,7 @@
 #Mock-up  
 ##Note  
-- Our group will not have the registration page. Because, the responsibility of creating account is belong to the administrator.  
+- Our group will not have the registration page. Because, the responsibility of creating account is belong to the administrator. 
+  
 ##Login  
 ![Login](/mockup/Login.jpg)  
 ##Rate  
