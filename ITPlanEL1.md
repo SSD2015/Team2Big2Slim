@@ -4,8 +4,7 @@
 
 | Milestone | Description |
 |-----------|-----------------------------------------|
-| Informal main menu implemented | - There is only visual main menu  
-- Option button and Project Banner is touchable and will show the dump page |
+| Informal main menu implemented | There is only visual main menu. Option button and Project Banner is touchable and will show the dump page |
 | Vote | The project can be vote by touching "vote button" inside "Option menu" |
 | Deployment | The web application will be uploaded into the server and runable |
 
