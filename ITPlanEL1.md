@@ -13,9 +13,13 @@
 | Task | Priority (1=very high, 5=low) |
 |------------------------|:-----------------------------:|
 | Informal main menu implemented | 1 |
-| Vote | 1 |
+| Create a UI to vote | 1 |
+| Create a choosable choice for voting | 1 |
+| Make a choice submittable | 1 |
+| A score can save to database | 1 |
+| A score can be shown | 1 |
 | Deployment | 2 |
-as
+
 ## Unplanned Work
 
 
