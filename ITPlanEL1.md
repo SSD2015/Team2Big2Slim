@@ -5,7 +5,7 @@
 | Milestone | Description |
 |-----------|-----------------------------------------|
 | Informal main menu implemented | There is only visual main menu. Option button and Project Banner is touchable and will show just template page (only pictures there) |
-| Vote | The project can be voted vote |
+| Vote | The project can be voted |
 | Deployment | The web application will be uploaded into the server and runnable |
 
 ## Iteration Objective(s)
