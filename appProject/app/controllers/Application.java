@@ -11,4 +11,8 @@ public class Application extends Controller {
         return ok(index.render() );
     }
 
+    public static Result voting() {
+        return ok(vote.render() );
+    }
+
 }
