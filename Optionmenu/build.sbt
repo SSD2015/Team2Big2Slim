@@ -10,4 +10,6 @@ libraryDependencies ++= Seq(
 
 libraryDependencies += "org.webjars" % "bootstrap" % "3.3.2-1"
 
+playAssetsDirectories <+= baseDirectory / "public"
+
 play.Project.playJavaSettings
