@@ -8,4 +8,6 @@ libraryDependencies ++= Seq(
   cache
 )     
 
+libraryDependencies += "org.webjars" % "bootstrap" % "3.3.2-1"
+
 play.Project.playJavaSettings
