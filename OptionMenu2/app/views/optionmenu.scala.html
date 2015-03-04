@@ -1,0 +1,46 @@
+@main("Option menu") {
+    <html>
+        <head>
+                <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <style>
+            .header {
+            float: right;
+            /*width: 300px;		*/
+            }
+            .optionpane {
+            background-color: #ff8080;
+            color: white;
+
+            /*text-align: center;*/
+            padding: 20px;
+            }
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div>
+                    <div class="optionpane">
+                        <font size="10">Option menu</font>
+                        <button type="button" id="optionb" class="btn btn-default btn-lg dropdown-toggle" style="float: right;" data-toggle="dropdown" aria-expended="true">option<span class="caret"></button>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="optionb">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Camera</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Vote</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Logout</a></li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+            	$(document).ready(function(){
+            		// $("button").click(function(){
+            		// 	$("#optionb")
+            		// });
+            	});
+            </script>
+        </body>
+
+    </html>
+}
