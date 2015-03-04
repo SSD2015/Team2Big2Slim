@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
-// @HASH:43c0f19be3c27362993b5eb64e98be4690591ce0
-// @DATE:Wed Mar 04 16:32:28 ICT 2015
+// @HASH:075177f5e50873bb31f0f2323cc2cc7418a17abd
+// @DATE:Wed Mar 04 17:54:45 ICT 2015
 
 package controllers;
 

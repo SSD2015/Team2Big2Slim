@@ -6,13 +6,26 @@ import play.mvc.*;
 import views.html.*;
 
 public class Application extends Controller {
+    public Application() {
+    }
 
     public static Result index() {
         return ok(index.render() );
     }
 
     public static Result voting() {
-        return ok(vote.render() );
+//        dummyProject  project = Form.form(dummyProject.class).bindFromRequest().get();
+//        project.save();
+        //return redirect(routes.Application.index());
+        return ok(vote.render());
+    }
+
+    public static Result group1() {
+        return ok(group1.render( Math.random()*5) );
+    }
+
+    public static Result profile()  {
+        return ok(profile.render());
     }
 
 }

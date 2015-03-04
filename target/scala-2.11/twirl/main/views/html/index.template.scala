@@ -32,41 +32,42 @@ Seq[Any](_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.r
         <!-- Bootstrap -->
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
             <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
             <!-- CSS -->
             <style>
-                html, body """),format.raw/*12.28*/("""{"""),format.raw/*12.29*/("""
-                    """),format.raw/*13.21*/("""max-width: 100%;
+                html, body """),format.raw/*13.28*/("""{"""),format.raw/*13.29*/("""
+                    """),format.raw/*14.21*/("""max-width: 100%;
                     overflow-x: hidden;
-                """),format.raw/*15.17*/("""}"""),format.raw/*15.18*/("""
-                """),format.raw/*16.17*/(""".header """),format.raw/*16.25*/("""{"""),format.raw/*16.26*/("""
-                """),format.raw/*17.17*/("""float: right;
+                """),format.raw/*16.17*/("""}"""),format.raw/*16.18*/("""
+                """),format.raw/*17.17*/(""".header """),format.raw/*17.25*/("""{"""),format.raw/*17.26*/("""
+                """),format.raw/*18.17*/("""float: right;
                 /*width: 300px;     */
-                """),format.raw/*19.17*/("""}"""),format.raw/*19.18*/("""
-                """),format.raw/*20.17*/(""".toppanel """),format.raw/*20.27*/("""{"""),format.raw/*20.28*/("""
-                    """),format.raw/*21.21*/("""position: fixed;
+                """),format.raw/*20.17*/("""}"""),format.raw/*20.18*/("""
+                """),format.raw/*21.17*/(""".toppanel """),format.raw/*21.27*/("""{"""),format.raw/*21.28*/("""
+                    """),format.raw/*22.21*/("""position: fixed;
                     background-color: #ff8080;
                     color: white;
                     /*text-align: center;*/
                     padding: 20px;
                     width: 100%;
                     z-index: 1;
-                """),format.raw/*28.17*/("""}"""),format.raw/*28.18*/("""
-                """),format.raw/*29.17*/(""".projectlist """),format.raw/*29.30*/("""{"""),format.raw/*29.31*/("""
-                    """),format.raw/*30.21*/("""position: absolute;
+                """),format.raw/*29.17*/("""}"""),format.raw/*29.18*/("""
+                """),format.raw/*30.17*/(""".projectlist """),format.raw/*30.30*/("""{"""),format.raw/*30.31*/("""
+                    """),format.raw/*31.21*/("""position: absolute;
                     top: 100px;
                     z-index: 0;
                     width: 100%;
-                """),format.raw/*34.17*/("""}"""),format.raw/*34.18*/("""
-                """),format.raw/*35.17*/(""".project """),format.raw/*35.26*/("""{"""),format.raw/*35.27*/("""
-                    """),format.raw/*36.21*/("""width: 100%;
-                """),format.raw/*37.17*/("""}"""),format.raw/*37.18*/("""
-                """),format.raw/*38.17*/(""".container """),format.raw/*38.28*/("""{"""),format.raw/*38.29*/("""
-                    """),format.raw/*39.21*/("""/*position: ;*/
+                """),format.raw/*35.17*/("""}"""),format.raw/*35.18*/("""
+                """),format.raw/*36.17*/(""".project """),format.raw/*36.26*/("""{"""),format.raw/*36.27*/("""
+                    """),format.raw/*37.21*/("""width: 100%;
+                """),format.raw/*38.17*/("""}"""),format.raw/*38.18*/("""
+                """),format.raw/*39.17*/(""".container """),format.raw/*39.28*/("""{"""),format.raw/*39.29*/("""
+                    """),format.raw/*40.21*/("""/*position: ;*/
                     margin-left: 0px;
-                """),format.raw/*41.17*/("""}"""),format.raw/*41.18*/("""
-            """),format.raw/*42.13*/("""</style>
+                """),format.raw/*42.17*/("""}"""),format.raw/*42.18*/("""
+            """),format.raw/*43.13*/("""</style>
         </head>
 
         <body>
@@ -90,55 +91,55 @@ Seq[Any](_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.r
             </div>
 
             <div class="projectlist">
-                <image class="project" src = "assets/template_g1.jpg" title = "group1"></image>
+                <a href="profile"><image class="project" src = "assets/template_g1.jpg" title = "group1"></image></a>
 
                 <br>
                 <br>
 
-                <image class="project" src = "assets/template_g2.jpg" title = "group2"></image>
+                <a href="profile"><image class="project" src = "assets/template_g2.jpg" title = "group2"></image></a>
 
                 <br>
                 <br>
 
-                <image class="project" src = "assets/template_g3.jpg" title = "group3"></image>
+                <a href="profile"><image class="project" src = "assets/template_g3.jpg" title = "group3"></image></a>
 
                 <br>
                 <br>
 
-                <image class="project" src = "assets/template_g4.jpg" title = "group4"></image>
+                <a href="profile"><image class="project" src = "assets/template_g4.jpg" title = "group4"></image></a>
 
                 <br>
                 <br>
             </div>>
             <!-- JQuery -->
             <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
-                $(document).ready(function()"""),format.raw/*88.45*/("""{"""),format.raw/*88.46*/("""
-                    """),format.raw/*89.21*/("""$("#camera").click(function()"""),format.raw/*89.50*/("""{"""),format.raw/*89.51*/("""
-                        """),format.raw/*90.25*/("""alert("camera");
-                    """),format.raw/*91.21*/("""}"""),format.raw/*91.22*/(""");
+                $(document).ready(function()"""),format.raw/*89.45*/("""{"""),format.raw/*89.46*/("""
+                    """),format.raw/*90.21*/("""$("#camera").click(function()"""),format.raw/*90.50*/("""{"""),format.raw/*90.51*/("""
+                        """),format.raw/*91.25*/("""alert("camera");
+                    """),format.raw/*92.21*/("""}"""),format.raw/*92.22*/(""");
 
-                """),format.raw/*93.17*/("""}"""),format.raw/*93.18*/(""");
+                """),format.raw/*94.17*/("""}"""),format.raw/*94.18*/(""");
             </script>
 
             <!-- JS -->
             <script>
-                function camerabEvent() """),format.raw/*98.41*/("""{"""),format.raw/*98.42*/("""
-                    """),format.raw/*99.21*/("""//open camera app
+                function camerabEvent() """),format.raw/*99.41*/("""{"""),format.raw/*99.42*/("""
+                    """),format.raw/*100.21*/("""//open camera app
                     alert("camera");
-                """),format.raw/*101.17*/("""}"""),format.raw/*101.18*/("""
-                """),format.raw/*102.17*/("""function votebEvent() """),format.raw/*102.39*/("""{"""),format.raw/*102.40*/("""
-                    """),format.raw/*103.21*/("""//actually go to vote page
+                """),format.raw/*102.17*/("""}"""),format.raw/*102.18*/("""
+                """),format.raw/*103.17*/("""function votebEvent() """),format.raw/*103.39*/("""{"""),format.raw/*103.40*/("""
+                    """),format.raw/*104.21*/("""//actually go to vote page
                     alert("vote");
-                """),format.raw/*105.17*/("""}"""),format.raw/*105.18*/("""
-                """),format.raw/*106.17*/("""function logoutbEvent() """),format.raw/*106.41*/("""{"""),format.raw/*106.42*/("""
-                    """),format.raw/*107.21*/("""//confirmation prompt out
+                """),format.raw/*106.17*/("""}"""),format.raw/*106.18*/("""
+                """),format.raw/*107.17*/("""function logoutbEvent() """),format.raw/*107.41*/("""{"""),format.raw/*107.42*/("""
+                    """),format.raw/*108.21*/("""//confirmation prompt out
                     confirm("Are you sure ?");
-                """),format.raw/*109.17*/("""}"""),format.raw/*109.18*/("""
-            """),format.raw/*110.13*/("""</script>
+                """),format.raw/*110.17*/("""}"""),format.raw/*110.18*/("""
+            """),format.raw/*111.13*/("""</script>
         </div>
         </body>
     </html>
-""")))}),format.raw/*114.2*/("""
+""")))}),format.raw/*115.2*/("""
 """))}
   }
 
@@ -151,11 +152,11 @@ Seq[Any](_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.r
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 04 17:38:23 ICT 2015
+                  DATE: Wed Mar 04 18:26:44 ICT 2015
                   SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/index.scala.html
-                  HASH: a21739cf64844a067585a3e16551a77a99f8c965
-                  MATRIX: 798->2|823->19|862->21|893->26|1361->466|1390->467|1439->488|1540->561|1569->562|1614->579|1650->587|1679->588|1724->605|1821->674|1850->675|1895->692|1933->702|1962->703|2011->724|2297->982|2326->983|2371->1000|2412->1013|2441->1014|2490->1035|2651->1168|2680->1169|2725->1186|2762->1195|2791->1196|2840->1217|2897->1246|2926->1247|2971->1264|3010->1275|3039->1276|3088->1297|3186->1367|3215->1368|3256->1381|5564->3661|5593->3662|5642->3683|5699->3712|5728->3713|5781->3738|5846->3775|5875->3776|5923->3796|5952->3797|6091->3908|6120->3909|6169->3930|6269->4001|6299->4002|6345->4019|6396->4041|6426->4042|6476->4063|6583->4141|6613->4142|6659->4159|6712->4183|6742->4184|6792->4205|6910->4294|6940->4295|6982->4308|7067->4362
-                  LINES: 29->2|29->2|29->2|30->3|39->12|39->12|40->13|42->15|42->15|43->16|43->16|43->16|44->17|46->19|46->19|47->20|47->20|47->20|48->21|55->28|55->28|56->29|56->29|56->29|57->30|61->34|61->34|62->35|62->35|62->35|63->36|64->37|64->37|65->38|65->38|65->38|66->39|68->41|68->41|69->42|115->88|115->88|116->89|116->89|116->89|117->90|118->91|118->91|120->93|120->93|125->98|125->98|126->99|128->101|128->101|129->102|129->102|129->102|130->103|132->105|132->105|133->106|133->106|133->106|134->107|136->109|136->109|137->110|141->114
+                  HASH: bd4cc2f433c17e43042d0703f639749863da245b
+                  MATRIX: 798->2|823->19|862->21|893->26|1456->561|1485->562|1534->583|1635->656|1664->657|1709->674|1745->682|1774->683|1819->700|1916->769|1945->770|1990->787|2028->797|2057->798|2106->819|2392->1077|2421->1078|2466->1095|2507->1108|2536->1109|2585->1130|2746->1263|2775->1264|2820->1281|2857->1290|2886->1291|2935->1312|2992->1341|3021->1342|3066->1359|3105->1370|3134->1371|3183->1392|3281->1462|3310->1463|3351->1476|5747->3844|5776->3845|5825->3866|5882->3895|5911->3896|5964->3921|6029->3958|6058->3959|6106->3979|6135->3980|6274->4091|6303->4092|6353->4113|6453->4184|6483->4185|6529->4202|6580->4224|6610->4225|6660->4246|6767->4324|6797->4325|6843->4342|6896->4366|6926->4367|6976->4388|7094->4477|7124->4478|7166->4491|7251->4545
+                  LINES: 29->2|29->2|29->2|30->3|40->13|40->13|41->14|43->16|43->16|44->17|44->17|44->17|45->18|47->20|47->20|48->21|48->21|48->21|49->22|56->29|56->29|57->30|57->30|57->30|58->31|62->35|62->35|63->36|63->36|63->36|64->37|65->38|65->38|66->39|66->39|66->39|67->40|69->42|69->42|70->43|116->89|116->89|117->90|117->90|117->90|118->91|119->92|119->92|121->94|121->94|126->99|126->99|127->100|129->102|129->102|130->103|130->103|130->103|131->104|133->106|133->106|134->107|134->107|134->107|135->108|137->110|137->110|138->111|142->115
                   -- GENERATED --
               */
           

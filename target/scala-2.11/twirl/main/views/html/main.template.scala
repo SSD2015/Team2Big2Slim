@@ -35,7 +35,7 @@ Seq[Any](format.raw/*1.32*/("""
         <title>"""),_display_(/*7.17*/title),format.raw/*7.22*/("""</title>
         <link rel="stylesheet" media="screen" href=""""),_display_(/*8.54*/routes/*8.60*/.Assets.at("stylesheets/main.css")),format.raw/*8.94*/("""">
         <link rel="shortcut icon" type="image/png" href=""""),_display_(/*9.59*/routes/*9.65*/.Assets.at("images/favicon.png")),format.raw/*9.97*/("""">
-        <script src=""""),_display_(/*10.23*/routes/*10.29*/.Assets.at("javascripts/jquery-1.9.0.min.js")),format.raw/*10.74*/("""" type="text/javascript"></script>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     </head>
     <body>
         """),_display_(/*13.10*/content),format.raw/*13.17*/("""
@@ -53,11 +53,11 @@ Seq[Any](format.raw/*1.32*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 04 16:32:29 ICT 2015
+                  DATE: Wed Mar 04 18:26:44 ICT 2015
                   SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/main.scala.html
-                  HASH: f94ea80224674e01a4d3b44c37f5875e1ed2d1ee
-                  MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1336->315|1351->321|1417->366|1511->433|1539->440|1571->445
-                  LINES: 26->1|29->1|31->3|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|38->10|38->10|38->10|41->13|41->13|42->14
+                  HASH: 45ead1a9cc566917a820f289cc7f8d761e73162e
+                  MATRIX: 727->1|845->31|873->33|950->84|975->89|1063->151|1077->157|1131->191|1218->252|1232->258|1284->290|1437->416|1465->423|1497->428
+                  LINES: 26->1|29->1|31->3|35->7|35->7|36->8|36->8|36->8|37->9|37->9|37->9|41->13|41->13|42->14
                   -- GENERATED --
               */
           

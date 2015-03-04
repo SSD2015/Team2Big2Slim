@@ -50,7 +50,7 @@ Seq[Any](_display_(/*1.2*/main("Voting")/*1.16*/ {_display_(Seq[Any](format.raw/
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 04 16:32:29 ICT 2015
+                  DATE: Wed Mar 04 17:54:46 ICT 2015
                   SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/vote.scala.html
                   HASH: 8dbf3d54393ca436a8492549493ca00fa17b44a6
                   MATRIX: 797->1|819->15|858->17|889->22
