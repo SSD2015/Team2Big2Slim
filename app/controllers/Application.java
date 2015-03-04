@@ -27,5 +27,9 @@ public class Application extends Controller {
 	public static Result group1() {
 		return ok(group1.render( Math.random()*5) );
 	}
+	
+	public static Result profile()  {
+        return ok(profile.render());
+    }
 
 }
