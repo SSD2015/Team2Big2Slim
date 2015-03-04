@@ -14,5 +14,9 @@ public class Application extends Controller {
     public static Result voting() {
         return ok(vote.render() );
     }
+	
+	public static Result group1() {
+		return ok(group1.render( Math.random()*5) );
+	}
 
 }
