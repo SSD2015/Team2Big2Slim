@@ -1,5 +1,6 @@
 package controllers;
 
+import play.*;
 import play.mvc.*;
 import play.data.Form;
 import play.db.*;
@@ -18,6 +19,10 @@ public class Application extends Controller {
 
     public static Result index() {
         return ok(index.render() );
+    }
+
+    public static Result profile()  {
+        return ok(profile.render());
     }
 
     public static Result createProject() {
@@ -54,5 +59,4 @@ public class Application extends Controller {
 	public static Result group1() {
 		return ok(group1.render( Math.random()*5) );
 	}
-
 }
