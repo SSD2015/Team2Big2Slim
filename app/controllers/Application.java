@@ -20,7 +20,7 @@ public class Application extends Controller {
     public static Result voting() {
         dummyProject  project = Form.form(dummyProject.class).bindFromRequest().get();
         project.save();
-        return redirect(routes.Application.index());
+        //return redirect(routes.Application.index());
         return ok(vote.render());
     }
 	
