@@ -1,34 +1,110 @@
 
 @main("Main Menu") {
-    <image src = "assets/option_bar.jpg" title = "option"></image>
+    <html>
+        <head>
+        <!-- Bootstrap -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 
-    <br>
-    <br>
-    <br>
-    <br>
+            <!-- CSS -->
+            <style>
+                .header {
+                float: right;
+                /*width: 300px;     */
+                }
+                .toppanel {
+                    position: fixed;
+                    background-color: #ff8080;
+                    color: white;
+                    /*text-align: center;*/
+                    padding: 20px;
+                    width: 100%;
+                    z-index: 1;
+                }
+                .projectlist {
+                    position: absolute;
+                    top: 100px;
+                    z-index: 0;
+                    width: 100%;
+                }
+                .project {
+                    width: 100%;
+                }
+                .container {
+                    /*position: ;*/
+                    margin-left: 0px;
+                }
+            </style>
+        </head>
 
+        <body>
+        <div class="container">
+            <div class="toppanel">
+                <image src = "assets/option_bar.jpg" title = "option"></image>
+                <div class="dropdown" style="float: right;">
+                        <button class="btn btn-default dropdown-toggle btn-lg" type="button" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                        <span class="glyphicon glyphicon-option-vertical" aria-hidden="true"></span>
+                        <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="optionmenu">
+                            <li role="presentation" onclick="camerabEvent()" id="camera"><a role="menuitem" tabindex="-1" href="#">
+                            <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Camera</a></li>
+                            <li role="presentation" onclick="votebEvent()" id="vote"><a role="menuitem" tabindex="-1" href="#">
+                            <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Vote</a></li>
+                            <li role="presentation" onclick="logoutbEvent()" id="logout"><a role="menuitem" tabindex="-1" href="#">
+                            <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout</a></li>
+                        </ul>
+                    </div>
+            </div>
 
-    <image src = "assets/template_g1.jpg" title = "group1"></image>
+            <div class="projectlist">
+                <image class="project" src = "assets/template_g1.jpg" title = "group1"></image>
 
-    <br>
-    <br>
+                <br>
+                <br>
 
-    <image src = "assets/template_g2.jpg" title = "group2"></image>
+                <image class="project" src = "assets/template_g2.jpg" title = "group2"></image>
 
-    <br>
-    <br>
+                <br>
+                <br>
 
-    <image src = "assets/template_g3.jpg" title = "group3"></image>
+                <image class="project" src = "assets/template_g3.jpg" title = "group3"></image>
 
-    <br>
-    <br>
+                <br>
+                <br>
 
-    <image src = "assets/template_g4.jpg" title = "group4"></image>
+                <image class="project" src = "assets/template_g4.jpg" title = "group4"></image>
 
-    <br>
-    <br>
+                <br>
+                <br>
+            </div>>
+            <!-- JQuery -->
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js">
+                $(document).ready(function(){
+                    $("#camera").click(function(){
+                        alert("camera");
+                    });
 
-                                    .
-                                    .
-                                    .
+                });
+            </script>
+
+            <!-- JS -->
+            <script>
+                function camerabEvent() {
+                    //open camera app
+                    alert("camera");
+                }
+                function votebEvent() {
+                    //actually go to vote page
+                    alert("vote");
+                }
+                function logoutbEvent() {
+                    //confirmation prompt out
+                    confirm("Are you sure ?");
+                }
+            </script>
+        </div>
+        </body>
+    </html>
 }
