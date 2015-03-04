@@ -8,8 +8,8 @@ import javax.persistence.Id;
 @Entity
 public class dummyProject extends Model  {
     @Id
-    String ID;
-    String name;
-    int score;
+    public String ID;
+    public String name;
+    public int score;
 
 }

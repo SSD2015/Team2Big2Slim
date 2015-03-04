@@ -8,6 +8,10 @@ import models.dummyProject;
 
 import views.html.*;
 
+import java.util.List;
+
+import static play.libs.Json.toJson;
+
 public class Application extends Controller {
 
     public Application() {
@@ -17,11 +21,24 @@ public class Application extends Controller {
         return ok(index.render() );
     }
 
-    public static Result voting() {
-        dummyProject  project = Form.form(dummyProject.class).bindFromRequest().get();
+    public static Result createProject() {
+        dummyProject project = Form.form(dummyProject.class).bindFromRequest().get();
+        Logger.trace("project ", project);
         project.save();
-        return redirect(routes.Application.index());
+        return redirect(routes.Application.getVoteResult());
+    }
+
+    public static Result voting(){
         return ok(vote.render());
+    }
+
+    public static Result addProject(){
+        return ok(creater.render("create project"));
+    }
+
+    public static Result getVoteResult(){
+        List<dummyProject> projects = new Model.Finder<String,dummyProject>(String.class,dummyProject.class).all();
+        return ok(toJson(projects));
     }
 	
 	public static Result group1() {
