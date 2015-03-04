@@ -8,7 +8,9 @@ GET         /                    controllers.Application.index()
 POST        /creater             controllers.Application.createProject()
 GET         /create              controllers.Application.addProject()
 
+
 GET         /vote                controllers.Application.voting()
+POST        /toVote              controllers.Application.vote(id)
 GET         /voteResult          controllers.Application.getVoteResult()
 
 GET         /group1              controllers.Application.group1()

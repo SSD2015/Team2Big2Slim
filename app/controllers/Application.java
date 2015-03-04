@@ -1,10 +1,10 @@
 package controllers;
 
-import play.*;
 import play.mvc.*;
 import play.data.Form;
+import play.db.*;
 import play.db.ebean.Model;
-import models.dummyProject;
+import models.Project;
 
 import views.html.*;
 
@@ -13,7 +13,6 @@ import java.util.List;
 import static play.libs.Json.toJson;
 
 public class Application extends Controller {
-
     public Application() {
     }
 
@@ -22,14 +21,25 @@ public class Application extends Controller {
     }
 
     public static Result createProject() {
-        dummyProject project = Form.form(dummyProject.class).bindFromRequest().get();
-        Logger.trace("project ", project);
+        Project project = Form.form(Project.class).bindFromRequest().get();
         project.save();
-        return redirect(routes.Application.getVoteResult());
+        return ok(vote.render());
     }
 
     public static Result voting(){
         return ok(vote.render());
+    }
+
+    public static Result vote(String id){
+        Project projects = Project.find.byId(id);
+        projects.score++;
+        projects.save();
+
+//        for(Iterator<Project> i = projects.iterator(); i.hasNext(); ) {
+//            Project item = i.next();
+//            if(item.ID.equals(id)) item.score++;
+//        }
+        return redirect(routes.Application.getVoteResult());
     }
 
     public static Result addProject(){
@@ -37,7 +47,7 @@ public class Application extends Controller {
     }
 
     public static Result getVoteResult(){
-        List<dummyProject> projects = new Model.Finder<String,dummyProject>(String.class,dummyProject.class).all();
+        List<Project> projects = new Model.Finder<String, Project>(String.class, Project.class).all();
         return ok(toJson(projects));
     }
 	
