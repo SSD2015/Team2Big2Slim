@@ -1,0 +1,9 @@
+@(message: String)
+@main("creater"){
+    <script type='text/javascript' src="@routes.Assets.at("js/getVote.js")"></script>
+    <ul id="projects"></ul>
+    <form action="@routes.Application.createProject()" method="post">
+        <input type="text" name="name">
+        <button>Add project</button>
+    </form>
+}
