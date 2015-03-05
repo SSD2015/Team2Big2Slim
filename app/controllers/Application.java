@@ -53,3 +53,4 @@ public class Application extends Controller {
 		return ok(group1.render( Math.random()*5) );
 	}
 }
+
