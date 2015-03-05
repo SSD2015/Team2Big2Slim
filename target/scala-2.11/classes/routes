@@ -4,14 +4,16 @@
 
 # Home page
 GET         /                    controllers.Application.index()
-GET         /profile             controllers.Application.profile()
+
 POST        /creater             controllers.Application.createProject()
 GET         /create              controllers.Application.addProject()
 
-GET         /vote                controllers.Application.voting()
-POST        /toVote              controllers.Application.vote(id)
+POST        /vote                controllers.Application.vote(String)
+GET         /voting              controllers.Application.voting()
+
 GET         /voteResult          controllers.Application.getVoteResult()
 
+GET         /profile             controllers.Application.profile()
 GET         /group1              controllers.Application.group1()
 
 # Map static resources from the /public folder to the /assets URL path

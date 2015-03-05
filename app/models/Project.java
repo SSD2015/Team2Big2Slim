@@ -1,7 +1,9 @@
 package models;
 
+/**
+ * Created by nicole on 3/5/15 AD.
+ */
 import play.db.ebean.Model;
-
 import javax.persistence.Entity;
 import javax.persistence.Id;
 

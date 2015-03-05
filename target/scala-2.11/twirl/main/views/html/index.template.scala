@@ -20,13 +20,14 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[String,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(message:String):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.raw/*2.21*/("""
+Seq[Any](format.raw/*1.18*/("""
+"""),_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.raw/*2.21*/("""
     """),format.raw/*3.5*/("""<html>
         <head>
         <!-- Bootstrap -->
@@ -82,7 +83,7 @@ Seq[Any](_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.r
                         <ul class="dropdown-menu dropdown-menu-right" role="menu" aria-labelledby="optionmenu">
                             <li role="presentation" onclick="camerabEvent()" id="camera"><a role="menuitem" tabindex="-1" href="#">
                             <span class="glyphicon glyphicon-camera" aria-hidden="true"></span> Camera</a></li>
-                            <li role="presentation" id="vote"><a role="menuitem" tabindex="-1" href="vote">
+                            <li role="presentation" id="vote"><a role="menuitem" tabindex="-1" href="voting">
                             <span class="glyphicon glyphicon-star" aria-hidden="true"></span> Vote</a></li>
                             <li role="presentation" onclick="logoutbEvent()" id="logout"><a role="menuitem" tabindex="-1" href="#">
                             <span class="glyphicon glyphicon-off" aria-hidden="true"></span> Logout</a></li>
@@ -143,20 +144,20 @@ Seq[Any](_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.r
 """))}
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(message:String): play.twirl.api.HtmlFormat.Appendable = apply(message)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((String) => play.twirl.api.HtmlFormat.Appendable) = (message) => apply(message)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 05 01:49:28 ICT 2015
+                  DATE: Thu Mar 05 23:11:42 ICT 2015
                   SOURCE: /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/app/views/index.scala.html
-                  HASH: 39c1c20a8c7208b9bbc40ef68faa511c4a20953d
-                  MATRIX: 798->2|823->19|862->21|893->26|1456->561|1485->562|1534->583|1635->656|1664->657|1709->674|1745->682|1774->683|1819->700|1916->769|1945->770|1990->787|2028->797|2057->798|2106->819|2392->1077|2421->1078|2466->1095|2507->1108|2536->1109|2585->1130|2746->1263|2775->1264|2820->1281|2857->1290|2886->1291|2935->1312|2992->1341|3021->1342|3066->1359|3105->1370|3134->1371|3183->1392|3281->1462|3310->1463|3351->1476|5727->3824|5756->3825|5805->3846|5862->3875|5891->3876|5944->3901|6009->3938|6038->3939|6086->3959|6115->3960|6254->4071|6283->4072|6333->4093|6433->4164|6463->4165|6509->4182|6560->4204|6590->4205|6640->4226|6747->4304|6777->4305|6823->4322|6876->4346|6906->4347|6956->4368|7074->4457|7104->4458|7146->4471|7231->4525
-                  LINES: 29->2|29->2|29->2|30->3|40->13|40->13|41->14|43->16|43->16|44->17|44->17|44->17|45->18|47->20|47->20|48->21|48->21|48->21|49->22|56->29|56->29|57->30|57->30|57->30|58->31|62->35|62->35|63->36|63->36|63->36|64->37|65->38|65->38|66->39|66->39|66->39|67->40|69->42|69->42|70->43|116->89|116->89|117->90|117->90|117->90|118->91|119->92|119->92|121->94|121->94|126->99|126->99|127->100|129->102|129->102|130->103|130->103|130->103|131->104|133->106|133->106|134->107|134->107|134->107|135->108|137->110|137->110|138->111|142->115
+                  HASH: 5e7ebde48dbf51a2adf810fa1fbbe6a79cc9bd2c
+                  MATRIX: 723->1|827->17|854->19|879->36|918->38|949->43|1512->578|1541->579|1590->600|1691->673|1720->674|1765->691|1801->699|1830->700|1875->717|1972->786|2001->787|2046->804|2084->814|2113->815|2162->836|2448->1094|2477->1095|2522->1112|2563->1125|2592->1126|2641->1147|2802->1280|2831->1281|2876->1298|2913->1307|2942->1308|2991->1329|3048->1358|3077->1359|3122->1376|3161->1387|3190->1388|3239->1409|3337->1479|3366->1480|3407->1493|5785->3843|5814->3844|5863->3865|5920->3894|5949->3895|6002->3920|6067->3957|6096->3958|6144->3978|6173->3979|6312->4090|6341->4091|6391->4112|6491->4183|6521->4184|6567->4201|6618->4223|6648->4224|6698->4245|6805->4323|6835->4324|6881->4341|6934->4365|6964->4366|7014->4387|7132->4476|7162->4477|7204->4490|7289->4544
+                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|41->13|41->13|42->14|44->16|44->16|45->17|45->17|45->17|46->18|48->20|48->20|49->21|49->21|49->21|50->22|57->29|57->29|58->30|58->30|58->30|59->31|63->35|63->35|64->36|64->36|64->36|65->37|66->38|66->38|67->39|67->39|67->39|68->40|70->42|70->42|71->43|117->89|117->89|118->90|118->90|118->90|119->91|120->92|120->92|122->94|122->94|127->99|127->99|128->100|130->102|130->102|131->103|131->103|131->103|132->104|134->106|134->106|135->107|135->107|135->107|136->108|138->110|138->110|139->111|143->115
                   -- GENERATED --
               */
           

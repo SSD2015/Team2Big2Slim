@@ -1,11 +1,14 @@
-name := "appproject"
+name := """Team2Big2Slim"""
 
-version := "1.0"
+version := "1.0-SNAPSHOT"
 
-lazy val `appproject` = (project in file(".")).enablePlugins(PlayJava)
+lazy val root = (project in file(".")).enablePlugins(PlayJava)
 
 scalaVersion := "2.11.1"
 
-libraryDependencies ++= Seq( javaJdbc , javaEbean , cache , javaWs )
-
-unmanagedResourceDirectories in Test <+=  baseDirectory ( _ /"target/web/public/test" )
+libraryDependencies ++= Seq(
+  javaJdbc,
+  javaEbean,
+  cache,
+  javaWs
+)

@@ -31,14 +31,14 @@ Seq[Any](_display_(/*1.2*/main("Voting")/*1.16*/ {_display_(Seq[Any](format.raw/
     <br>
     <br>
     """),format.raw/*5.29*/("""
-    """),format.raw/*6.5*/("""<form id='voteProject' val="" action=""""),_display_(/*6.44*/routes/*6.50*/.Application.vote("1")),format.raw/*6.72*/("""" method="post">
+    """),format.raw/*6.5*/("""<form id='voteProject' action=""""),_display_(/*6.37*/routes/*6.43*/.Application.vote("1")),format.raw/*6.65*/("""" method="post">
         <script text='text/javascript' src='"""),_display_(/*7.46*/routes/*7.52*/.Assets.at("js/getButton.js")),format.raw/*7.81*/("""'></script>
         <dev id = 'list' ></dev>
         <script text="/text/javascript">
-            $('#voteProject' ).on('change',function()"""),format.raw/*10.54*/("""{"""),format.raw/*10.55*/("""
-            """),format.raw/*11.13*/("""//$("#voteProject" ).attr("action", "routes.Application.vote(" + ($('input[name=project]:checked','#voteProject').val()) + ")" ) ;
-            alert("you select "+$('input[name=project]:checked','#voteProject' ).val());
-            """),format.raw/*13.13*/("""}"""),format.raw/*13.14*/(""");
+        $('#voteProject' ).on('change',function()"""),format.raw/*10.50*/("""{"""),format.raw/*10.51*/("""
+        """),format.raw/*11.9*/("""//$("#voteProject" ).attr("action", "routes.Application.vote(" + ($('input[name=project]:checked','#voteProject').val()) + ")" ) ;
+        alert("you select "+$('input[name=project]:checked','#voteProject' ).val());
+        """),format.raw/*13.9*/("""}"""),format.raw/*13.10*/(""");
         </script>
         <button>submit</button>
     </form>
@@ -56,10 +56,10 @@ Seq[Any](_display_(/*1.2*/main("Voting")/*1.16*/ {_display_(Seq[Any](format.raw/
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 05 01:49:28 ICT 2015
+                  DATE: Thu Mar 05 23:20:37 ICT 2015
                   SOURCE: /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/app/views/vote.scala.html
-                  HASH: ce01b14ca626552d4beba96517c1cf336da510bb
-                  MATRIX: 797->1|819->15|858->17|889->22|964->94|995->99|1060->138|1074->144|1116->166|1204->228|1218->234|1267->263|1434->402|1463->403|1504->416|1764->648|1793->649
+                  HASH: 853c88f5ef5d19d3deedc21cdf0dbc07605bf34c
+                  MATRIX: 797->1|819->15|858->17|889->22|964->94|995->99|1053->131|1067->137|1109->159|1197->221|1211->227|1260->256|1423->391|1452->392|1488->401|1739->625|1768->626
                   LINES: 29->1|29->1|29->1|30->2|33->5|34->6|34->6|34->6|34->6|35->7|35->7|35->7|38->10|38->10|39->11|41->13|41->13
                   -- GENERATED --
               */
