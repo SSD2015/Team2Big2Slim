@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="88beaf84-6a72-42a7-945f-e19a8e34fcdd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.java" afterPath="$PROJECT_DIR$/app/controllers/Application.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="Team2Big2Slim.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -670,12 +670,12 @@
       <option name="number" value="Default" />
       <updated>1425538586446</updated>
       <workItem from="1425538587843" duration="2984000" />
-      <workItem from="1425568519504" duration="2105000" />
+      <workItem from="1425568519504" duration="2184000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="5089000" />
+    <option name="totallyTimeSpent" value="5168000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="721" extended-state="6" />
