@@ -42,7 +42,6 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
         <p>Project name: GTA</p>
         <p>Type of project: Game</p>
         <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
-
     </body>
     <button type="button" onclick="getElementById('content').innerHTML ='asdasdasd'">Read more!</button>
     <div id="content"></div>
@@ -58,9 +57,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 02 14:02:18 ICT 2015
-                  SOURCE: /Users/nathakorn/Desktop/PlayWork(Intellij)/2big2slim/app/views/profile.scala.html
-                  HASH: 419037a70d184192107c1c1dd3174bd273d3c9c0
+                  DATE: Thu Mar 05 13:30:00 ICT 2015
+                  SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/profile.scala.html
+                  HASH: 35392fe7ff92e78f7b2f146a857116cfef374e5a
                   MATRIX: 800->0
                   LINES: 29->1
                   -- GENERATED --
