@@ -2,12 +2,18 @@
     <h> Who is the best ?</h>
     <br>
     <br>
-    <input type="radio" name="group" value="check">PP<br>
-    <input type="radio" name="group" value="check">Momo<br>
-    <input type="radio" name="group" value="check">Patbu<br>
-    <input type="radio" name="group" value="check">Korn<br>
-    <input type="radio" name="group" value="check">KeawNak
+    @*Just always pass "1"*@
+    <form id='voteProject' val="" action="@routes.Application.vote("1")" method="post">
+        <script text='text/javascript' src='@routes.Assets.at("js/getButton.js")'></script>
+        <dev id = 'list' ></dev>
+        <script text="/text/javascript">
+            $('#voteProject' ).on('change',function(){
+            //$("#voteProject" ).attr("action", "routes.Application.vote(" + ($('input[name=project]:checked','#voteProject').val()) + ")" ) ;
+            alert("you select "+$('input[name=project]:checked','#voteProject' ).val());
+            });
+        </script>
+        <button>submit</button>
+    </form>
     <br>
     <br>
-    <button> submit </button>
 }

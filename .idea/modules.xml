@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Team2Big2Slim.iml" filepath="$PROJECT_DIR$/Team2Big2Slim.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/appproject.iml" filepath="$PROJECT_DIR$/.idea/modules/appproject.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/appproject-build.iml" filepath="$PROJECT_DIR$/.idea/modules/appproject-build.iml" />
     </modules>

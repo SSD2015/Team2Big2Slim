@@ -6,10 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 
 @Entity
-public class dummyProject extends Model  {
+public class Project extends Model  {
     @Id
     public String ID;
     public String name;
     public int score;
+    public static Finder<String,Project> find = new Finder<String,Project>(
+            String.class, Project.class
+    );
 
 }

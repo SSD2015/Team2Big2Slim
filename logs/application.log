@@ -1,36 +1,48 @@
-2015-03-04 18:58:51,010 - [INFO] - from play in pool-4-thread-1 
+2015-03-05 01:50:40,381 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-04 18:59:04,482 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-05 01:51:03,815 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-04 18:59:05,064 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-05 01:51:04,453 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-04 18:59:05,680 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-05 01:51:12,034 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-04 18:59:05,728 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-05 01:51:12,075 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-04 18:59:45,088 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-8 
+2015-03-05 01:51:27,543 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-2 
 Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
 
-2015-03-04 18:59:45,092 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
-Not strongly caching class [models.dummyProject] because it is not cache-safe
+2015-03-05 01:51:27,547 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Not strongly caching class [models.Project] because it is not cache-safe
 
-2015-03-04 18:59:45,092 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
-Getting BeanInfo for class [models.dummyProject]
+2015-03-05 01:51:27,548 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Getting BeanInfo for class [models.Project]
 
-2015-03-04 18:59:45,097 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
-Caching PropertyDescriptors for class [models.dummyProject]
+2015-03-05 01:51:27,554 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Caching PropertyDescriptors for class [models.Project]
 
-2015-03-04 18:59:45,097 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+2015-03-05 01:51:27,554 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
 Found bean property 'class' of type [java.lang.Class]
 
-2015-03-04 18:59:45,098 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
-Found bean property 'name' of type [java.lang.String]
+2015-03-05 01:53:21,097 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
 
-2015-03-04 18:59:45,098 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
-Found bean property 'score' of type [int]
+2015-03-05 01:53:21,136 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-05 01:53:30,840 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+Not strongly caching class [models.Project] because it is not cache-safe
+
+2015-03-05 01:53:30,841 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+Getting BeanInfo for class [models.Project]
+
+2015-03-05 01:53:30,843 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+Caching PropertyDescriptors for class [models.Project]
+
+2015-03-05 01:53:30,843 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+Found bean property 'class' of type [java.lang.Class]
 
