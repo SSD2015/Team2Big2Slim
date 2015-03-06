@@ -34,6 +34,6 @@
 ## Unplanned Work
 | Task | Description |
 |------|:-----------:|
-| Learn Vaadin | https://github.com/SSD2015/Team2Big2Slim/issues/20 |
+| Learn to use Vaadin | https://github.com/SSD2015/Team2Big2Slim/issues/20 |
 
 
