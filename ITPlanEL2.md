@@ -17,12 +17,10 @@
 | Vote | Fix play config file |  |
 | Vote | Make a vote submitable |  |
 | Vote | Show vote result |  |
-|---|:---:|:---:|
 | Rate | Show rating criteria |  |
 | Rate | Voter can rate each criterion |  |
 | Rate | Voter can submit a rating |  |
 | Rate | Show a rating review before press final decision |  |
-|---|:---:|:---:|
 | Documentation |  |  |
 
 
