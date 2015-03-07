@@ -21,6 +21,11 @@
 | Rate | Voter can rate each criterion |  |
 | Rate | Voter can submit a rating |  |
 | Rate | Show a rating review before press final decision |  |
-| Documentation |  |  |
+| Documentation | Update Requirement  |  |
+| Documentation | Update vision statement |  |
+| Documentation | Update supplementary requirement |  |
+| Documentation | Update glossary |  |
+| Documentation | Update domain model |  |
+| Documentation | User manual |  |
 
 
