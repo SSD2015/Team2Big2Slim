@@ -27,9 +27,9 @@
 ### Milestone: Documentation
 | Task | Priority (1=very high, 5=low) |
 |-----------------------------|:---:|
-| Update Requirement  |  |
+| Update Requirements  |  |
 | Update vision statement |  |
-| Update supplementary requirement |  |
+| Update supplementary requirements |  |
 | Update glossary |  |
 | Update domain model |  |
 | User manual |  |
