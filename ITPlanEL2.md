@@ -10,22 +10,28 @@
 | Documentation | Update the documents according to new requirements and create a rough user manual. |  
   
 ## Iteration Objective(s)
-
-| Milestone | Task | Priority (1=very high, 5=low) |
-|------------------------|:-----------------------------:|:---:|
-| Vote | Write database file into server |  |
-| Vote | Fix play config file |  |
-| Vote | Make a vote submitable |  |
-| Vote | Show vote result |  |
-| Rate | Show rating criteria |  |
-| Rate | Voter can rate each criterion |  |
-| Rate | Voter can submit a rating |  |
-| Rate | Show a rating review before press final decision |  |
-| Documentation | Update Requirement  |  |
-| Documentation | Update vision statement |  |
-| Documentation | Update supplementary requirement |  |
-| Documentation | Update glossary |  |
-| Documentation | Update domain model |  |
-| Documentation | User manual |  |
+### Milestone: Vote
+| Task | Priority (1=very high, 5=low) |
+|-----------------------------|:---:|
+| Write database file into server |  |
+| Fix play config file |  |
+| Make a vote submitable |  |
+| Show vote result |  |
+### Milestone: Rate 
+| Task | Priority (1=very high, 5=low) |
+|-----------------------------|:---:|
+| Show rating criteria |  |
+| Voter can rate each criterion |  |
+| Voter can submit a rating |  |
+| Show a rating review before press final decision |  |
+### Milestone: Documentation
+| Task | Priority (1=very high, 5=low) |
+|-----------------------------|:---:|
+| Update Requirement  |  |
+| Update vision statement |  |
+| Update supplementary requirement |  |
+| Update glossary |  |
+| Update domain model |  |
+| User manual |  |
 
 
