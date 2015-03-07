@@ -33,5 +33,9 @@
 | Update glossary |  |
 | Update domain model |  |
 | User manual |  |
-
+### Milestone: Login
+| Task | Priority (1=very high, 5=low) |
+|-----------------------------|:---:|
+| Login page (UI) |  |
+| Link users with database |  |
 
