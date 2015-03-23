@@ -4,11 +4,7 @@
 		module="team2big2slim-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-<<<<<<< HEAD
-		publication="20150323172806"
-=======
-		publication="20150306001431"
->>>>>>> origin/MakeObject
+		publication="20150323204704"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

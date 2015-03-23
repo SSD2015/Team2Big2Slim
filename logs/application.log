@@ -1,10 +1,10 @@
-2015-03-23 20:22:53,728 - [INFO] - from play in pool-4-thread-7 
+2015-03-23 20:47:41,474 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-23 20:23:37,088 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-23 20:47:51,920 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-23 20:23:37,970 - [ERROR] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
+2015-03-23 20:47:52,456 - [ERROR] - from com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager in play-internal-execution-context-1 
 Error in deployment
 javax.persistence.PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)
 	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1337) ~[avaje-ebeanorm-3.3.4.jar:na]
@@ -46,58 +46,10 @@ Caused by: java.lang.IllegalArgumentException: field [ID] not found in [models.P
 	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1321) ~[avaje-ebeanorm-3.3.4.jar:na]
 	... 32 common frames omitted
 
-2015-03-23 20:23:38,009 - [ERROR] - from application in New I/O worker #1 
+2015-03-23 20:47:52,463 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6lhjk972b - Internal server error, for (GET) [/] ->
-
-play.api.UnexpectedException: Unexpected exception[PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:166) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1337) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1134) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1050) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:527) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:235) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at play.db.ebean.EbeanPlugin.onStart(EbeanPlugin.java:89) ~[play-java-ebean_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
-	... 14 common frames omitted
-Caused by: java.lang.IllegalArgumentException: field [ID] not found in [models.Project][score, ProfilePic, picture]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getFieldIndex(EnhanceBeanReflect.java:139) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getGetter(EnhanceBeanReflect.java:143) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1321) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 32 common frames omitted
-
-2015-03-23 20:25:19,167 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6lhjk972b - Internal server error, for (GET) [/] ->
+! @6lhjne0hh - Internal server error, for (GET) [/] ->
 
 play.api.UnexpectedException: Unexpected exception[PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)]
 	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:166) ~[play_2.11-2.3.8.jar:2.3.8]
@@ -142,106 +94,10 @@ Caused by: java.lang.IllegalArgumentException: field [ID] not found in [models.P
 	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1321) ~[avaje-ebeanorm-3.3.4.jar:na]
 	... 32 common frames omitted
 
-2015-03-23 20:25:22,095 - [ERROR] - from application in New I/O worker #1 
+2015-03-23 20:47:54,665 - [ERROR] - from application in New I/O worker #1 
 
 
-! @6lhjk972b - Internal server error, for (GET) [/voting] ->
-
-play.api.UnexpectedException: Unexpected exception[PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:166) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1337) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1134) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1050) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:527) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:235) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at play.db.ebean.EbeanPlugin.onStart(EbeanPlugin.java:89) ~[play-java-ebean_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
-	... 14 common frames omitted
-Caused by: java.lang.IllegalArgumentException: field [ID] not found in [models.Project][score, ProfilePic, picture]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getFieldIndex(EnhanceBeanReflect.java:139) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getGetter(EnhanceBeanReflect.java:143) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1321) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 32 common frames omitted
-
-2015-03-23 20:29:28,369 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6lhjk972b - Internal server error, for (GET) [/] ->
-
-play.api.UnexpectedException: Unexpected exception[PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:166) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1337) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.createByteCode(BeanDescriptorManager.java:1134) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readDeployAssociations(BeanDescriptorManager.java:1050) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.readEntityDeploymentAssociations(BeanDescriptorManager.java:527) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.deploy(BeanDescriptorManager.java:235) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.InternalConfiguration.<init>(InternalConfiguration.java:114) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:204) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServerFactory.createServer(DefaultServerFactory.java:65) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.EbeanServerFactory.create(EbeanServerFactory.java:58) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at play.db.ebean.EbeanPlugin.onStart(EbeanPlugin.java:89) ~[play-java-ebean_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
-	... 14 common frames omitted
-Caused by: java.lang.IllegalArgumentException: field [ID] not found in [models.Project][score, ProfilePic, picture]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getFieldIndex(EnhanceBeanReflect.java:139) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.reflect.EnhanceBeanReflect.getGetter(EnhanceBeanReflect.java:143) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.deploy.BeanDescriptorManager.setBeanReflect(BeanDescriptorManager.java:1321) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 32 common frames omitted
-
-2015-03-23 20:29:30,052 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6lhjk972b - Internal server error, for (GET) [/] ->
+! @6lhjne0hh - Internal server error, for (GET) [/] ->
 
 play.api.UnexpectedException: Unexpected exception[PersistenceException: Error with [models.Project] I believe it is not enhanced but it's superClass [class models.User] is? (You are not allowed to mix enhancement in a single inheritance hierarchy)]
 	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:166) ~[play_2.11-2.3.8.jar:2.3.8]

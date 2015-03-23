@@ -9,204 +9,200 @@
 		extra-sbtVersion="0.13"
 		conf="test-internal"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-<<<<<<< HEAD
-		date="20150323172806"/>
-=======
-		date="20150306001431"/>
->>>>>>> origin/MakeObject
+		date="20150323204704"/>
 	<dependencies>
 		<module organisation="com.typesafe.sbt" name="sbt-mocha">
-			<revision name="1.0.0" status="release" pubdate="20140529102332" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="138">
-				<metadata-artifact status="successful" details="" size="1664" time="4832" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-mocha\ivy-1.0.0.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-mocha\ivy-1.0.0.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
+			<revision name="1.0.0" status="release" pubdate="20140529102332" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="138">
+				<metadata-artifact status="no" details="" size="1666" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-mocha\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
 				<caller organisation="default" name="team2big2slim-build" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-mocha" type="jar" ext="jar" status="successful" details="" size="137369" time="8035" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-mocha\jars\sbt-mocha-1.0.0.jar">
+					<artifact name="sbt-mocha" type="jar" ext="jar" status="no" details="" size="137369" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-mocha\jars\sbt-mocha-1.0.0.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/jars/sbt-mocha.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="mocha">
-			<revision name="1.17.1" status="release" pubdate="20140301004534" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="139">
+			<revision name="1.17.1" status="release" pubdate="20140301004534" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="139">
 				<license name="MIT" url="https://github.com/visionmedia/mocha/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="5150" time="1375" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mocha\ivy-1.17.1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mocha\ivy-1.17.1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/mocha/1.17.1/mocha-1.17.1.pom"/>
+				<metadata-artifact status="no" details="" size="3665" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mocha\ivy-1.17.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/mocha/1.17.1/mocha-1.17.1.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-mocha" conf="compile" rev="1.17.1" rev-constraint-default="1.17.1" rev-constraint-dynamic="1.17.1" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="mocha" type="jar" ext="jar" status="successful" details="" size="58303" time="1435" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mocha\jars\mocha-1.17.1.jar">
+					<artifact name="mocha" type="jar" ext="jar" status="no" details="" size="58303" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mocha\jars\mocha-1.17.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/mocha/1.17.1/mocha-1.17.1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="diff">
-			<revision name="1.0.7" status="release" pubdate="20140301004035" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="141">
+			<revision name="1.0.7" status="release" pubdate="20140301004035" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="141">
 				<license name="BSD" url="https://github.com/kpdecker/jsdiff/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="4719" time="1462" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\diff\ivy-1.0.7.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\diff\ivy-1.0.7.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/diff/1.0.7/diff-1.0.7.pom"/>
+				<metadata-artifact status="no" details="" size="3363" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\diff\ivy-1.0.7.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/diff/1.0.7/diff-1.0.7.pom"/>
 				<caller organisation="org.webjars" name="mocha" conf="default, compile, runtime, master" rev="1.0.7" rev-constraint-default="1.0.7" rev-constraint-dynamic="1.0.7" callerrev="1.17.1"/>
 				<artifacts>
-					<artifact name="diff" type="jar" ext="jar" status="successful" details="" size="6969" time="1510" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\diff\jars\diff-1.0.7.jar">
+					<artifact name="diff" type="jar" ext="jar" status="no" details="" size="6969" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\diff\jars\diff-1.0.7.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/diff/1.0.7/diff-1.0.7.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="debug">
-			<revision name="0.7.4" status="release" pubdate="20140301004129" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="140">
+			<revision name="0.7.4" status="release" pubdate="20140301004129" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="140">
 				<license name="MIT" url="https://github.com/visionmedia/debug/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="4726" time="1339" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\debug\ivy-0.7.4.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\debug\ivy-0.7.4.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/debug/0.7.4/debug-0.7.4.pom"/>
+				<metadata-artifact status="no" details="" size="3369" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\debug\ivy-0.7.4.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/debug/0.7.4/debug-0.7.4.pom"/>
 				<caller organisation="org.webjars" name="mocha" conf="default, compile, runtime, master" rev="0.7.4" rev-constraint-default="0.7.4" rev-constraint-dynamic="0.7.4" callerrev="1.17.1"/>
 				<artifacts>
-					<artifact name="debug" type="jar" ext="jar" status="successful" details="" size="4688" time="1196" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\debug\jars\debug-0.7.4.jar">
+					<artifact name="debug" type="jar" ext="jar" status="no" details="" size="4688" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\debug\jars\debug-0.7.4.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/debug/0.7.4/debug-0.7.4.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.sbt" name="sbt-digest">
-			<revision name="1.0.0" status="release" pubdate="20140528153110" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="137">
-				<metadata-artifact status="successful" details="" size="1570" time="4541" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-digest\ivy-1.0.0.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-digest\ivy-1.0.0.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-digest/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
+			<revision name="1.0.0" status="release" pubdate="20140528153110" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="137">
+				<metadata-artifact status="no" details="" size="1572" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-digest\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-digest/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
 				<caller organisation="default" name="team2big2slim-build" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-digest" type="jar" ext="jar" status="successful" details="" size="20511" time="5512" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-digest\jars\sbt-digest-1.0.0.jar">
+					<artifact name="sbt-digest" type="jar" ext="jar" status="no" details="" size="20511" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-digest\jars\sbt-digest-1.0.0.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-digest/scala_2.10/sbt_0.13/1.0.0/jars/sbt-digest.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.sbt" name="sbt-rjs">
-			<revision name="1.0.1" status="release" pubdate="20140528184002" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="135">
-				<metadata-artifact status="successful" details="" size="1662" time="4419" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-rjs\ivy-1.0.1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-rjs\ivy-1.0.1.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-rjs/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml"/>
+			<revision name="1.0.1" status="release" pubdate="20140528184002" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="135">
+				<metadata-artifact status="no" details="" size="1664" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-rjs\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-rjs/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml"/>
 				<caller organisation="default" name="team2big2slim-build" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-rjs" type="jar" ext="jar" status="successful" details="" size="68178" time="6444" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-rjs\jars\sbt-rjs-1.0.1.jar">
+					<artifact name="sbt-rjs" type="jar" ext="jar" status="no" details="" size="68178" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-rjs\jars\sbt-rjs-1.0.1.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-rjs/scala_2.10/sbt_0.13/1.0.1/jars/sbt-rjs.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="rjs">
-			<revision name="2.1.11-1-trireme" status="release" pubdate="20140325141622" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="136">
+			<revision name="2.1.11-1-trireme" status="release" pubdate="20140325141622" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="136">
 				<license name="The &quot;New&quot; BSD License or MIT License" url="https://github.com/jrburke/r.js/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="3543" time="1334" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\rjs\ivy-2.1.11-1-trireme.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\rjs\ivy-2.1.11-1-trireme.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/rjs/2.1.11-1-trireme/rjs-2.1.11-1-trireme.pom"/>
+				<metadata-artifact status="no" details="" size="3479" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\rjs\ivy-2.1.11-1-trireme.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/rjs/2.1.11-1-trireme/rjs-2.1.11-1-trireme.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-rjs" conf="compile" rev="2.1.11-1-trireme" rev-constraint-default="2.1.11-1-trireme" rev-constraint-dynamic="2.1.11-1-trireme" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="rjs" type="jar" ext="jar" status="successful" details="" size="216702" time="3521" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\rjs\jars\rjs-2.1.11-1-trireme.jar">
+					<artifact name="rjs" type="jar" ext="jar" status="no" details="" size="216702" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\rjs\jars\rjs-2.1.11-1-trireme.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/rjs/2.1.11-1-trireme/rjs-2.1.11-1-trireme.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.sbt" name="sbt-jshint">
-			<revision name="1.0.1" status="release" pubdate="20140608175701" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="131">
-				<metadata-artifact status="successful" details="" size="1676" time="4249" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-jshint\ivy-1.0.1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-jshint\ivy-1.0.1.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-jshint/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml"/>
+			<revision name="1.0.1" status="release" pubdate="20140608175701" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="131">
+				<metadata-artifact status="no" details="" size="1678" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-jshint\ivy-1.0.1.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-jshint/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml"/>
 				<caller organisation="default" name="team2big2slim-build" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.1" rev-constraint-default="1.0.1" rev-constraint-dynamic="1.0.1" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-jshint" type="jar" ext="jar" status="successful" details="" size="18875" time="6116" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-jshint\jars\sbt-jshint-1.0.1.jar">
+					<artifact name="sbt-jshint" type="jar" ext="jar" status="no" details="" size="18875" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-jshint\jars\sbt-jshint-1.0.1.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-jshint/scala_2.10/sbt_0.13/1.0.1/jars/sbt-jshint.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="jshint-node">
-			<revision name="2.4.1-1" status="release" pubdate="20140120025530" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="132">
-				<metadata-artifact status="successful" details="" size="3022" time="1391" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\jshint-node\ivy-2.4.1-1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\jshint-node\ivy-2.4.1-1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/jshint-node/2.4.1-1/jshint-node-2.4.1-1.pom"/>
+			<revision name="2.4.1-1" status="release" pubdate="20140120025530" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="132">
+				<metadata-artifact status="no" details="" size="3612" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\jshint-node\ivy-2.4.1-1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/jshint-node/2.4.1-1/jshint-node-2.4.1-1.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-jshint" conf="compile" rev="2.4.1-1" rev-constraint-default="2.4.1-1" rev-constraint-dynamic="2.4.1-1" callerrev="1.0.1"/>
 				<artifacts>
-					<artifact name="jshint-node" type="jar" ext="jar" status="successful" details="" size="163669" time="2930" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\jshint-node\jars\jshint-node-2.4.1-1.jar">
+					<artifact name="jshint-node" type="jar" ext="jar" status="no" details="" size="163669" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\jshint-node\jars\jshint-node-2.4.1-1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/jshint-node/2.4.1-1/jshint-node-2.4.1-1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="console-browserify">
-			<revision name="0.1.6-1" status="release" pubdate="20140119195957" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="134">
+			<revision name="0.1.6-1" status="release" pubdate="20140119195957" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="134">
 				<license name="MIT" url="https://github.com/substack/console-browserify/blob/master/LICENCE"/>
-				<metadata-artifact status="successful" details="" size="4576" time="1450" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\console-browserify\ivy-0.1.6-1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\console-browserify\ivy-0.1.6-1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/console-browserify/0.1.6-1/console-browserify-0.1.6-1.pom"/>
+				<metadata-artifact status="no" details="" size="3441" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\console-browserify\ivy-0.1.6-1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/console-browserify/0.1.6-1/console-browserify-0.1.6-1.pom"/>
 				<caller organisation="org.webjars" name="jshint-node" conf="default, compile, runtime, master" rev="0.1.6-1" rev-constraint-default="0.1.6-1" rev-constraint-dynamic="0.1.6-1" callerrev="2.4.1-1"/>
 				<artifacts>
-					<artifact name="console-browserify" type="jar" ext="jar" status="successful" details="" size="4510" time="1602" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\console-browserify\jars\console-browserify-0.1.6-1.jar">
+					<artifact name="console-browserify" type="jar" ext="jar" status="no" details="" size="4510" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\console-browserify\jars\console-browserify-0.1.6-1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/console-browserify/0.1.6-1/console-browserify-0.1.6-1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="underscorejs">
-			<revision name="1.5.2-2" status="release" pubdate="20140119195512" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="133">
+			<revision name="1.5.2-2" status="release" pubdate="20140119195512" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="133">
 				<license name="Copyright (c) 2009-2012 Jeremy Ashkenas, DocumentCloud" url="https://github.com/documentcloud/underscore/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="4337" time="1233" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\underscorejs\ivy-1.5.2-2.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\underscorejs\ivy-1.5.2-2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/underscorejs/1.5.2-2/underscorejs-1.5.2-2.pom"/>
+				<metadata-artifact status="no" details="" size="3401" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\underscorejs\ivy-1.5.2-2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/underscorejs/1.5.2-2/underscorejs-1.5.2-2.pom"/>
 				<caller organisation="org.webjars" name="jshint-node" conf="default, compile, runtime, master" rev="1.5.2-2" rev-constraint-default="1.5.2-2" rev-constraint-dynamic="1.5.2-2" callerrev="2.4.1-1"/>
 				<artifacts>
-					<artifact name="underscorejs" type="jar" ext="jar" status="successful" details="" size="29786" time="2131" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\underscorejs\jars\underscorejs-1.5.2-2.jar">
+					<artifact name="underscorejs" type="jar" ext="jar" status="no" details="" size="29786" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\underscorejs\jars\underscorejs-1.5.2-2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/underscorejs/1.5.2-2/underscorejs-1.5.2-2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.sbt" name="sbt-less">
-			<revision name="1.0.0" status="release" pubdate="20140528160747" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="127">
-				<metadata-artifact status="successful" details="" size="1861" time="10853" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-less\ivy-1.0.0.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-less\ivy-1.0.0.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-less/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
+			<revision name="1.0.0" status="release" pubdate="20140528160747" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="127">
+				<metadata-artifact status="no" details="" size="1863" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-less\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-less/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
 				<caller organisation="default" name="team2big2slim-build" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-less" type="jar" ext="jar" status="successful" details="" size="35347" time="6256" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-less\jars\sbt-less-1.0.0.jar">
+					<artifact name="sbt-less" type="jar" ext="jar" status="no" details="" size="35347" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-less\jars\sbt-less-1.0.0.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-less/scala_2.10/sbt_0.13/1.0.0/jars/sbt-less.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="source-map">
-			<revision name="0.1.31-2" status="release" pubdate="20140122184643" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="129">
+			<revision name="0.1.31-2" status="release" pubdate="20140122184643" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="129">
 				<license name="Mozilla" url="https://github.com/mozilla/source-map/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="4122" time="1332" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\source-map\ivy-0.1.31-2.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\source-map\ivy-0.1.31-2.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/source-map/0.1.31-2/source-map-0.1.31-2.pom"/>
+				<metadata-artifact status="no" details="" size="3513" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\source-map\ivy-0.1.31-2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/source-map/0.1.31-2/source-map-0.1.31-2.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-less" conf="compile" rev="0.1.31-2" rev-constraint-default="0.1.31-2" rev-constraint-dynamic="0.1.31-2" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="source-map" type="jar" ext="jar" status="successful" details="" size="23920" time="1809" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\source-map\jars\source-map-0.1.31-2.jar">
+					<artifact name="source-map" type="jar" ext="jar" status="no" details="" size="23920" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\source-map\jars\source-map-0.1.31-2.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/source-map/0.1.31-2/source-map-0.1.31-2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="amdefine">
-			<revision name="0.1.0-1" status="release" pubdate="20140122183922" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="130">
+			<revision name="0.1.0-1" status="release" pubdate="20140122183922" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="master(*), compile, runtime(*), runtime, compile(*), master" position="130">
 				<license name="BSD" url="https://github.com/jrburke/amdefine/blob/master/LICENSE"/>
-				<metadata-artifact status="successful" details="" size="3958" time="1266" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\amdefine\ivy-0.1.0-1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\amdefine\ivy-0.1.0-1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/amdefine/0.1.0-1/amdefine-0.1.0-1.pom"/>
+				<metadata-artifact status="no" details="" size="3317" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\amdefine\ivy-0.1.0-1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/amdefine/0.1.0-1/amdefine-0.1.0-1.pom"/>
 				<caller organisation="org.webjars" name="source-map" conf="default, compile, runtime, master" rev="0.1.0-1" rev-constraint-default="0.1.0-1" rev-constraint-dynamic="0.1.0-1" callerrev="0.1.31-2"/>
 				<artifacts>
-					<artifact name="amdefine" type="jar" ext="jar" status="successful" details="" size="7160" time="1233" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\amdefine\jars\amdefine-0.1.0-1.jar">
+					<artifact name="amdefine" type="jar" ext="jar" status="no" details="" size="7160" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\amdefine\jars\amdefine-0.1.0-1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/amdefine/0.1.0-1/amdefine-0.1.0-1.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="com.typesafe.sbt" name="sbt-coffeescript">
-			<revision name="1.0.0" status="release" pubdate="20140528152306" resolver="sbt-plugin-releases" artresolver="sbt-plugin-releases" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="true" searched="true" default="false" conf="compile, default(compile)" position="124">
-				<metadata-artifact status="successful" details="" size="1804" time="4654" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-coffeescript\ivy-1.0.0.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-coffeescript\ivy-1.0.0.xml.original" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
+			<revision name="1.0.0" status="release" pubdate="20140528152306" resolver="sbt-chain" artresolver="sbt-chain" extra-scalaVersion="2.10" extra-sbtVersion="0.13" downloaded="false" searched="false" default="false" conf="compile, default(compile)" position="124">
+				<metadata-artifact status="no" details="" size="1806" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-coffeescript\ivy-1.0.0.xml" searched="false" origin-is-local="false" origin-location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml"/>
 				<caller organisation="default" name="team2big2slim-build" conf="test, compile, provided, test-internal, runtime, optional" rev="1.0.0" rev-constraint-default="1.0.0" rev-constraint-dynamic="1.0.0" callerrev="0.1-SNAPSHOT" extra-scalaVersion="2.10" extra-sbtVersion="0.13"/>
 				<artifacts>
-					<artifact name="sbt-coffeescript" type="jar" ext="jar" status="successful" details="" size="18232" time="6209" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-coffeescript\jars\sbt-coffeescript-1.0.0.jar">
+					<artifact name="sbt-coffeescript" type="jar" ext="jar" status="no" details="" size="18232" time="0" location="C:\Users\momomomomo\.ivy2\cache\scala_2.10\sbt_0.13\com.typesafe.sbt\sbt-coffeescript\jars\sbt-coffeescript-1.0.0.jar">
 						<origin-location is-local="false" location="http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/jars/sbt-coffeescript.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="mkdirp">
-			<revision name="0.3.5" status="release" pubdate="20140226090459" resolver="public" artresolver="public" homepage="http://webjars.org" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="126">
+			<revision name="0.3.5" status="release" pubdate="20140226090459" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://webjars.org" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="126">
 				<license name="MIT/X11" url="https://github.com/substack/node-mkdirp/blob/master/LICENCE"/>
-				<metadata-artifact status="successful" details="" size="4469" time="1349" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mkdirp\ivy-0.3.5.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mkdirp\ivy-0.3.5.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/mkdirp/0.3.5/mkdirp-0.3.5.pom"/>
+				<metadata-artifact status="no" details="" size="3386" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mkdirp\ivy-0.3.5.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/mkdirp/0.3.5/mkdirp-0.3.5.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-coffeescript" conf="compile" rev="0.3.5" rev-constraint-default="0.3.5" rev-constraint-dynamic="0.3.5" callerrev="1.0.0"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-less" conf="compile" rev="0.3.5" rev-constraint-default="0.3.5" rev-constraint-dynamic="0.3.5" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="mkdirp" type="jar" ext="jar" status="successful" details="" size="4156" time="1223" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mkdirp\jars\mkdirp-0.3.5.jar">
+					<artifact name="mkdirp" type="jar" ext="jar" status="no" details="" size="4156" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\mkdirp\jars\mkdirp-0.3.5.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/mkdirp/0.3.5/mkdirp-0.3.5.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="coffee-script-node">
-			<revision name="1.7.1" status="release" pubdate="20140311093807" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="125">
-				<metadata-artifact status="successful" details="" size="1938" time="1412" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\coffee-script-node\ivy-1.7.1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\coffee-script-node\ivy-1.7.1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.pom"/>
+			<revision name="1.7.1" status="release" pubdate="20140311093807" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="125">
+				<metadata-artifact status="no" details="" size="3366" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\coffee-script-node\ivy-1.7.1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-coffeescript" conf="compile" rev="1.7.1" rev-constraint-default="1.7.1" rev-constraint-dynamic="1.7.1" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="coffee-script-node" type="jar" ext="jar" status="successful" details="" size="84846" time="2442" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\coffee-script-node\jars\coffee-script-node-1.7.1.jar">
+					<artifact name="coffee-script-node" type="jar" ext="jar" status="no" details="" size="84846" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\coffee-script-node\jars\coffee-script-node-1.7.1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.jar"/>
 					</artifact>
 				</artifacts>
@@ -674,11 +670,11 @@
 			</revision>
 		</module>
 		<module organisation="org.webjars" name="less-node">
-			<revision name="1.6.0-1" status="release" pubdate="20140119002735" resolver="public" artresolver="public" homepage="" downloaded="true" searched="true" default="false" conf="default, compile, runtime, default(compile), master" position="128">
-				<metadata-artifact status="successful" details="" size="1906" time="2071" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\less-node\ivy-1.6.0-1.xml" searched="true" original-local-location="C:\Users\momomomomo\.ivy2\cache\org.webjars\less-node\ivy-1.6.0-1.xml.original" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/less-node/1.6.0-1/less-node-1.6.0-1.pom"/>
+			<revision name="1.6.0-1" status="release" pubdate="20140119002735" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="128">
+				<metadata-artifact status="no" details="" size="3325" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\less-node\ivy-1.6.0-1.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/webjars/less-node/1.6.0-1/less-node-1.6.0-1.pom"/>
 				<caller organisation="com.typesafe.sbt" name="sbt-less" conf="compile" rev="1.6.0-1" rev-constraint-default="1.6.0-1" rev-constraint-dynamic="1.6.0-1" callerrev="1.0.0"/>
 				<artifacts>
-					<artifact name="less-node" type="jar" ext="jar" status="successful" details="" size="84445" time="2310" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\less-node\jars\less-node-1.6.0-1.jar">
+					<artifact name="less-node" type="jar" ext="jar" status="no" details="" size="84445" time="0" location="C:\Users\momomomomo\.ivy2\cache\org.webjars\less-node\jars\less-node-1.6.0-1.jar">
 						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/webjars/less-node/1.6.0-1/less-node-1.6.0-1.jar"/>
 					</artifact>
 				</artifacts>
