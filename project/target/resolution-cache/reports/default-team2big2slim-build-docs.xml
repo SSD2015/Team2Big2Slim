@@ -9,7 +9,11 @@
 		extra-sbtVersion="0.13"
 		conf="docs"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
+<<<<<<< HEAD
 		date="20150323172806"/>
+=======
+		date="20150306001431"/>
+>>>>>>> origin/MakeObject
 	<dependencies>
 	</dependencies>
 </ivy-report>

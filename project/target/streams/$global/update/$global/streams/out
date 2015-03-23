@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [info] Updating {file:/C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/project/}team2big2slim-build...
+=======
+[info] Updating {file:/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/}team2big2slim-build...
+>>>>>>> origin/MakeObject
 [debug] :: resolving dependencies :: default#team2big2slim-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -249,7 +253,11 @@
 [debug] sbt-chain: Checking cache for: dependency: org.apache.commons#commons-lang3;3.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.apache.commons#commons-lang3;3.1
 [debug] 	typesafe-ivy-releases: revision in cache: org.apache.commons#commons-lang3;3.1
+<<<<<<< HEAD
 [debug] 	found org.apache.commons#commons-lang3;3.1 in public
+=======
+[debug] 	found org.apache.commons#commons-lang3;3.1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.0.2->org.apache.commons#commons-lang3;3.1 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#twirl-compiler_2.10;1.0.2->com.typesafe.play#twirl-api_2.10;1.0.2 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#twirl-compiler_2.10;1.0.2->com.typesafe.play#twirl-api_2.10;1.0.2 [compile->compile]
@@ -381,7 +389,11 @@
 [debug] sbt-chain: Checking cache for: dependency: commons-io#commons-io;2.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-io#commons-io;2.4
 [debug] 	typesafe-ivy-releases: revision in cache: commons-io#commons-io;2.4
+<<<<<<< HEAD
 [debug] 	found commons-io#commons-io;2.4 in public
+=======
+[debug] 	found commons-io#commons-io;2.4 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies org.vafer#jdeb;1.3->commons-io#commons-io;2.4 [compile->compile(*)]
 [debug] == resolving dependencies org.vafer#jdeb;1.3->commons-io#commons-io;2.4 [compile->runtime(*)]
 [debug] == resolving dependencies org.vafer#jdeb;1.3->commons-io#commons-io;2.4 [compile->compile]
@@ -2030,28 +2042,44 @@
 [debug] sbt-chain: Checking cache for: dependency: xalan#xalan;2.7.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xalan#xalan;2.7.1
 [debug] 	typesafe-ivy-releases: revision in cache: xalan#xalan;2.7.1
+<<<<<<< HEAD
 [debug] 	found xalan#xalan;2.7.1 in public
+=======
+[debug] 	found xalan#xalan;2.7.1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->xalan#xalan;2.7.1 [compile->compile(*)]
 [debug] == resolving dependencies xalan#xalan;2.7.1->xalan#serializer;2.7.1 [compile->master(*)]
 [info] Resolving xalan#serializer;2.7.1 ...
 [debug] sbt-chain: Checking cache for: dependency: xalan#serializer;2.7.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xalan#serializer;2.7.1
 [debug] 	typesafe-ivy-releases: revision in cache: xalan#serializer;2.7.1
+<<<<<<< HEAD
 [debug] 	found xalan#serializer;2.7.1 in public
+=======
+[debug] 	found xalan#serializer;2.7.1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies xalan#xalan;2.7.1->xalan#serializer;2.7.1 [compile->compile(*)]
 [debug] == resolving dependencies xalan#serializer;2.7.1->xml-apis#xml-apis;1.3.04 [compile->master(*)]
 [info] Resolving xml-apis#xml-apis;1.3.04 ...
 [debug] sbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.3.04 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xml-apis#xml-apis;1.3.04
 [debug] 	typesafe-ivy-releases: revision in cache: xml-apis#xml-apis;1.3.04
+<<<<<<< HEAD
 [debug] 	found xml-apis#xml-apis;1.3.04 in public
+=======
+[debug] 	found xml-apis#xml-apis;1.3.04 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies xalan#serializer;2.7.1->xml-apis#xml-apis;1.3.04 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-collections#commons-collections;3.2.1 [compile->master(*)]
 [info] Resolving commons-collections#commons-collections;3.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: commons-collections#commons-collections;3.2.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-collections#commons-collections;3.2.1
 [debug] 	typesafe-ivy-releases: revision in cache: commons-collections#commons-collections;3.2.1
+<<<<<<< HEAD
 [debug] 	found commons-collections#commons-collections;3.2.1 in public
+=======
+[debug] 	found commons-collections#commons-collections;3.2.1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-collections#commons-collections;3.2.1 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->org.apache.commons#commons-lang3;3.2.1 [compile->master(*)]
 [info] Resolving org.apache.commons#commons-lang3;3.2.1 ...
@@ -2121,7 +2149,11 @@
 [debug] sbt-chain: Checking cache for: dependency: commons-logging#commons-logging;1.1.3 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-logging#commons-logging;1.1.3
 [debug] 	typesafe-ivy-releases: revision in cache: commons-logging#commons-logging;1.1.3
+<<<<<<< HEAD
 [debug] 	found commons-logging#commons-logging;1.1.3 in public
+=======
+[debug] 	found commons-logging#commons-logging;1.1.3 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] dependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.9 {test=[runtime(*), master(*)]}
 [debug] == resolving dependencies org.apache.httpcomponents#httpclient;4.3.2->commons-logging#commons-logging;1.1.3 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.9 {test=[runtime(*), master(*)]}
@@ -2168,7 +2200,11 @@
 [debug] sbt-chain: Checking cache for: dependency: commons-codec#commons-codec;1.9 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-codec#commons-codec;1.9
 [debug] 	typesafe-ivy-releases: revision in cache: commons-codec#commons-codec;1.9
+<<<<<<< HEAD
 [debug] 	found commons-codec#commons-codec;1.9 in public
+=======
+[debug] 	found commons-codec#commons-codec;1.9 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-codec#commons-codec;1.9 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->net.sourceforge.htmlunit#htmlunit-core-js;2.14 [compile->master(*)]
 [info] Resolving net.sourceforge.htmlunit#htmlunit-core-js;2.14 ...
@@ -2182,14 +2218,22 @@
 [debug] sbt-chain: Checking cache for: dependency: xerces#xercesImpl;2.11.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xerces#xercesImpl;2.11.0
 [debug] 	typesafe-ivy-releases: revision in cache: xerces#xercesImpl;2.11.0
+<<<<<<< HEAD
 [debug] 	found xerces#xercesImpl;2.11.0 in public
+=======
+[debug] 	found xerces#xercesImpl;2.11.0 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->xerces#xercesImpl;2.11.0 [compile->compile(*)]
 [debug] == resolving dependencies xerces#xercesImpl;2.11.0->xml-apis#xml-apis;1.4.01 [compile->master(*)]
 [info] Resolving xml-apis#xml-apis;1.4.01 ...
 [debug] sbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.4.01 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xml-apis#xml-apis;1.4.01
 [debug] 	typesafe-ivy-releases: revision in cache: xml-apis#xml-apis;1.4.01
+<<<<<<< HEAD
 [debug] 	found xml-apis#xml-apis;1.4.01 in public
+=======
+[debug] 	found xml-apis#xml-apis;1.4.01 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies xerces#xercesImpl;2.11.0->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->net.sourceforge.nekohtml#nekohtml;1.9.20 [compile->master(*)]
 [info] Resolving net.sourceforge.nekohtml#nekohtml;1.9.20 ...
@@ -2211,7 +2255,11 @@
 [debug] sbt-chain: Checking cache for: dependency: org.w3c.css#sac;1.3 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.w3c.css#sac;1.3
 [debug] 	typesafe-ivy-releases: revision in cache: org.w3c.css#sac;1.3
+<<<<<<< HEAD
 [debug] 	found org.w3c.css#sac;1.3 in public
+=======
+[debug] 	found org.w3c.css#sac;1.3 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies net.sourceforge.cssparser#cssparser;0.9.13->org.w3c.css#sac;1.3 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-io#commons-io;2.4 [compile->master(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-io#commons-io;2.4 [compile->compile(*)]
@@ -2339,6 +2387,7 @@
 [debug] == resolving dependencies default#team2big2slim-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-coffeescript;1.0.0 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-coffeescript;1.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-coffeescript;1.0.0 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-coffeescript;1.0.0
@@ -2408,12 +2457,24 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\coffee-script-node\1.7.1\jars\coffee-script-node.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.jar
 [debug] 	found org.webjars#coffee-script-node;1.7.1 in public
+=======
+[debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-coffeescript;1.0.0
+[debug] 	typesafe-ivy-releases: revision in cache: com.typesafe.sbt#sbt-coffeescript;1.0.0
+[debug] 	found com.typesafe.sbt#sbt-coffeescript;1.0.0 in sbt-chain
+[debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#coffee-script-node;1.7.1 [compile->default(compile)]
+[info] Resolving org.webjars#coffee-script-node;1.7.1 ...
+[debug] sbt-chain: Checking cache for: dependency: org.webjars#coffee-script-node;1.7.1 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.webjars#coffee-script-node;1.7.1
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#coffee-script-node;1.7.1
+[debug] 	found org.webjars#coffee-script-node;1.7.1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#coffee-script-node;1.7.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#coffee-script-node;1.7.1 [compile->compile]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#coffee-script-node;1.7.1 [compile->master]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#mkdirp;0.3.5 [compile->default(compile)]
 [info] Resolving org.webjars#mkdirp;0.3.5 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#mkdirp;0.3.5 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/mkdirp/0.3.5/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/mkdirp/0.3.5/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#mkdirp;0.3.5
@@ -2441,6 +2502,11 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\mkdirp\0.3.5\jars\mkdirp.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/mkdirp/0.3.5/mkdirp-0.3.5.jar
 [debug] 	found org.webjars#mkdirp;0.3.5 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#mkdirp;0.3.5
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#mkdirp;0.3.5
+[debug] 	found org.webjars#mkdirp;0.3.5 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#mkdirp;0.3.5 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#mkdirp;0.3.5 [compile->compile]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-coffeescript;1.0.0->org.webjars#mkdirp;0.3.5 [compile->master]
@@ -2449,6 +2515,7 @@
 [debug] == resolving dependencies default#team2big2slim-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-less;1.0.0 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-less;1.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-less;1.0.0 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-less/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-less/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-less;1.0.0
@@ -2518,12 +2585,24 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\less-node\1.6.0-1\jars\less-node.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/less-node/1.6.0-1/less-node-1.6.0-1.jar
 [debug] 	found org.webjars#less-node;1.6.0-1 in public
+=======
+[debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-less;1.0.0
+[debug] 	typesafe-ivy-releases: revision in cache: com.typesafe.sbt#sbt-less;1.0.0
+[debug] 	found com.typesafe.sbt#sbt-less;1.0.0 in sbt-chain
+[debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#less-node;1.6.0-1 [compile->default(compile)]
+[info] Resolving org.webjars#less-node;1.6.0-1 ...
+[debug] sbt-chain: Checking cache for: dependency: org.webjars#less-node;1.6.0-1 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.webjars#less-node;1.6.0-1
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#less-node;1.6.0-1
+[debug] 	found org.webjars#less-node;1.6.0-1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#less-node;1.6.0-1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#less-node;1.6.0-1 [compile->compile]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#less-node;1.6.0-1 [compile->master]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#source-map;0.1.31-2 [compile->default(compile)]
 [info] Resolving org.webjars#source-map;0.1.31-2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#source-map;0.1.31-2 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/source-map/0.1.31-2/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/source-map/0.1.31-2/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#source-map;0.1.31-2
@@ -2551,11 +2630,17 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\source-map\0.1.31-2\jars\source-map.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/source-map/0.1.31-2/source-map-0.1.31-2.jar
 [debug] 	found org.webjars#source-map;0.1.31-2 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#source-map;0.1.31-2
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#source-map;0.1.31-2
+[debug] 	found org.webjars#source-map;0.1.31-2 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#source-map;0.1.31-2 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-less;1.0.0->org.webjars#source-map;0.1.31-2 [compile->compile]
 [debug] == resolving dependencies org.webjars#source-map;0.1.31-2->org.webjars#amdefine;0.1.0-1 [compile->master(*)]
 [info] Resolving org.webjars#amdefine;0.1.0-1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#amdefine;0.1.0-1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/amdefine/0.1.0-1/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/amdefine/0.1.0-1/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#amdefine;0.1.0-1
@@ -2583,6 +2668,11 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\amdefine\0.1.0-1\jars\amdefine.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/amdefine/0.1.0-1/amdefine-0.1.0-1.jar
 [debug] 	found org.webjars#amdefine;0.1.0-1 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#amdefine;0.1.0-1
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#amdefine;0.1.0-1
+[debug] 	found org.webjars#amdefine;0.1.0-1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies org.webjars#source-map;0.1.31-2->org.webjars#amdefine;0.1.0-1 [compile->compile(*)]
 [debug] == resolving dependencies org.webjars#source-map;0.1.31-2->org.webjars#amdefine;0.1.0-1 [compile->runtime(*)]
 [debug] == resolving dependencies org.webjars#source-map;0.1.31-2->org.webjars#amdefine;0.1.0-1 [compile->compile]
@@ -2598,6 +2688,7 @@
 [debug] == resolving dependencies default#team2big2slim-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-jshint;1.0.1 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-jshint;1.0.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-jshint;1.0.1 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-jshint/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-jshint/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-jshint;1.0.1
@@ -2667,11 +2758,23 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\jshint-node\2.4.1-1\jars\jshint-node.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/jshint-node/2.4.1-1/jshint-node-2.4.1-1.jar
 [debug] 	found org.webjars#jshint-node;2.4.1-1 in public
+=======
+[debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-jshint;1.0.1
+[debug] 	typesafe-ivy-releases: revision in cache: com.typesafe.sbt#sbt-jshint;1.0.1
+[debug] 	found com.typesafe.sbt#sbt-jshint;1.0.1 in sbt-chain
+[debug] == resolving dependencies com.typesafe.sbt#sbt-jshint;1.0.1->org.webjars#jshint-node;2.4.1-1 [compile->default(compile)]
+[info] Resolving org.webjars#jshint-node;2.4.1-1 ...
+[debug] sbt-chain: Checking cache for: dependency: org.webjars#jshint-node;2.4.1-1 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.webjars#jshint-node;2.4.1-1
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#jshint-node;2.4.1-1
+[debug] 	found org.webjars#jshint-node;2.4.1-1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-jshint;1.0.1->org.webjars#jshint-node;2.4.1-1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-jshint;1.0.1->org.webjars#jshint-node;2.4.1-1 [compile->compile]
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#underscorejs;1.5.2-2 [compile->master(*)]
 [info] Resolving org.webjars#underscorejs;1.5.2-2 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#underscorejs;1.5.2-2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/underscorejs/1.5.2-2/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/underscorejs/1.5.2-2/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#underscorejs;1.5.2-2
@@ -2699,12 +2802,18 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\underscorejs\1.5.2-2\jars\underscorejs.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/underscorejs/1.5.2-2/underscorejs-1.5.2-2.jar
 [debug] 	found org.webjars#underscorejs;1.5.2-2 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#underscorejs;1.5.2-2
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#underscorejs;1.5.2-2
+[debug] 	found org.webjars#underscorejs;1.5.2-2 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#underscorejs;1.5.2-2 [compile->compile(*)]
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#underscorejs;1.5.2-2 [compile->runtime(*)]
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#underscorejs;1.5.2-2 [compile->compile]
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#console-browserify;0.1.6-1 [compile->master(*)]
 [info] Resolving org.webjars#console-browserify;0.1.6-1 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#console-browserify;0.1.6-1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/console-browserify/0.1.6-1/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/console-browserify/0.1.6-1/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#console-browserify;0.1.6-1
@@ -2732,6 +2841,11 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\console-browserify\0.1.6-1\jars\console-browserify.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/console-browserify/0.1.6-1/console-browserify-0.1.6-1.jar
 [debug] 	found org.webjars#console-browserify;0.1.6-1 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#console-browserify;0.1.6-1
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#console-browserify;0.1.6-1
+[debug] 	found org.webjars#console-browserify;0.1.6-1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#console-browserify;0.1.6-1 [compile->compile(*)]
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#console-browserify;0.1.6-1 [compile->runtime(*)]
 [debug] == resolving dependencies org.webjars#jshint-node;2.4.1-1->org.webjars#console-browserify;0.1.6-1 [compile->compile]
@@ -2745,6 +2859,7 @@
 [debug] == resolving dependencies default#team2big2slim-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-rjs;1.0.1 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-rjs;1.0.1 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-rjs;1.0.1 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-rjs/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-rjs/scala_2.10/sbt_0.13/1.0.1/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-rjs;1.0.1
@@ -2787,6 +2902,17 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\rjs\2.1.11-1-trireme\jars\rjs.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/rjs/2.1.11-1-trireme/rjs-2.1.11-1-trireme.jar
 [debug] 	found org.webjars#rjs;2.1.11-1-trireme in public
+=======
+[debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-rjs;1.0.1
+[debug] 	typesafe-ivy-releases: revision in cache: com.typesafe.sbt#sbt-rjs;1.0.1
+[debug] 	found com.typesafe.sbt#sbt-rjs;1.0.1 in sbt-chain
+[debug] == resolving dependencies com.typesafe.sbt#sbt-rjs;1.0.1->org.webjars#rjs;2.1.11-1-trireme [compile->default(compile)]
+[info] Resolving org.webjars#rjs;2.1.11-1-trireme ...
+[debug] sbt-chain: Checking cache for: dependency: org.webjars#rjs;2.1.11-1-trireme {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.webjars#rjs;2.1.11-1-trireme
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#rjs;2.1.11-1-trireme
+[debug] 	found org.webjars#rjs;2.1.11-1-trireme in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-rjs;1.0.1->org.webjars#rjs;2.1.11-1-trireme [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-rjs;1.0.1->org.webjars#rjs;2.1.11-1-trireme [compile->compile]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-rjs;1.0.1->org.webjars#rjs;2.1.11-1-trireme [compile->master]
@@ -2795,6 +2921,7 @@
 [debug] == resolving dependencies default#team2big2slim-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-digest;1.0.0 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-digest;1.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-digest;1.0.0 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-digest/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-digest/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-digest;1.0.0
@@ -2807,11 +2934,17 @@
 [debug] sha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-digest/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] 	[SUCCESSFUL ] com.typesafe.sbt#sbt-digest;1.0.0!ivy.xml(ivy.original) (4541ms)
 [debug] 	found com.typesafe.sbt#sbt-digest;1.0.0 in sbt-plugin-releases
+=======
+[debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-digest;1.0.0
+[debug] 	typesafe-ivy-releases: revision in cache: com.typesafe.sbt#sbt-digest;1.0.0
+[debug] 	found com.typesafe.sbt#sbt-digest;1.0.0 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-digest;1.0.0->com.typesafe.sbt#sbt-web;1.0.0 [compile->default(compile)]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-digest;1.0.0->com.typesafe.sbt#sbt-web;1.0.2 [compile->default(compile)]
 [debug] == resolving dependencies default#team2big2slim-build;0.1-SNAPSHOT->com.typesafe.sbt#sbt-mocha;1.0.0 [compile->default(compile)]
 [info] Resolving com.typesafe.sbt#sbt-mocha;1.0.0 ...
 [debug] sbt-chain: Checking cache for: dependency: com.typesafe.sbt#sbt-mocha;1.0.0 {compile=[default(compile)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for com.typesafe.sbt#sbt-mocha;1.0.0
@@ -2854,11 +2987,23 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\mocha\1.17.1\jars\mocha.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/mocha/1.17.1/mocha-1.17.1.jar
 [debug] 	found org.webjars#mocha;1.17.1 in public
+=======
+[debug] sbt-chain: module revision found in cache: com.typesafe.sbt#sbt-mocha;1.0.0
+[debug] 	typesafe-ivy-releases: revision in cache: com.typesafe.sbt#sbt-mocha;1.0.0
+[debug] 	found com.typesafe.sbt#sbt-mocha;1.0.0 in sbt-chain
+[debug] == resolving dependencies com.typesafe.sbt#sbt-mocha;1.0.0->org.webjars#mocha;1.17.1 [compile->default(compile)]
+[info] Resolving org.webjars#mocha;1.17.1 ...
+[debug] sbt-chain: Checking cache for: dependency: org.webjars#mocha;1.17.1 {compile=[default(compile)]}
+[debug] sbt-chain: module revision found in cache: org.webjars#mocha;1.17.1
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#mocha;1.17.1
+[debug] 	found org.webjars#mocha;1.17.1 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies com.typesafe.sbt#sbt-mocha;1.0.0->org.webjars#mocha;1.17.1 [compile->runtime]
 [debug] == resolving dependencies com.typesafe.sbt#sbt-mocha;1.0.0->org.webjars#mocha;1.17.1 [compile->compile]
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#debug;0.7.4 [compile->master(*)]
 [info] Resolving org.webjars#debug;0.7.4 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#debug;0.7.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/debug/0.7.4/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/debug/0.7.4/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#debug;0.7.4
@@ -2886,12 +3031,18 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\debug\0.7.4\jars\debug.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/debug/0.7.4/debug-0.7.4.jar
 [debug] 	found org.webjars#debug;0.7.4 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#debug;0.7.4
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#debug;0.7.4
+[debug] 	found org.webjars#debug;0.7.4 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#debug;0.7.4 [compile->compile(*)]
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#debug;0.7.4 [compile->runtime(*)]
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#debug;0.7.4 [compile->compile]
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#diff;1.0.7 [compile->master(*)]
 [info] Resolving org.webjars#diff;1.0.7 ...
 [debug] sbt-chain: Checking cache for: dependency: org.webjars#diff;1.0.7 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
+<<<<<<< HEAD
 [debug] 		tried http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/diff/1.0.7/ivys/ivy.xml
 [debug] CLIENT ERROR: Not Found url=http://repo.typesafe.com/typesafe/ivy-releases/org.webjars/diff/1.0.7/ivys/ivy.xml
 [debug] 	typesafe-ivy-releases: no ivy file found for org.webjars#diff;1.0.7
@@ -2919,6 +3070,11 @@
 [debug] 		tried C:\Users\momomomomo\.ivy2\local\org.webjars\diff\1.0.7\jars\diff.jar
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/diff/1.0.7/diff-1.0.7.jar
 [debug] 	found org.webjars#diff;1.0.7 in public
+=======
+[debug] sbt-chain: module revision found in cache: org.webjars#diff;1.0.7
+[debug] 	typesafe-ivy-releases: revision in cache: org.webjars#diff;1.0.7
+[debug] 	found org.webjars#diff;1.0.7 in sbt-chain
+>>>>>>> origin/MakeObject
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#diff;1.0.7 [compile->compile(*)]
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#diff;1.0.7 [compile->runtime(*)]
 [debug] == resolving dependencies org.webjars#mocha;1.17.1->org.webjars#diff;1.0.7 [compile->compile]
@@ -12554,6 +12710,7 @@
 [debug] 	resolved ivy file produced in cache
 [debug] :: downloading artifacts ::
 [debug] 	[NOT REQUIRED] com.typesafe.play#sbt-plugin;2.3.8!sbt-plugin.jar
+<<<<<<< HEAD
 [debug] 		tried http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/jars/sbt-coffeescript.jar
 [info] downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/jars/sbt-coffeescript.jar ...
 [debug] 	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-coffeescript/scala_2.10/sbt_0.13/1.0.0/jars/sbt-coffeescript.jar
@@ -12590,6 +12747,14 @@
 [debug] 	sbt-plugin-releases: downloading http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/jars/sbt-mocha.jar.sha1
 [debug] sha1 OK for http://repo.scala-sbt.org/scalasbt/sbt-plugin-releases/com.typesafe.sbt/sbt-mocha/scala_2.10/sbt_0.13/1.0.0/jars/sbt-mocha.jar
 [info] 	[SUCCESSFUL ] com.typesafe.sbt#sbt-mocha;1.0.0!sbt-mocha.jar (8035ms)
+=======
+[debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-coffeescript;1.0.0!sbt-coffeescript.jar
+[debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-less;1.0.0!sbt-less.jar
+[debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-jshint;1.0.1!sbt-jshint.jar
+[debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-rjs;1.0.1!sbt-rjs.jar
+[debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-digest;1.0.0!sbt-digest.jar
+[debug] 	[NOT REQUIRED] com.typesafe.sbt#sbt-mocha;1.0.0!sbt-mocha.jar
+>>>>>>> origin/MakeObject
 [debug] 	[NOT REQUIRED] com.typesafe.play#routes-compiler_2.10;2.3.8!routes-compiler_2.10.jar
 [debug] 	[NOT REQUIRED] com.typesafe.play#sbt-run-support_2.10;2.3.8!sbt-run-support_2.10.jar
 [debug] 	[NOT REQUIRED] com.typesafe#config;1.2.1!config.jar(bundle)
@@ -12713,6 +12878,7 @@
 [debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-util;8.1.14.v20131031!jetty-util.jar
 [debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-io;8.1.14.v20131031!jetty-io.jar
 [debug] 	[NOT REQUIRED] org.eclipse.jetty#jetty-http;8.1.14.v20131031!jetty-http.jar
+<<<<<<< HEAD
 [debug] 		tried http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.jar
 [info] downloading http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.jar ...
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/webjars/coffee-script-node/1.7.1/coffee-script-node-1.7.1.jar
@@ -12785,6 +12951,20 @@
 [debug] 	public: downloading http://repo1.maven.org/maven2/org/webjars/diff/1.0.7/diff-1.0.7.jar.sha1
 [debug] sha1 OK for http://repo1.maven.org/maven2/org/webjars/diff/1.0.7/diff-1.0.7.jar
 [info] 	[SUCCESSFUL ] org.webjars#diff;1.0.7!diff.jar (1510ms)
+=======
+[debug] 	[NOT REQUIRED] org.webjars#coffee-script-node;1.7.1!coffee-script-node.jar
+[debug] 	[NOT REQUIRED] org.webjars#mkdirp;0.3.5!mkdirp.jar
+[debug] 	[NOT REQUIRED] org.webjars#less-node;1.6.0-1!less-node.jar
+[debug] 	[NOT REQUIRED] org.webjars#source-map;0.1.31-2!source-map.jar
+[debug] 	[NOT REQUIRED] org.webjars#amdefine;0.1.0-1!amdefine.jar
+[debug] 	[NOT REQUIRED] org.webjars#jshint-node;2.4.1-1!jshint-node.jar
+[debug] 	[NOT REQUIRED] org.webjars#underscorejs;1.5.2-2!underscorejs.jar
+[debug] 	[NOT REQUIRED] org.webjars#console-browserify;0.1.6-1!console-browserify.jar
+[debug] 	[NOT REQUIRED] org.webjars#rjs;2.1.11-1-trireme!rjs.jar
+[debug] 	[NOT REQUIRED] org.webjars#mocha;1.17.1!mocha.jar
+[debug] 	[NOT REQUIRED] org.webjars#debug;0.7.4!debug.jar
+[debug] 	[NOT REQUIRED] org.webjars#diff;1.0.7!diff.jar
+>>>>>>> origin/MakeObject
 [debug] 	[NOT REQUIRED] org.scala-sbt#sbt;0.13.5!sbt.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#main;0.13.5!main.jar
 [debug] 	[NOT REQUIRED] org.scala-sbt#compiler-interface;0.13.5!compiler-interface-src.jar
@@ -12830,6 +13010,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
+<<<<<<< HEAD
 [debug] :: resolution report :: resolve 143501ms :: artifacts dl 62232ms
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-compile.xml
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-runtime.xml
@@ -12845,4 +13026,21 @@
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-pom.xml
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-scala-tool.xml
 [debug] 	resolve done (143501ms resolve - 62232ms download)
+=======
+[debug] :: resolution report :: resolve 4118ms :: artifacts dl 81ms
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT provided produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-provided.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT optional produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-optional.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile-internal produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime-internal produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test-internal produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT plugin produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-plugin.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT sources produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-sources.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-docs.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-pom.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-scala-tool.xml
+[debug] 	resolve done (4118ms resolve - 81ms download)
+>>>>>>> origin/MakeObject
 [info] Done updating.

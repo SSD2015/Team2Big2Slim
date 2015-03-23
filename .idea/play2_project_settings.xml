@@ -14,8 +14,13 @@
           <value>
             <ProjectSettingsEntry>
               <option name="version" value="2.3.8" />
+<<<<<<< HEAD
               <option name="sourceDir" value="C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\conf" />
               <option name="confDir" value="C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\app" />
+=======
+              <option name="sourceDir" value="$PROJECT_DIR$/conf" />
+              <option name="confDir" value="$PROJECT_DIR$/app" />
+>>>>>>> origin/MakeObject
               <option name="routesImports">
                 <list>
                   <option value="controllers.Assets.Asset" />
