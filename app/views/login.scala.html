@@ -1,9 +1,10 @@
+@(form: Form[Login.LoginInfo] )
 @main("Login") {
     <h1>Login</h1>
     <form action="@routes.Application.index()" method="get">
         Username: <input type="text" name="username">
         <br> <br>
-        Password: <input type="text" name="password">
+        Password: <input type="password" name="password">
         <br> <br>
         <button>Sign in</button>
     </form>

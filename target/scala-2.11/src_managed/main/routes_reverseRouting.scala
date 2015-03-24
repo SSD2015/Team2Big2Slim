@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:1c3ac65e150fc6e77b7fbdde1a94545cb0b9d864
-// @DATE:Tue Mar 24 21:35:47 ICT 2015
+// @HASH:b829dd432ce51f6af022a3c199899466a6863494
+// @DATE:Tue Mar 24 23:03:55 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -32,7 +32,7 @@ class ReverseLogin {
 
 
 // @LINE:19
-def loginPage(): Call = {
+def login(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "login")
 }
@@ -146,8 +146,8 @@ class ReverseLogin {
 
 
 // @LINE:19
-def loginPage : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Login.loginPage",
+def login : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Login.login",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
@@ -300,8 +300,8 @@ class ReverseLogin {
 
 
 // @LINE:19
-def loginPage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Login.loginPage(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "loginPage", Seq(), "GET", """""", _prefix + """login""")
+def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Login.login(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "login", Seq(), "GET", """""", _prefix + """login""")
 )
                       
 

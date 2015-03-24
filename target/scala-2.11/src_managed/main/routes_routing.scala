@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:1c3ac65e150fc6e77b7fbdde1a94545cb0b9d864
-// @DATE:Tue Mar 24 21:35:47 ICT 2015
+// @HASH:b829dd432ce51f6af022a3c199899466a6863494
+// @DATE:Tue Mar 24 23:03:55 ICT 2015
 
 
 import play.core._
@@ -89,10 +89,10 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "group1"
         
 
 // @LINE:19
-private[this] lazy val controllers_Login_loginPage8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
-private[this] lazy val controllers_Login_loginPage8_invoker = createInvoker(
-controllers.Login.loginPage(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "loginPage", Nil,"GET", """""", Routes.prefix + """login"""))
+private[this] lazy val controllers_Login_login8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_Login_login8_invoker = createInvoker(
+controllers.Login.login(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "login", Nil,"GET", """""", Routes.prefix + """login"""))
         
 
 // @LINE:23
@@ -101,7 +101,7 @@ private[this] lazy val controllers_Assets_at9_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.loginPage()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -174,9 +174,9 @@ case controllers_Application_group17_route(params) => {
         
 
 // @LINE:19
-case controllers_Login_loginPage8_route(params) => {
+case controllers_Login_login8_route(params) => {
    call { 
-        controllers_Login_loginPage8_invoker.call(controllers.Login.loginPage())
+        controllers_Login_login8_invoker.call(controllers.Login.login())
    }
 }
         

@@ -9,15 +9,28 @@ import models.Project;
 
 import views.html.*;
 
+import javax.persistence.Entity;
 import java.util.List;
 
+import static play.data.Form.form;
 import static play.libs.Json.toJson;
 
 public class Login extends Controller {
 
-    public static Result loginPage() {
-        return ok(login.render());
+    //public String username;
+    //public String password;
+    @Entity
+    public static class LoginInfo {
+
+        public String username;
+        public String password;
+
     }
+
+    public static Result login() {
+       return ok( login.render( Form.form(LoginInfo.class)));
+    }
+
 
 }
 

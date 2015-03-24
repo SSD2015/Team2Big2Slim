@@ -16,7 +16,7 @@ GET         /voteResult          controllers.Application.getVoteResult()
 GET         /profile             controllers.Application.profile()
 GET         /group1              controllers.Application.group1()
 
-GET         /login               controllers.Login.loginPage()
+GET         /login               controllers.Login.login()
 #POST        /checking            controllers.Login.checkAccount()
 
 # Map static resources from the /public folder to the /assets URL path
