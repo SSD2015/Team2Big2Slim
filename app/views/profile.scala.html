@@ -1,10 +1,21 @@
 <!DOCTYPE HTML>
 <html lang = "en">
-
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-        h1,h2
-        {
-            color : green
+        .NameProject{
+            font-size : 300%;
+            color : mediumvioletred;
+        }
+        .Description{
+            font-size : 250%;
+            color : green;
+        }
+        .ScreenShot{
+            font-size : 250%;
+            color : green;
         }
         body1
         {
@@ -18,32 +29,42 @@
             top:825px;
             left:300px;
         }
-        p1
+        p
         {
-            position:absolute;
-            top:850px;
-            left:300px;
+            font-style: oblique;
         }
     </style>
+
     <head>
         <title>Profile:GTA</title>
         <meta charset = "UTF-8" />
-        </head>
-            <body1 style="background-color: pink">
-                <h1 style="font-family:verdana" >Profile: </h1>
-                <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:600px;height:350px"> </p>
-                <h2 style="font-family:verdana" >Description:</h2>
-                <p>Project name: GTA</p>
-                <p>Type of project: Game</p>
-                <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
-                <h1 style="font-family:verdana" >ScreenShot:</h1>
-                <p>
-                <button> <img src="http://i.ytimg.com/vi/TM6JCG6LIHo/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/TM6JCG6LIHo/maxresdefault.jpg'"> </button>
+    </head>
+
+    <body1>
+        <div class = "NameProject">
+            <h style="font-family:verdana" >Grand Theft Auto V </h>
+        </div>
+        <div class = "PictureProject">
+            <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:600px;height:350px"> </p>
+        </div>
+        <div class = "Description">
+            <h style="font-family:verdana" >Description:</h>
+        </div>
+        <div class = "Information">
+            <p>Project name: GTA</p>
+            <p>Type of project: Game</p>
+            <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
+        </div>
+        <div class = ScreenShot>
+            <h style="font-family:verdana" >ScreenShot:</h>
+        </div>
+        <div class = "PictureScreenShot">
+            <p>
+                <button> <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg'"> </button>
                 <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg'"> </button>
                 <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg'"> </button>
-                </p>
-                <button type="button" onclick="getElementById('content').innerHTML ='<p1>Date start: 14/02/15<br> ' + 'Date finish : 20/3/15<br> </p1>'">Read more!</button>
-            </body1>
-
+            </p>
+        </div>
+    </body1>
     <div id="content"></div>
 </html>

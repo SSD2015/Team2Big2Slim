@@ -28,53 +28,72 @@ object profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Fo
 
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 <html lang = "en">
-
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-        h1,h2
-        """),format.raw/*6.9*/("""{"""),format.raw/*6.10*/("""
-            """),format.raw/*7.13*/("""color : green
-        """),format.raw/*8.9*/("""}"""),format.raw/*8.10*/("""
-        """),format.raw/*9.9*/("""body1
-        """),format.raw/*10.9*/("""{"""),format.raw/*10.10*/("""
-            """),format.raw/*11.13*/("""position:absolute;
+        .NameProject"""),format.raw/*8.21*/("""{"""),format.raw/*8.22*/("""
+            """),format.raw/*9.13*/("""font-size : 300%;
+            color : mediumvioletred;
+        """),format.raw/*11.9*/("""}"""),format.raw/*11.10*/("""
+        """),format.raw/*12.9*/(""".Description"""),format.raw/*12.21*/("""{"""),format.raw/*12.22*/("""
+            """),format.raw/*13.13*/("""font-size : 250%;
+            color : green;
+        """),format.raw/*15.9*/("""}"""),format.raw/*15.10*/("""
+        """),format.raw/*16.9*/(""".ScreenShot"""),format.raw/*16.20*/("""{"""),format.raw/*16.21*/("""
+            """),format.raw/*17.13*/("""font-size : 250%;
+            color : green;
+        """),format.raw/*19.9*/("""}"""),format.raw/*19.10*/("""
+        """),format.raw/*20.9*/("""body1
+        """),format.raw/*21.9*/("""{"""),format.raw/*21.10*/("""
+            """),format.raw/*22.13*/("""position:absolute;
             top:0px;
             left:300px;
-        """),format.raw/*14.9*/("""}"""),format.raw/*14.10*/("""
-        """),format.raw/*15.9*/("""body2
-        """),format.raw/*16.9*/("""{"""),format.raw/*16.10*/("""
-            """),format.raw/*17.13*/("""position:absolute;
+        """),format.raw/*25.9*/("""}"""),format.raw/*25.10*/("""
+        """),format.raw/*26.9*/("""body2
+        """),format.raw/*27.9*/("""{"""),format.raw/*27.10*/("""
+            """),format.raw/*28.13*/("""position:absolute;
             top:825px;
             left:300px;
-        """),format.raw/*20.9*/("""}"""),format.raw/*20.10*/("""
-        """),format.raw/*21.9*/("""p1
-        """),format.raw/*22.9*/("""{"""),format.raw/*22.10*/("""
-            """),format.raw/*23.13*/("""position:absolute;
-            top:850px;
-            left:300px;
-        """),format.raw/*26.9*/("""}"""),format.raw/*26.10*/("""
-    """),format.raw/*27.5*/("""</style>
+        """),format.raw/*31.9*/("""}"""),format.raw/*31.10*/("""
+        """),format.raw/*32.9*/("""p
+        """),format.raw/*33.9*/("""{"""),format.raw/*33.10*/("""
+            """),format.raw/*34.13*/("""font-style: oblique;
+        """),format.raw/*35.9*/("""}"""),format.raw/*35.10*/("""
+    """),format.raw/*36.5*/("""</style>
+
     <head>
         <title>Profile:GTA</title>
         <meta charset = "UTF-8" />
-        </head>
-            <body1 style="background-color: pink">
-                <h1 style="font-family:verdana" >Profile: </h1>
-                <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:600px;height:350px"> </p>
-                <h2 style="font-family:verdana" >Description:</h2>
-                <p>Project name: GTA</p>
-                <p>Type of project: Game</p>
-                <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
-                <h1 style="font-family:verdana" >ScreenShot:</h1>
-                <p>
-                <button> <img src="http://i.ytimg.com/vi/TM6JCG6LIHo/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/TM6JCG6LIHo/maxresdefault.jpg'"> </button>
+    </head>
+
+    <body1>
+        <div class = "NameProject">
+            <h style="font-family:verdana" >Grand Theft Auto V </h>
+        </div>
+        <div class = "PictureProject">
+            <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:600px;height:350px"> </p>
+        </div>
+        <div class = "Description">
+            <h style="font-family:verdana" >Description:</h>
+        </div>
+        <div class = "Information">
+            <p>Project name: GTA</p>
+            <p>Type of project: Game</p>
+            <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
+        </div>
+        <div class = ScreenShot>
+            <h style="font-family:verdana" >ScreenShot:</h>
+        </div>
+        <div class = "PictureScreenShot">
+            <p>
+                <button> <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg'"> </button>
                 <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg'"> </button>
                 <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg'"> </button>
-                </p>
-                <button type="button" onclick="getElementById('content').innerHTML ='<p1>Date start: 14/02/15<br> ' +
-                'Date finish : 20/3/15<br> </p1>'">Read more!
-                </button>
-            </body1>
-
+            </p>
+        </div>
+    </body1>
     <div id="content"></div>
 </html>"""))}
   }
@@ -88,11 +107,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 23 20:54:19 ICT 2015
+                  DATE: Tue Mar 24 18:38:16 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/profile.scala.html
-                  HASH: 0fca134a42df0856ca1d675b9dfeb5911337f955
-                  MATRIX: 800->0|896->70|924->71|964->84|1012->106|1040->107|1075->116|1116->130|1145->131|1186->144|1285->216|1314->217|1350->226|1391->240|1420->241|1461->254|1562->328|1591->329|1627->338|1665->349|1694->350|1735->363|1836->437|1865->438|1897->443
-                  LINES: 29->1|34->6|34->6|35->7|36->8|36->8|37->9|38->10|38->10|39->11|42->14|42->14|43->15|44->16|44->16|45->17|48->20|48->20|49->21|50->22|50->22|51->23|54->26|54->26|55->27
+                  HASH: f262cb6d2734dca19a3c90dab2523feee3b1bce4
+                  MATRIX: 800->0|1192->365|1220->366|1260->379|1350->442|1379->443|1415->452|1455->464|1484->465|1525->478|1605->531|1634->532|1670->541|1709->552|1738->553|1779->566|1859->619|1888->620|1924->629|1965->643|1994->644|2035->657|2134->729|2163->730|2199->739|2240->753|2269->754|2310->767|2411->841|2440->842|2476->851|2513->861|2542->862|2583->875|2639->904|2668->905|2700->910
+                  LINES: 29->1|36->8|36->8|37->9|39->11|39->11|40->12|40->12|40->12|41->13|43->15|43->15|44->16|44->16|44->16|45->17|47->19|47->19|48->20|49->21|49->21|50->22|53->25|53->25|54->26|55->27|55->27|56->28|59->31|59->31|60->32|61->33|61->33|62->34|63->35|63->35|64->36
                   -- GENERATED --
               */
           
