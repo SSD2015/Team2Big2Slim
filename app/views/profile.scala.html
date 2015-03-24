@@ -1,5 +1,12 @@
 <!DOCTYPE HTML>
 <html lang = "en">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->
@@ -24,6 +31,16 @@
         }
         p{
             font-style: oblique;
+        }
+
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+        width: 160%;
+        margin: auto;
+        }
+        .container{
+            width : 600px;
+            height : 400px;
         }
     </style>
 
@@ -50,12 +67,43 @@
         <div class = ScreenShot>
             <h style="font-family:verdana" >ScreenShot:</h>
         </div>
-        <div class = "PictureScreenShot">
-            <p>
-                <button> <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://localhost:9000/screenshot1'"> </button>
-                <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://localhost:9000/screenshot2'"> </button>
-                <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://localhost:9000/screenshot3'"> </button>
-            </p>
+
+        <div class="container">
+            <br>
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+
+                </ol>
+
+                    <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <button > <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1'"> </button>
+                    </div>
+
+                    <div class="item">
+                        <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2'"> </button>
+                    </div>
+
+                    <div class="item">
+                        <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3'"> </button>
+                    </div>
+                </div>
+
+                    <!-- Left and right controls -->
+                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
         </div>
     </body1>
     <div id="content"></div>
