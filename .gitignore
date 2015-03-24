@@ -20,3 +20,5 @@ dist
 *.xml
 
 .idea/workspace.xml
+
+logs/application.log

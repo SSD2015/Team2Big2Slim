@@ -10,7 +10,7 @@ import javax.persistence.Id;
 @Entity
 public abstract class User extends Model{
     @Id
-    public String ID;
+    protected String ID;
     public String name;
     public String getID() {
         return ID;

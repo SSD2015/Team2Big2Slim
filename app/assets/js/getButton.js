@@ -6,7 +6,7 @@ var radioInput=[];
     $(function() {
         return $.get("/voteResult", function(project) {
             return $.each(project, function(index, project ) {
-                return $('#list').append($("<input type='radio' name='project' value="+project.ID+">"+project.name+"<br>"));
+                return $('#list').append($("<input type='radio' name='project' value="+project.getID()+">"+project.name+"<br>"));
             });
         });
     });
