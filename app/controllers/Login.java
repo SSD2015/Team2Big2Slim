@@ -19,6 +19,5 @@ public class Login extends Controller {
         return ok(login.render());
     }
 
-    pu
 }
 

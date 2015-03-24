@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:ee93e9e215671b864ad1b4d96da49645a7e3ce9d
-// @DATE:Tue Mar 24 20:54:15 ICT 2015
+// @HASH:1c3ac65e150fc6e77b7fbdde1a94545cb0b9d864
+// @DATE:Tue Mar 24 21:35:47 ICT 2015
 
 
 import play.core._
@@ -95,7 +95,7 @@ controllers.Login.loginPage(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "loginPage", Nil,"GET", """""", Routes.prefix + """login"""))
         
 
-// @LINE:22
+// @LINE:23
 private[this] lazy val controllers_Assets_at9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("assets/"),DynamicPart("file", """.+""",false))))
 private[this] lazy val controllers_Assets_at9_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
@@ -181,7 +181,7 @@ case controllers_Login_loginPage8_route(params) => {
 }
         
 
-// @LINE:22
+// @LINE:23
 case controllers_Assets_at9_route(params) => {
    call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
         controllers_Assets_at9_invoker.call(controllers.Assets.at(path, file))

@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:ee93e9e215671b864ad1b4d96da49645a7e3ce9d
-// @DATE:Tue Mar 24 20:54:15 ICT 2015
+// @HASH:1c3ac65e150fc6e77b7fbdde1a94545cb0b9d864
+// @DATE:Tue Mar 24 21:35:47 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,7 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:22
+// @LINE:23
 // @LINE:19
 // @LINE:17
 // @LINE:16
@@ -41,11 +41,11 @@ def loginPage(): Call = {
 }
                           
 
-// @LINE:22
+// @LINE:23
 class ReverseAssets {
 
 
-// @LINE:22
+// @LINE:23
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -128,7 +128,7 @@ def index(): Call = {
                   
 
 
-// @LINE:22
+// @LINE:23
 // @LINE:19
 // @LINE:17
 // @LINE:16
@@ -159,11 +159,11 @@ def loginPage : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:22
+// @LINE:23
 class ReverseAssets {
 
 
-// @LINE:22
+// @LINE:23
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -282,7 +282,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:22
+// @LINE:23
 // @LINE:19
 // @LINE:17
 // @LINE:16
@@ -308,11 +308,11 @@ def loginPage(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:22
+// @LINE:23
 class ReverseAssets {
 
 
-// @LINE:22
+// @LINE:23
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
