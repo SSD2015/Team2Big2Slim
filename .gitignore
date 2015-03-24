@@ -15,11 +15,8 @@ dist
 /.settings
 
     
-.idea/workspace.xml
+.idea/*.xml
 
 *.xml
-
-.idea/workspace.xml
 
 logs/application.log
-*.xml
