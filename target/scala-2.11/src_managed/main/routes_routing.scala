@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:0b1ad8046d83cd2966889fc75ad50392500ec6c5
-// @DATE:Thu Mar 05 13:29:59 ICT 2015
+// @HASH:8d7f73e79ca5c0b5cb93b4f1ad3de79dd20c375e
+// @DATE:Tue Mar 24 20:13:32 ICT 2015
 
 
 import play.core._
@@ -59,7 +59,28 @@ private[this] lazy val controllers_Application_profile3_invoker = createInvoker(
 controllers.Application.profile(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "profile", Nil,"GET", """""", Routes.prefix + """profile"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:15
+private[this] lazy val controllers_Application_screenshot14_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot1"))))
+private[this] lazy val controllers_Application_screenshot14_invoker = createInvoker(
+controllers.Application.screenshot1(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot1", Nil,"GET", """""", Routes.prefix + """screenshot1"""))
+        
+
+// @LINE:17
+private[this] lazy val controllers_Application_screenshot25_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot2"))))
+private[this] lazy val controllers_Application_screenshot25_invoker = createInvoker(
+controllers.Application.screenshot2(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot2", Nil,"GET", """""", Routes.prefix + """screenshot2"""))
+        
+
+// @LINE:19
+private[this] lazy val controllers_Application_screenshot36_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot3"))))
+private[this] lazy val controllers_Application_screenshot36_invoker = createInvoker(
+controllers.Application.screenshot3(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot3", Nil,"GET", """""", Routes.prefix + """screenshot3"""))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1""","""controllers.Application.screenshot1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2""","""controllers.Application.screenshot2()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3""","""controllers.Application.screenshot3()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -95,6 +116,30 @@ case controllers_Application_hello2_route(params) => {
 case controllers_Application_profile3_route(params) => {
    call { 
         controllers_Application_profile3_invoker.call(controllers.Application.profile())
+   }
+}
+        
+
+// @LINE:15
+case controllers_Application_screenshot14_route(params) => {
+   call { 
+        controllers_Application_screenshot14_invoker.call(controllers.Application.screenshot1())
+   }
+}
+        
+
+// @LINE:17
+case controllers_Application_screenshot25_route(params) => {
+   call { 
+        controllers_Application_screenshot25_invoker.call(controllers.Application.screenshot2())
+   }
+}
+        
+
+// @LINE:19
+case controllers_Application_screenshot36_route(params) => {
+   call { 
+        controllers_Application_screenshot36_invoker.call(controllers.Application.screenshot3())
    }
 }
         

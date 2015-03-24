@@ -45,23 +45,15 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
             """),format.raw/*17.13*/("""font-size : 250%;
             color : green;
         """),format.raw/*19.9*/("""}"""),format.raw/*19.10*/("""
-        """),format.raw/*20.9*/("""body1
-        """),format.raw/*21.9*/("""{"""),format.raw/*21.10*/("""
-            """),format.raw/*22.13*/("""position:absolute;
+        """),format.raw/*20.9*/("""body1"""),format.raw/*20.14*/("""{"""),format.raw/*20.15*/("""
+            """),format.raw/*21.13*/("""position:absolute;
             top:0px;
             left:300px;
-        """),format.raw/*25.9*/("""}"""),format.raw/*25.10*/("""
-        """),format.raw/*26.9*/("""body2
-        """),format.raw/*27.9*/("""{"""),format.raw/*27.10*/("""
-            """),format.raw/*28.13*/("""position:absolute;
-            top:825px;
-            left:300px;
-        """),format.raw/*31.9*/("""}"""),format.raw/*31.10*/("""
-        """),format.raw/*32.9*/("""p
-        """),format.raw/*33.9*/("""{"""),format.raw/*33.10*/("""
-            """),format.raw/*34.13*/("""font-style: oblique;
-        """),format.raw/*35.9*/("""}"""),format.raw/*35.10*/("""
-    """),format.raw/*36.5*/("""</style>
+        """),format.raw/*24.9*/("""}"""),format.raw/*24.10*/("""
+        """),format.raw/*25.9*/("""p"""),format.raw/*25.10*/("""{"""),format.raw/*25.11*/("""
+            """),format.raw/*26.13*/("""font-style: oblique;
+        """),format.raw/*27.9*/("""}"""),format.raw/*27.10*/("""
+    """),format.raw/*28.5*/("""</style>
 
     <head>
         <title>Profile:GTA</title>
@@ -88,9 +80,9 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
         </div>
         <div class = "PictureScreenShot">
             <p>
-                <button> <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg'"> </button>
-                <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg'"> </button>
-                <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg'"> </button>
+                <button> <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://localhost:9000/screenshot1'"> </button>
+                <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://localhost:9000/screenshot2'"> </button>
+                <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://localhost:9000/screenshot3'"> </button>
             </p>
         </div>
     </body1>
@@ -107,11 +99,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 24 18:38:16 ICT 2015
+                  DATE: Tue Mar 24 20:14:25 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/profile.scala.html
-                  HASH: f262cb6d2734dca19a3c90dab2523feee3b1bce4
-                  MATRIX: 800->0|1192->365|1220->366|1260->379|1350->442|1379->443|1415->452|1455->464|1484->465|1525->478|1605->531|1634->532|1670->541|1709->552|1738->553|1779->566|1859->619|1888->620|1924->629|1965->643|1994->644|2035->657|2134->729|2163->730|2199->739|2240->753|2269->754|2310->767|2411->841|2440->842|2476->851|2513->861|2542->862|2583->875|2639->904|2668->905|2700->910
-                  LINES: 29->1|36->8|36->8|37->9|39->11|39->11|40->12|40->12|40->12|41->13|43->15|43->15|44->16|44->16|44->16|45->17|47->19|47->19|48->20|49->21|49->21|50->22|53->25|53->25|54->26|55->27|55->27|56->28|59->31|59->31|60->32|61->33|61->33|62->34|63->35|63->35|64->36
+                  HASH: 3b8e2633d8b7cfb128dda59ae59785f2c057b376
+                  MATRIX: 800->0|1192->365|1220->366|1260->379|1350->442|1379->443|1415->452|1455->464|1484->465|1525->478|1605->531|1634->532|1670->541|1709->552|1738->553|1779->566|1859->619|1888->620|1924->629|1957->634|1986->635|2027->648|2126->720|2155->721|2191->730|2220->731|2249->732|2290->745|2346->774|2375->775|2407->780
+                  LINES: 29->1|36->8|36->8|37->9|39->11|39->11|40->12|40->12|40->12|41->13|43->15|43->15|44->16|44->16|44->16|45->17|47->19|47->19|48->20|48->20|48->20|49->21|52->24|52->24|53->25|53->25|53->25|54->26|55->27|55->27|56->28
                   -- GENERATED --
               */
           

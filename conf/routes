@@ -11,3 +11,9 @@ GET        /assets/*file        controllers.Assets.at(path="/public", file)
 GET        /hello               controllers.Application.hello()
 
 GET        /profile             controllers.Application.profile()
+
+GET        /screenshot1         controllers.Application.screenshot1()
+
+GET        /screenshot2         controllers.Application.screenshot2()
+
+GET        /screenshot3           controllers.Application.screenshot3()
