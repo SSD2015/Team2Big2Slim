@@ -13,10 +13,6 @@ dist
 /.project
 /RUNNING_PID
 /.settings
-
-    
-.idea/*.xml
-
 *.xml
 
-logs/application.log
+.idea/*.xml

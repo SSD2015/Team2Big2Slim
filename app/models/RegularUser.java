@@ -14,4 +14,22 @@ public class RegularUser extends User{
     public void Rate(){}
     public void Unlock(){}
 
+<<<<<<< HEAD
+=======
+    @Override
+    public boolean validate(String name, String pass) {
+        return false;
+    }
+
+    @Override
+    public void login() {
+
+
+    }
+
+    @Override
+    public void logout() {
+
+    }
+>>>>>>> MakeObject
 }
