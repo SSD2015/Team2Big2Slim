@@ -3,6 +3,7 @@ package models;
 /**
  * Created by nicole on 3/5/15 AD.
  */
+import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
 import javax.persistence.*;
@@ -12,7 +13,6 @@ import java.util.ArrayList;
 public class Project extends Model implements User{
     @Id
     public String ID;
-    @Column
     public String name;
     public String pass;
     public int Vscore;
@@ -33,6 +33,9 @@ public class Project extends Model implements User{
     @Override
     public String getID() {
         return this.ID;
+    }
+    public void setName(String name){
+        this.name = name;
     }
 
     @Override
