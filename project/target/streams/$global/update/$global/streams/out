@@ -1,4 +1,4 @@
-[info] Updating {file:/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/}team2big2slim-build...
+[info] Updating {file:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/}team2big2slim-build...
 [debug] :: resolving dependencies :: default#team2big2slim-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -381,7 +381,7 @@
 [debug] sbt-chain: Checking cache for: dependency: commons-io#commons-io;2.4 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-io#commons-io;2.4
 [debug] 	typesafe-ivy-releases: revision in cache: commons-io#commons-io;2.4
-[debug] 	found commons-io#commons-io;2.4 in sbt-chain
+[debug] 	found commons-io#commons-io;2.4 in public
 [debug] == resolving dependencies org.vafer#jdeb;1.3->commons-io#commons-io;2.4 [compile->compile(*)]
 [debug] == resolving dependencies org.vafer#jdeb;1.3->commons-io#commons-io;2.4 [compile->runtime(*)]
 [debug] == resolving dependencies org.vafer#jdeb;1.3->commons-io#commons-io;2.4 [compile->compile]
@@ -2030,28 +2030,28 @@
 [debug] sbt-chain: Checking cache for: dependency: xalan#xalan;2.7.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xalan#xalan;2.7.1
 [debug] 	typesafe-ivy-releases: revision in cache: xalan#xalan;2.7.1
-[debug] 	found xalan#xalan;2.7.1 in sbt-chain
+[debug] 	found xalan#xalan;2.7.1 in public
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->xalan#xalan;2.7.1 [compile->compile(*)]
 [debug] == resolving dependencies xalan#xalan;2.7.1->xalan#serializer;2.7.1 [compile->master(*)]
 [info] Resolving xalan#serializer;2.7.1 ...
 [debug] sbt-chain: Checking cache for: dependency: xalan#serializer;2.7.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xalan#serializer;2.7.1
 [debug] 	typesafe-ivy-releases: revision in cache: xalan#serializer;2.7.1
-[debug] 	found xalan#serializer;2.7.1 in sbt-chain
+[debug] 	found xalan#serializer;2.7.1 in public
 [debug] == resolving dependencies xalan#xalan;2.7.1->xalan#serializer;2.7.1 [compile->compile(*)]
 [debug] == resolving dependencies xalan#serializer;2.7.1->xml-apis#xml-apis;1.3.04 [compile->master(*)]
 [info] Resolving xml-apis#xml-apis;1.3.04 ...
 [debug] sbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.3.04 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xml-apis#xml-apis;1.3.04
 [debug] 	typesafe-ivy-releases: revision in cache: xml-apis#xml-apis;1.3.04
-[debug] 	found xml-apis#xml-apis;1.3.04 in sbt-chain
+[debug] 	found xml-apis#xml-apis;1.3.04 in public
 [debug] == resolving dependencies xalan#serializer;2.7.1->xml-apis#xml-apis;1.3.04 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-collections#commons-collections;3.2.1 [compile->master(*)]
 [info] Resolving commons-collections#commons-collections;3.2.1 ...
 [debug] sbt-chain: Checking cache for: dependency: commons-collections#commons-collections;3.2.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-collections#commons-collections;3.2.1
 [debug] 	typesafe-ivy-releases: revision in cache: commons-collections#commons-collections;3.2.1
-[debug] 	found commons-collections#commons-collections;3.2.1 in sbt-chain
+[debug] 	found commons-collections#commons-collections;3.2.1 in public
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-collections#commons-collections;3.2.1 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->org.apache.commons#commons-lang3;3.2.1 [compile->master(*)]
 [info] Resolving org.apache.commons#commons-lang3;3.2.1 ...
@@ -2121,7 +2121,7 @@
 [debug] sbt-chain: Checking cache for: dependency: commons-logging#commons-logging;1.1.3 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-logging#commons-logging;1.1.3
 [debug] 	typesafe-ivy-releases: revision in cache: commons-logging#commons-logging;1.1.3
-[debug] 	found commons-logging#commons-logging;1.1.3 in sbt-chain
+[debug] 	found commons-logging#commons-logging;1.1.3 in public
 [debug] dependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.9 {test=[runtime(*), master(*)]}
 [debug] == resolving dependencies org.apache.httpcomponents#httpclient;4.3.2->commons-logging#commons-logging;1.1.3 [compile->compile(*)]
 [debug] dependency descriptor has been mediated: dependency: junit#junit;3.8.1 {test=[runtime(*), master(*)]} => dependency: junit#junit;4.9 {test=[runtime(*), master(*)]}
@@ -2211,7 +2211,7 @@
 [debug] sbt-chain: Checking cache for: dependency: org.w3c.css#sac;1.3 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.w3c.css#sac;1.3
 [debug] 	typesafe-ivy-releases: revision in cache: org.w3c.css#sac;1.3
-[debug] 	found org.w3c.css#sac;1.3 in sbt-chain
+[debug] 	found org.w3c.css#sac;1.3 in public
 [debug] == resolving dependencies net.sourceforge.cssparser#cssparser;0.9.13->org.w3c.css#sac;1.3 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-io#commons-io;2.4 [compile->master(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-io#commons-io;2.4 [compile->compile(*)]
@@ -12317,19 +12317,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 5714ms :: artifacts dl 159ms
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT provided produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-provided.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT optional produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-optional.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile-internal produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile-internal.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime-internal produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime-internal.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test-internal produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test-internal.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT plugin produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-plugin.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT sources produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-sources.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-docs.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-pom.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in /Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-scala-tool.xml
-[debug] 	resolve done (5714ms resolve - 159ms download)
+[debug] :: resolution report :: resolve 2314ms :: artifacts dl 52ms
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT provided produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-provided.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT optional produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-optional.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile-internal produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime-internal produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test-internal produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT plugin produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-plugin.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT sources produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-sources.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-docs.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-pom.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-scala-tool.xml
+[debug] 	resolve done (2314ms resolve - 52ms download)
 [info] Done updating.

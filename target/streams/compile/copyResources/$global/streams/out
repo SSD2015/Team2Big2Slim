@@ -1,6 +1,6 @@
 [debug] Copy resource mappings: 
-[debug] 	(/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/conf/application.conf,/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/target/scala-2.11/classes/application.conf)
-[debug] 	(/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/conf/evolutions,/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/target/scala-2.11/classes/evolutions)
-[debug] 	(/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/conf/routes,/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/target/scala-2.11/classes/routes)
-[debug] 	(/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/conf/evolutions/default,/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/target/scala-2.11/classes/evolutions/default)
-[debug] 	(/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/conf/evolutions/default/1.sql,/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/target/scala-2.11/classes/evolutions/default/1.sql)
+[debug] 	(/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/application.conf,/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/target/scala-2.11/classes/application.conf)
+[debug] 	(/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/evolutions,/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/target/scala-2.11/classes/evolutions)
+[debug] 	(/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes,/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/target/scala-2.11/classes/routes)
+[debug] 	(/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/evolutions/default,/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/target/scala-2.11/classes/evolutions/default)
+[debug] 	(/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/evolutions/default/1.sql,/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/target/scala-2.11/classes/evolutions/default/1.sql)
