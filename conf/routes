@@ -3,24 +3,26 @@
 # ~~~~
 
 # Home page
-GET         /                    controllers.Application.index()
+GET         /                     controllers.Application.index()
 
-POST        /creater             controllers.Application.createProject()
-GET         /create              controllers.Application.addProject()
+POST        /creater              controllers.Profile.createProject()
+GET         /create               controllers.Profile.addProject()
 
-POST        /vote                controllers.Application.vote(String)
-GET         /voting              controllers.Application.voting()
+POST        /vote                 controllers.Application.vote(String)
+GET         /voting               controllers.Application.voting()
 
-GET         /voteResult          controllers.Application.getVoteResult()
+GET         /voteResult           controllers.Application.getVoteResult()
 
-GET         /profile             controllers.Application.profile()
-GET         /group1              controllers.Application.group1()
+GET         /profileDetail        controllers.Profile.getProfile(String)
+GET         /test                 controllers.Profile.testProfile()
+GET         /profile              controllers.Profile.profile()
+GET         /group1               controllers.Application.group1()
 
-GET         /login               controllers.Login.login()
-POST        /login               controllers.Login.authenticate()
+GET         /login                controllers.Login.login()
+POST        /login                controllers.Login.authenticate()
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file         controllers.Assets.at(path="/public", file)
 
 
     

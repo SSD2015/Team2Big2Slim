@@ -1,19 +1,13 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
 import play.data.Form;
-import play.db.*;
-import play.db.ebean.Model;
-import models.Project;
-
-import views.html.*;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.login;
 
 import javax.persistence.Entity;
-import java.util.List;
 
 import static play.data.Form.form;
-import static play.libs.Json.toJson;
 
 public class Login extends Controller {
 
@@ -29,7 +23,6 @@ public class Login extends Controller {
 
     public static Result login() {
        return ok( login.render( Form.form(LoginInfo.class)));
-        //return ok( login.render( Form.form() ) );
     }
 
 

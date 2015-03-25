@@ -1,13 +1,13 @@
 package controllers;
 
-import play.*;
-import play.mvc.*;
-import play.data.Form;
-import play.db.*;
-import play.db.ebean.Model;
 import models.Project;
-
-import views.html.*;
+import play.db.ebean.Model;
+import play.mvc.Controller;
+import play.mvc.Result;
+import views.html.creater;
+import views.html.group1;
+import views.html.index;
+import views.html.vote;
 
 import java.util.List;
 
@@ -19,16 +19,6 @@ public class Application extends Controller {
         return ok(index.render("Your new application is ready."));
     }
 
-    public static Result profile()  {
-        return ok(profile.render());
-    }
-
-    public static Result createProject() {
-        Project project = Form.form(Project.class).bindFromRequest().get();
-        project.save();
-        return ok(vote.render());
-    }
-
     public static Result voting(){
         return ok(vote.render());
     }
@@ -38,10 +28,6 @@ public class Application extends Controller {
         projects.score++;
         projects.save();
         return redirect(routes.Application.getVoteResult());
-    }
-
-    public static Result addProject(){
-        return ok(creater.render("create project"));
     }
 
     public static Result getVoteResult(){

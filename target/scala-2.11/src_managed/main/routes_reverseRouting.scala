@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:0187e495fdfd2e4cf2f5caae3343a2d22e4d0274
-// @DATE:Wed Mar 25 16:05:34 ICT 2015
+// @SOURCE:/Users/nutkaewnak/Documents/SoftSpec/Team2Big2Slim/conf/routes
+// @HASH:a3bbe2281236fdc16e4abfefbe51585f2d50f799
+// @DATE:Wed Mar 25 20:25:48 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,9 +15,11 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:23
-// @LINE:20
+// @LINE:25
+// @LINE:22
+// @LINE:21
 // @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:14
@@ -28,19 +30,19 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:20
-// @LINE:19
+// @LINE:22
+// @LINE:21
 class ReverseLogin {
 
 
-// @LINE:20
+// @LINE:22
 def authenticate(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "login")
 }
                         
 
-// @LINE:19
+// @LINE:21
 def login(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "login")
@@ -50,11 +52,11 @@ def login(): Call = {
 }
                           
 
-// @LINE:23
+// @LINE:25
 class ReverseAssets {
 
 
-// @LINE:23
+// @LINE:25
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -64,23 +66,13 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:14
-// @LINE:12
-// @LINE:11
 // @LINE:9
 // @LINE:8
-// @LINE:6
-class ReverseApplication {
+class ReverseProfile {
 
-
-// @LINE:17
-def group1(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "group1")
-}
-                        
 
 // @LINE:9
 def addProject(): Call = {
@@ -89,17 +81,24 @@ def addProject(): Call = {
 }
                         
 
-// @LINE:14
-def getVoteResult(): Call = {
+// @LINE:16
+def getProfile(String:String): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "voteResult")
+   Call("GET", _prefix + { _defaultPrefix } + "profileDetail" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("String", String)))))
 }
                         
 
-// @LINE:16
+// @LINE:18
 def profile(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "profile")
+}
+                        
+
+// @LINE:17
+def testProfile(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "test")
 }
                         
 
@@ -107,6 +106,31 @@ def profile(): Call = {
 def createProject(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "creater")
+}
+                        
+
+}
+                          
+
+// @LINE:19
+// @LINE:14
+// @LINE:12
+// @LINE:11
+// @LINE:6
+class ReverseApplication {
+
+
+// @LINE:19
+def group1(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "group1")
+}
+                        
+
+// @LINE:14
+def getVoteResult(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "voteResult")
 }
                         
 
@@ -137,9 +161,11 @@ def index(): Call = {
                   
 
 
-// @LINE:23
-// @LINE:20
+// @LINE:25
+// @LINE:22
+// @LINE:21
 // @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:14
@@ -151,12 +177,12 @@ def index(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:20
-// @LINE:19
+// @LINE:22
+// @LINE:21
 class ReverseLogin {
 
 
-// @LINE:20
+// @LINE:22
 def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Login.authenticate",
    """
@@ -167,7 +193,7 @@ def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:19
+// @LINE:21
 def login : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Login.login",
    """
@@ -181,11 +207,11 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:23
+// @LINE:25
 class ReverseAssets {
 
 
-// @LINE:23
+// @LINE:25
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -199,34 +225,86 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
-// @LINE:14
-// @LINE:12
-// @LINE:11
 // @LINE:9
 // @LINE:8
-// @LINE:6
-class ReverseApplication {
+class ReverseProfile {
 
 
-// @LINE:17
-def group1 : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.group1",
+// @LINE:9
+def addProject : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Profile.addProject",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "group1"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "create"})
       }
    """
 )
                         
 
-// @LINE:9
-def addProject : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.addProject",
+// @LINE:16
+def getProfile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Profile.getProfile",
+   """
+      function(String) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profileDetail" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("String", String)])})
+      }
+   """
+)
+                        
+
+// @LINE:18
+def profile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Profile.profile",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "create"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
+      }
+   """
+)
+                        
+
+// @LINE:17
+def testProfile : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Profile.testProfile",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
+      }
+   """
+)
+                        
+
+// @LINE:8
+def createProject : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Profile.createProject",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "creater"})
+      }
+   """
+)
+                        
+
+}
+              
+
+// @LINE:19
+// @LINE:14
+// @LINE:12
+// @LINE:11
+// @LINE:6
+class ReverseApplication {
+
+
+// @LINE:19
+def group1 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.group1",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "group1"})
       }
    """
 )
@@ -238,28 +316,6 @@ def getVoteResult : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "voteResult"})
-      }
-   """
-)
-                        
-
-// @LINE:16
-def profile : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.profile",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
-      }
-   """
-)
-                        
-
-// @LINE:8
-def createProject : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.createProject",
-   """
-      function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "creater"})
       }
    """
 )
@@ -304,9 +360,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:23
-// @LINE:20
+// @LINE:25
+// @LINE:22
+// @LINE:21
 // @LINE:19
+// @LINE:18
 // @LINE:17
 // @LINE:16
 // @LINE:14
@@ -318,18 +376,18 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:20
-// @LINE:19
+// @LINE:22
+// @LINE:21
 class ReverseLogin {
 
 
-// @LINE:20
+// @LINE:22
 def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Login.authenticate(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "authenticate", Seq(), "POST", """""", _prefix + """login""")
 )
                       
 
-// @LINE:19
+// @LINE:21
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Login.login(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "login", Seq(), "GET", """""", _prefix + """login""")
 )
@@ -338,11 +396,11 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:23
+// @LINE:25
 class ReverseAssets {
 
 
-// @LINE:23
+// @LINE:25
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -351,44 +409,64 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:18
 // @LINE:17
 // @LINE:16
+// @LINE:9
+// @LINE:8
+class ReverseProfile {
+
+
+// @LINE:9
+def addProject(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Profile.addProject(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Profile", "addProject", Seq(), "GET", """""", _prefix + """create""")
+)
+                      
+
+// @LINE:16
+def getProfile(String:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Profile.getProfile(String), HandlerDef(this.getClass.getClassLoader, "", "controllers.Profile", "getProfile", Seq(classOf[String]), "GET", """""", _prefix + """profileDetail""")
+)
+                      
+
+// @LINE:18
+def profile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Profile.profile(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Profile", "profile", Seq(), "GET", """""", _prefix + """profile""")
+)
+                      
+
+// @LINE:17
+def testProfile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Profile.testProfile(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Profile", "testProfile", Seq(), "GET", """""", _prefix + """test""")
+)
+                      
+
+// @LINE:8
+def createProject(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Profile.createProject(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Profile", "createProject", Seq(), "POST", """""", _prefix + """creater""")
+)
+                      
+
+}
+                          
+
+// @LINE:19
 // @LINE:14
 // @LINE:12
 // @LINE:11
-// @LINE:9
-// @LINE:8
 // @LINE:6
 class ReverseApplication {
 
 
-// @LINE:17
+// @LINE:19
 def group1(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.group1(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "group1", Seq(), "GET", """""", _prefix + """group1""")
-)
-                      
-
-// @LINE:9
-def addProject(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.addProject(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "addProject", Seq(), "GET", """""", _prefix + """create""")
 )
                       
 
 // @LINE:14
 def getVoteResult(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.getVoteResult(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "getVoteResult", Seq(), "GET", """""", _prefix + """voteResult""")
-)
-                      
-
-// @LINE:16
-def profile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.profile(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "profile", Seq(), "GET", """""", _prefix + """profile""")
-)
-                      
-
-// @LINE:8
-def createProject(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.createProject(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "createProject", Seq(), "POST", """""", _prefix + """creater""")
 )
                       
 
