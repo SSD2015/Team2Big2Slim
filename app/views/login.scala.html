@@ -1,7 +1,7 @@
 @(form: Form[Login.LoginInfo] )
 @main("Login") {
     <h1>Login</h1>
-    <form action="@routes.Application.index()" method="get">
+    <form action="@routes.Login.authenticate()" method="post">
         Username: <input type="text" name="username">
         <br> <br>
         Password: <input type="password" name="password">

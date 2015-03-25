@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:b829dd432ce51f6af022a3c199899466a6863494
-// @DATE:Tue Mar 24 23:03:55 ICT 2015
+// @HASH:0187e495fdfd2e4cf2f5caae3343a2d22e4d0274
+// @DATE:Wed Mar 25 16:05:34 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -16,6 +16,7 @@ import Router.queryString
 
 
 // @LINE:23
+// @LINE:20
 // @LINE:19
 // @LINE:17
 // @LINE:16
@@ -27,9 +28,17 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
+// @LINE:20
 // @LINE:19
 class ReverseLogin {
 
+
+// @LINE:20
+def authenticate(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "login")
+}
+                        
 
 // @LINE:19
 def login(): Call = {
@@ -129,6 +138,7 @@ def index(): Call = {
 
 
 // @LINE:23
+// @LINE:20
 // @LINE:19
 // @LINE:17
 // @LINE:16
@@ -141,9 +151,21 @@ def index(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
+// @LINE:20
 // @LINE:19
 class ReverseLogin {
 
+
+// @LINE:20
+def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Login.authenticate",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      }
+   """
+)
+                        
 
 // @LINE:19
 def login : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -283,6 +305,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 
 
 // @LINE:23
+// @LINE:20
 // @LINE:19
 // @LINE:17
 // @LINE:16
@@ -295,9 +318,16 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
+// @LINE:20
 // @LINE:19
 class ReverseLogin {
 
+
+// @LINE:20
+def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Login.authenticate(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "authenticate", Seq(), "POST", """""", _prefix + """login""")
+)
+                      
 
 // @LINE:19
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(

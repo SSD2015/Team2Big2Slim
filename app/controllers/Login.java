@@ -17,8 +17,8 @@ import static play.libs.Json.toJson;
 
 public class Login extends Controller {
 
-    //public String username;
-    //public String password;
+    public String username;
+    public String password;
     @Entity
     public static class LoginInfo {
 
@@ -29,8 +29,20 @@ public class Login extends Controller {
 
     public static Result login() {
        return ok( login.render( Form.form(LoginInfo.class)));
+        //return ok( login.render( Form.form() ) );
     }
 
+
+    public static Result authenticate() {
+        Form<Login> loginForm = form(Login.class).bindFromRequest();
+        //System.out.print(loginForm.get().username);
+        if( loginForm.get().username.equals("admin") && loginForm.get().password.equals("admin") )  {
+            System.out.println("I'm in");
+            return redirect(routes.Application.index());
+        }
+
+        return ok( login.render( Form.form(LoginInfo.class)));
+    }
 
 }
 

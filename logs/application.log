@@ -1,9 +1,150 @@
-2015-03-24 23:04:18,907 - [INFO] - from play in pool-4-thread-6 
+2015-03-25 16:06:26,164 - [INFO] - from play in pool-4-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-24 23:04:32,150 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-25 16:07:07,002 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:h2:mem:play
 
-2015-03-24 23:04:32,610 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-25 16:07:08,569 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
+
+2015-03-25 16:07:22,061 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-3 
+Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
+
+2015-03-25 16:07:22,065 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+Not strongly caching class [controllers.Login] because it is not cache-safe
+
+2015-03-25 16:07:22,066 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+Getting BeanInfo for class [controllers.Login]
+
+2015-03-25 16:07:22,074 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+Caching PropertyDescriptors for class [controllers.Login]
+
+2015-03-25 16:07:22,074 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-25 16:07:22,075 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-25 16:07:22,075 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-25 16:15:22,778 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-25 16:15:22,887 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-25 16:15:35,574 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Not strongly caching class [controllers.Login] because it is not cache-safe
+
+2015-03-25 16:15:35,575 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Getting BeanInfo for class [controllers.Login]
+
+2015-03-25 16:15:35,577 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Caching PropertyDescriptors for class [controllers.Login]
+
+2015-03-25 16:15:35,577 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-25 16:15:35,577 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-25 16:15:35,577 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-25 16:18:14,802 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-25 16:18:14,934 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-25 16:18:22,861 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Not strongly caching class [controllers.Login] because it is not cache-safe
+
+2015-03-25 16:18:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Getting BeanInfo for class [controllers.Login]
+
+2015-03-25 16:18:22,864 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Caching PropertyDescriptors for class [controllers.Login]
+
+2015-03-25 16:18:22,865 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-25 16:18:22,865 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-25 16:18:22,865 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-25 16:20:09,464 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-25 16:20:09,567 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-25 16:20:18,266 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Not strongly caching class [controllers.Login] because it is not cache-safe
+
+2015-03-25 16:20:18,267 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Getting BeanInfo for class [controllers.Login]
+
+2015-03-25 16:20:18,268 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Caching PropertyDescriptors for class [controllers.Login]
+
+2015-03-25 16:20:18,268 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-25 16:20:18,268 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-25 16:20:18,268 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-25 16:23:08,522 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-25 16:23:08,618 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-25 16:23:13,874 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-37 
+Not strongly caching class [controllers.Login] because it is not cache-safe
+
+2015-03-25 16:23:13,875 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-37 
+Getting BeanInfo for class [controllers.Login]
+
+2015-03-25 16:23:13,877 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-37 
+Caching PropertyDescriptors for class [controllers.Login]
+
+2015-03-25 16:23:13,877 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-37 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-25 16:23:13,877 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-37 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-25 16:23:13,877 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-37 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-25 16:25:14,742 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:h2:mem:play
+
+2015-03-25 16:25:14,852 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-25 16:25:19,964 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Not strongly caching class [controllers.Login] because it is not cache-safe
+
+2015-03-25 16:25:19,965 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Getting BeanInfo for class [controllers.Login]
+
+2015-03-25 16:25:19,966 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Caching PropertyDescriptors for class [controllers.Login]
+
+2015-03-25 16:25:19,967 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-25 16:25:19,967 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-25 16:25:19,967 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'username' of type [java.lang.String]
 
