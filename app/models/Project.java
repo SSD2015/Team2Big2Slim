@@ -6,10 +6,11 @@ package models;
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.io.Serializable;
 import java.util.ArrayList;
 
 @Entity
-public class Project extends User  {
+public class Project extends User {
     public int score;
     public String ProfilePic;   //
     public ArrayList<String> picture;
@@ -17,6 +18,11 @@ public class Project extends User  {
     public static Finder<String,Project> find = new Finder<String,Project>(
             String.class, Project.class
     );
+
+    @Override
+    public boolean validate(String name, String pass) {
+        return false;
+    }
 
     @Override
     public void login(){
