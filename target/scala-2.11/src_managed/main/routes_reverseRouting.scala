@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:8d7f73e79ca5c0b5cb93b4f1ad3de79dd20c375e
-// @DATE:Tue Mar 24 20:13:32 ICT 2015
+// @HASH:c3b147aafef7e1ed4928c7dbfad51e7eb96e9931
+// @DATE:Tue Mar 24 21:50:23 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -38,6 +39,7 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -68,6 +70,13 @@ def hello(): Call = {
 }
                         
 
+// @LINE:21
+def test(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "test")
+}
+                        
+
 // @LINE:17
 def screenshot2(): Call = {
    import ReverseRouteContext.empty
@@ -95,6 +104,7 @@ def index(): Call = {
                   
 
 
+// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -123,6 +133,7 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -160,6 +171,17 @@ def hello : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hello"})
+      }
+   """
+)
+                        
+
+// @LINE:21
+def test : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.test",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
       }
    """
 )
@@ -204,6 +226,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -227,6 +250,7 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -251,6 +275,12 @@ def profile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:11
 def hello(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.hello(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "hello", Seq(), "GET", """""", _prefix + """hello""")
+)
+                      
+
+// @LINE:21
+def test(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.test(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "test", Seq(), "GET", """""", _prefix + """test""")
 )
                       
 

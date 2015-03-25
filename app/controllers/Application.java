@@ -19,4 +19,5 @@ public class Application extends Controller {
     public static Result screenshot1(){return ok(screenshot1.render()); }
     public static Result screenshot2(){return ok(screenshot2.render()); }
     public static Result screenshot3(){return ok(screenshot3.render()); }
+    public static Result test(){return ok(test.render()); }
 }

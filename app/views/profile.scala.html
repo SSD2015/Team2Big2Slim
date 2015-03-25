@@ -1,6 +1,6 @@
 <!DOCTYPE HTML>
 <html lang = "en">
-    <title>Bootstrap Example</title>
+    <title>Grand Theft Auto V</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -13,29 +13,27 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
         .NameProject{
-            font-size : 300%;
-            color : mediumvioletred;
+            font-size : 250%;
+            color : black;
         }
         .Description{
             font-size : 250%;
-            color : green;
+            color : black;
         }
         .ScreenShot{
             font-size : 250%;
-            color : green;
-        }
-        body1{
-            position:absolute;
-            top:0px;
-            left:300px;
+            color : black;
         }
         p{
-            font-style: oblique;
+            font-style: normal;
+        }
+       .Line{
+            border-bottom: 1px dashed;
         }
 
         .carousel-inner > .item > img,
         .carousel-inner > .item > a > img {
-        width: 160%;
+        width: auto;
         margin: auto;
         }
         .container{
@@ -49,62 +47,121 @@
         <meta charset = "UTF-8" />
     </head>
 
-    <body1>
-        <div class = "NameProject">
-            <h style="font-family:verdana" >Grand Theft Auto V </h>
-        </div>
-        <div class = "PictureProject">
-            <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:600px;height:350px"> </p>
-        </div>
-        <div class = "Description">
-            <h style="font-family:verdana" >Description:</h>
-        </div>
-        <div class = "Information">
-            <p>Project name: GTA</p>
-            <p>Type of project: Game</p>
-            <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
-        </div>
-        <div class = ScreenShot>
-            <h style="font-family:verdana" >ScreenShot:</h>
-        </div>
-
-        <div class="container">
-            <br>
-            <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                    <!-- Indicators -->
-                <ol class="carousel-indicators">
-                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                    <li data-target="#myCarousel" data-slide-to="2"></li>
-
-                </ol>
-
-                    <!-- Wrapper for slides -->
-                <div class="carousel-inner" role="listbox">
-                    <div class="item active">
-                        <button > <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1'"> </button>
-                    </div>
-
-                    <div class="item">
-                        <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2'"> </button>
-                    </div>
-
-                    <div class="item">
-                        <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3'"> </button>
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "NameProject">
+                        <h style="font-family:verdana" >Grand Theft Auto V</h>
                     </div>
                 </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "PictureProject">
+                        <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:700px;height:450px"> </p>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Description">
+                        <h style="font-family:verdana" >Description</h>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Information">
+                        <p>Project name: GTA</p>
+                        <p>Type of project: Game</p>
+                        <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = ScreenShot>
+                        <h style="font-family:verdana" >Screenshot</h>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class="container">
+                        <br>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
 
-                    <!-- Left and right controls -->
-                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                    <span class="sr-only">Previous</span>
-                </a>
-                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                    <span class="sr-only">Next</span>
-                </a>
+                                <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <button class = "Picture"> <img src="http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1'"> </button>
+                                </div>
+                                <div class="item">
+                                    <button class = "Picture"> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2'"> </button>
+                                </div>
+
+                                <div class="item">
+                                    <button class = "Picture"> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3'"> </button>
+                                </div>
+                            </div>
+
+                                <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
             </div>
         </div>
-    </body1>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class = "Line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class = "col-xs-2"> </div>
+            <div class="col-xs-8">
+                <div class = ScreenShot>
+                    <h style="font-family:verdana" >Rate</h>
+                </div>
+            </div>
+            <div class = "col-xs-2"> </div>
+        </div>
+    </body>
     <div id="content"></div>
 </html>

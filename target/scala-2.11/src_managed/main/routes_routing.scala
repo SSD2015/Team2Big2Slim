@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:8d7f73e79ca5c0b5cb93b4f1ad3de79dd20c375e
-// @DATE:Tue Mar 24 20:13:32 ICT 2015
+// @HASH:c3b147aafef7e1ed4928c7dbfad51e7eb96e9931
+// @DATE:Tue Mar 24 21:50:23 ICT 2015
 
 
 import play.core._
@@ -80,7 +80,14 @@ private[this] lazy val controllers_Application_screenshot36_invoker = createInvo
 controllers.Application.screenshot3(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot3", Nil,"GET", """""", Routes.prefix + """screenshot3"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1""","""controllers.Application.screenshot1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2""","""controllers.Application.screenshot2()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3""","""controllers.Application.screenshot3()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:21
+private[this] lazy val controllers_Application_test7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test"))))
+private[this] lazy val controllers_Application_test7_invoker = createInvoker(
+controllers.Application.test(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "test", Nil,"GET", """""", Routes.prefix + """test"""))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1""","""controllers.Application.screenshot1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2""","""controllers.Application.screenshot2()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3""","""controllers.Application.screenshot3()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Application.test()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -140,6 +147,14 @@ case controllers_Application_screenshot25_route(params) => {
 case controllers_Application_screenshot36_route(params) => {
    call { 
         controllers_Application_screenshot36_invoker.call(controllers.Application.screenshot3())
+   }
+}
+        
+
+// @LINE:21
+case controllers_Application_test7_route(params) => {
+   call { 
+        controllers_Application_test7_invoker.call(controllers.Application.test())
    }
 }
         

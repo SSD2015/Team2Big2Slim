@@ -1,5 +1,11 @@
 <!DOCTYPE html>
 <html>
+    <title>Bootstrap Grand Theft Auto V</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->
@@ -8,12 +14,12 @@
     .Picture{
     position:absolute;
     top:0px;
-    left:300px;
+    left:0px;
     }
     .Button{
     position:absolute;
     top:370px;
-    left:550px;
+    left:250px;
     }
 
     </style>
@@ -23,11 +29,19 @@
         <title></title>
     </head>
     <body>
-        <div class = "Picture">
-            <p> <img src = "http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class = "Picture">
+                    <p> <img src = "http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+                </div>
+            </div>
         </div>
-        <div class = "Button">
-            <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+        <div class="row">
+            <div class="col-sm-12">
+                <div class = "Button">
+                <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+                </div>
+            </div>
         </div>
     </body>
 </html>
