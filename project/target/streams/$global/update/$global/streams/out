@@ -1,4 +1,4 @@
-[info] Updating {file:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/}team2big2slim-build...
+[info] Updating {file:/C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/project/}team2big2slim-build...
 [debug] :: resolving dependencies :: default#team2big2slim-build;0.1-SNAPSHOT
 [debug] 	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool]
 [debug] 	validate = true
@@ -249,7 +249,7 @@
 [debug] sbt-chain: Checking cache for: dependency: org.apache.commons#commons-lang3;3.1 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: org.apache.commons#commons-lang3;3.1
 [debug] 	typesafe-ivy-releases: revision in cache: org.apache.commons#commons-lang3;3.1
-[debug] 	found org.apache.commons#commons-lang3;3.1 in sbt-chain
+[debug] 	found org.apache.commons#commons-lang3;3.1 in public
 [debug] == resolving dependencies com.typesafe.play#twirl-api_2.10;1.0.2->org.apache.commons#commons-lang3;3.1 [compile->compile(*)]
 [debug] == resolving dependencies com.typesafe.play#twirl-compiler_2.10;1.0.2->com.typesafe.play#twirl-api_2.10;1.0.2 [compile->runtime(*)]
 [debug] == resolving dependencies com.typesafe.play#twirl-compiler_2.10;1.0.2->com.typesafe.play#twirl-api_2.10;1.0.2 [compile->compile]
@@ -2168,7 +2168,7 @@
 [debug] sbt-chain: Checking cache for: dependency: commons-codec#commons-codec;1.9 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: commons-codec#commons-codec;1.9
 [debug] 	typesafe-ivy-releases: revision in cache: commons-codec#commons-codec;1.9
-[debug] 	found commons-codec#commons-codec;1.9 in sbt-chain
+[debug] 	found commons-codec#commons-codec;1.9 in public
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->commons-codec#commons-codec;1.9 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->net.sourceforge.htmlunit#htmlunit-core-js;2.14 [compile->master(*)]
 [info] Resolving net.sourceforge.htmlunit#htmlunit-core-js;2.14 ...
@@ -2182,14 +2182,14 @@
 [debug] sbt-chain: Checking cache for: dependency: xerces#xercesImpl;2.11.0 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xerces#xercesImpl;2.11.0
 [debug] 	typesafe-ivy-releases: revision in cache: xerces#xercesImpl;2.11.0
-[debug] 	found xerces#xercesImpl;2.11.0 in sbt-chain
+[debug] 	found xerces#xercesImpl;2.11.0 in public
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->xerces#xercesImpl;2.11.0 [compile->compile(*)]
 [debug] == resolving dependencies xerces#xercesImpl;2.11.0->xml-apis#xml-apis;1.4.01 [compile->master(*)]
 [info] Resolving xml-apis#xml-apis;1.4.01 ...
 [debug] sbt-chain: Checking cache for: dependency: xml-apis#xml-apis;1.4.01 {compile=[compile(*), master(*)], runtime=[runtime(*)]}
 [debug] sbt-chain: module revision found in cache: xml-apis#xml-apis;1.4.01
 [debug] 	typesafe-ivy-releases: revision in cache: xml-apis#xml-apis;1.4.01
-[debug] 	found xml-apis#xml-apis;1.4.01 in sbt-chain
+[debug] 	found xml-apis#xml-apis;1.4.01 in public
 [debug] == resolving dependencies xerces#xercesImpl;2.11.0->xml-apis#xml-apis;1.4.01 [compile->compile(*)]
 [debug] == resolving dependencies net.sourceforge.htmlunit#htmlunit;2.14->net.sourceforge.nekohtml#nekohtml;1.9.20 [compile->master(*)]
 [info] Resolving net.sourceforge.nekohtml#nekohtml;1.9.20 ...
@@ -12317,19 +12317,19 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 2314ms :: artifacts dl 52ms
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT provided produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-provided.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT optional produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-optional.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile-internal produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile-internal.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime-internal produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime-internal.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test-internal produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test-internal.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT plugin produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-plugin.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT sources produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-sources.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-docs.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-pom.xml
-[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-scala-tool.xml
-[debug] 	resolve done (2314ms resolve - 52ms download)
+[debug] :: resolution report :: resolve 13031ms :: artifacts dl 289ms
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-compile.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-runtime.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-test.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT provided produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-provided.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT optional produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-optional.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile-internal produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-compile-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime-internal produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-runtime-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test-internal produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-test-internal.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT plugin produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-plugin.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT sources produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-sources.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-docs.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-pom.xml
+[debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-scala-tool.xml
+[debug] 	resolve done (13031ms resolve - 289ms download)
 [info] Done updating.
