@@ -5,7 +5,7 @@
     $(function() {
         return $.get("/voteResult", function(project) {
             return $.each(project, function(index, project ) {
-                return $('#projects').append($("<li>").text(project.name+" "+project.score));
+                return $('#projects').append($("<li>").text(project.name+" "+project.Vscore));
             });
         });
     });

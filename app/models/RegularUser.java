@@ -4,19 +4,37 @@ package models;
  * Created by nicole on 3/23/15 AD.
  */
 
-import javax.persistence.Entity;
+import play.db.ebean.Model;
+
+import javax.persistence.*;
 import java.util.List;
 
 @Entity
-public class RegularUser extends User{
+public class RegularUser extends Model implements User{
+    @Id
+    private String ID;
+    @Column
+    private String name;
+
+    private String pass;
     private List<Project> knownProject;
     public void Vote(){}
     public void Rate(){}
     public void Unlock(){}
 
     @Override
+    public String getID() {
+        return this.ID;
+    }
+
+    @Override
+    public String getName() {
+        return this.name;
+    }
+
+    @Override
     public boolean validate(String name, String pass) {
-        return false;
+        return this.getName().equals(name) && this.pass.equals(pass);
     }
 
     @Override

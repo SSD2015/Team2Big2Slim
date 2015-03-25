@@ -25,7 +25,7 @@ public class Application extends Controller {
 
     public static Result vote(String id){
         Project projects = Project.find.byId(id);
-        projects.score++;
+        projects.Vote();
         projects.save();
         return redirect(routes.Application.getVoteResult());
     }
