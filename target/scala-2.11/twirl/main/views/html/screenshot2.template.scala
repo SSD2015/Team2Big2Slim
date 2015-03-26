@@ -39,36 +39,35 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-    .Picture"""),format.raw/*14.13*/("""{"""),format.raw/*14.14*/("""
-    """),format.raw/*15.5*/("""position:absolute;
-    top:0px;
-    left:0px;
-    """),format.raw/*18.5*/("""}"""),format.raw/*18.6*/("""
-    """),format.raw/*19.5*/(""".Button"""),format.raw/*19.12*/("""{"""),format.raw/*19.13*/("""
-    """),format.raw/*20.5*/("""position:absolute;
-    top:370px;
-    left:250px;
-    """),format.raw/*23.5*/("""}"""),format.raw/*23.6*/("""
 
-    """),format.raw/*25.5*/("""</style>
+
+    </style>
 
     <head lang="en">
         <meta charset="UTF-8">
         <title></title>
     </head>
     <body>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class = "Picture">
-                    <p> <img src = "http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Picture">
+                        <p> <img src = "http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+                    </div>
                 </div>
+                <div class = "col-xs-2"> </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class = "Button">
-                <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Button">
+                        <button
+                            type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
+                        </button>
+                    </div>
                 </div>
+                <div class = "col-xs-2"> </div>
             </div>
         </div>
     </body>
@@ -84,11 +83,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 25 21:15:42 ICT 2015
+                  DATE: Thu Mar 26 13:22:33 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/screenshot2.scala.html
-                  HASH: 91a0bd0a5b2664b10694f92a998a67dd1e88c63c
-                  MATRIX: 804->0|1618->786|1647->787|1679->792|1756->842|1784->843|1816->848|1851->855|1880->856|1912->861|1993->915|2021->916|2054->922
-                  LINES: 29->1|42->14|42->14|43->15|46->18|46->18|47->19|47->19|47->19|48->20|51->23|51->23|53->25
+                  HASH: 3633e0addfe2beca1da609c5071d7efff6ac708f
+                  MATRIX: 804->0
+                  LINES: 29->1
                   -- GENERATED --
               */
           

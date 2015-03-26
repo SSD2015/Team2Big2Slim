@@ -28,54 +28,70 @@ object screenshot1 extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendabl
 
 Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 <html>
-    <title>Grand Theft Auto V</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-        <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-        <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
 
-    .Picture"""),format.raw/*16.13*/("""{"""),format.raw/*16.14*/("""
-        """),format.raw/*17.9*/("""position:absolute;
-        top:0px;
-        left:0px;
-    """),format.raw/*20.5*/("""}"""),format.raw/*20.6*/("""
-    """),format.raw/*21.5*/(""".Button"""),format.raw/*21.12*/("""{"""),format.raw/*21.13*/("""
-        """),format.raw/*22.9*/("""position:absolute;
-        top:370px;
-        left:250px;
-    """),format.raw/*25.5*/("""}"""),format.raw/*25.6*/("""
-
-    """),format.raw/*27.5*/("""</style>
+    </style>
 
     <head lang="en">
+        <title>Grand Theft Auto V</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+            <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+            <!-- Optional theme -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
         <meta charset="UTF-8">
-        <title></title>
+
     </head>
     <body>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class = "Picture">
-                    <p> <img src = "http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:600px;height:350px"> </p>
-                </div>
+        <div class="container-fluid">
+            <div class="row">
+                <clock></clock>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class = "Button">
-                    <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'">
-                        <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Picture">
+                        <p> <img src = "http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+                    </div>
                 </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Button">
+                        <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'">
+                            <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
+                        </button>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
             </div>
         </div>
     </body>
-</html>"""))}
+    <script>
+        function getdate()"""),format.raw/*50.27*/("""{"""),format.raw/*50.28*/("""
+            """),format.raw/*51.13*/("""var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            if(s<10)"""),format.raw/*55.21*/("""{"""),format.raw/*55.22*/("""
+            """),format.raw/*56.13*/("""s = "0"+s;
+        """),format.raw/*57.9*/("""}"""),format.raw/*57.10*/("""
+        """),format.raw/*58.9*/("""$("clock").text(h+" : "+m+" : "+s);
+        setTimeout(function()"""),format.raw/*59.30*/("""{"""),format.raw/*59.31*/("""
+            """),format.raw/*60.13*/("""getdate()"""),format.raw/*60.22*/("""}"""),format.raw/*60.23*/(""", 500);
+        """),format.raw/*61.9*/("""}"""),format.raw/*61.10*/("""
+        """),format.raw/*62.9*/("""getdate();
+
+    </script>
+</html>
+"""))}
   }
 
   def render(): play.twirl.api.HtmlFormat.Appendable = apply()
@@ -87,11 +103,11 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 25 21:42:15 ICT 2015
+                  DATE: Thu Mar 26 13:22:33 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/screenshot1.scala.html
-                  HASH: e11c402b0698389b652079291e7f794bef4ea506
-                  MATRIX: 804->0|1610->778|1639->779|1675->788|1760->846|1788->847|1820->852|1855->859|1884->860|1920->869|2009->931|2037->932|2070->938
-                  LINES: 29->1|44->16|44->16|45->17|48->20|48->20|49->21|49->21|49->21|50->22|53->25|53->25|55->27
+                  HASH: a165ee0b8d1c1a89cbc8b765e873408dea9a235b
+                  MATRIX: 804->0|2874->2042|2903->2043|2944->2056|3134->2218|3163->2219|3204->2232|3250->2251|3279->2252|3315->2261|3408->2326|3437->2327|3478->2340|3515->2349|3544->2350|3587->2366|3616->2367|3652->2376
+                  LINES: 29->1|78->50|78->50|79->51|83->55|83->55|84->56|85->57|85->57|86->58|87->59|87->59|88->60|88->60|88->60|89->61|89->61|90->62
                   -- GENERATED --
               */
           

@@ -11,17 +11,6 @@
         <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-    .Picture{
-    position:absolute;
-    top:0px;
-    left:0px;
-    }
-    .Button{
-    position:absolute;
-    top:370px;
-    left:250px;
-    }
-
     </style>
 
     <head lang="en">
@@ -29,18 +18,24 @@
         <title></title>
     </head>
     <body>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class = "Picture">
-                    <p> <img src = "http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+        <div class="container-fluid">
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Picture">
+                        <p> <img src = "http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+                    </div>
                 </div>
+                <div class = "col-xs-2"> </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-12">
-                <div class = "Button">
-                <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Button">
+                    <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+                    </div>
                 </div>
+                <div class = "col-xs-2"> </div>
             </div>
         </div>
     </body>
