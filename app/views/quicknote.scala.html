@@ -1,0 +1,14 @@
+@(notes: List[Note])
+
+@main("Hello Page") {
+    <h1>Hello World!</h1>
+
+    <form action="/quicknote" method="post">
+        <input type="text" name="name" />
+        <button type="submit">Add</button>
+    </form>
+
+    @notes.map { note =>
+        @note.name <br>
+    }
+}

@@ -3,6 +3,12 @@
 
 # --- !Ups
 
+create table note (
+  id                        bigint auto_increment not null,
+  name                      varchar(255),
+  constraint pk_note primary key (id))
+;
+
 create table project (
   id                        varchar(255) not null,
   name                      varchar(255),
@@ -23,30 +29,20 @@ create table user (
   constraint pk_user primary key (id))
 ;
 
-create sequence project_seq;
-
-create sequence regular_user_seq;
-
-create sequence user_seq;
-
 
 
 
 # --- !Downs
 
-SET REFERENTIAL_INTEGRITY FALSE;
+SET FOREIGN_KEY_CHECKS=0;
 
-drop table if exists project;
+drop table note;
 
-drop table if exists regular_user;
+drop table project;
 
-drop table if exists user;
+drop table regular_user;
 
-SET REFERENTIAL_INTEGRITY TRUE;
+drop table user;
 
-drop sequence if exists project_seq;
-
-drop sequence if exists regular_user_seq;
-
-drop sequence if exists user_seq;
+SET FOREIGN_KEY_CHECKS=1;
 

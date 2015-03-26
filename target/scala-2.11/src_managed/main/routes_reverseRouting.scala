@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:5f48b0f1f8c846f33cd5597b5a0559bdcb69db6b
-// @DATE:Wed Mar 25 21:50:17 ICT 2015
+// @HASH:5dc53189a4e93a2df792cda65eb3729933351590
+// @DATE:Thu Mar 26 19:17:50 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:24
+// @LINE:23
 // @LINE:20
 // @LINE:17
 // @LINE:16
@@ -25,6 +27,28 @@ import Router.queryString
 // @LINE:8
 // @LINE:6
 package controllers {
+
+// @LINE:24
+// @LINE:23
+class ReverseQuicknote {
+
+
+// @LINE:24
+def addNote(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "quicknote")
+}
+                        
+
+// @LINE:23
+def index(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "quicknote")
+}
+                        
+
+}
+                          
 
 // @LINE:20
 class ReverseAssets {
@@ -113,6 +137,8 @@ def index(): Call = {
                   
 
 
+// @LINE:24
+// @LINE:23
 // @LINE:20
 // @LINE:17
 // @LINE:16
@@ -124,6 +150,36 @@ def index(): Call = {
 // @LINE:6
 package controllers.javascript {
 import ReverseRouteContext.empty
+
+// @LINE:24
+// @LINE:23
+class ReverseQuicknote {
+
+
+// @LINE:24
+def addNote : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Quicknote.addNote",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "quicknote"})
+      }
+   """
+)
+                        
+
+// @LINE:23
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Quicknote.index",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "quicknote"})
+      }
+   """
+)
+                        
+
+}
+              
 
 // @LINE:20
 class ReverseAssets {
@@ -248,6 +304,8 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:24
+// @LINE:23
 // @LINE:20
 // @LINE:17
 // @LINE:16
@@ -259,6 +317,26 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:6
 package controllers.ref {
 
+
+// @LINE:24
+// @LINE:23
+class ReverseQuicknote {
+
+
+// @LINE:24
+def addNote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Quicknote.addNote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "addNote", Seq(), "POST", """""", _prefix + """quicknote""")
+)
+                      
+
+// @LINE:23
+def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Quicknote.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "index", Seq(), "GET", """""", _prefix + """quicknote""")
+)
+                      
+
+}
+                          
 
 // @LINE:20
 class ReverseAssets {
