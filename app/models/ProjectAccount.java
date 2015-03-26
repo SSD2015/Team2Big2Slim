@@ -3,14 +3,13 @@ package models;
 /**
  * Created by nicole on 3/5/15 AD.
  */
-import play.data.validation.Constraints;
 import play.db.ebean.Model;
 
 import javax.persistence.*;
 import java.util.ArrayList;
 
 @Entity
-public class Project extends Model implements User{
+public class ProjectAccount extends Model implements User{
     @Id
     public String ID;
     public String name;
@@ -19,8 +18,8 @@ public class Project extends Model implements User{
     public int Rscore;
     public String ProfilePic;
     public ArrayList<String> picture;
-    public static Model.Finder<String,Project> find = new Model.Finder<String,Project>(
-            String.class, Project.class
+    public static Model.Finder<String, ProjectAccount> find = new Model.Finder<String, ProjectAccount>(
+            String.class, ProjectAccount.class
     );
 
     public void Vote(){

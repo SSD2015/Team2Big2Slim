@@ -1,10 +1,9 @@
 package controllers;
 
-import models.Project;
+import models.ProjectAccount;
 import play.db.ebean.Model;
 import play.mvc.Controller;
 import play.mvc.Result;
-import views.html.creater;
 import views.html.group1;
 import views.html.index;
 import views.html.vote;
@@ -24,15 +23,15 @@ public class Application extends Controller {
     }
 
     public static Result vote(String id){
-        Project projects = Project.find.byId(id);
+        ProjectAccount projects = ProjectAccount.find.byId(id);
         projects.Vote();
         projects.save();
         return redirect(routes.Application.getVoteResult());
     }
 
     public static Result getVoteResult(){
-        List<Project> projects = new Model.Finder<String, Project>(String.class, Project.class).all();
-        return ok(toJson(projects));
+        List<ProjectAccount> projectAccounts = new Model.Finder<String, ProjectAccount>(String.class, ProjectAccount.class).all();
+        return ok(toJson(projectAccounts));
     }
 
 	public static Result group1() {

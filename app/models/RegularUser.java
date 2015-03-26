@@ -17,7 +17,7 @@ public class RegularUser extends Model implements User{
     private String name;
 
     private String pass;
-    private List<Project> knownProject;
+    private List<ProjectAccount> knownProject;
     public void Vote(){}
     public void Rate(){}
     public void Unlock(){}

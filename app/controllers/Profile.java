@@ -21,8 +21,8 @@ public class Profile {
     }
 
     public static Result createProject() {
-        Project project = Form.form(Project.class).bindFromRequest().get();
-        project.save();
+        ProjectAccount projectAccount = Form.form(ProjectAccount.class).bindFromRequest().get();
+        projectAccount.save();
         return ok(vote.render());
     }
     public static Result addProject(){
@@ -32,13 +32,14 @@ public class Profile {
     public static Result testProfile(){
         return redirect(routes.Profile.getProfile("pp"));
     }
+
     public static Result getProfile(String name){
-        for(Project p : Project.find.all()) {
-            if(p.getName() == name) {
+        for(ProjectAccount p : ProjectAccount.find.all()) {
+            if(p.getName().equals(name)) {
                  return ok(toJson(p));
             }
         }
-        return ok(toJson(new Project()));
+        return ok(toJson(new ProjectAccount()));
 
     }
 }

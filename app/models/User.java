@@ -3,6 +3,7 @@ package models;
  * Created by nicole on 3/23/15 AD.
  */
 
+import javax.persistence.JoinColumn;
 import java.io.Serializable;
 
 public interface User extends Serializable {
@@ -11,4 +12,7 @@ public interface User extends Serializable {
     public boolean validate(String name,String pass);
     public void login();
     public void logout();
+
+
+
 }
