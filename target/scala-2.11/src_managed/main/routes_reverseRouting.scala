@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:5dc53189a4e93a2df792cda65eb3729933351590
-// @DATE:Thu Mar 26 19:17:50 ICT 2015
+// @HASH:5d8ffdbe6f59884e3694b910587f51db57805f3e
+// @DATE:Thu Mar 26 21:40:52 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:20
@@ -28,22 +30,44 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:24
-// @LINE:23
+// @LINE:27
+// @LINE:26
 class ReverseQuicknote {
 
 
-// @LINE:24
+// @LINE:27
 def addNote(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "quicknote")
 }
                         
 
-// @LINE:23
+// @LINE:26
 def index(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "quicknote")
+}
+                        
+
+}
+                          
+
+// @LINE:24
+// @LINE:23
+class ReverseLogin {
+
+
+// @LINE:24
+def authenticate(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "login")
+}
+                        
+
+// @LINE:23
+def login(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "login")
 }
                         
 
@@ -137,6 +161,8 @@ def index(): Call = {
                   
 
 
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:20
@@ -151,12 +177,12 @@ def index(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:24
-// @LINE:23
+// @LINE:27
+// @LINE:26
 class ReverseQuicknote {
 
 
-// @LINE:24
+// @LINE:27
 def addNote : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Quicknote.addNote",
    """
@@ -167,12 +193,42 @@ def addNote : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
+// @LINE:26
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Quicknote.index",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "quicknote"})
+      }
+   """
+)
+                        
+
+}
+              
+
+// @LINE:24
+// @LINE:23
+class ReverseLogin {
+
+
+// @LINE:24
+def authenticate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Login.authenticate",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
+      }
+   """
+)
+                        
+
+// @LINE:23
+def login : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Login.login",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
       }
    """
 )
@@ -304,6 +360,8 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:27
+// @LINE:26
 // @LINE:24
 // @LINE:23
 // @LINE:20
@@ -318,20 +376,40 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:24
-// @LINE:23
+// @LINE:27
+// @LINE:26
 class ReverseQuicknote {
 
 
-// @LINE:24
+// @LINE:27
 def addNote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Quicknote.addNote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "addNote", Seq(), "POST", """""", _prefix + """quicknote""")
 )
                       
 
-// @LINE:23
+// @LINE:26
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Quicknote.index(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "index", Seq(), "GET", """""", _prefix + """quicknote""")
+)
+                      
+
+}
+                          
+
+// @LINE:24
+// @LINE:23
+class ReverseLogin {
+
+
+// @LINE:24
+def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Login.authenticate(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "authenticate", Seq(), "POST", """""", _prefix + """login""")
+)
+                      
+
+// @LINE:23
+def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Login.login(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "login", Seq(), "GET", """""", _prefix + """login""")
 )
                       
 

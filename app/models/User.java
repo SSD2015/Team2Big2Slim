@@ -8,21 +8,18 @@ import javax.persistence.Id;
  * Created by nicole on 3/23/15 AD.
  */
 @Entity
-public abstract class User extends Model{
+public class User extends Model{
     @Id
-    protected String ID;
-    public String name;
-    public String getID() {
+    protected int ID;
+    private String username;
+    private String password;
+
+    public static Finder<Integer, User> find = new Finder<Integer,User>(
+            Integer.class, User.class
+    );
+
+    public int getID() {
         return ID;
     }
 
-    public String getName() {
-        return name;
-    }
-    public void login() {
-
-    }
-    public void logout() {
-
-    }
 }

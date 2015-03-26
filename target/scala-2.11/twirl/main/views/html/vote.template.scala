@@ -56,7 +56,7 @@ Seq[Any](_display_(/*1.2*/main("Voting")/*1.16*/ {_display_(Seq[Any](format.raw/
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Mar 25 21:50:19 ICT 2015
+                  DATE: Thu Mar 26 21:40:53 ICT 2015
                   SOURCE: C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/app/views/vote.scala.html
                   HASH: 0e5952ba5c94f12523bb88d47f45f3569f9c4340
                   MATRIX: 797->1|819->15|858->17|890->23|968->98|1000->104|1058->136|1072->142|1114->164|1203->227|1217->233|1266->262|1432->400|1461->401|1498->411|1751->637|1780->638

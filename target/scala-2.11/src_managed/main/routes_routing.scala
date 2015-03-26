@@ -1,6 +1,6 @@
 // @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:5dc53189a4e93a2df792cda65eb3729933351590
-// @DATE:Thu Mar 26 19:17:50 ICT 2015
+// @HASH:5d8ffdbe6f59884e3694b910587f51db57805f3e
+// @DATE:Thu Mar 26 21:40:52 ICT 2015
 
 
 import play.core._
@@ -96,19 +96,33 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(cla
         
 
 // @LINE:23
-private[this] lazy val controllers_Quicknote_index9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("quicknote"))))
-private[this] lazy val controllers_Quicknote_index9_invoker = createInvoker(
+private[this] lazy val controllers_Login_login9_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_Login_login9_invoker = createInvoker(
+controllers.Login.login(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "login", Nil,"GET", """""", Routes.prefix + """login"""))
+        
+
+// @LINE:24
+private[this] lazy val controllers_Login_authenticate10_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("login"))))
+private[this] lazy val controllers_Login_authenticate10_invoker = createInvoker(
+controllers.Login.authenticate(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "authenticate", Nil,"POST", """""", Routes.prefix + """login"""))
+        
+
+// @LINE:26
+private[this] lazy val controllers_Quicknote_index11_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("quicknote"))))
+private[this] lazy val controllers_Quicknote_index11_invoker = createInvoker(
 controllers.Quicknote.index(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "index", Nil,"GET", """""", Routes.prefix + """quicknote"""))
         
 
-// @LINE:24
-private[this] lazy val controllers_Quicknote_addNote10_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("quicknote"))))
-private[this] lazy val controllers_Quicknote_addNote10_invoker = createInvoker(
+// @LINE:27
+private[this] lazy val controllers_Quicknote_addNote12_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("quicknote"))))
+private[this] lazy val controllers_Quicknote_addNote12_invoker = createInvoker(
 controllers.Quicknote.addNote(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "addNote", Nil,"POST", """""", Routes.prefix + """quicknote"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -189,17 +203,33 @@ case controllers_Assets_at8_route(params) => {
         
 
 // @LINE:23
-case controllers_Quicknote_index9_route(params) => {
+case controllers_Login_login9_route(params) => {
    call { 
-        controllers_Quicknote_index9_invoker.call(controllers.Quicknote.index())
+        controllers_Login_login9_invoker.call(controllers.Login.login())
    }
 }
         
 
 // @LINE:24
-case controllers_Quicknote_addNote10_route(params) => {
+case controllers_Login_authenticate10_route(params) => {
    call { 
-        controllers_Quicknote_addNote10_invoker.call(controllers.Quicknote.addNote())
+        controllers_Login_authenticate10_invoker.call(controllers.Login.authenticate())
+   }
+}
+        
+
+// @LINE:26
+case controllers_Quicknote_index11_route(params) => {
+   call { 
+        controllers_Quicknote_index11_invoker.call(controllers.Quicknote.index())
+   }
+}
+        
+
+// @LINE:27
+case controllers_Quicknote_addNote12_route(params) => {
+   call { 
+        controllers_Quicknote_addNote12_invoker.call(controllers.Quicknote.addNote())
    }
 }
         

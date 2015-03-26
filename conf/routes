@@ -20,8 +20,11 @@ GET         /group1              controllers.Application.group1()
 GET         /assets/*file        controllers.Assets.at(path="/public", file)
 
 
-GET		    /quicknote		controllers.Quicknote.index()
-POST		/quicknote		controllers.Quicknote.addNote()
+GET         /login               controllers.Login.login()
+POST        /login               controllers.Login.authenticate()
+
+GET         /quicknote           controllers.Quicknote.index()
+POST        /quicknote           controllers.Quicknote.addNote()
 
 
     

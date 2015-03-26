@@ -1,10 +1,10 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-  <meta charset="UTF-8">
-  <title></title>
-</head>
-<body>
-
-</body>
-</html>
+@main("Login") {
+    <h1>Login</h1>
+    <form action="/login" method="post">
+        Username: <input type="text" name="username" id="username">
+        <br> <br>
+        Password: <input type="password" name="password" id="password">
+        <br> <br>
+        <button type="submit" name="action">Sign in</button>
+    </form>
+}
