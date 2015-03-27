@@ -18,14 +18,13 @@ import static play.libs.Json.toJson;
 
 public class Rate extends Controller {
 
-	public static class RateScore
-	{
+	public static class RateScore {
+        public String category;
 		public int score;
 	}
 
     public static Result rate() {
         return ok(rate.render());
-        //return ok( login.render( Form.form() ) );
     }
 	
 	public static Result submitRate()
