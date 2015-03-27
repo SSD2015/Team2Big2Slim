@@ -13,11 +13,18 @@ public class Project extends Model {
     @Id
     public Long id;
     public String projectName;
+    public String PicProject;
+    public String typeApp;
 
-    public static void create(long id,String name){
+
+
+
+    public static void create(long id,String name,String PicProject,String typeApp){
         Project project = new Project();
-        project.projectName = name;
         project.id = id;
+        project.projectName = name;
+        project.PicProject = PicProject;
+        project.typeApp = typeApp;
         project.save();
     }
 

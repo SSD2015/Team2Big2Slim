@@ -8,7 +8,6 @@ public class ProjectList extends Controller {
 
     public static Result index(Long id){
         Project project = Project.find.byId(id);
-
         return ok(profile.render(project));
     }
 }

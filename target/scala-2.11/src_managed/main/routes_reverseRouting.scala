@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:b92c794a0d6781fcc6113878d82c498ec8101193
-// @DATE:Fri Mar 27 11:29:04 ICT 2015
+// @HASH:9736acd8e74e2af183233417ab76902693af0bf4
+// @DATE:Fri Mar 27 14:47:01 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -33,7 +33,7 @@ class ReverseProjectList {
 // @LINE:13
 def index(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "profile" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("id", id)))))
+   Call("GET", _prefix + { _defaultPrefix } + "profile/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
@@ -140,7 +140,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProjectList.index",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("id", id)])})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -278,7 +278,7 @@ class ReverseProjectList {
 
 // @LINE:13
 def index(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ProjectList.index(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Long]), "GET", """""", _prefix + """profile""")
+   controllers.ProjectList.index(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Long]), "GET", """""", _prefix + """profile/$id<[^/]+>""")
 )
                       
 

@@ -23,10 +23,10 @@ import views.html._
 object profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Project,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(projects : Project):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(project : Project):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.22*/("""
+Seq[Any](format.raw/*1.21*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE HTML>
 <html lang = "en">
     <title>Grand Theft Auto V</title>
@@ -82,7 +82,7 @@ Seq[Any](format.raw/*1.22*/("""
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "NameProject">
-                        <h style="font-family:verdana" >"""),_display_(/*57.58*/projects/*57.66*/.projectName),format.raw/*57.78*/("""</h>
+                        <h style="font-family:verdana" >"""),_display_(/*57.58*/project/*57.65*/.projectName),format.raw/*57.77*/("""</h>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -91,7 +91,7 @@ Seq[Any](format.raw/*1.22*/("""
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "PictureProject">
-                        <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:700px;height:450px"> </p>
+                        <p> <img src = """),_display_(/*66.41*/project/*66.48*/.PicProject),format.raw/*66.59*/(""" """),format.raw/*66.60*/("""style="width:700px;height:450px"> </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -114,8 +114,8 @@ Seq[Any](format.raw/*1.22*/("""
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "Information">
-                        <p>Project name: GTA</p>
-                        <p>Type of project: Game</p>
+                        <p>Project name: """),_display_(/*89.43*/project/*89.50*/.projectName),format.raw/*89.62*/("""</p>
+                        <p>Type of project: """),_display_(/*90.46*/project/*90.53*/.typeApp),format.raw/*90.61*/("""</p>
                         <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
                     </div>
                 </div>
@@ -196,20 +196,20 @@ Seq[Any](format.raw/*1.22*/("""
 </html>"""))}
   }
 
-  def render(projects:Project): play.twirl.api.HtmlFormat.Appendable = apply(projects)
+  def render(project:Project): play.twirl.api.HtmlFormat.Appendable = apply(project)
 
-  def f:((Project) => play.twirl.api.HtmlFormat.Appendable) = (projects) => apply(projects)
+  def f:((Project) => play.twirl.api.HtmlFormat.Appendable) = (project) => apply(project)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 27 11:37:23 ICT 2015
+                  DATE: Fri Mar 27 15:23:24 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/profile.scala.html
-                  HASH: eb83be5600b3bd24b3aee762c5310714f317c61e
-                  MATRIX: 726->1|834->21|861->22|1686->819|1715->820|1756->833|1836->886|1865->887|1901->896|1941->908|1970->909|2011->922|2091->975|2120->976|2156->985|2195->996|2224->997|2265->1010|2345->1063|2374->1064|2410->1073|2439->1074|2468->1075|2509->1088|2564->1116|2593->1117|2628->1125|2661->1130|2690->1131|2731->1144|2793->1179|2822->1180|2859->1190|2960->1263|2989->1264|3025->1273|3095->1316|3124->1317|3160->1326|3198->1336|3227->1337|3268->1350|3346->1401|3375->1402|3407->1407|3809->1782|3826->1790|3859->1802
-                  LINES: 26->1|29->1|30->2|44->16|44->16|45->17|47->19|47->19|48->20|48->20|48->20|49->21|51->23|51->23|52->24|52->24|52->24|53->25|55->27|55->27|56->28|56->28|56->28|57->29|58->30|58->30|59->31|59->31|59->31|60->32|61->33|61->33|63->35|64->36|64->36|65->37|67->39|67->39|68->40|68->40|68->40|69->41|71->43|71->43|72->44|85->57|85->57|85->57
+                  HASH: b3fdb5460e34334eba557af432265e6da31be7f8
+                  MATRIX: 726->1|833->20|860->21|1685->818|1714->819|1755->832|1835->885|1864->886|1900->895|1940->907|1969->908|2010->921|2090->974|2119->975|2155->984|2194->995|2223->996|2264->1009|2344->1062|2373->1063|2409->1072|2438->1073|2467->1074|2508->1087|2563->1115|2592->1116|2627->1124|2660->1129|2689->1130|2730->1143|2792->1178|2821->1179|2858->1189|2959->1262|2988->1263|3024->1272|3094->1315|3123->1316|3159->1325|3197->1335|3226->1336|3267->1349|3345->1400|3374->1401|3406->1406|3808->1781|3824->1788|3857->1800|4214->2130|4230->2137|4262->2148|4291->2149|5194->3025|5210->3032|5243->3044|5320->3094|5336->3101|5365->3109
+                  LINES: 26->1|29->1|30->2|44->16|44->16|45->17|47->19|47->19|48->20|48->20|48->20|49->21|51->23|51->23|52->24|52->24|52->24|53->25|55->27|55->27|56->28|56->28|56->28|57->29|58->30|58->30|59->31|59->31|59->31|60->32|61->33|61->33|63->35|64->36|64->36|65->37|67->39|67->39|68->40|68->40|68->40|69->41|71->43|71->43|72->44|85->57|85->57|85->57|94->66|94->66|94->66|94->66|117->89|117->89|117->89|118->90|118->90|118->90
                   -- GENERATED --
               */
           

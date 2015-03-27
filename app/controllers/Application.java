@@ -32,8 +32,8 @@ public class Application extends Controller {
         return ok(test.render());
     }
     public static Result mockDatabase() {
-        Project.create(1,"Grand Theft Auto V s");
-        Project.create(2,"GTA");
+        Project.create(1,"Grand Theft Auto V","http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg","Game");
+        Project.create(2,"Line","http://screenshots.en.sftcdn.net/en/scrn/6651000/6651755/image-05-700x525.png","Social network app");
         return redirect(routes.Application.index());
     }
 }

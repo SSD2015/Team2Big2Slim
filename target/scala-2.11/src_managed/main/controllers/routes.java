@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:b92c794a0d6781fcc6113878d82c498ec8101193
-// @DATE:Fri Mar 27 11:29:04 ICT 2015
+// @HASH:9736acd8e74e2af183233417ab76902693af0bf4
+// @DATE:Fri Mar 27 14:47:01 ICT 2015
 
 package controllers;
 

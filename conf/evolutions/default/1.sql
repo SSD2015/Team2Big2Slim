@@ -5,7 +5,9 @@
 
 create table project (
   id                        integer primary key AUTOINCREMENT,
-  project_name              varchar(255))
+  project_name              varchar(255),
+  pic_project               varchar(255),
+  type_app                  varchar(255))
 ;
 
 

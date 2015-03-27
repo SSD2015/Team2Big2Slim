@@ -10,7 +10,7 @@ GET        /assets/*file        controllers.Assets.at(path="/public", file)
 
 GET        /hello               controllers.Application.hello()
 
-GET        /profile             controllers.ProjectList.index(id : Long)
+GET        /profile/:id            controllers.ProjectList.index(id:Long)
 
 GET        /screenshot1         controllers.Application.screenshot1()
 
