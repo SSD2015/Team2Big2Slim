@@ -18,6 +18,11 @@ import static play.libs.Json.toJson;
 
 public class Rate extends Controller {
 
+	public static class RateScore
+	{
+		public int score;
+	}
+
     public static Result rate() {
         return ok(rate.render());
         //return ok( login.render( Form.form() ) );
@@ -25,7 +30,9 @@ public class Rate extends Controller {
 	
 	public static Result submitRate()
 	{
-		
+		Form<RateScore> rateForm = Form.form(RateScore.class).bindFromRequest();
+		System.out.println("RateForm: " + rateForm.get());
+        System.out.println("Score: " + rateForm.get().score);
 		return ok(rate.render());
 	}
 
