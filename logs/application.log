@@ -1,57 +1,498 @@
-2015-03-27 17:48:59,053 - [INFO] - from play in pool-4-thread-1 
+2015-03-27 19:04:10,515 - [INFO] - from play in pool-4-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-03-27 17:49:28,991 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-27 19:04:17,029 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-03-27 17:49:30,136 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-27 19:04:18,080 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-27 17:49:36,558 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-3 
+2015-03-27 19:04:57,851 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:04:57,938 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:05:01,715 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-8 
 Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
 
-2015-03-27 17:49:36,599 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Not strongly caching class [controllers.Rate$RateScore] because it is not cache-safe
+2015-03-27 19:05:01,720 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
 
-2015-03-27 17:49:36,600 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Getting BeanInfo for class [controllers.Rate$RateScore]
+2015-03-27 19:05:01,720 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Getting BeanInfo for class [models.RatingRecord]
 
-2015-03-27 17:49:36,603 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Caching PropertyDescriptors for class [controllers.Rate$RateScore]
+2015-03-27 19:05:01,724 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Caching PropertyDescriptors for class [models.RatingRecord]
 
-2015-03-27 17:49:36,603 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+2015-03-27 19:05:01,724 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:05:01,725 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
 Found bean property 'class' of type [java.lang.Class]
 
-2015-03-27 17:49:36,604 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
+2015-03-27 19:05:01,725 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:05:01,725 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:05:01,726 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-8 
 Found bean property 'score' of type [int]
 
-2015-03-27 17:49:36,621 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-3 
-Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@23dc1268]
-
-2015-03-27 17:49:39,193 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-3 
-Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@2c10463d]
-
-2015-03-27 17:51:12,706 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-27 19:06:21,837 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-03-27 17:51:12,771 - [INFO] - from play in play-internal-execution-context-1 
+2015-03-27 19:06:21,945 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-03-27 17:51:12,781 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-6 
-Not strongly caching class [controllers.Rate$RateScore] because it is not cache-safe
+2015-03-27 19:06:24,556 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-14 
+Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
 
-2015-03-27 17:51:12,781 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-6 
-Getting BeanInfo for class [controllers.Rate$RateScore]
+2015-03-27 19:06:24,557 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-14 
+Getting BeanInfo for class [controllers.Login$LoginInfo]
 
-2015-03-27 17:51:12,783 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-6 
-Caching PropertyDescriptors for class [controllers.Rate$RateScore]
+2015-03-27 19:06:24,558 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-14 
+Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
 
-2015-03-27 17:51:12,783 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-6 
+2015-03-27 19:06:24,559 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-14 
 Found bean property 'class' of type [java.lang.Class]
 
-2015-03-27 17:51:12,783 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-6 
+2015-03-27 19:06:24,559 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-14 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-27 19:06:24,559 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-14 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-27 19:07:03,548 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:07:03,629 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:07:03,638 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
+
+2015-03-27 19:07:03,639 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Getting BeanInfo for class [controllers.Login$LoginInfo]
+
+2015-03-27 19:07:03,640 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
+
+2015-03-27 19:07:03,640 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:07:03,640 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-27 19:07:03,640 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'shit' of type [java.lang.String]
+
+2015-03-27 19:07:03,640 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-27 19:09:02,567 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:09:02,643 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:09:02,650 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
+
+2015-03-27 19:09:02,651 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Getting BeanInfo for class [controllers.Login$LoginInfo]
+
+2015-03-27 19:09:02,652 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
+
+2015-03-27 19:09:02,652 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:09:02,652 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'password' of type [java.lang.String]
+
+2015-03-27 19:09:02,653 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'sda' of type [int]
+
+2015-03-27 19:09:02,653 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'shit' of type [java.lang.String]
+
+2015-03-27 19:09:02,653 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
+Found bean property 'username' of type [java.lang.String]
+
+2015-03-27 19:10:25,109 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:10:25,201 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:10:27,781 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:10:27,782 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:10:27,784 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:10:27,784 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:10:27,784 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:10:27,784 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:10:27,784 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:10:27,784 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
 Found bean property 'score' of type [int]
 
-2015-03-27 17:51:12,783 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-6 
-Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@41f067f3]
+2015-03-27 19:10:27,796 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-22 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@575cea39]
+
+2015-03-27 19:10:27,798 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-22 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@575cea39]
+
+2015-03-27 19:10:27,798 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-22 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@575cea39]
+
+2015-03-27 19:11:23,035 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:11:23,118 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:11:23,126 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:11:23,127 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:11:23,129 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:11:23,129 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:11:23,129 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:11:23,129 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:11:23,129 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:11:23,129 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-25 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:11:23,130 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f38ffeb]
+
+2015-03-27 19:11:23,130 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f38ffeb]
+
+2015-03-27 19:11:23,131 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f38ffeb]
+
+2015-03-27 19:11:24,974 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72dfe0b5]
+
+2015-03-27 19:11:24,974 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72dfe0b5]
+
+2015-03-27 19:11:24,975 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72dfe0b5]
+
+2015-03-27 19:11:31,813 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19bbab3e]
+
+2015-03-27 19:11:31,814 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19bbab3e]
+
+2015-03-27 19:11:31,814 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19bbab3e]
+
+2015-03-27 19:11:33,974 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@9acb4be]
+
+2015-03-27 19:11:33,974 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@9acb4be]
+
+2015-03-27 19:11:33,974 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@9acb4be]
+
+2015-03-27 19:11:45,889 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-20 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@13d68222]
+
+2015-03-27 19:11:45,890 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-20 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@13d68222]
+
+2015-03-27 19:11:45,890 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-20 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@13d68222]
+
+2015-03-27 19:11:51,816 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@624375d3]
+
+2015-03-27 19:11:51,816 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@624375d3]
+
+2015-03-27 19:11:51,817 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-25 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@624375d3]
+
+2015-03-27 19:12:11,812 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:12:11,902 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:12:11,912 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:12:11,913 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:12:11,915 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-20 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c2c7413]
+
+2015-03-27 19:12:11,916 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-20 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c2c7413]
+
+2015-03-27 19:12:11,916 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-20 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c2c7413]
+
+2015-03-27 19:12:13,545 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-26 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3ff51f19]
+
+2015-03-27 19:12:13,545 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-26 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3ff51f19]
+
+2015-03-27 19:12:13,546 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-26 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3ff51f19]
+
+2015-03-27 19:12:53,311 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:12:53,381 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:12:53,387 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:12:53,388 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:12:53,389 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:12:53,389 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:12:53,389 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:12:53,389 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:12:53,389 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:12:53,389 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-26 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:13:19,749 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:13:19,822 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:13:19,829 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:13:19,830 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:13:19,831 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:13:19,831 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:13:19,831 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:13:19,831 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:13:19,831 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:13:19,832 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:15:22,781 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:15:22,851 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:15:22,860 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:15:22,861 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:15:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:15:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:15:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:15:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:15:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:15:22,863 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:15:22,864 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7cfe7e27]
+
+2015-03-27 19:15:22,864 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7cfe7e27]
+
+2015-03-27 19:15:22,865 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7cfe7e27]
+
+2015-03-27 19:15:30,445 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@34de715d]
+
+2015-03-27 19:15:30,446 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@34de715d]
+
+2015-03-27 19:15:30,446 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@34de715d]
+
+2015-03-27 19:16:08,155 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:16:08,240 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:16:08,246 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:16:08,247 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:16:08,249 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:16:08,249 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:16:08,249 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:16:08,250 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:16:08,250 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:16:08,250 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:16:08,250 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3b2be3cb]
+
+2015-03-27 19:16:08,251 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3b2be3cb]
+
+2015-03-27 19:16:08,251 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3b2be3cb]
+
+2015-03-27 19:17:28,995 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-03-27 19:17:29,072 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-03-27 19:17:29,079 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-03-27 19:17:29,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-03-27 19:17:29,082 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-03-27 19:17:29,082 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'ID' of type [int]
+
+2015-03-27 19:17:29,082 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-03-27 19:17:29,082 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'criteriaID' of type [int]
+
+2015-03-27 19:17:29,082 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'projectID' of type [int]
+
+2015-03-27 19:17:29,082 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'score' of type [int]
+
+2015-03-27 19:17:29,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1015e565]
+
+2015-03-27 19:17:29,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1015e565]
+
+2015-03-27 19:17:29,084 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-28 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1015e565]
+
+2015-03-27 19:17:30,735 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-31 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3c95038a]
+
+2015-03-27 19:17:30,735 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-31 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3c95038a]
+
+2015-03-27 19:17:30,735 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-31 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3c95038a]
+
+2015-03-27 19:18:02,084 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-31 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@366d68fa]
+
+2015-03-27 19:18:02,084 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-31 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@366d68fa]
+
+2015-03-27 19:18:02,084 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-31 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@366d68fa]
 

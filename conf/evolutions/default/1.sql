@@ -18,6 +18,14 @@ create table project (
   constraint pk_project primary key (id))
 ;
 
+create table rating_record (
+  id                        integer auto_increment not null,
+  project_id                integer,
+  criteria_id               integer,
+  score                     integer,
+  constraint pk_rating_record primary key (id))
+;
+
 create table regular_user (
   id                        integer auto_increment not null,
   username                  varchar(255),
@@ -42,6 +50,8 @@ SET FOREIGN_KEY_CHECKS=0;
 drop table note;
 
 drop table project;
+
+drop table rating_record;
 
 drop table regular_user;
 

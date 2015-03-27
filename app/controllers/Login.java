@@ -19,6 +19,7 @@ import static play.libs.Json.toJson;
 public class Login extends Controller {
 
     public static class LoginInfo {
+        public String shit;
         public String username;
         public String password;
     }
@@ -31,9 +32,10 @@ public class Login extends Controller {
 
     public static Result authenticate() {
         Form<LoginInfo> loginForm = Form.form(LoginInfo.class).bindFromRequest();
-        //System.out.println("LoginForm: " + loginForm.get());
-        //System.out.println("username: " + loginForm.get().username);
-        //System.out.println("password: " + loginForm.get().password);
+        System.out.println("LoginForm: " + loginForm.get());
+        System.out.println("shit: " + loginForm.get().shit);
+        System.out.println("username: " + loginForm.get().username);
+        System.out.println("password: " + loginForm.get().password);
         LoginInfo info = loginForm.get();
         User user = User.find.where().eq("username", info.username).eq("password", info.password).findUnique();
 

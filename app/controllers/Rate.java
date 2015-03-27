@@ -1,5 +1,6 @@
 package controllers;
 
+import models.RatingRecord;
 import models.User;
 import play.*;
 import play.mvc.*;
@@ -19,7 +20,6 @@ import static play.libs.Json.toJson;
 public class Rate extends Controller {
 
 	public static class RateScore {
-        public String category;
 		public int score;
 	}
 
@@ -27,11 +27,17 @@ public class Rate extends Controller {
         return ok(rate.render());
     }
 	
-	public static Result submitRate()
-	{
-		Form<RateScore> rateForm = Form.form(RateScore.class).bindFromRequest();
-		System.out.println("RateForm: " + rateForm.get());
-        System.out.println("Score: " + rateForm.get().score);
+	public static Result submitRate() {
+
+        //Form<RatingRecord> ratingForm = Form.form(RatingRecord.class).bindFromRequest();
+        //System.out.println("RateForm: " + ratingForm.get());
+        //System.out.println("ID: " + ratingForm.get().getID());
+        //System.out.println("projectID: " + ratingForm.get().getProjectID());
+        //System.out.println("criteriaID: " + ratingForm.get().getCriteriaID());
+        //System.out.println("score: " + ratingForm.get().getScore());
+
+        RatingRecord record = Form.form(RatingRecord.class).bindFromRequest().get();
+        record.save();
 		return ok(rate.render());
 	}
 

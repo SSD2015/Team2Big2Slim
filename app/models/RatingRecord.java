@@ -13,25 +13,29 @@ import javax.persistence.IdClass;
 @Entity
 public class RatingRecord extends Model {
     @Id
-    protected int ID;
-    private int projectID;
-    private int criteriaID;
-    private int score;
+    public int ID;
+    public int projectID;
+    public int criteriaID;
+    public int score;
 
     public static Finder<Integer, User> find = new Finder<Integer,User>(
             Integer.class, User.class
     );
 
+    public int getID() {
+        return ID;
+    }
+
     public int getProjectID() {
-        return projectID;
+        return this.projectID;
     }
 
     public int getCriteriaID() {
-        return criteriaID;
+        return this.criteriaID;
     }
 
     public int getScore() {
-        return score;
+        return this.score;
     }
 
 

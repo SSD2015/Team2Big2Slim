@@ -11,8 +11,8 @@ import javax.persistence.Id;
 public class User extends Model{
     @Id
     protected int ID;
-    private String username;
-    private String password;
+    public String username;
+    public String password;
 
     public static Finder<Integer, User> find = new Finder<Integer,User>(
             Integer.class, User.class
