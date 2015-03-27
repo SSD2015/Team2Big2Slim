@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:5d8ffdbe6f59884e3694b910587f51db57805f3e
-// @DATE:Thu Mar 26 21:40:52 ICT 2015
+// @SOURCE:C:/Team2Big2Slim/conf/routes
+// @HASH:0e13e75071bee77463befc5de2ae65d3fa570469
+// @DATE:Fri Mar 27 17:07:53 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,8 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:30
+// @LINE:29
 // @LINE:27
 // @LINE:26
 // @LINE:24
@@ -29,6 +31,42 @@ import Router.queryString
 // @LINE:8
 // @LINE:6
 package controllers {
+
+// @LINE:30
+// @LINE:29
+class ReverseRate {
+
+
+// @LINE:30
+def submitRate(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "rate")
+}
+                        
+
+// @LINE:29
+def rate(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "rate")
+}
+                        
+
+}
+                          
+
+// @LINE:20
+class ReverseAssets {
+
+
+// @LINE:20
+def at(file:String): Call = {
+   implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
+   Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
+}
+                        
+
+}
+                          
 
 // @LINE:27
 // @LINE:26
@@ -68,20 +106,6 @@ def authenticate(): Call = {
 def login(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "login")
-}
-                        
-
-}
-                          
-
-// @LINE:20
-class ReverseAssets {
-
-
-// @LINE:20
-def at(file:String): Call = {
-   implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
-   Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
 }
                         
 
@@ -161,6 +185,8 @@ def index(): Call = {
                   
 
 
+// @LINE:30
+// @LINE:29
 // @LINE:27
 // @LINE:26
 // @LINE:24
@@ -176,6 +202,54 @@ def index(): Call = {
 // @LINE:6
 package controllers.javascript {
 import ReverseRouteContext.empty
+
+// @LINE:30
+// @LINE:29
+class ReverseRate {
+
+
+// @LINE:30
+def submitRate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Rate.submitRate",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "rate"})
+      }
+   """
+)
+                        
+
+// @LINE:29
+def rate : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Rate.rate",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rate"})
+      }
+   """
+)
+                        
+
+}
+              
+
+// @LINE:20
+class ReverseAssets {
+
+
+// @LINE:20
+def at : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Assets.at",
+   """
+      function(file) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
+      }
+   """
+)
+                        
+
+}
+              
 
 // @LINE:27
 // @LINE:26
@@ -229,24 +303,6 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "login"})
-      }
-   """
-)
-                        
-
-}
-              
-
-// @LINE:20
-class ReverseAssets {
-
-
-// @LINE:20
-def at : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Assets.at",
-   """
-      function(file) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "assets/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("file", file)})
       }
    """
 )
@@ -360,6 +416,8 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:30
+// @LINE:29
 // @LINE:27
 // @LINE:26
 // @LINE:24
@@ -375,6 +433,39 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:6
 package controllers.ref {
 
+
+// @LINE:30
+// @LINE:29
+class ReverseRate {
+
+
+// @LINE:30
+def submitRate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Rate.submitRate(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "submitRate", Seq(), "POST", """""", _prefix + """rate""")
+)
+                      
+
+// @LINE:29
+def rate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Rate.rate(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "rate", Seq(), "GET", """""", _prefix + """rate""")
+)
+                      
+
+}
+                          
+
+// @LINE:20
+class ReverseAssets {
+
+
+// @LINE:20
+def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
+)
+                      
+
+}
+                          
 
 // @LINE:27
 // @LINE:26
@@ -410,19 +501,6 @@ def authenticate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:23
 def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Login.login(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Login", "login", Seq(), "GET", """""", _prefix + """login""")
-)
-                      
-
-}
-                          
-
-// @LINE:20
-class ReverseAssets {
-
-
-// @LINE:20
-def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
                       
 

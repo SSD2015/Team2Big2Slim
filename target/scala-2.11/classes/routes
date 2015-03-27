@@ -26,5 +26,8 @@ POST        /login               controllers.Login.authenticate()
 GET         /quicknote           controllers.Quicknote.index()
 POST        /quicknote           controllers.Quicknote.addNote()
 
+GET			/rate				 controllers.Rate.rate()
+POST		/rate				 controllers.Rate.submitRate()
+
 
     

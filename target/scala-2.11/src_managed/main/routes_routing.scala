@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:5d8ffdbe6f59884e3694b910587f51db57805f3e
-// @DATE:Thu Mar 26 21:40:52 ICT 2015
+// @SOURCE:C:/Team2Big2Slim/conf/routes
+// @HASH:0e13e75071bee77463befc5de2ae65d3fa570469
+// @DATE:Fri Mar 27 17:07:53 ICT 2015
 
 
 import play.core._
@@ -122,7 +122,21 @@ private[this] lazy val controllers_Quicknote_addNote12_invoker = createInvoker(
 controllers.Quicknote.addNote(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Quicknote", "addNote", Nil,"POST", """""", Routes.prefix + """quicknote"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+
+// @LINE:29
+private[this] lazy val controllers_Rate_rate13_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("rate"))))
+private[this] lazy val controllers_Rate_rate13_invoker = createInvoker(
+controllers.Rate.rate(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "rate", Nil,"GET", """""", Routes.prefix + """rate"""))
+        
+
+// @LINE:30
+private[this] lazy val controllers_Rate_submitRate14_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("rate"))))
+private[this] lazy val controllers_Rate_submitRate14_invoker = createInvoker(
+controllers.Rate.submitRate(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "submitRate", Nil,"POST", """""", Routes.prefix + """rate"""))
+        
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.rate()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.submitRate()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -230,6 +244,22 @@ case controllers_Quicknote_index11_route(params) => {
 case controllers_Quicknote_addNote12_route(params) => {
    call { 
         controllers_Quicknote_addNote12_invoker.call(controllers.Quicknote.addNote())
+   }
+}
+        
+
+// @LINE:29
+case controllers_Rate_rate13_route(params) => {
+   call { 
+        controllers_Rate_rate13_invoker.call(controllers.Rate.rate())
+   }
+}
+        
+
+// @LINE:30
+case controllers_Rate_submitRate14_route(params) => {
+   call { 
+        controllers_Rate_submitRate14_invoker.call(controllers.Rate.submitRate())
    }
 }
         
