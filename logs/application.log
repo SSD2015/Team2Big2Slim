@@ -1,36 +1,120 @@
-2558-03-27 17:31:23,407 - [INFO] - from play in pool-4-thread-1 
+2558-03-27 19:25:18,874 - [INFO] - from play in pool-4-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2558-03-27 17:31:46,319 - [INFO] - from play in play-internal-execution-context-1 
+2558-03-27 19:25:43,386 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2558-03-27 17:31:46,988 - [INFO] - from play in play-internal-execution-context-1 
+2558-03-27 19:25:44,057 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2558-03-27 17:32:15,213 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-5 
+2558-03-27 19:27:06,664 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-10 
 Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
 
-2558-03-27 17:32:15,218 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-5 
-Not strongly caching class [controllers.Rate$RateScore] because it is not cache-safe
+2558-03-27 19:27:06,668 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-10 
+Not strongly caching class [controllers.Vote$VoteScore] because it is not cache-safe
 
-2558-03-27 17:32:15,219 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-5 
-Getting BeanInfo for class [controllers.Rate$RateScore]
+2558-03-27 19:27:06,668 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-10 
+Getting BeanInfo for class [controllers.Vote$VoteScore]
 
-2558-03-27 17:32:15,223 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-5 
-Caching PropertyDescriptors for class [controllers.Rate$RateScore]
+2558-03-27 19:27:06,673 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-10 
+Caching PropertyDescriptors for class [controllers.Vote$VoteScore]
 
-2558-03-27 17:32:15,224 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-5 
+2558-03-27 19:27:06,674 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-10 
 Found bean property 'class' of type [java.lang.Class]
 
-2558-03-27 17:32:15,225 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-5 
+2558-03-27 19:27:06,675 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-10 
+Found bean property 'projectName' of type [java.lang.String]
+
+2558-03-27 19:27:06,676 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-10 
 Found bean property 'score' of type [int]
 
-2558-03-27 17:32:15,251 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-5 
-Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1194c9bd]
+2558-03-27 19:28:02,584 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2558-03-27 17:32:19,580 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-6 
-Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@10aa0755]
+2558-03-27 19:28:02,711 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 
-2558-03-27 17:32:22,535 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-6 
-Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@2f9074d]
+2558-03-27 19:28:02,726 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-9 
+Not strongly caching class [controllers.Vote$VoteScore] because it is not cache-safe
+
+2558-03-27 19:28:02,727 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-9 
+Getting BeanInfo for class [controllers.Vote$VoteScore]
+
+2558-03-27 19:28:02,730 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-9 
+Caching PropertyDescriptors for class [controllers.Vote$VoteScore]
+
+2558-03-27 19:28:02,731 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-9 
+Found bean property 'class' of type [java.lang.Class]
+
+2558-03-27 19:28:02,732 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-9 
+Found bean property 'projectName' of type [java.lang.String]
+
+2558-03-27 19:28:02,733 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-9 
+Found bean property 'score' of type [int]
+
+2558-03-27 19:29:12,820 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2558-03-27 19:29:12,928 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2558-03-27 19:38:45,873 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-23 
+Not strongly caching class [controllers.Rate$RateScore] because it is not cache-safe
+
+2558-03-27 19:38:45,874 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-23 
+Getting BeanInfo for class [controllers.Rate$RateScore]
+
+2558-03-27 19:38:45,876 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-23 
+Caching PropertyDescriptors for class [controllers.Rate$RateScore]
+
+2558-03-27 19:38:45,876 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-23 
+Found bean property 'class' of type [java.lang.Class]
+
+2558-03-27 19:38:45,877 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-23 
+Found bean property 'score' of type [int]
+
+2558-03-27 19:38:45,896 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-23 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1c6fbef2]
+
+2558-03-27 19:38:54,417 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Not strongly caching class [controllers.Vote$VoteScore] because it is not cache-safe
+
+2558-03-27 19:38:54,418 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Getting BeanInfo for class [controllers.Vote$VoteScore]
+
+2558-03-27 19:38:54,420 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Caching PropertyDescriptors for class [controllers.Vote$VoteScore]
+
+2558-03-27 19:38:54,420 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'class' of type [java.lang.Class]
+
+2558-03-27 19:38:54,421 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'projectName' of type [java.lang.String]
+
+2558-03-27 19:38:54,421 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-28 
+Found bean property 'score' of type [int]
+
+2558-03-27 19:42:27,214 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2558-03-27 19:42:27,340 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2558-03-27 19:42:55,654 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-30 
+Not strongly caching class [controllers.Vote$VoteScore] because it is not cache-safe
+
+2558-03-27 19:42:55,669 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-30 
+Getting BeanInfo for class [controllers.Vote$VoteScore]
+
+2558-03-27 19:42:55,671 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-30 
+Caching PropertyDescriptors for class [controllers.Vote$VoteScore]
+
+2558-03-27 19:42:55,671 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-30 
+Found bean property 'class' of type [java.lang.Class]
+
+2558-03-27 19:42:55,672 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-30 
+Found bean property 'projectName' of type [java.lang.String]
+
+2558-03-27 19:42:55,673 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-30 
+Found bean property 'score' of type [int]
 
