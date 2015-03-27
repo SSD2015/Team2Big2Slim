@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:c3b147aafef7e1ed4928c7dbfad51e7eb96e9931
-// @DATE:Tue Mar 24 21:50:23 ICT 2015
+// @HASH:b92c794a0d6781fcc6113878d82c498ec8101193
+// @DATE:Fri Mar 27 11:29:04 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:23
 // @LINE:21
 // @LINE:19
 // @LINE:17
@@ -24,6 +25,20 @@ import Router.queryString
 // @LINE:9
 // @LINE:6
 package controllers {
+
+// @LINE:13
+class ReverseProjectList {
+
+
+// @LINE:13
+def index(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "profile" + queryString(List(Some(implicitly[QueryStringBindable[Long]].unbind("id", id)))))
+}
+                        
+
+}
+                          
 
 // @LINE:9
 class ReverseAssets {
@@ -39,11 +54,11 @@ def at(file:String): Call = {
 }
                           
 
+// @LINE:23
 // @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
-// @LINE:13
 // @LINE:11
 // @LINE:6
 class ReverseApplication {
@@ -56,17 +71,17 @@ def screenshot3(): Call = {
 }
                         
 
-// @LINE:13
-def profile(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "profile")
-}
-                        
-
 // @LINE:11
 def hello(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "hello")
+}
+                        
+
+// @LINE:23
+def mockDatabase(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "install")
 }
                         
 
@@ -104,6 +119,7 @@ def index(): Call = {
                   
 
 
+// @LINE:23
 // @LINE:21
 // @LINE:19
 // @LINE:17
@@ -114,6 +130,24 @@ def index(): Call = {
 // @LINE:6
 package controllers.javascript {
 import ReverseRouteContext.empty
+
+// @LINE:13
+class ReverseProjectList {
+
+
+// @LINE:13
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.index",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile" + _qS([(""" + implicitly[QueryStringBindable[Long]].javascriptUnbind + """)("id", id)])})
+      }
+   """
+)
+                        
+
+}
+              
 
 // @LINE:9
 class ReverseAssets {
@@ -133,11 +167,11 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:23
 // @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
-// @LINE:13
 // @LINE:11
 // @LINE:6
 class ReverseApplication {
@@ -154,23 +188,23 @@ def screenshot3 : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:13
-def profile : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.profile",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
-      }
-   """
-)
-                        
-
 // @LINE:11
 def hello : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.hello",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hello"})
+      }
+   """
+)
+                        
+
+// @LINE:23
+def mockDatabase : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.mockDatabase",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "install"})
       }
    """
 )
@@ -226,6 +260,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:23
 // @LINE:21
 // @LINE:19
 // @LINE:17
@@ -236,6 +271,19 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:6
 package controllers.ref {
 
+
+// @LINE:13
+class ReverseProjectList {
+
+
+// @LINE:13
+def index(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.index(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Long]), "GET", """""", _prefix + """profile""")
+)
+                      
+
+}
+                          
 
 // @LINE:9
 class ReverseAssets {
@@ -250,11 +298,11 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
+// @LINE:23
 // @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
-// @LINE:13
 // @LINE:11
 // @LINE:6
 class ReverseApplication {
@@ -266,15 +314,15 @@ def screenshot3(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:13
-def profile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.profile(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "profile", Seq(), "GET", """""", _prefix + """profile""")
-)
-                      
-
 // @LINE:11
 def hello(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.hello(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "hello", Seq(), "GET", """""", _prefix + """hello""")
+)
+                      
+
+// @LINE:23
+def mockDatabase(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.mockDatabase(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "mockDatabase", Seq(), "GET", """""", _prefix + """install""")
 )
                       
 

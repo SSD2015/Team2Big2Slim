@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="runtime"
 		confs="compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool"
-		date="20150323195207"/>
+		date="20150327110440"/>
 	<dependencies>
 		<module organisation="com.typesafe.play" name="play-java-ws_2.11">
 			<revision name="2.3.8" status="release" pubdate="20150225121703" resolver="sbt-chain" artresolver="sbt-chain" homepage="https://playframework.com" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="59">
@@ -155,6 +155,17 @@
 				<artifacts>
 					<artifact name="avaje-ebeanorm" type="jar" ext="jar" status="no" details="" size="1590523" time="0" location="/Users/nathakorn/.ivy2/cache/org.avaje.ebeanorm/avaje-ebeanorm/jars/avaje-ebeanorm-3.3.4.jar">
 						<origin-location is-local="false" location="file:/usr/local/Cellar/typesafe-activator/1.2.12/libexec/repository/org.avaje.ebeanorm/avaje-ebeanorm/3.3.4/jars/avaje-ebeanorm.jar"/>
+					</artifact>
+				</artifacts>
+			</revision>
+		</module>
+		<module organisation="org.xerial" name="sqlite-jdbc">
+			<revision name="3.7.2" status="release" pubdate="20100827162018" resolver="sbt-chain" artresolver="sbt-chain" homepage="" downloaded="false" searched="false" default="false" conf="default(compile), default, compile, runtime, master" position="67">
+				<metadata-artifact status="no" details="" size="3255" time="0" location="/Users/nathakorn/.ivy2/cache/org.xerial/sqlite-jdbc/ivy-3.7.2.xml" searched="false" origin-is-local="false" origin-location="http://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.7.2/sqlite-jdbc-3.7.2.pom"/>
+				<caller organisation="2big2slim" name="2big2slim_2.11" conf="compile, runtime" rev="3.7.2" rev-constraint-default="3.7.2" rev-constraint-dynamic="3.7.2" callerrev="1.0-SNAPSHOT"/>
+				<artifacts>
+					<artifact name="sqlite-jdbc" type="jar" ext="jar" status="no" details="" size="3201133" time="0" location="/Users/nathakorn/.ivy2/cache/org.xerial/sqlite-jdbc/jars/sqlite-jdbc-3.7.2.jar">
+						<origin-location is-local="false" location="http://repo1.maven.org/maven2/org/xerial/sqlite-jdbc/3.7.2/sqlite-jdbc-3.7.2.jar"/>
 					</artifact>
 				</artifacts>
 			</revision>

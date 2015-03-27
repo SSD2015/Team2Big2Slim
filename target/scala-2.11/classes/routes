@@ -10,7 +10,7 @@ GET        /assets/*file        controllers.Assets.at(path="/public", file)
 
 GET        /hello               controllers.Application.hello()
 
-GET        /profile             controllers.Application.profile()
+GET        /profile             controllers.ProjectList.index(id : Long)
 
 GET        /screenshot1         controllers.Application.screenshot1()
 
@@ -19,3 +19,5 @@ GET        /screenshot2         controllers.Application.screenshot2()
 GET        /screenshot3         controllers.Application.screenshot3()
 
 GET        /test                controllers.Application.test()
+
+GET        /install             controllers.Application.mockDatabase()

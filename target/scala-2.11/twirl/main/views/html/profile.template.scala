@@ -20,13 +20,14 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Project,play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(projects : Project):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
+Seq[Any](format.raw/*1.22*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE HTML>
 <html lang = "en">
     <title>Grand Theft Auto V</title>
     <meta charset="utf-8">
@@ -40,35 +41,35 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
         <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-        .NameProject"""),format.raw/*15.21*/("""{"""),format.raw/*15.22*/("""
-            """),format.raw/*16.13*/("""font-size : 250%;
+        .NameProject"""),format.raw/*16.21*/("""{"""),format.raw/*16.22*/("""
+            """),format.raw/*17.13*/("""font-size : 250%;
             color : black;
-        """),format.raw/*18.9*/("""}"""),format.raw/*18.10*/("""
-        """),format.raw/*19.9*/(""".Description"""),format.raw/*19.21*/("""{"""),format.raw/*19.22*/("""
-            """),format.raw/*20.13*/("""font-size : 250%;
+        """),format.raw/*19.9*/("""}"""),format.raw/*19.10*/("""
+        """),format.raw/*20.9*/(""".Description"""),format.raw/*20.21*/("""{"""),format.raw/*20.22*/("""
+            """),format.raw/*21.13*/("""font-size : 250%;
             color : black;
-        """),format.raw/*22.9*/("""}"""),format.raw/*22.10*/("""
-        """),format.raw/*23.9*/(""".ScreenShot"""),format.raw/*23.20*/("""{"""),format.raw/*23.21*/("""
-            """),format.raw/*24.13*/("""font-size : 250%;
+        """),format.raw/*23.9*/("""}"""),format.raw/*23.10*/("""
+        """),format.raw/*24.9*/(""".ScreenShot"""),format.raw/*24.20*/("""{"""),format.raw/*24.21*/("""
+            """),format.raw/*25.13*/("""font-size : 250%;
             color : black;
-        """),format.raw/*26.9*/("""}"""),format.raw/*26.10*/("""
-        """),format.raw/*27.9*/("""p"""),format.raw/*27.10*/("""{"""),format.raw/*27.11*/("""
-            """),format.raw/*28.13*/("""font-style: normal;
-        """),format.raw/*29.9*/("""}"""),format.raw/*29.10*/("""
-       """),format.raw/*30.8*/(""".Line"""),format.raw/*30.13*/("""{"""),format.raw/*30.14*/("""
-            """),format.raw/*31.13*/("""border-bottom: 1px dashed;
-        """),format.raw/*32.9*/("""}"""),format.raw/*32.10*/("""
+        """),format.raw/*27.9*/("""}"""),format.raw/*27.10*/("""
+        """),format.raw/*28.9*/("""p"""),format.raw/*28.10*/("""{"""),format.raw/*28.11*/("""
+            """),format.raw/*29.13*/("""font-style: normal;
+        """),format.raw/*30.9*/("""}"""),format.raw/*30.10*/("""
+       """),format.raw/*31.8*/(""".Line"""),format.raw/*31.13*/("""{"""),format.raw/*31.14*/("""
+            """),format.raw/*32.13*/("""border-bottom: 1px dashed;
+        """),format.raw/*33.9*/("""}"""),format.raw/*33.10*/("""
 
-        """),format.raw/*34.9*/(""".carousel-inner > .item > img,
-        .carousel-inner > .item > a > img """),format.raw/*35.43*/("""{"""),format.raw/*35.44*/("""
-        """),format.raw/*36.9*/("""width: auto;
+        """),format.raw/*35.9*/(""".carousel-inner > .item > img,
+        .carousel-inner > .item > a > img """),format.raw/*36.43*/("""{"""),format.raw/*36.44*/("""
+        """),format.raw/*37.9*/("""width: auto;
         margin: auto;
-        """),format.raw/*38.9*/("""}"""),format.raw/*38.10*/("""
-        """),format.raw/*39.9*/(""".container"""),format.raw/*39.19*/("""{"""),format.raw/*39.20*/("""
-            """),format.raw/*40.13*/("""width : 600px;
+        """),format.raw/*39.9*/("""}"""),format.raw/*39.10*/("""
+        """),format.raw/*40.9*/(""".container"""),format.raw/*40.19*/("""{"""),format.raw/*40.20*/("""
+            """),format.raw/*41.13*/("""width : 600px;
             height : 400px;
-        """),format.raw/*42.9*/("""}"""),format.raw/*42.10*/("""
-    """),format.raw/*43.5*/("""</style>
+        """),format.raw/*43.9*/("""}"""),format.raw/*43.10*/("""
+    """),format.raw/*44.5*/("""</style>
 
     <head>
         <title>Profile:GTA</title>
@@ -81,7 +82,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "NameProject">
-                        <h style="font-family:verdana" >Grand Theft Auto V</h>
+                        <h style="font-family:verdana" >"""),_display_(/*57.58*/projects/*57.66*/.projectName),format.raw/*57.78*/("""</h>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -195,20 +196,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE HTML>
 </html>"""))}
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(projects:Project): play.twirl.api.HtmlFormat.Appendable = apply(projects)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((Project) => play.twirl.api.HtmlFormat.Appendable) = (projects) => apply(projects)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 26 01:41:50 ICT 2015
+                  DATE: Fri Mar 27 11:37:23 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/profile.scala.html
-                  HASH: 720c86fc47e98ff19bf3b58e1f9e3e830cdbaab7
-                  MATRIX: 800->0|1625->797|1654->798|1695->811|1775->864|1804->865|1840->874|1880->886|1909->887|1950->900|2030->953|2059->954|2095->963|2134->974|2163->975|2204->988|2284->1041|2313->1042|2349->1051|2378->1052|2407->1053|2448->1066|2503->1094|2532->1095|2567->1103|2600->1108|2629->1109|2670->1122|2732->1157|2761->1158|2798->1168|2899->1241|2928->1242|2964->1251|3034->1294|3063->1295|3099->1304|3137->1314|3166->1315|3207->1328|3285->1379|3314->1380|3346->1385
-                  LINES: 29->1|43->15|43->15|44->16|46->18|46->18|47->19|47->19|47->19|48->20|50->22|50->22|51->23|51->23|51->23|52->24|54->26|54->26|55->27|55->27|55->27|56->28|57->29|57->29|58->30|58->30|58->30|59->31|60->32|60->32|62->34|63->35|63->35|64->36|66->38|66->38|67->39|67->39|67->39|68->40|70->42|70->42|71->43
+                  HASH: eb83be5600b3bd24b3aee762c5310714f317c61e
+                  MATRIX: 726->1|834->21|861->22|1686->819|1715->820|1756->833|1836->886|1865->887|1901->896|1941->908|1970->909|2011->922|2091->975|2120->976|2156->985|2195->996|2224->997|2265->1010|2345->1063|2374->1064|2410->1073|2439->1074|2468->1075|2509->1088|2564->1116|2593->1117|2628->1125|2661->1130|2690->1131|2731->1144|2793->1179|2822->1180|2859->1190|2960->1263|2989->1264|3025->1273|3095->1316|3124->1317|3160->1326|3198->1336|3227->1337|3268->1350|3346->1401|3375->1402|3407->1407|3809->1782|3826->1790|3859->1802
+                  LINES: 26->1|29->1|30->2|44->16|44->16|45->17|47->19|47->19|48->20|48->20|48->20|49->21|51->23|51->23|52->24|52->24|52->24|53->25|55->27|55->27|56->28|56->28|56->28|57->29|58->30|58->30|59->31|59->31|59->31|60->32|61->33|61->33|63->35|64->36|64->36|65->37|67->39|67->39|68->40|68->40|68->40|69->41|71->43|71->43|72->44|85->57|85->57|85->57
                   -- GENERATED --
               */
           
