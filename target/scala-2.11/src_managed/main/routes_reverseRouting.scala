@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
-// @HASH:b2b45b7628d8951d91c22e6217f6d76ee7affc52
-// @DATE:Tue Mar 31 18:44:34 ICT 2015
+// @HASH:cb0009d9e93c7efe6c7b13818543dccad347ceb1
+// @DATE:Tue Mar 31 19:59:51 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -112,11 +112,31 @@ def login(): Call = {
 }
                           
 
+// @LINE:12
+// @LINE:11
+class ReverseVote {
+
+
+// @LINE:11
+def vote(): Call = {
+   import ReverseRouteContext.empty
+   Call("POST", _prefix + { _defaultPrefix } + "vote")
+}
+                        
+
+// @LINE:12
+def submitVote(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "vote")
+}
+                        
+
+}
+                          
+
 // @LINE:17
 // @LINE:16
 // @LINE:14
-// @LINE:12
-// @LINE:11
 // @LINE:9
 // @LINE:8
 // @LINE:6
@@ -155,20 +175,6 @@ def profile(): Call = {
 def createProject(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "creater")
-}
-                        
-
-// @LINE:11
-def vote(String:String): Call = {
-   import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "vote" + queryString(List(Some(implicitly[QueryStringBindable[String]].unbind("String", String)))))
-}
-                        
-
-// @LINE:12
-def voting(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "voting")
 }
                         
 
@@ -311,11 +317,39 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:12
+// @LINE:11
+class ReverseVote {
+
+
+// @LINE:11
+def vote : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Vote.vote",
+   """
+      function() {
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "vote"})
+      }
+   """
+)
+                        
+
+// @LINE:12
+def submitVote : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Vote.submitVote",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "vote"})
+      }
+   """
+)
+                        
+
+}
+              
+
 // @LINE:17
 // @LINE:16
 // @LINE:14
-// @LINE:12
-// @LINE:11
 // @LINE:9
 // @LINE:8
 // @LINE:6
@@ -372,28 +406,6 @@ def createProject : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "creater"})
-      }
-   """
-)
-                        
-
-// @LINE:11
-def vote : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.vote",
-   """
-      function(String) {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "vote" + _qS([(""" + implicitly[QueryStringBindable[String]].javascriptUnbind + """)("String", String)])})
-      }
-   """
-)
-                        
-
-// @LINE:12
-def voting : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.voting",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "voting"})
       }
    """
 )
@@ -507,11 +519,29 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:12
+// @LINE:11
+class ReverseVote {
+
+
+// @LINE:11
+def vote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Vote.vote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "vote", Seq(), "POST", """""", _prefix + """vote""")
+)
+                      
+
+// @LINE:12
+def submitVote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Vote.submitVote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "submitVote", Seq(), "GET", """""", _prefix + """vote""")
+)
+                      
+
+}
+                          
+
 // @LINE:17
 // @LINE:16
 // @LINE:14
-// @LINE:12
-// @LINE:11
 // @LINE:9
 // @LINE:8
 // @LINE:6
@@ -545,18 +575,6 @@ def profile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 // @LINE:8
 def createProject(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.createProject(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "createProject", Seq(), "POST", """""", _prefix + """creater""")
-)
-                      
-
-// @LINE:11
-def vote(String:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.vote(String), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "vote", Seq(classOf[String]), "POST", """""", _prefix + """vote""")
-)
-                      
-
-// @LINE:12
-def voting(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.voting(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "voting", Seq(), "GET", """""", _prefix + """voting""")
 )
                       
 

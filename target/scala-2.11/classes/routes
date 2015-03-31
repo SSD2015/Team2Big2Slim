@@ -8,8 +8,8 @@ GET         /                    controllers.Application.index()
 POST        /creater             controllers.Application.createProject()
 GET         /create              controllers.Application.addProject()
 
-POST        /vote                controllers.Application.vote(String)
-GET         /voting              controllers.Application.voting()
+POST        /vote                controllers.Vote.vote()
+GET         /vote                controllers.Vote.submitVote()
 
 GET         /voteResult          controllers.Application.getVoteResult()
 

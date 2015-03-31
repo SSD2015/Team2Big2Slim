@@ -1,19 +1,10 @@
-@main("Voting") {
-    <h> Who is the best ?</h>
-    <br>
-    <br>
-    @*Just always pass "1"*@
-    <form id='voteProject' action="@routes.Application.vote("1")" method="post">
-        <script text='text/javascript' src='@routes.Assets.at("js/getButton.js")'></script>
-        <dev id = 'list' ></dev>
-        <script text="/text/javascript">
-        $('#voteProject' ).on('change',function(){
-        //$("#voteProject" ).attr("action", "routes.Application.vote(" + ($('input[name=project]:checked','#voteProject').val()) + ")" ) ;
-        alert("you select "+$('input[name=project]:checked','#voteProject' ).val());
-        });
-        </script>
-        <button>submit</button>
-    </form>
-    <br>
-    <br>
+@main("Project Vote") {
+    <h1>Please vote which project is the best</h1>
+
+	<h1>Application</h1>
+    <form action="/vote" method="post">
+	GGWP<input type="radio" name="projectName" value="GGWP" checked> LOL<input type="radio" name="projectName" value="LOL">
+	<br>
+	<button type="submit" name="action">Submit</button>
+	</form>
 }

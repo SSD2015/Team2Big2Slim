@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
-// @HASH:b2b45b7628d8951d91c22e6217f6d76ee7affc52
-// @DATE:Tue Mar 31 18:44:34 ICT 2015
+// @HASH:cb0009d9e93c7efe6c7b13818543dccad347ceb1
+// @DATE:Tue Mar 31 19:59:51 ICT 2015
 
 
 import play.core._
@@ -54,17 +54,17 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "addProj
         
 
 // @LINE:11
-private[this] lazy val controllers_Application_vote3_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("vote"))))
-private[this] lazy val controllers_Application_vote3_invoker = createInvoker(
-controllers.Application.vote(fakeValue[String]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "vote", Seq(classOf[String]),"POST", """""", Routes.prefix + """vote"""))
+private[this] lazy val controllers_Vote_vote3_route = Route("POST", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("vote"))))
+private[this] lazy val controllers_Vote_vote3_invoker = createInvoker(
+controllers.Vote.vote(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "vote", Nil,"POST", """""", Routes.prefix + """vote"""))
         
 
 // @LINE:12
-private[this] lazy val controllers_Application_voting4_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("voting"))))
-private[this] lazy val controllers_Application_voting4_invoker = createInvoker(
-controllers.Application.voting(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "voting", Nil,"GET", """""", Routes.prefix + """voting"""))
+private[this] lazy val controllers_Vote_submitVote4_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("vote"))))
+private[this] lazy val controllers_Vote_submitVote4_invoker = createInvoker(
+controllers.Vote.submitVote(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "submitVote", Nil,"GET", """""", Routes.prefix + """vote"""))
         
 
 // @LINE:14
@@ -136,7 +136,7 @@ private[this] lazy val controllers_Rate_submitRate14_invoker = createInvoker(
 controllers.Rate.submitRate(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "submitRate", Nil,"POST", """""", Routes.prefix + """rate"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Application.vote(String:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voting""","""controllers.Application.voting()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.rate()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.submitRate()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Vote.vote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Vote.submitVote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile""","""controllers.Application.profile()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.rate()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.submitRate()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -169,17 +169,17 @@ case controllers_Application_addProject2_route(params) => {
         
 
 // @LINE:11
-case controllers_Application_vote3_route(params) => {
-   call(params.fromQuery[String]("String", None)) { (String) =>
-        controllers_Application_vote3_invoker.call(controllers.Application.vote(String))
+case controllers_Vote_vote3_route(params) => {
+   call { 
+        controllers_Vote_vote3_invoker.call(controllers.Vote.vote())
    }
 }
         
 
 // @LINE:12
-case controllers_Application_voting4_route(params) => {
+case controllers_Vote_submitVote4_route(params) => {
    call { 
-        controllers_Application_voting4_invoker.call(controllers.Application.voting())
+        controllers_Vote_submitVote4_invoker.call(controllers.Vote.submitVote())
    }
 }
         

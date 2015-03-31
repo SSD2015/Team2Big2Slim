@@ -1,6 +1,6 @@
 // @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
-// @HASH:b2b45b7628d8951d91c22e6217f6d76ee7affc52
-// @DATE:Tue Mar 31 18:44:34 ICT 2015
+// @HASH:cb0009d9e93c7efe6c7b13818543dccad347ceb1
+// @DATE:Tue Mar 31 19:59:51 ICT 2015
 
 package controllers;
 
@@ -9,6 +9,7 @@ public static final controllers.ReverseRate Rate = new controllers.ReverseRate()
 public static final controllers.ReverseAssets Assets = new controllers.ReverseAssets();
 public static final controllers.ReverseQuicknote Quicknote = new controllers.ReverseQuicknote();
 public static final controllers.ReverseLogin Login = new controllers.ReverseLogin();
+public static final controllers.ReverseVote Vote = new controllers.ReverseVote();
 public static final controllers.ReverseApplication Application = new controllers.ReverseApplication();
 
 public static class javascript {
@@ -16,6 +17,7 @@ public static final controllers.javascript.ReverseRate Rate = new controllers.ja
 public static final controllers.javascript.ReverseAssets Assets = new controllers.javascript.ReverseAssets();
 public static final controllers.javascript.ReverseQuicknote Quicknote = new controllers.javascript.ReverseQuicknote();
 public static final controllers.javascript.ReverseLogin Login = new controllers.javascript.ReverseLogin();
+public static final controllers.javascript.ReverseVote Vote = new controllers.javascript.ReverseVote();
 public static final controllers.javascript.ReverseApplication Application = new controllers.javascript.ReverseApplication();
 }
           
@@ -25,6 +27,7 @@ public static final controllers.ref.ReverseRate Rate = new controllers.ref.Rever
 public static final controllers.ref.ReverseAssets Assets = new controllers.ref.ReverseAssets();
 public static final controllers.ref.ReverseQuicknote Quicknote = new controllers.ref.ReverseQuicknote();
 public static final controllers.ref.ReverseLogin Login = new controllers.ref.ReverseLogin();
+public static final controllers.ref.ReverseVote Vote = new controllers.ref.ReverseVote();
 public static final controllers.ref.ReverseApplication Application = new controllers.ref.ReverseApplication();
 }
           
