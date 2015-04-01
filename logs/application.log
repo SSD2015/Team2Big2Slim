@@ -161,3 +161,15 @@ database [default] connected at jdbc:sqlite:db.sqlite
 2015-04-01 20:43:10,090 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+2015-04-01 20:53:20,475 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:sqlite:db.sqlite
+
+2015-04-01 20:53:20,666 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-01 20:55:21,717 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:sqlite:db.sqlite
+
+2015-04-01 20:55:21,805 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
