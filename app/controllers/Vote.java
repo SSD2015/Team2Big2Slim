@@ -1,5 +1,6 @@
 package controllers;
 
+import models.RatingRecord;
 import models.User;
 import play.*;
 import play.mvc.*;
@@ -26,16 +27,26 @@ public class Vote extends Controller {
 
     public static Result vote() {
         return ok(vote.render());
-        //return ok( login.render( Form.form() ) );
     }
 	
-	public static Result submitVote()
-	{
-		Form<VoteScore> voteForm = Form.form(VoteScore.class).bindFromRequest();
-		VoteScore info = voteForm.get();
-		System.out.println("VoteForm: " + voteForm.get());
-		System.out.println("Name: " + info.projectName);
-        System.out.println("Score: " + info.score);
+	public static Result submitVote() {
+		//Form<VoteScore> voteForm = Form.form(VoteScore.class).bindFromRequest();
+		//VoteScore info = voteForm.get();
+		//System.out.println("VoteForm: " + voteForm.get());
+		//System.out.println("Name: " + info.projectName);
+        //System.out.println("Score: " + info.score);
+
+        Project project = Form.form(Project.class).bindFromRequest().get();
+        Project existProject = Project.find.where().eq("projectName", project.getProjectName()).findUnique();
+
+        if( existProject != null ) {
+            existProject.updateVote();
+            existProject.save();
+        }
+        else {
+            project.save();
+        }
+
 		return ok(vote.render());
 	}
 

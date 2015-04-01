@@ -31,7 +31,9 @@ Seq[Any](_display_(/*1.2*/main("Project Vote")/*1.22*/ {_display_(Seq[Any](forma
 
 	<h1>Application</h1>
     <form action="/vote" method="post">
-	GGWP<input type="radio" name="projectName" value="GGWP" checked> LOL<input type="radio" name="projectName" value="LOL">
+	    <input type="radio" name="projectName" value="GGWP" checked> GGWP <br>
+
+        <input type="radio" name="projectName" value="LOL"> LOL
 	<br>
 	<button type="submit" name="action">Submit</button>
 	</form>
@@ -47,10 +49,10 @@ Seq[Any](_display_(/*1.2*/main("Project Vote")/*1.22*/ {_display_(Seq[Any](forma
 }
               /*
                   -- GENERATED --
-                  DATE: Tue Mar 31 20:10:00 ICT 2015
-                  SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/vote.scala.html
-                  HASH: ec05060e25d31f348f9186205851a945f72761e8
-                  MATRIX: 797->1|825->21|864->23|895->28
+                  DATE: Wed Apr 01 17:35:27 ICT 2015
+                  SOURCE: C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/app/views/vote.scala.html
+                  HASH: 17faad3a1ff5cf014d5e9dae477b96c3986f8e0e
+                  MATRIX: 797->1|825->21|864->23|896->29
                   LINES: 29->1|29->1|29->1|30->2
                   -- GENERATED --
               */

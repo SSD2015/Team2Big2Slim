@@ -11,10 +11,8 @@ create table note (
 
 create table project (
   id                        integer auto_increment not null,
-  username                  varchar(255),
-  password                  varchar(255),
-  score                     integer,
-  profile_pic               varchar(255),
+  project_name              varchar(255),
+  vote_score                integer,
   constraint pk_project primary key (id))
 ;
 

@@ -1,6 +1,6 @@
-// @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
-// @HASH:cb0009d9e93c7efe6c7b13818543dccad347ceb1
-// @DATE:Tue Mar 31 19:59:51 ICT 2015
+// @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
+// @HASH:4201d675e96fe5207270502f8eea7f55de60e154
+// @DATE:Wed Apr 01 17:39:58 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -117,17 +117,17 @@ def login(): Call = {
 class ReverseVote {
 
 
-// @LINE:11
+// @LINE:12
 def vote(): Call = {
    import ReverseRouteContext.empty
-   Call("POST", _prefix + { _defaultPrefix } + "vote")
+   Call("GET", _prefix + { _defaultPrefix } + "vote")
 }
                         
 
-// @LINE:12
+// @LINE:11
 def submitVote(): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "vote")
+   Call("POST", _prefix + { _defaultPrefix } + "vote")
 }
                         
 
@@ -322,23 +322,23 @@ def login : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseVote {
 
 
-// @LINE:11
+// @LINE:12
 def vote : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Vote.vote",
    """
       function() {
-      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "vote"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "vote"})
       }
    """
 )
                         
 
-// @LINE:12
+// @LINE:11
 def submitVote : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Vote.submitVote",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "vote"})
+      return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "vote"})
       }
    """
 )
@@ -524,15 +524,15 @@ def login(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 class ReverseVote {
 
 
-// @LINE:11
+// @LINE:12
 def vote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Vote.vote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "vote", Seq(), "POST", """""", _prefix + """vote""")
+   controllers.Vote.vote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "vote", Seq(), "GET", """""", _prefix + """vote""")
 )
                       
 
-// @LINE:12
+// @LINE:11
 def submitVote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Vote.submitVote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "submitVote", Seq(), "GET", """""", _prefix + """vote""")
+   controllers.Vote.submitVote(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "submitVote", Seq(), "POST", """""", _prefix + """vote""")
 )
                       
 
