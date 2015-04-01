@@ -12,11 +12,11 @@ GET        /hello               controllers.Application.hello()
 
 GET        /profile/:id         controllers.ProjectList.index(id:Long)
 
-GET        /screenshot1/:id         controllers.ProjectList.index(id:Long)
+GET        /screenshot1/:id         controllers.ProjectList.sc1(id:Long)
 
-GET        /screenshot2/:id         controllers.ProjectList.index(id:Long)
+GET        /screenshot2/:id         controllers.ProjectList.sc2(id:Long)
 
-GET        /screenshot3/:id         controllers.ProjectList.index(id:Long)
+GET        /screenshot3/:id         controllers.ProjectList.sc3(id:Long)
 
 GET        /test                controllers.Application.test()
 

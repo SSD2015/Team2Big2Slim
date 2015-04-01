@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:a372eb87cac72058c708843595eafa412b09ad1a
-// @DATE:Wed Apr 01 20:18:36 ICT 2015
+// @HASH:6d58eaf73ca33cfd83845c276c2e68afa4bfde15
+// @DATE:Wed Apr 01 20:38:30 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -33,20 +33,33 @@ package controllers {
 class ReverseProjectList {
 
 
-// @LINE:19
-// @LINE:17
 // @LINE:15
+def sc1(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "screenshot1/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:19
+def sc3(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "screenshot3/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:17
+def sc2(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "screenshot2/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
 // @LINE:13
 def index(id:Long): Call = {
-   (id: @unchecked) match {
-// @LINE:13
-case (id)  =>
-  import ReverseRouteContext.empty
-  Call("GET", _prefix + { _defaultPrefix } + "profile/" + implicitly[PathBindable[Long]].unbind("id", id))
-                                         
-   }
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "profile/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
-                                                
+                        
 
 }
                           
@@ -125,26 +138,45 @@ import ReverseRouteContext.empty
 class ReverseProjectList {
 
 
-// @LINE:19
-// @LINE:17
 // @LINE:15
+def sc1 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.sc1",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot1/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:19
+def sc3 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.sc3",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot3/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:17
+def sc2 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.sc2",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot2/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
 // @LINE:13
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProjectList.index",
    """
       function(id) {
-      if (true) {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot1/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot2/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
-      }
-      if (true) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot3/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
-      }
       }
    """
 )
@@ -246,6 +278,24 @@ package controllers.ref {
 // @LINE:13
 class ReverseProjectList {
 
+
+// @LINE:15
+def sc1(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.sc1(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc1", Seq(classOf[Long]), "GET", """""", _prefix + """screenshot1/$id<[^/]+>""")
+)
+                      
+
+// @LINE:19
+def sc3(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.sc3(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc3", Seq(classOf[Long]), "GET", """""", _prefix + """screenshot3/$id<[^/]+>""")
+)
+                      
+
+// @LINE:17
+def sc2(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.sc2(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc2", Seq(classOf[Long]), "GET", """""", _prefix + """screenshot2/$id<[^/]+>""")
+)
+                      
 
 // @LINE:13
 def index(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(

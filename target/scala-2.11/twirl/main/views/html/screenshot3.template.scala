@@ -61,7 +61,7 @@ Seq[Any](format.raw/*1.45*/("""
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "Button">
-                    <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile/'"""),_display_(/*36.127*/project/*36.134*/.id),format.raw/*36.137*/(""""> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
+                    <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile/' + """),_display_(/*36.130*/project/*36.137*/.id),format.raw/*36.140*/(""""> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back</button>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -80,10 +80,10 @@ Seq[Any](format.raw/*1.45*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 01 20:18:37 ICT 2015
+                  DATE: Wed Apr 01 20:43:08 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/screenshot3.scala.html
-                  HASH: 0d87a883261507de0d68f1b677739274b74e2067
-                  MATRIX: 743->1|874->44|901->45|2054->1171|2070->1178|2095->1182|2124->1183|2594->1625|2611->1632|2636->1635
+                  HASH: e800e6e6c406b17133c67cf778540a4429e0094a
+                  MATRIX: 743->1|874->44|901->45|2054->1171|2070->1178|2095->1182|2124->1183|2597->1628|2614->1635|2639->1638
                   LINES: 26->1|29->1|30->2|55->27|55->27|55->27|55->27|64->36|64->36|64->36
                   -- GENERATED --
               */
