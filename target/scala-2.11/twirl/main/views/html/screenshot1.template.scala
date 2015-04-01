@@ -20,13 +20,14 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object screenshot1 extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object screenshot1 extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Project,List[Member],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(project : Project )(member : List[Member]):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
+Seq[Any](format.raw/*1.45*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
     <style>
 
@@ -56,7 +57,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "Picture">
-                        <p> <img src = "http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+                        <p> <img src = """),_display_(/*32.41*/project/*32.48*/.sc1),format.raw/*32.52*/(""" """),format.raw/*32.53*/("""style="width:600px;height:350px"> </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -65,7 +66,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "Button">
-                        <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'">
+                        <button type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile/'  """),_display_(/*41.133*/project/*41.140*/.id),format.raw/*41.143*/("""">
                             <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
                         </button>
                     </div>
@@ -75,39 +76,39 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
         </div>
     </body>
     <script>
-        function getdate()"""),format.raw/*50.27*/("""{"""),format.raw/*50.28*/("""
-            """),format.raw/*51.13*/("""var today = new Date();
+        function getdate()"""),format.raw/*51.27*/("""{"""),format.raw/*51.28*/("""
+            """),format.raw/*52.13*/("""var today = new Date();
             var h = today.getHours();
             var m = today.getMinutes();
             var s = today.getSeconds();
-            if(s<10)"""),format.raw/*55.21*/("""{"""),format.raw/*55.22*/("""
-            """),format.raw/*56.13*/("""s = "0"+s;
-        """),format.raw/*57.9*/("""}"""),format.raw/*57.10*/("""
-        """),format.raw/*58.9*/("""$("clock").text(h+" : "+m+" : "+s);
-        setTimeout(function()"""),format.raw/*59.30*/("""{"""),format.raw/*59.31*/("""
-            """),format.raw/*60.13*/("""getdate()"""),format.raw/*60.22*/("""}"""),format.raw/*60.23*/(""", 500);
-        """),format.raw/*61.9*/("""}"""),format.raw/*61.10*/("""
-        """),format.raw/*62.9*/("""getdate();
+            if(s<10)"""),format.raw/*56.21*/("""{"""),format.raw/*56.22*/("""
+            """),format.raw/*57.13*/("""s = "0"+s;
+        """),format.raw/*58.9*/("""}"""),format.raw/*58.10*/("""
+        """),format.raw/*59.9*/("""$("clock").text(h+" : "+m+" : "+s);
+        setTimeout(function()"""),format.raw/*60.30*/("""{"""),format.raw/*60.31*/("""
+            """),format.raw/*61.13*/("""getdate()"""),format.raw/*61.22*/("""}"""),format.raw/*61.23*/(""", 500);
+        """),format.raw/*62.9*/("""}"""),format.raw/*62.10*/("""
+        """),format.raw/*63.9*/("""getdate();
 
     </script>
 </html>
 """))}
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(project:Project,member:List[Member]): play.twirl.api.HtmlFormat.Appendable = apply(project)(member)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((Project) => (List[Member]) => play.twirl.api.HtmlFormat.Appendable) = (project) => (member) => apply(project)(member)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 26 13:22:33 ICT 2015
+                  DATE: Wed Apr 01 20:18:37 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/screenshot1.scala.html
-                  HASH: a165ee0b8d1c1a89cbc8b765e873408dea9a235b
-                  MATRIX: 804->0|2874->2042|2903->2043|2944->2056|3134->2218|3163->2219|3204->2232|3250->2251|3279->2252|3315->2261|3408->2326|3437->2327|3478->2340|3515->2349|3544->2350|3587->2366|3616->2367|3652->2376
-                  LINES: 29->1|78->50|78->50|79->51|83->55|83->55|84->56|85->57|85->57|86->58|87->59|87->59|88->60|88->60|88->60|89->61|89->61|90->62
+                  HASH: 63c7519910dda4897e30f2fac88fbf90773107cd
+                  MATRIX: 743->1|874->44|901->45|2144->1261|2160->1268|2185->1272|2214->1273|2690->1721|2707->1728|2732->1731|3089->2060|3118->2061|3159->2074|3349->2236|3378->2237|3419->2250|3465->2269|3494->2270|3530->2279|3623->2344|3652->2345|3693->2358|3730->2367|3759->2368|3802->2384|3831->2385|3867->2394
+                  LINES: 26->1|29->1|30->2|60->32|60->32|60->32|60->32|69->41|69->41|69->41|79->51|79->51|80->52|84->56|84->56|85->57|86->58|86->58|87->59|88->60|88->60|89->61|89->61|89->61|90->62|90->62|91->63
                   -- GENERATED --
               */
           

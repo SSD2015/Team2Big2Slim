@@ -15,16 +15,21 @@ public class Project extends Model {
     public String projectName;
     public String PicProject;
     public String typeApp;
+    public String sc1;
+    public String sc2;
+    public String sc3;
 
 
 
-
-    public static void create(long id,String name,String PicProject,String typeApp){
+    public static void create(long id,String name,String PicProject,String typeApp,String sc1,String sc2,String sc3){
         Project project = new Project();
         project.id = id;
         project.projectName = name;
         project.PicProject = PicProject;
         project.typeApp = typeApp;
+        project.sc1 = sc1;
+        project.sc2 = sc2;
+        project.sc3 = sc3;
         project.save();
     }
 

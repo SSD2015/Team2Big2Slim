@@ -20,13 +20,14 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object screenshot2 extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template0[play.twirl.api.HtmlFormat.Appendable] {
+object screenshot2 extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Project,List[Member],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply():play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(project : Project )(member : List[Member]):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
+Seq[Any](format.raw/*1.45*/("""
+"""),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
     <title>Bootstrap Grand Theft Auto V</title>
     <meta charset="utf-8">
@@ -53,7 +54,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "Picture">
-                        <p> <img src = "http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:600px;height:350px"> </p>
+                        <p> <img src = """),_display_(/*29.41*/project/*29.48*/.sc2),format.raw/*29.52*/(""" """),format.raw/*29.53*/("""style="width:600px;height:350px"> </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -63,7 +64,7 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
                 <div class="col-xs-8">
                     <div class = "Button">
                         <button
-                            type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile'"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
+                            type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile/' """),_display_(/*39.128*/project/*39.135*/.id),format.raw/*39.138*/(""""> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
                         </button>
                     </div>
                 </div>
@@ -74,20 +75,20 @@ Seq[Any](format.raw/*1.1*/("""<!DOCTYPE html>
 </html>"""))}
   }
 
-  def render(): play.twirl.api.HtmlFormat.Appendable = apply()
+  def render(project:Project,member:List[Member]): play.twirl.api.HtmlFormat.Appendable = apply(project)(member)
 
-  def f:(() => play.twirl.api.HtmlFormat.Appendable) = () => apply()
+  def f:((Project) => (List[Member]) => play.twirl.api.HtmlFormat.Appendable) = (project) => (member) => apply(project)(member)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Thu Mar 26 13:22:33 ICT 2015
+                  DATE: Wed Apr 01 20:18:37 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/screenshot2.scala.html
-                  HASH: 3633e0addfe2beca1da609c5071d7efff6ac708f
-                  MATRIX: 804->0
-                  LINES: 29->1
+                  HASH: dee75e34aa447a253f8582436078124d21b99db6
+                  MATRIX: 743->1|874->44|901->45|2056->1173|2072->1180|2097->1184|2126->1185|2629->1660|2646->1667|2671->1670
+                  LINES: 26->1|29->1|30->2|57->29|57->29|57->29|57->29|67->39|67->39|67->39
                   -- GENERATED --
               */
           

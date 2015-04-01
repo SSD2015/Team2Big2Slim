@@ -27,5 +27,5 @@ public class Member extends Model {
         member.projectId = projectId;
         member.save();
     }
-    public static Finder<Long, Project> find = new Finder<Long, Project>(Long.class, Project.class);
+    public static Finder<Long, Member> find = new Finder<Long, Member>(Long.class, Member.class);
 }

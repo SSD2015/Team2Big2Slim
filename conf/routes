@@ -10,13 +10,13 @@ GET        /assets/*file        controllers.Assets.at(path="/public", file)
 
 GET        /hello               controllers.Application.hello()
 
-GET        /profile/:id            controllers.ProjectList.index(id:Long)
+GET        /profile/:id         controllers.ProjectList.index(id:Long)
 
-GET        /screenshot1         controllers.Application.screenshot1()
+GET        /screenshot1/:id         controllers.ProjectList.index(id:Long)
 
-GET        /screenshot2         controllers.Application.screenshot2()
+GET        /screenshot2/:id         controllers.ProjectList.index(id:Long)
 
-GET        /screenshot3         controllers.Application.screenshot3()
+GET        /screenshot3/:id         controllers.ProjectList.index(id:Long)
 
 GET        /test                controllers.Application.test()
 

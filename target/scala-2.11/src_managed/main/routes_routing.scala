@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:9736acd8e74e2af183233417ab76902693af0bf4
-// @DATE:Fri Mar 27 14:47:01 ICT 2015
+// @HASH:a372eb87cac72058c708843595eafa412b09ad1a
+// @DATE:Wed Apr 01 20:18:36 ICT 2015
 
 
 import play.core._
@@ -61,24 +61,24 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index",
         
 
 // @LINE:15
-private[this] lazy val controllers_Application_screenshot14_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot1"))))
-private[this] lazy val controllers_Application_screenshot14_invoker = createInvoker(
-controllers.Application.screenshot1(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot1", Nil,"GET", """""", Routes.prefix + """screenshot1"""))
+private[this] lazy val controllers_ProjectList_index4_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot1/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_ProjectList_index4_invoker = createInvoker(
+controllers.ProjectList.index(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Long]),"GET", """""", Routes.prefix + """screenshot1/$id<[^/]+>"""))
         
 
 // @LINE:17
-private[this] lazy val controllers_Application_screenshot25_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot2"))))
-private[this] lazy val controllers_Application_screenshot25_invoker = createInvoker(
-controllers.Application.screenshot2(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot2", Nil,"GET", """""", Routes.prefix + """screenshot2"""))
+private[this] lazy val controllers_ProjectList_index5_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot2/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_ProjectList_index5_invoker = createInvoker(
+controllers.ProjectList.index(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Long]),"GET", """""", Routes.prefix + """screenshot2/$id<[^/]+>"""))
         
 
 // @LINE:19
-private[this] lazy val controllers_Application_screenshot36_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot3"))))
-private[this] lazy val controllers_Application_screenshot36_invoker = createInvoker(
-controllers.Application.screenshot3(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "screenshot3", Nil,"GET", """""", Routes.prefix + """screenshot3"""))
+private[this] lazy val controllers_ProjectList_index6_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("screenshot3/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_ProjectList_index6_invoker = createInvoker(
+controllers.ProjectList.index(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Long]),"GET", """""", Routes.prefix + """screenshot3/$id<[^/]+>"""))
         
 
 // @LINE:21
@@ -94,7 +94,7 @@ private[this] lazy val controllers_Application_mockDatabase8_invoker = createInv
 controllers.Application.mockDatabase(),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "mockDatabase", Nil,"GET", """""", Routes.prefix + """install"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1""","""controllers.Application.screenshot1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2""","""controllers.Application.screenshot2()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3""","""controllers.Application.screenshot3()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Application.test()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """install""","""controllers.Application.mockDatabase()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Application.test()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """install""","""controllers.Application.mockDatabase()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -135,25 +135,25 @@ case controllers_ProjectList_index3_route(params) => {
         
 
 // @LINE:15
-case controllers_Application_screenshot14_route(params) => {
-   call { 
-        controllers_Application_screenshot14_invoker.call(controllers.Application.screenshot1())
+case controllers_ProjectList_index4_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_ProjectList_index4_invoker.call(controllers.ProjectList.index(id))
    }
 }
         
 
 // @LINE:17
-case controllers_Application_screenshot25_route(params) => {
-   call { 
-        controllers_Application_screenshot25_invoker.call(controllers.Application.screenshot2())
+case controllers_ProjectList_index5_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_ProjectList_index5_invoker.call(controllers.ProjectList.index(id))
    }
 }
         
 
 // @LINE:19
-case controllers_Application_screenshot36_route(params) => {
-   call { 
-        controllers_Application_screenshot36_invoker.call(controllers.Application.screenshot3())
+case controllers_ProjectList_index6_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_ProjectList_index6_invoker.call(controllers.ProjectList.index(id))
    }
 }
         
