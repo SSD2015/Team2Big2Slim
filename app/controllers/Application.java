@@ -33,12 +33,12 @@ public class Application extends Controller {
         return ok(vote.render());
     }
 
-    public static Result vote(String id){
+    /*public static Result vote(String id){
         Project projects = Project.find.byId(id);
         projects.score++;
         projects.save();
         return redirect(routes.Application.getVoteResult());
-    }
+    }*/
 
     public static Result addProject(){
         return ok(creater.render("create project"));

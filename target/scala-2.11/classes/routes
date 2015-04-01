@@ -28,6 +28,6 @@ POST        /quicknote           controllers.Quicknote.addNote()
 
 GET			/rate				 controllers.Rate.rate()
 POST		/rate				 controllers.Rate.submitRate()
-
+GET			/rateResult			 controllers.Rate.showRateResult()
 
     

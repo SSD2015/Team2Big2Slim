@@ -18,8 +18,8 @@ public class RatingRecord extends Model {
     public int criteriaID;
     public int score;
 
-    public static Finder<Integer, User> find = new Finder<Integer,User>(
-            Integer.class, User.class
+    public static Finder<Integer, RatingRecord> find = new Finder<Integer,RatingRecord>(
+            Integer.class, RatingRecord.class
     );
 
     public int getID() {

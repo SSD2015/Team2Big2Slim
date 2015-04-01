@@ -40,5 +40,11 @@ public class Rate extends Controller {
         record.save();
 		return ok(rate.render());
 	}
+	
+	public static Result showRateResult()
+	{
+	//RatingRecord.find.all()
+		return ok(rateResult.render(RatingRecord.find.all()));
+	}
 
 }

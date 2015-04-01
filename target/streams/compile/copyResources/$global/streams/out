@@ -1,6 +1,6 @@
-[debug] Copy resource mappings: 
-[debug] 	(C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\conf\application.conf,C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\target\scala-2.11\classes\application.conf)
-[debug] 	(C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\conf\evolutions,C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\target\scala-2.11\classes\evolutions)
-[debug] 	(C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\conf\routes,C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\target\scala-2.11\classes\routes)
-[debug] 	(C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\conf\evolutions\default,C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\target\scala-2.11\classes\evolutions\default)
-[debug] 	(C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\conf\evolutions\default\1.sql,C:\Users\momomomomo\Documents\WORK\SoftSpec\project\Team2Big2Slim\target\scala-2.11\classes\evolutions\default\1.sql)
+[0m[[0mdebug[0m] [0mCopy resource mappings: [0m
+[0m[[0mdebug[0m] [0m	(C:\Team2Big2Slim\conf\application.conf,C:\Team2Big2Slim\target\scala-2.11\classes\application.conf)[0m
+[0m[[0mdebug[0m] [0m	(C:\Team2Big2Slim\conf\evolutions,C:\Team2Big2Slim\target\scala-2.11\classes\evolutions)[0m
+[0m[[0mdebug[0m] [0m	(C:\Team2Big2Slim\conf\routes,C:\Team2Big2Slim\target\scala-2.11\classes\routes)[0m
+[0m[[0mdebug[0m] [0m	(C:\Team2Big2Slim\conf\evolutions\default,C:\Team2Big2Slim\target\scala-2.11\classes\evolutions\default)[0m
+[0m[[0mdebug[0m] [0m	(C:\Team2Big2Slim\conf\evolutions\default\1.sql,C:\Team2Big2Slim\target\scala-2.11\classes\evolutions\default\1.sql)[0m

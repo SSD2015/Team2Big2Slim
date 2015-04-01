@@ -1,6 +1,6 @@
-// @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
-// @HASH:4201d675e96fe5207270502f8eea7f55de60e154
-// @DATE:Wed Apr 01 17:39:58 ICT 2015
+// @SOURCE:C:/Team2Big2Slim/conf/routes
+// @HASH:a9b4b3021ef2b6e09a0974ac5896987dd55c5598
+// @DATE:Wed Apr 01 19:31:21 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:31
 // @LINE:30
 // @LINE:29
 // @LINE:27
@@ -32,6 +33,7 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
+// @LINE:31
 // @LINE:30
 // @LINE:29
 class ReverseRate {
@@ -41,6 +43,13 @@ class ReverseRate {
 def submitRate(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "rate")
+}
+                        
+
+// @LINE:31
+def showRateResult(): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "rateResult")
 }
                         
 
@@ -191,6 +200,7 @@ def index(): Call = {
                   
 
 
+// @LINE:31
 // @LINE:30
 // @LINE:29
 // @LINE:27
@@ -209,6 +219,7 @@ def index(): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
+// @LINE:31
 // @LINE:30
 // @LINE:29
 class ReverseRate {
@@ -220,6 +231,17 @@ def submitRate : JavascriptReverseRoute = JavascriptReverseRoute(
    """
       function() {
       return _wA({method:"POST", url:"""" + _prefix + { _defaultPrefix } + """" + "rate"})
+      }
+   """
+)
+                        
+
+// @LINE:31
+def showRateResult : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Rate.showRateResult",
+   """
+      function() {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "rateResult"})
       }
    """
 )
@@ -428,6 +450,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:31
 // @LINE:30
 // @LINE:29
 // @LINE:27
@@ -446,6 +469,7 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
+// @LINE:31
 // @LINE:30
 // @LINE:29
 class ReverseRate {
@@ -454,6 +478,12 @@ class ReverseRate {
 // @LINE:30
 def submitRate(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Rate.submitRate(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "submitRate", Seq(), "POST", """""", _prefix + """rate""")
+)
+                      
+
+// @LINE:31
+def showRateResult(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Rate.showRateResult(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Rate", "showRateResult", Seq(), "GET", """""", _prefix + """rateResult""")
 )
                       
 
