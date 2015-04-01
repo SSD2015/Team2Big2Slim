@@ -140,3 +140,39 @@ Found bean property 'class' of type [java.lang.Class]
 2015-04-01 22:57:05,137 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-32 
 Found bean property 'projectID' of type [java.lang.String]
 
+2015-04-01 23:06:28,373 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-01 23:06:28,410 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-01 23:11:59,596 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-01 23:11:59,625 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-01 23:13:04,625 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-01 23:13:04,655 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-01 23:13:35,188 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-01 23:13:35,217 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-01 23:18:13,799 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-01 23:18:13,828 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-01 23:19:10,033 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-01 23:19:10,067 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+

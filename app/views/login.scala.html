@@ -1,10 +1,38 @@
 @main("Login") {
-    <h1>Login</h1>
-    <form action="/login" method="post">
-        Username: <input type="text" name="username" id="username">
-        <br> <br>
-        Password: <input type="password" name="password" id="password">
-        <br> <br>
-        <button type="submit" name="action">Sign in</button>
-    </form>
+    <html>
+
+        <head>
+            <!-- Bootstrap -->
+            <title>Bootstrap Case</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        </head>
+
+        <body>
+        <div class="jumbotron">
+            <h1><center>Login</center></h1>
+        </div>
+
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-4"></div>
+                <div class="col-xs-4">
+                    <form action="/login" method="post">
+                        Username: <input type="text" name="username" id="username">
+                        <br> <br>
+                        Password: <input type="password" name="password" id="password">
+                        <br> <br>
+                        <button class="btn-success" type="submit" name="action">Sign in</button>
+                    </form>
+                </div>
+                <div class="col-xs-4"></div>
+            </div>
+        </div>
+
+        </body>
+
+    </html>
 }
