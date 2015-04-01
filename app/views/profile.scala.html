@@ -1,29 +1,182 @@
+@(project : Project )(member : List[Member])
 <!DOCTYPE HTML>
 <html lang = "en">
-    <head>
-        <title>Profile:GTA</title>
-        <meta charset = "UTF-8" />
-    </head>
+    <title>@project.projectName</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
+        <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+        <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
+    <style>
+    .NameProject{
+    font-size : 250%;
+    color : black;
+    }
+    .Description{
+    font-size : 250%;
+    color : black;
+    }
+    .ScreenShot{
+    font-size : 250%;
+    color : black;
+    }
+    p{
+    font-style: normal;
+    }
+    .Line{
+    border-bottom: 1px dashed;
+    }
+
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img {
+    width: auto;
+    margin: auto;
+    }
+    .container{
+    width : 600px;
+    height : 400px;
+    }
+    </style>
+
     <body>
-        <h1>Profile: </h1>
-        <p>
-            <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:600px;height:350px"
-        </p>
-        <h2>Description:</h2>
-        <p>Project name: GTA</p>
-        <p>Type of project: Game</p>
-        <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
-        <h1>ScreenShot:</h1>
-        <p>
-            <button> <img src="http://i.ytimg.com/vi/TM6JCG6LIHo/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/TM6JCG6LIHo/maxresdefault.jpg'"> </button>
-            <button> <img src="http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg'"> </button>
-            <button> <img src="http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg" style="width:180px;height:128px" onclick="location.href='http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg'"> </button>
+        <div class="container-fluid">
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-7">
+                    <div class = "NameProject jumbotron">
+                            <h style="font-family:verdana" >@project.projectName</h>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "PictureProject">
+                        <p> <img src = @project.PicProject style="width:700px;height:450px"> </p>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Description">
+                        <h style="font-family:verdana" >Description</h>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = "Information">
+                        <p>Project name: @project.projectName</p>
+                        <p>Type of project: @project.typeApp</p>
+                        <h4 style="font-family:verdana" >Member:</h4>
+                        @member.map { person =>
+                            <p>@person.name @person.surname @person.kuNo</p>
+                        }
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line"></div>
+                </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-2"> </div>
+                <div class="col-xs-8">
+                    <div class = ScreenShot>
+                        <h style="font-family:verdana" >Screenshot</h>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+            <div class="row">
+                <div class = "col-xs-1"> </div>
+                <div class="col-xs-9">
+                    <div class="container">
+                        <br>
+                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                <!-- Indicators -->
+                            <ol class="carousel-indicators">
+                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                <li data-target="#myCarousel" data-slide-to="1"></li>
+                                <li data-target="#myCarousel" data-slide-to="2"></li>
+                            </ol>
 
-        </p>
+                                <!-- Wrapper for slides -->
+                            <div class="carousel-inner" role="listbox">
+                                <div class="item active">
+                                    <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1/' + @project.ID"> </button>
+                                </div>
+                                <div class="item">
+                                    <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2/' + @project.ID"> </button>
+                                </div>
+                                <div class="item">
+                                    <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.ID"> </button>
+                                </div>
+                            </div>
+
+                                <!-- Left and right controls -->
+                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class = "col-xs-2"> </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12">
+                <div class = "Line"></div>
+            </div>
+        </div>
+        <div class="row">
+            <div class = "col-xs-2"> </div>
+            <div class="col-xs-8">
+                <div class = ScreenShot>
+                    <h style="font-family:verdana" >Rate
+                    <h3>Please rate Project @project.ID with follow criteria :</h3>
+
+                    <div>
+                        <h3>Appearance</h3>
+                        <form action="/rate" method="post">
+                            <input type="hidden" name="projectID" value=@project.ID>
+                            <input type="hidden" name="criteriaID" value="1">
+                            <input type="radio" name="score" value="0" checked>
+                            <input type="radio" name="score" value="1">
+                            <input type="radio" name="score" value="2">
+                            <input type="radio" name="score" value="3">
+                            <input type="radio" name="score" value="4">
+                            <input type="radio" name="score" value="5">
+                            <br>
+                            <button type="submit" name="action">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class = "col-xs-2"> </div>
+        </div>
     </body>
-    <button type="button" onclick="getElementById('content').innerHTML ='<p>Date start: 14/02/15<br> ' +
-    'Date finish : 20/3/15<br> </p>'">Read more!
-    </button>
-
     <div id="content"></div>
 </html>

@@ -18,6 +18,14 @@ public class User extends Model{
             Integer.class, User.class
     );
 
+    public static void create(int id, String username, String password){
+        User user = new User();
+        user.ID = id;
+        user.username = username;
+        user.password = password;
+        user.save();
+    }
+
     public int getID() {
         return ID;
     }

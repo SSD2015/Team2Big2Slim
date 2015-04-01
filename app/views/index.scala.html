@@ -77,7 +77,7 @@
                             <h2><center>Are you sure ?</center></h2>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default">Ok</button>
+                            <button onclick="location.href='http://localhost:9000/login'" type="button" class="btn btn-default">Ok</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
@@ -140,16 +140,16 @@
             <div id="voteLayer">
                 <div class="container-fluid votelist">
                     <div class="row" id="1">
-                        <a value="1" class="voteB" href="#" id="project1" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
+                        <a value="1" class="voteB" id="project1" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
                     </div>
                     <div class="row" id="2">
-                        <a value="2" class="voteB" href="#" id="project2" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
+                        <a value="2" class="voteB" id="project2" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
                     </div>
                     <div class="row" id="3">
-                        <a value="3" class="voteB" href="#" id="project3" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
+                        <a value="3" class="voteB" id="project3" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
                     </div>
                     <div class="row" id="4">
-                        <a value="4" class="voteB" href="#" id="project4" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
+                        <a value="4" class="voteB" id="project4" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
                     </div>
                 </div>
             </div>
@@ -157,16 +157,16 @@
             <div id="projectlistLayer">
                 <div class="container-fluid projectlist">
                     <div class="row" id="1">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
+                        <a href="profile/1" id="project1"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
                     </div>
                     <div class="row" id="2">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
+                        <a href="profile/2"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
                     </div>
                     <div class="row" id="3">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
+                        <a href="#"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
                     </div>
                     <div class="row" id="4">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
+                        <a href="#"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
                     </div>
                 </div>
             </div>
@@ -178,13 +178,21 @@
                         var h = today.getHours();
                         var m = today.getMinutes();
                         var s = today.getSeconds();
+                        if(h<10) {
+                            h = "0"+h;
+                        }
+                        if(m<10) {
+                            m = "0"+m;
+                        }
                         if(s<10){
-                        s = "0"+s;
+                            s = "0"+s;
                         }
                         $("clock").text(h+" : "+m+" : "+s);
                         setTimeout(function(){getdate()}, 500);
                     }
                     getdate();
+
+                    $("#voteLayer" ).toggle();
 
                     $('#vote').click(function () {
                         var body = $("html, body");
@@ -213,24 +221,33 @@
                         $("projectname" ).append(name);
                         $("#voteValue" ).attr("value", value);
                     });
+
                 });
             </script>
 
                 <!-- JS -->
             <script>
-            function camerabEvent() {
-            //open camera app
-            alert("camera");
-            }
-            function votebEvent() {
-            //actually go to vote page
-            alert("vote");
-            }
-            function logoutbEvent() {
-            //confirmation prompt out
-            confirm("Are you sure ?");
-            }
+                function camerabEvent() {
+                //open camera app
+                alert("camera");
+                }
+                function votebEvent() {
+                //actually go to vote page
+                alert("vote");
+                }
+                function logoutbEvent() {
+                //confirmation prompt out
+                confirm("Are you sure ?");
+                }
+                function redirectProfile1() {
+                    return true;
+                }
             </script>
         </body>
     </html>
 }
+<script type="text/javascript">
+function theFunction () {
+// return true or false, depending on whether you want to allow the `href` property to follow through or not
+}
+</script>

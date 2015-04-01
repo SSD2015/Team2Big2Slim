@@ -19,10 +19,6 @@ import static play.libs.Json.toJson;
 
 public class Rate extends Controller {
 
-	public static class RateScore {
-		public int score;
-	}
-
     public static Result rate() {
         return ok(rate.render());
     }
@@ -38,7 +34,7 @@ public class Rate extends Controller {
 
         RatingRecord record = Form.form(RatingRecord.class).bindFromRequest().get();
         record.save();
-		return ok(rate.render());
+		return redirect("/profile/"+record.getProjectID());
 	}
 	
 	public static Result showRateResult()

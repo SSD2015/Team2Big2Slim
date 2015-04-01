@@ -1,6 +1,6 @@
-// @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
-// @HASH:e8bec4372cc0e5501ea566c18ff7a08c985142d5
-// @DATE:Wed Apr 01 22:45:03 ICT 2015
+// @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
+// @HASH:8fff4860de8aadde5e735d93626a7794f5800b0b
+// @DATE:Thu Apr 02 01:31:32 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,6 +15,11 @@ import _root_.play.libs.F
 import Router.queryString
 
 
+// @LINE:42
+// @LINE:40
+// @LINE:38
+// @LINE:36
+// @LINE:33
 // @LINE:31
 // @LINE:30
 // @LINE:29
@@ -24,7 +29,6 @@ import Router.queryString
 // @LINE:23
 // @LINE:20
 // @LINE:17
-// @LINE:16
 // @LINE:14
 // @LINE:12
 // @LINE:11
@@ -99,6 +103,44 @@ def index(): Call = {
 }
                           
 
+// @LINE:42
+// @LINE:40
+// @LINE:38
+// @LINE:36
+class ReverseProjectList {
+
+
+// @LINE:36
+def index(id:Integer): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "profile/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                        
+
+// @LINE:40
+def sc2(id:Integer): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "screenshot2/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                        
+
+// @LINE:38
+def sc1(id:Integer): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "screenshot1/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                        
+
+// @LINE:42
+def sc3(id:Integer): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "screenshot3/" + implicitly[PathBindable[Integer]].unbind("id", id))
+}
+                        
+
+}
+                          
+
 // @LINE:24
 // @LINE:23
 class ReverseLogin {
@@ -143,8 +185,8 @@ def submitVote(): Call = {
 }
                           
 
+// @LINE:33
 // @LINE:17
-// @LINE:16
 // @LINE:14
 // @LINE:9
 // @LINE:8
@@ -173,10 +215,10 @@ def getVoteResult(): Call = {
 }
                         
 
-// @LINE:16
-def profile(): Call = {
+// @LINE:33
+def mockDatabase(): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "profile")
+   Call("GET", _prefix + { _defaultPrefix } + "install")
 }
                         
 
@@ -200,6 +242,11 @@ def index(): Call = {
                   
 
 
+// @LINE:42
+// @LINE:40
+// @LINE:38
+// @LINE:36
+// @LINE:33
 // @LINE:31
 // @LINE:30
 // @LINE:29
@@ -209,7 +256,6 @@ def index(): Call = {
 // @LINE:23
 // @LINE:20
 // @LINE:17
-// @LINE:16
 // @LINE:14
 // @LINE:12
 // @LINE:11
@@ -309,6 +355,60 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:42
+// @LINE:40
+// @LINE:38
+// @LINE:36
+class ReverseProjectList {
+
+
+// @LINE:36
+def index : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.index",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:40
+def sc2 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.sc2",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot2/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:38
+def sc1 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.sc1",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot1/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:42
+def sc3 : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProjectList.sc3",
+   """
+      function(id) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "screenshot3/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+}
+              
+
 // @LINE:24
 // @LINE:23
 class ReverseLogin {
@@ -369,8 +469,8 @@ def submitVote : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
+// @LINE:33
 // @LINE:17
-// @LINE:16
 // @LINE:14
 // @LINE:9
 // @LINE:8
@@ -411,12 +511,12 @@ def getVoteResult : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:16
-def profile : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.profile",
+// @LINE:33
+def mockDatabase : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.Application.mockDatabase",
    """
       function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "profile"})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "install"})
       }
    """
 )
@@ -450,6 +550,11 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
+// @LINE:42
+// @LINE:40
+// @LINE:38
+// @LINE:36
+// @LINE:33
 // @LINE:31
 // @LINE:30
 // @LINE:29
@@ -459,7 +564,6 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 // @LINE:23
 // @LINE:20
 // @LINE:17
-// @LINE:16
 // @LINE:14
 // @LINE:12
 // @LINE:11
@@ -529,6 +633,40 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:42
+// @LINE:40
+// @LINE:38
+// @LINE:36
+class ReverseProjectList {
+
+
+// @LINE:36
+def index(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.index(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "index", Seq(classOf[Integer]), "GET", """""", _prefix + """profile/$id<[^/]+>""")
+)
+                      
+
+// @LINE:40
+def sc2(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.sc2(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc2", Seq(classOf[Integer]), "GET", """""", _prefix + """screenshot2/$id<[^/]+>""")
+)
+                      
+
+// @LINE:38
+def sc1(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.sc1(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc1", Seq(classOf[Integer]), "GET", """""", _prefix + """screenshot1/$id<[^/]+>""")
+)
+                      
+
+// @LINE:42
+def sc3(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProjectList.sc3(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc3", Seq(classOf[Integer]), "GET", """""", _prefix + """screenshot3/$id<[^/]+>""")
+)
+                      
+
+}
+                          
+
 // @LINE:24
 // @LINE:23
 class ReverseLogin {
@@ -569,8 +707,8 @@ def submitVote(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
+// @LINE:33
 // @LINE:17
-// @LINE:16
 // @LINE:14
 // @LINE:9
 // @LINE:8
@@ -596,9 +734,9 @@ def getVoteResult(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:16
-def profile(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.profile(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "profile", Seq(), "GET", """""", _prefix + """profile""")
+// @LINE:33
+def mockDatabase(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.Application.mockDatabase(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "mockDatabase", Seq(), "GET", """""", _prefix + """install""")
 )
                       
 

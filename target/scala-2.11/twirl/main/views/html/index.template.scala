@@ -105,7 +105,7 @@ Seq[Any](format.raw/*1.18*/("""
                             <h2><center>Are you sure ?</center></h2>
                         </div>
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-default">Ok</button>
+                            <button onclick="location.href='http://localhost:9000/login'" type="button" class="btn btn-default">Ok</button>
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                         </div>
                     </div>
@@ -168,16 +168,16 @@ Seq[Any](format.raw/*1.18*/("""
             <div id="voteLayer">
                 <div class="container-fluid votelist">
                     <div class="row" id="1">
-                        <a value="1" class="voteB" href="#" id="project1" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
+                        <a value="1" class="voteB" id="project1" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
                     </div>
                     <div class="row" id="2">
-                        <a value="2" class="voteB" href="#" id="project2" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
+                        <a value="2" class="voteB" id="project2" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
                     </div>
                     <div class="row" id="3">
-                        <a value="3" class="voteB" href="#" id="project3" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
+                        <a value="3" class="voteB" id="project3" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
                     </div>
                     <div class="row" id="4">
-                        <a value="4" class="voteB" href="#" id="project4" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
+                        <a value="4" class="voteB" id="project4" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
                     </div>
                 </div>
             </div>
@@ -185,16 +185,16 @@ Seq[Any](format.raw/*1.18*/("""
             <div id="projectlistLayer">
                 <div class="container-fluid projectlist">
                     <div class="row" id="1">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
+                        <a href="profile/1" id="project1"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
                     </div>
                     <div class="row" id="2">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
+                        <a href="profile/2"><image class="project img-rounded" src = "assets/g2_vector.jpg" title = "group2"></image></a>
                     </div>
                     <div class="row" id="3">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
+                        <a href="#"><image class="project img-rounded" src = "assets/g3_vector.jpg" title = "group3"></image></a>
                     </div>
                     <div class="row" id="4">
-                        <a href="rate"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
+                        <a href="#"><image class="project img-rounded" src = "assets/g4_vector.jpg" title = "group4"></image></a>
                     </div>
                 </div>
             </div>
@@ -206,63 +206,79 @@ Seq[Any](format.raw/*1.18*/("""
                         var h = today.getHours();
                         var m = today.getMinutes();
                         var s = today.getSeconds();
-                        if(s<10)"""),format.raw/*181.33*/("""{"""),format.raw/*181.34*/("""
-                        """),format.raw/*182.25*/("""s = "0"+s;
+                        if(h<10) """),format.raw/*181.34*/("""{"""),format.raw/*181.35*/("""
+                            """),format.raw/*182.29*/("""h = "0"+h;
                         """),format.raw/*183.25*/("""}"""),format.raw/*183.26*/("""
-                        """),format.raw/*184.25*/("""$("clock").text(h+" : "+m+" : "+s);
-                        setTimeout(function()"""),format.raw/*185.46*/("""{"""),format.raw/*185.47*/("""getdate()"""),format.raw/*185.56*/("""}"""),format.raw/*185.57*/(""", 500);
-                    """),format.raw/*186.21*/("""}"""),format.raw/*186.22*/("""
-                    """),format.raw/*187.21*/("""getdate();
+                        """),format.raw/*184.25*/("""if(m<10) """),format.raw/*184.34*/("""{"""),format.raw/*184.35*/("""
+                            """),format.raw/*185.29*/("""m = "0"+m;
+                        """),format.raw/*186.25*/("""}"""),format.raw/*186.26*/("""
+                        """),format.raw/*187.25*/("""if(s<10)"""),format.raw/*187.33*/("""{"""),format.raw/*187.34*/("""
+                            """),format.raw/*188.29*/("""s = "0"+s;
+                        """),format.raw/*189.25*/("""}"""),format.raw/*189.26*/("""
+                        """),format.raw/*190.25*/("""$("clock").text(h+" : "+m+" : "+s);
+                        setTimeout(function()"""),format.raw/*191.46*/("""{"""),format.raw/*191.47*/("""getdate()"""),format.raw/*191.56*/("""}"""),format.raw/*191.57*/(""", 500);
+                    """),format.raw/*192.21*/("""}"""),format.raw/*192.22*/("""
+                    """),format.raw/*193.21*/("""getdate();
 
-                    $('#vote').click(function () """),format.raw/*189.50*/("""{"""),format.raw/*189.51*/("""
-                        """),format.raw/*190.25*/("""var body = $("html, body");
-                        body.animate("""),format.raw/*191.38*/("""{"""),format.raw/*191.39*/("""scrollTop:0"""),format.raw/*191.50*/("""}"""),format.raw/*191.51*/(""", "duration:600", "swing", function() """),format.raw/*191.89*/("""{"""),format.raw/*191.90*/("""
-                        """),format.raw/*192.25*/("""console.log("vote");
+                    $("#voteLayer" ).toggle();
+
+                    $('#vote').click(function () """),format.raw/*197.50*/("""{"""),format.raw/*197.51*/("""
+                        """),format.raw/*198.25*/("""var body = $("html, body");
+                        body.animate("""),format.raw/*199.38*/("""{"""),format.raw/*199.39*/("""scrollTop:0"""),format.raw/*199.50*/("""}"""),format.raw/*199.51*/(""", "duration:600", "swing", function() """),format.raw/*199.89*/("""{"""),format.raw/*199.90*/("""
+                        """),format.raw/*200.25*/("""console.log("vote");
                         $("#topbar").fadeOut();
                         $("#projectlistLayer").fadeOut();
                         $("#votebar" ).fadeIn();
                         $("#voteLayer" ).fadeIn();
-                        """),format.raw/*197.25*/("""}"""),format.raw/*197.26*/(""");
-                    """),format.raw/*198.21*/("""}"""),format.raw/*198.22*/(""");
+                        """),format.raw/*205.25*/("""}"""),format.raw/*205.26*/(""");
+                    """),format.raw/*206.21*/("""}"""),format.raw/*206.22*/(""");
 
-                    $("#back" ).click(function () """),format.raw/*200.51*/("""{"""),format.raw/*200.52*/("""
-                        """),format.raw/*201.25*/("""console.log("back");
+                    $("#back" ).click(function () """),format.raw/*208.51*/("""{"""),format.raw/*208.52*/("""
+                        """),format.raw/*209.25*/("""console.log("back");
                         $("#topbar" ).fadeIn();
                         $("#projectlistLayer" ).fadeIn();
                         $("#voteLayer" ).fadeOut();
-                    """),format.raw/*205.21*/("""}"""),format.raw/*205.22*/(""");
+                    """),format.raw/*213.21*/("""}"""),format.raw/*213.22*/(""");
 
-                    $(".voteB" ).click(function () """),format.raw/*207.52*/("""{"""),format.raw/*207.53*/("""
-                        """),format.raw/*208.25*/("""var name = $(this ).attr("id");
+                    $(".voteB" ).click(function () """),format.raw/*215.52*/("""{"""),format.raw/*215.53*/("""
+                        """),format.raw/*216.25*/("""var name = $(this ).attr("id");
                         var value = $(this ).attr("value");
-                        $("projectname").contents().filter(function () """),format.raw/*210.72*/("""{"""),format.raw/*210.73*/("""
-                        """),format.raw/*211.25*/("""return this.nodeType === 3;
-                        """),format.raw/*212.25*/("""}"""),format.raw/*212.26*/(""" """),format.raw/*212.27*/(""").remove();
+                        $("projectname").contents().filter(function () """),format.raw/*218.72*/("""{"""),format.raw/*218.73*/("""
+                        """),format.raw/*219.25*/("""return this.nodeType === 3;
+                        """),format.raw/*220.25*/("""}"""),format.raw/*220.26*/(""" """),format.raw/*220.27*/(""").remove();
                         $("projectname" ).append(name);
                         $("#voteValue" ).attr("value", value);
-                    """),format.raw/*215.21*/("""}"""),format.raw/*215.22*/(""");
-                """),format.raw/*216.17*/("""}"""),format.raw/*216.18*/(""");
+                    """),format.raw/*223.21*/("""}"""),format.raw/*223.22*/(""");
+
+                """),format.raw/*225.17*/("""}"""),format.raw/*225.18*/(""");
             </script>
 
                 <!-- JS -->
             <script>
-            function camerabEvent() """),format.raw/*221.37*/("""{"""),format.raw/*221.38*/("""
-            """),format.raw/*222.13*/("""//open camera app
-            alert("camera");
-            """),format.raw/*224.13*/("""}"""),format.raw/*224.14*/("""
-            """),format.raw/*225.13*/("""function votebEvent() """),format.raw/*225.35*/("""{"""),format.raw/*225.36*/("""
-            """),format.raw/*226.13*/("""//actually go to vote page
-            alert("vote");
-            """),format.raw/*228.13*/("""}"""),format.raw/*228.14*/("""
-            """),format.raw/*229.13*/("""function logoutbEvent() """),format.raw/*229.37*/("""{"""),format.raw/*229.38*/("""
-            """),format.raw/*230.13*/("""//confirmation prompt out
-            confirm("Are you sure ?");
-            """),format.raw/*232.13*/("""}"""),format.raw/*232.14*/("""
-            """),format.raw/*233.13*/("""</script>
+                function camerabEvent() """),format.raw/*230.41*/("""{"""),format.raw/*230.42*/("""
+                """),format.raw/*231.17*/("""//open camera app
+                alert("camera");
+                """),format.raw/*233.17*/("""}"""),format.raw/*233.18*/("""
+                """),format.raw/*234.17*/("""function votebEvent() """),format.raw/*234.39*/("""{"""),format.raw/*234.40*/("""
+                """),format.raw/*235.17*/("""//actually go to vote page
+                alert("vote");
+                """),format.raw/*237.17*/("""}"""),format.raw/*237.18*/("""
+                """),format.raw/*238.17*/("""function logoutbEvent() """),format.raw/*238.41*/("""{"""),format.raw/*238.42*/("""
+                """),format.raw/*239.17*/("""//confirmation prompt out
+                confirm("Are you sure ?");
+                """),format.raw/*241.17*/("""}"""),format.raw/*241.18*/("""
+                """),format.raw/*242.17*/("""function redirectProfile1() """),format.raw/*242.45*/("""{"""),format.raw/*242.46*/("""
+                    """),format.raw/*243.21*/("""return true;
+                """),format.raw/*244.17*/("""}"""),format.raw/*244.18*/("""
+            """),format.raw/*245.13*/("""</script>
         </body>
     </html>
-""")))}),format.raw/*236.2*/("""
-"""))}
+""")))}),format.raw/*248.2*/("""
+"""),format.raw/*249.1*/("""<script type="text/javascript">
+function theFunction () """),format.raw/*250.25*/("""{"""),format.raw/*250.26*/("""
+"""),format.raw/*251.1*/("""// return true or false, depending on whether you want to allow the `href` property to follow through or not
+"""),format.raw/*252.1*/("""}"""),format.raw/*252.2*/("""
+"""),format.raw/*253.1*/("""</script>"""))}
   }
 
   def render(message:String): play.twirl.api.HtmlFormat.Appendable = apply(message)
@@ -274,11 +290,11 @@ Seq[Any](format.raw/*1.18*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 01 22:47:58 ICT 2015
-                  SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/index.scala.html
-                  HASH: 582831b9a5fb3515ab27933a3e2f4e3ba99804bf
-                  MATRIX: 723->1|827->17|854->19|879->36|918->38|949->43|1582->648|1611->649|1652->662|1810->792|1839->793|1880->806|1916->814|1945->815|1986->828|2075->889|2104->890|2145->903|2183->913|2212->914|2253->927|2487->1133|2516->1134|2557->1147|2593->1155|2622->1156|2663->1169|2747->1225|2776->1226|2817->1239|2858->1252|2887->1253|2928->1266|2988->1298|3017->1299|3058->1312|3095->1321|3124->1322|3165->1335|3360->1502|3389->1503|3430->1516|3473->1531|3502->1532|3543->1545|3597->1571|3626->1572|3667->1585|3706->1596|3735->1597|3776->1610|3862->1668|3891->1669|3932->1682|3965->1687|3994->1688|4035->1701|4088->1726|4117->1727|4158->1740|4197->1751|4226->1752|4267->1765|4356->1826|4385->1827|4426->1840|4460->1846|4489->1847|4530->1860|4615->1917|4644->1918|4685->1931|10565->7782|10595->7783|10645->7804|10692->7822|10722->7823|10776->7848|11015->8058|11045->8059|11099->8084|11163->8119|11193->8120|11247->8145|11357->8226|11387->8227|11425->8236|11455->8237|11512->8265|11542->8266|11592->8287|11682->8348|11712->8349|11766->8374|11860->8439|11890->8440|11930->8451|11960->8452|12027->8490|12057->8491|12111->8516|12391->8767|12421->8768|12473->8791|12503->8792|12586->8846|12616->8847|12670->8872|12898->9071|12928->9072|13012->9127|13042->9128|13096->9153|13288->9316|13318->9317|13372->9342|13453->9394|13483->9395|13513->9396|13693->9547|13723->9548|13771->9567|13801->9568|13941->9679|13971->9680|14013->9693|14101->9752|14131->9753|14173->9766|14224->9788|14254->9789|14296->9802|14391->9868|14421->9869|14463->9882|14516->9906|14546->9907|14588->9920|14694->9997|14724->9998|14766->10011|14836->10050
-                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|43->15|43->15|44->16|48->20|48->20|49->21|49->21|49->21|50->22|52->24|52->24|53->25|53->25|53->25|54->26|61->33|61->33|62->34|62->34|62->34|63->35|65->37|65->37|66->38|66->38|66->38|67->39|68->40|68->40|69->41|69->41|69->41|70->42|76->48|76->48|77->49|77->49|77->49|78->50|79->51|79->51|80->52|80->52|80->52|81->53|83->55|83->55|84->56|84->56|84->56|85->57|86->58|86->58|87->59|87->59|87->59|88->60|90->62|90->62|91->63|91->63|91->63|92->64|94->66|94->66|95->67|203->175|203->175|204->176|204->176|204->176|205->177|209->181|209->181|210->182|211->183|211->183|212->184|213->185|213->185|213->185|213->185|214->186|214->186|215->187|217->189|217->189|218->190|219->191|219->191|219->191|219->191|219->191|219->191|220->192|225->197|225->197|226->198|226->198|228->200|228->200|229->201|233->205|233->205|235->207|235->207|236->208|238->210|238->210|239->211|240->212|240->212|240->212|243->215|243->215|244->216|244->216|249->221|249->221|250->222|252->224|252->224|253->225|253->225|253->225|254->226|256->228|256->228|257->229|257->229|257->229|258->230|260->232|260->232|261->233|264->236
+                  DATE: Thu Apr 02 01:48:32 ICT 2015
+                  SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/index.scala.html
+                  HASH: 124616b5683fa351b94c69eba2bdfe37f0c17ec3
+                  MATRIX: 723->1|827->17|854->19|879->36|918->38|949->43|1582->648|1611->649|1652->662|1810->792|1839->793|1880->806|1916->814|1945->815|1986->828|2075->889|2104->890|2145->903|2183->913|2212->914|2253->927|2487->1133|2516->1134|2557->1147|2593->1155|2622->1156|2663->1169|2747->1225|2776->1226|2817->1239|2858->1252|2887->1253|2928->1266|2988->1298|3017->1299|3058->1312|3095->1321|3124->1322|3165->1335|3360->1502|3389->1503|3430->1516|3473->1531|3502->1532|3543->1545|3597->1571|3626->1572|3667->1585|3706->1596|3735->1597|3776->1610|3862->1668|3891->1669|3932->1682|3965->1687|3994->1688|4035->1701|4088->1726|4117->1727|4158->1740|4197->1751|4226->1752|4267->1765|4356->1826|4385->1827|4426->1840|4460->1846|4489->1847|4530->1860|4615->1917|4644->1918|4685->1931|10601->7818|10631->7819|10681->7840|10728->7858|10758->7859|10812->7884|11052->8095|11082->8096|11140->8125|11204->8160|11234->8161|11288->8186|11326->8195|11356->8196|11414->8225|11478->8260|11508->8261|11562->8286|11599->8294|11629->8295|11687->8324|11751->8359|11781->8360|11835->8385|11945->8466|11975->8467|12013->8476|12043->8477|12100->8505|12130->8506|12180->8527|12318->8636|12348->8637|12402->8662|12496->8727|12526->8728|12566->8739|12596->8740|12663->8778|12693->8779|12747->8804|13027->9055|13057->9056|13109->9079|13139->9080|13222->9134|13252->9135|13306->9160|13534->9359|13564->9360|13648->9415|13678->9416|13732->9441|13924->9604|13954->9605|14008->9630|14089->9682|14119->9683|14149->9684|14329->9835|14359->9836|14408->9856|14438->9857|14582->9972|14612->9973|14658->9990|14754->10057|14784->10058|14830->10075|14881->10097|14911->10098|14957->10115|15060->10189|15090->10190|15136->10207|15189->10231|15219->10232|15265->10249|15379->10334|15409->10335|15455->10352|15512->10380|15542->10381|15592->10402|15650->10431|15680->10432|15722->10445|15792->10484|15821->10485|15906->10541|15936->10542|15965->10543|16102->10652|16131->10653|16160->10654
+                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|43->15|43->15|44->16|48->20|48->20|49->21|49->21|49->21|50->22|52->24|52->24|53->25|53->25|53->25|54->26|61->33|61->33|62->34|62->34|62->34|63->35|65->37|65->37|66->38|66->38|66->38|67->39|68->40|68->40|69->41|69->41|69->41|70->42|76->48|76->48|77->49|77->49|77->49|78->50|79->51|79->51|80->52|80->52|80->52|81->53|83->55|83->55|84->56|84->56|84->56|85->57|86->58|86->58|87->59|87->59|87->59|88->60|90->62|90->62|91->63|91->63|91->63|92->64|94->66|94->66|95->67|203->175|203->175|204->176|204->176|204->176|205->177|209->181|209->181|210->182|211->183|211->183|212->184|212->184|212->184|213->185|214->186|214->186|215->187|215->187|215->187|216->188|217->189|217->189|218->190|219->191|219->191|219->191|219->191|220->192|220->192|221->193|225->197|225->197|226->198|227->199|227->199|227->199|227->199|227->199|227->199|228->200|233->205|233->205|234->206|234->206|236->208|236->208|237->209|241->213|241->213|243->215|243->215|244->216|246->218|246->218|247->219|248->220|248->220|248->220|251->223|251->223|253->225|253->225|258->230|258->230|259->231|261->233|261->233|262->234|262->234|262->234|263->235|265->237|265->237|266->238|266->238|266->238|267->239|269->241|269->241|270->242|270->242|270->242|271->243|272->244|272->244|273->245|276->248|277->249|278->250|278->250|279->251|280->252|280->252|281->253
                   -- GENERATED --
               */
           
