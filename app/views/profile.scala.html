@@ -88,9 +88,9 @@
                     <div class = "Information">
                         <p>Project name: @project.projectName</p>
                         <p>Type of project: @project.typeApp</p>
-                        <p>Member: </p>
+                        <h4 style="font-family:verdana" >Member:</h4>
                         @member.map { person =>
-                         <p>@person.name , @person.surname</p>
+                         <p>@person.name @person.surname @person.kuNo</p>
                      }
                     </div>
                 </div>

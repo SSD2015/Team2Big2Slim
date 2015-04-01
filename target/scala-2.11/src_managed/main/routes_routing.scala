@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:6d58eaf73ca33cfd83845c276c2e68afa4bfde15
-// @DATE:Wed Apr 01 20:38:30 ICT 2015
+// @HASH:f7096a25efa7e03bc0e091c695e73592fc672496
+// @DATE:Wed Apr 01 22:21:45 ICT 2015
 
 
 import play.core._
@@ -47,10 +47,10 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(cla
         
 
 // @LINE:11
-private[this] lazy val controllers_Application_hello2_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("hello"))))
-private[this] lazy val controllers_Application_hello2_invoker = createInvoker(
-controllers.Application.hello(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "hello", Nil,"GET", """""", Routes.prefix + """hello"""))
+private[this] lazy val controllers_Application_mockDatabase2_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("install"))))
+private[this] lazy val controllers_Application_mockDatabase2_invoker = createInvoker(
+controllers.Application.mockDatabase(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "mockDatabase", Nil,"GET", """""", Routes.prefix + """install"""))
         
 
 // @LINE:13
@@ -80,21 +80,7 @@ private[this] lazy val controllers_ProjectList_sc36_invoker = createInvoker(
 controllers.ProjectList.sc3(fakeValue[Long]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc3", Seq(classOf[Long]),"GET", """""", Routes.prefix + """screenshot3/$id<[^/]+>"""))
         
-
-// @LINE:21
-private[this] lazy val controllers_Application_test7_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("test"))))
-private[this] lazy val controllers_Application_test7_invoker = createInvoker(
-controllers.Application.test(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "test", Nil,"GET", """""", Routes.prefix + """test"""))
-        
-
-// @LINE:23
-private[this] lazy val controllers_Application_mockDatabase8_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("install"))))
-private[this] lazy val controllers_Application_mockDatabase8_invoker = createInvoker(
-controllers.Application.mockDatabase(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "mockDatabase", Nil,"GET", """""", Routes.prefix + """install"""))
-        
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """hello""","""controllers.Application.hello()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1/$id<[^/]+>""","""controllers.ProjectList.sc1(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2/$id<[^/]+>""","""controllers.ProjectList.sc2(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3/$id<[^/]+>""","""controllers.ProjectList.sc3(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """test""","""controllers.Application.test()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """install""","""controllers.Application.mockDatabase()""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """install""","""controllers.Application.mockDatabase()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile/$id<[^/]+>""","""controllers.ProjectList.index(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1/$id<[^/]+>""","""controllers.ProjectList.sc1(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2/$id<[^/]+>""","""controllers.ProjectList.sc2(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3/$id<[^/]+>""","""controllers.ProjectList.sc3(id:Long)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -119,9 +105,9 @@ case controllers_Assets_at1_route(params) => {
         
 
 // @LINE:11
-case controllers_Application_hello2_route(params) => {
+case controllers_Application_mockDatabase2_route(params) => {
    call { 
-        controllers_Application_hello2_invoker.call(controllers.Application.hello())
+        controllers_Application_mockDatabase2_invoker.call(controllers.Application.mockDatabase())
    }
 }
         
@@ -154,22 +140,6 @@ case controllers_ProjectList_sc25_route(params) => {
 case controllers_ProjectList_sc36_route(params) => {
    call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_ProjectList_sc36_invoker.call(controllers.ProjectList.sc3(id))
-   }
-}
-        
-
-// @LINE:21
-case controllers_Application_test7_route(params) => {
-   call { 
-        controllers_Application_test7_invoker.call(controllers.Application.test())
-   }
-}
-        
-
-// @LINE:23
-case controllers_Application_mockDatabase8_route(params) => {
-   call { 
-        controllers_Application_mockDatabase8_invoker.call(controllers.Application.mockDatabase())
    }
 }
         

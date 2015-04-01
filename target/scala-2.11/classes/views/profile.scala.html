@@ -90,7 +90,7 @@
                         <p>Type of project: @project.typeApp</p>
                         <p>Member: </p>
                         @member.map { person =>
-                         <p>@person.name , @person.surname</p>
+                         <p>@person.name @person.surname @person.kuNo</p>
                      }
                     </div>
                 </div>
@@ -126,13 +126,13 @@
                                 <!-- Wrapper for slides -->
                             <div class="carousel-inner" role="listbox">
                                 <div class="item active">
-                                    <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1/' @project.id"> </button>
+                                    <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1/' + @project.id"> </button>
                                 </div>
                                 <div class="item">
-                                    <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2/' @project.id"> </button>
+                                    <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2/' + @project.id"> </button>
                                 </div>
                                 <div class="item">
-                                    <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3/' @project.id"> </button>
+                                    <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.id"> </button>
                                 </div>
                             </div>
 

@@ -1,6 +1,6 @@
 // @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:6d58eaf73ca33cfd83845c276c2e68afa4bfde15
-// @DATE:Wed Apr 01 20:38:30 ICT 2015
+// @HASH:f7096a25efa7e03bc0e091c695e73592fc672496
+// @DATE:Wed Apr 01 22:21:45 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,8 +15,6 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:23
-// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -78,19 +76,10 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:23
-// @LINE:21
 // @LINE:11
 // @LINE:6
 class ReverseApplication {
 
-
-// @LINE:11
-def hello(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "hello")
-}
-                        
 
 // @LINE:6
 def index(): Call = {
@@ -99,17 +88,10 @@ def index(): Call = {
 }
                         
 
-// @LINE:23
+// @LINE:11
 def mockDatabase(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "install")
-}
-                        
-
-// @LINE:21
-def test(): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "test")
 }
                         
 
@@ -119,8 +101,6 @@ def test(): Call = {
                   
 
 
-// @LINE:23
-// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -203,23 +183,10 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:23
-// @LINE:21
 // @LINE:11
 // @LINE:6
 class ReverseApplication {
 
-
-// @LINE:11
-def hello : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.hello",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "hello"})
-      }
-   """
-)
-                        
 
 // @LINE:6
 def index : JavascriptReverseRoute = JavascriptReverseRoute(
@@ -232,23 +199,12 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:23
+// @LINE:11
 def mockDatabase : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.mockDatabase",
    """
       function() {
       return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "install"})
-      }
-   """
-)
-                        
-
-// @LINE:21
-def test : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.Application.test",
-   """
-      function() {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "test"})
       }
    """
 )
@@ -260,8 +216,6 @@ def test : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:23
-// @LINE:21
 // @LINE:19
 // @LINE:17
 // @LINE:15
@@ -319,18 +273,10 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:23
-// @LINE:21
 // @LINE:11
 // @LINE:6
 class ReverseApplication {
 
-
-// @LINE:11
-def hello(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.hello(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "hello", Seq(), "GET", """""", _prefix + """hello""")
-)
-                      
 
 // @LINE:6
 def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
@@ -338,15 +284,9 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:23
+// @LINE:11
 def mockDatabase(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.mockDatabase(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "mockDatabase", Seq(), "GET", """""", _prefix + """install""")
-)
-                      
-
-// @LINE:21
-def test(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.Application.test(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "test", Seq(), "GET", """""", _prefix + """test""")
 )
                       
 

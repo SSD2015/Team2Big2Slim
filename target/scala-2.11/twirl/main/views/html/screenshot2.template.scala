@@ -29,7 +29,7 @@ object screenshot2 extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendabl
 Seq[Any](format.raw/*1.45*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE html>
 <html>
-    <title>Bootstrap Grand Theft Auto V</title>
+    <title>Screentshot2</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -84,10 +84,10 @@ Seq[Any](format.raw/*1.45*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 01 20:43:08 ICT 2015
+                  DATE: Wed Apr 01 22:03:35 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/screenshot2.scala.html
-                  HASH: 2ba680c7302bdaefb0e1688584455ef744cdfad8
-                  MATRIX: 743->1|874->44|901->45|2056->1173|2072->1180|2097->1184|2126->1185|2631->1662|2648->1669|2673->1672
+                  HASH: 83e63bc7108e8c27778dcf51cb92e2b71fc57f6c
+                  MATRIX: 743->1|874->44|901->45|2040->1157|2056->1164|2081->1168|2110->1169|2615->1646|2632->1653|2657->1656
                   LINES: 26->1|29->1|30->2|57->29|57->29|57->29|57->29|67->39|67->39|67->39
                   -- GENERATED --
               */
