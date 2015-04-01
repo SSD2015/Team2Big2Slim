@@ -1,0 +1,10 @@
+@(rates: List[RatingRecord])
+	
+
+@main("Rate Result") {
+    
+	@rates.map { rate =>
+		<h1>Project @rate.projectID</h1> <br>
+        Criteria @rate.criteriaID : @rate.score <br>
+    }
+}
