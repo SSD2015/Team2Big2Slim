@@ -19,35 +19,25 @@ import static play.libs.Json.toJson;
 
 public class Vote extends Controller {
 
-	public static class VoteScore
-	{
-		public String projectName;
-		public int score = 1;
-	}
+    public static class VoteInfo {
+        public String projectID;
+    }
 
     public static Result vote() {
         return ok(vote.render());
     }
-	
-	public static Result submitVote() {
-		//Form<VoteScore> voteForm = Form.form(VoteScore.class).bindFromRequest();
-		//VoteScore info = voteForm.get();
-		//System.out.println("VoteForm: " + voteForm.get());
-		//System.out.println("Name: " + info.projectName);
-        //System.out.println("Score: " + info.score);
 
-        Project project = Form.form(Project.class).bindFromRequest().get();
-        Project existProject = Project.find.where().eq("projectName", project.getProjectName()).findUnique();
+    public static Result submitVote() {
+        Form<VoteInfo> voteForm = Form.form(VoteInfo.class).bindFromRequest();
+        VoteInfo info = voteForm.get();
+//        System.out.println("ID: "+info.projectID);
+        Project existProject = Project.find.where().eq("ID", info.projectID).findUnique();
 
         if( existProject != null ) {
             existProject.updateVote();
             existProject.save();
         }
-        else {
-            project.save();
-        }
 
-		return ok(vote.render());
-	}
-
+        return redirect("/");
+    }
 }

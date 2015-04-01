@@ -1,6 +1,6 @@
-// @SOURCE:C:/Team2Big2Slim/conf/routes
-// @HASH:a9b4b3021ef2b6e09a0974ac5896987dd55c5598
-// @DATE:Wed Apr 01 19:31:21 ICT 2015
+// @SOURCE:/Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/conf/routes
+// @HASH:e8bec4372cc0e5501ea566c18ff7a08c985142d5
+// @DATE:Wed Apr 01 22:45:03 ICT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
