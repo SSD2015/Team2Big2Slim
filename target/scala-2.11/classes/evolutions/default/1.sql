@@ -3,6 +3,14 @@
 
 # --- !Ups
 
+create table member (
+  id                        integer primary key AUTOINCREMENT,
+  name                      varchar(255),
+  surname                   varchar(255),
+  ku_no                     varchar(255),
+  project_id                integer)
+;
+
 create table project (
   id                        integer primary key AUTOINCREMENT,
   project_name              varchar(255),
@@ -16,6 +24,8 @@ create table project (
 # --- !Downs
 
 PRAGMA foreign_keys = OFF;
+
+drop table member;
 
 drop table project;
 

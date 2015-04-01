@@ -20,16 +20,16 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[Project,play.twirl.api.HtmlFormat.Appendable] {
+object profile extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template2[Project,List[Member],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(project : Project):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(project : Project )(member : List[Member]):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.21*/("""
+Seq[Any](format.raw/*1.45*/("""
 """),format.raw/*2.1*/("""<!DOCTYPE HTML>
 <html lang = "en">
-    <title>Grand Theft Auto V</title>
+    <title>"""),_display_(/*4.13*/project/*4.20*/.projectName),format.raw/*4.32*/("""</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -116,8 +116,10 @@ Seq[Any](format.raw/*1.21*/("""
                     <div class = "Information">
                         <p>Project name: """),_display_(/*89.43*/project/*89.50*/.projectName),format.raw/*89.62*/("""</p>
                         <p>Type of project: """),_display_(/*90.46*/project/*90.53*/.typeApp),format.raw/*90.61*/("""</p>
-                        <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
-                    </div>
+                     """),_display_(/*91.23*/member/*91.29*/.map/*91.33*/ { person =>_display_(Seq[Any](format.raw/*91.45*/("""
+                         """),format.raw/*92.26*/("""<p>Member : """),_display_(/*92.39*/person/*92.45*/.name),format.raw/*92.50*/(""" """),format.raw/*92.51*/(""", """),_display_(/*92.54*/person/*92.60*/.surname),format.raw/*92.68*/("""</p>
+                     """)))}),format.raw/*93.23*/("""
+                    """),format.raw/*94.21*/("""</div>
                 </div>
                 <div class = "col-xs-2"> </div>
             </div>
@@ -196,20 +198,20 @@ Seq[Any](format.raw/*1.21*/("""
 </html>"""))}
   }
 
-  def render(project:Project): play.twirl.api.HtmlFormat.Appendable = apply(project)
+  def render(project:Project,member:List[Member]): play.twirl.api.HtmlFormat.Appendable = apply(project)(member)
 
-  def f:((Project) => play.twirl.api.HtmlFormat.Appendable) = (project) => apply(project)
+  def f:((Project) => (List[Member]) => play.twirl.api.HtmlFormat.Appendable) = (project) => (member) => apply(project)(member)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Fri Mar 27 15:23:24 ICT 2015
+                  DATE: Wed Apr 01 19:11:40 ICT 2015
                   SOURCE: /Users/nathakorn/Documents/Team2Big2Slim/app/views/profile.scala.html
-                  HASH: b3fdb5460e34334eba557af432265e6da31be7f8
-                  MATRIX: 726->1|833->20|860->21|1685->818|1714->819|1755->832|1835->885|1864->886|1900->895|1940->907|1969->908|2010->921|2090->974|2119->975|2155->984|2194->995|2223->996|2264->1009|2344->1062|2373->1063|2409->1072|2438->1073|2467->1074|2508->1087|2563->1115|2592->1116|2627->1124|2660->1129|2689->1130|2730->1143|2792->1178|2821->1179|2858->1189|2959->1262|2988->1263|3024->1272|3094->1315|3123->1316|3159->1325|3197->1335|3226->1336|3267->1349|3345->1400|3374->1401|3406->1406|3808->1781|3824->1788|3857->1800|4214->2130|4230->2137|4262->2148|4291->2149|5194->3025|5210->3032|5243->3044|5320->3094|5336->3101|5365->3109
-                  LINES: 26->1|29->1|30->2|44->16|44->16|45->17|47->19|47->19|48->20|48->20|48->20|49->21|51->23|51->23|52->24|52->24|52->24|53->25|55->27|55->27|56->28|56->28|56->28|57->29|58->30|58->30|59->31|59->31|59->31|60->32|61->33|61->33|63->35|64->36|64->36|65->37|67->39|67->39|68->40|68->40|68->40|69->41|71->43|71->43|72->44|85->57|85->57|85->57|94->66|94->66|94->66|94->66|117->89|117->89|117->89|118->90|118->90|118->90
+                  HASH: 8dab45ac2b986b369250c0297f9db1e6be85355b
+                  MATRIX: 739->1|870->44|897->45|970->92|985->99|1017->111|1778->844|1807->845|1848->858|1928->911|1957->912|1993->921|2033->933|2062->934|2103->947|2183->1000|2212->1001|2248->1010|2287->1021|2316->1022|2357->1035|2437->1088|2466->1089|2502->1098|2531->1099|2560->1100|2601->1113|2656->1141|2685->1142|2720->1150|2753->1155|2782->1156|2823->1169|2885->1204|2914->1205|2951->1215|3052->1288|3081->1289|3117->1298|3187->1341|3216->1342|3252->1351|3290->1361|3319->1362|3360->1375|3438->1426|3467->1427|3499->1432|3901->1807|3917->1814|3950->1826|4307->2156|4323->2163|4355->2174|4384->2175|5287->3051|5303->3058|5336->3070|5413->3120|5429->3127|5458->3135|5512->3162|5527->3168|5540->3172|5590->3184|5644->3210|5684->3223|5699->3229|5725->3234|5754->3235|5784->3238|5799->3244|5828->3252|5886->3279|5935->3300
+                  LINES: 26->1|29->1|30->2|32->4|32->4|32->4|44->16|44->16|45->17|47->19|47->19|48->20|48->20|48->20|49->21|51->23|51->23|52->24|52->24|52->24|53->25|55->27|55->27|56->28|56->28|56->28|57->29|58->30|58->30|59->31|59->31|59->31|60->32|61->33|61->33|63->35|64->36|64->36|65->37|67->39|67->39|68->40|68->40|68->40|69->41|71->43|71->43|72->44|85->57|85->57|85->57|94->66|94->66|94->66|94->66|117->89|117->89|117->89|118->90|118->90|118->90|119->91|119->91|119->91|119->91|120->92|120->92|120->92|120->92|120->92|120->92|120->92|120->92|121->93|122->94
                   -- GENERATED --
               */
           

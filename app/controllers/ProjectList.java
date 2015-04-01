@@ -4,10 +4,13 @@ import play.mvc.*;
 import models.*;
 import views.html.*;
 
-public class ProjectList extends Controller {
+import java.util.List;
 
+public class ProjectList extends Controller {
     public static Result index(Long id){
         Project project = Project.find.byId(id);
-        return ok(profile.render(project));
+        List member = Member.find.where().eq("projectId",id).findList();
+        return ok(profile.render(project,member));
     }
+
 }

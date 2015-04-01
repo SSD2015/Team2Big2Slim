@@ -1,7 +1,7 @@
-@(project : Project)
+@(project : Project )(member : List[Member])
 <!DOCTYPE HTML>
 <html lang = "en">
-    <title>Grand Theft Auto V</title>
+    <title>@project.projectName</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -63,7 +63,7 @@
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "PictureProject">
-                        <p> <img src = "http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg" style="width:700px;height:450px"> </p>
+                        <p> <img src = @project.PicProject style="width:700px;height:450px"> </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -87,8 +87,10 @@
                 <div class="col-xs-8">
                     <div class = "Information">
                         <p>Project name: @project.projectName</p>
-                        <p>Type of project: Game</p>
-                        <p>Member: Korn , PP ,Mo , Sompat , Nut</p>
+                        <p>Type of project: @project.typeApp</p>
+                     @member.map { person =>
+                         <p>Member : @person.name , @person.surname</p>
+                     }
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>

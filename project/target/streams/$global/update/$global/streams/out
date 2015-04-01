@@ -12317,7 +12317,7 @@
 [debug] 	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar
 [debug] 	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar
 [debug] 	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar
-[debug] :: resolution report :: resolve 5125ms :: artifacts dl 105ms
+[debug] :: resolution report :: resolve 4578ms :: artifacts dl 123ms
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in /Users/nathakorn/Documents/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile.xml
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in /Users/nathakorn/Documents/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime.xml
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in /Users/nathakorn/Documents/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test.xml
@@ -12331,5 +12331,5 @@
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in /Users/nathakorn/Documents/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-docs.xml
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in /Users/nathakorn/Documents/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-pom.xml
 [debug] 	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in /Users/nathakorn/Documents/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-scala-tool.xml
-[debug] 	resolve done (5125ms resolve - 105ms download)
+[debug] 	resolve done (4578ms resolve - 123ms download)
 [info] Done updating.
