@@ -85,3 +85,9 @@ Found bean property 'shit' of type [java.lang.String]
 2015-04-02 08:05:38,030 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
 Found bean property 'username' of type [java.lang.String]
 
+2015-04-02 08:34:27,075 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-02 08:34:27,164 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
