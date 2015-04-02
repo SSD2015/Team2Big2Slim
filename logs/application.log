@@ -91,3 +91,24 @@ database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 2015-04-02 08:34:27,164 - [INFO] - from play in play-internal-execution-context-3 
 Application started (Dev)
 
+2015-04-02 08:36:27,884 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-02 08:36:28,016 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-04-02 08:36:35,153 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-39 
+Not strongly caching class [controllers.Vote$VoteInfo] because it is not cache-safe
+
+2015-04-02 08:36:35,154 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-39 
+Getting BeanInfo for class [controllers.Vote$VoteInfo]
+
+2015-04-02 08:36:35,156 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-39 
+Caching PropertyDescriptors for class [controllers.Vote$VoteInfo]
+
+2015-04-02 08:36:35,156 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-39 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-02 08:36:35,156 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-39 
+Found bean property 'projectID' of type [java.lang.String]
+
