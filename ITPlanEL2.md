@@ -13,29 +13,29 @@
 ### Milestone: Vote
 | Task | Priority (1=very high, 5=low) |
 |-----------------------------|:---:|
-| Write database file into server |  |
-| Fix play config file |  |
-| Make a vote submitable |  |
-| Show vote result |  |
+| Write database file into server | 2 |
+| Fix play config file | 1 |
+| Make a vote submitable | 1 |
+| Show vote result | 2 |
 ### Milestone: Rate 
 | Task | Priority (1=very high, 5=low) |
 |-----------------------------|:---:|
-| Show rating criteria |  |
-| Voter can rate each criterion |  |
-| Voter can submit a rating |  |
-| Show a rating review before press final decision |  |
+| Show rating criteria | 1 |
+| Voter can rate each criterion | 2 |
+| Voter can submit a rating | 1 |
+| Show a rating review before press final decision | 5 |
 ### Milestone: Documentation
 | Task | Priority (1=very high, 5=low) |
 |-----------------------------|:---:|
-| Update Requirements  |  |
-| Update vision statement |  |
-| Update supplementary requirements |  |
-| Update glossary |  |
-| Update domain model |  |
-| User manual |  |
+| Update Requirements  | 3 |
+| Update vision statement | 3 |
+| Update supplementary requirements | 4 |
+| Update glossary | 3 |
+| Update domain model | 4 |
+| User manual | 5 |
 ### Milestone: Login
 | Task | Priority (1=very high, 5=low) |
 |-----------------------------|:---:|
-| Login page (UI) |  |
-| Link users with database |  |
+| Login page (UI) | 2 |
+| Link users with database | 2 |
 
