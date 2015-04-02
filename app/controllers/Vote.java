@@ -40,4 +40,9 @@ public class Vote extends Controller {
 
         return redirect("/");
     }
+
+    public static Result showVoteResult() {
+        return ok(voteResult.render( Project.find.all()) );
+        //return ok("hello");
+    }
 }

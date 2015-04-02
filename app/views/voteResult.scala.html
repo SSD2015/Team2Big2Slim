@@ -1,0 +1,10 @@
+@(votes: List[Project])
+
+
+@main("Vote Result") {
+
+    @votes.map { votes =>
+    Project: @votes.projectName, Current Vote: @votes.voteScore<br>
+
+    }
+}

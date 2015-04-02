@@ -1,39 +1,87 @@
-2015-04-02 02:32:43,645 - [INFO] - from play in pool-4-thread-1 
+2015-04-02 07:59:43,751 - [INFO] - from play in pool-4-thread-7 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-04-02 02:33:05,356 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-02 08:00:20,669 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-02 02:33:06,107 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-02 08:00:21,132 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-02 02:33:10,075 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost:3306/exceedvote
-
-2015-04-02 02:33:10,126 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-04-02 02:34:20,694 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-11 
+2015-04-02 08:00:32,909 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-2 
 Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
 
-2015-04-02 02:34:20,699 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
+2015-04-02 08:00:32,913 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Not strongly caching class [controllers.Vote$VoteInfo] because it is not cache-safe
 
-2015-04-02 02:34:20,699 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
+2015-04-02 08:00:32,913 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Getting BeanInfo for class [controllers.Vote$VoteInfo]
 
-2015-04-02 02:34:20,702 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
+2015-04-02 08:00:32,916 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Caching PropertyDescriptors for class [controllers.Vote$VoteInfo]
 
-2015-04-02 02:34:20,703 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+2015-04-02 08:00:32,916 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
 Found bean property 'class' of type [java.lang.Class]
 
-2015-04-02 02:34:20,703 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+2015-04-02 08:00:32,916 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-2 
+Found bean property 'projectID' of type [java.lang.String]
+
+2015-04-02 08:03:02,552 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-02 08:03:02,656 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-04-02 08:04:21,985 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-02 08:04:22,054 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-04-02 08:04:40,826 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-02 08:04:40,906 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-04-02 08:05:08,137 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-02 08:05:08,265 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2015-04-02 08:05:12,507 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Not strongly caching class [controllers.Vote$VoteInfo] because it is not cache-safe
+
+2015-04-02 08:05:12,508 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Getting BeanInfo for class [controllers.Vote$VoteInfo]
+
+2015-04-02 08:05:12,510 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Caching PropertyDescriptors for class [controllers.Vote$VoteInfo]
+
+2015-04-02 08:05:12,510 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-02 08:05:12,510 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-15 
+Found bean property 'projectID' of type [java.lang.String]
+
+2015-04-02 08:05:38,028 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
+Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
+
+2015-04-02 08:05:38,028 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
+Getting BeanInfo for class [controllers.Login$LoginInfo]
+
+2015-04-02 08:05:38,030 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
+Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
+
+2015-04-02 08:05:38,030 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-02 08:05:38,030 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
 Found bean property 'password' of type [java.lang.String]
 
-2015-04-02 02:34:20,704 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+2015-04-02 08:05:38,030 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
 Found bean property 'shit' of type [java.lang.String]
 
-2015-04-02 02:34:20,704 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-11 
+2015-04-02 08:05:38,030 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
 Found bean property 'username' of type [java.lang.String]
 

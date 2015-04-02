@@ -4,9 +4,7 @@
 @main("Rate Result") {
     
 	@rates.map { rate =>
-		<h1>Project ID: @rate.projectID</h1> <br> 
-		Criteria ID: @rate.criteriaID <br>
-		Criteria Score: @rate.score <br>
+		Project ID: @rate.projectID, Criteria ID: @rate.criteriaID, Criteria Score: @rate.score <br>
 		<!--<script type="text/javascript"> 
 				if (@rate.criteriaID == 1)
 				{

@@ -1,6 +1,6 @@
-// @SOURCE:/Users/nathakorn/Documents/Team2Big2Slim/conf/routes
-// @HASH:8fff4860de8aadde5e735d93626a7794f5800b0b
-// @DATE:Thu Apr 02 01:31:32 ICT 2015
+// @SOURCE:C:/Users/momomomomo/Documents/WORK/SoftSpec/project/Team2Big2Slim/conf/routes
+// @HASH:c32a6596921eb542a516bb1ba6c776c900949a75
+// @DATE:Thu Apr 02 08:04:08 ICT 2015
 
 
 import play.core._
@@ -68,10 +68,10 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "vote", Nil,"GE
         
 
 // @LINE:14
-private[this] lazy val controllers_Application_getVoteResult5_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("voteResult"))))
-private[this] lazy val controllers_Application_getVoteResult5_invoker = createInvoker(
-controllers.Application.getVoteResult(),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "getVoteResult", Nil,"GET", """""", Routes.prefix + """voteResult"""))
+private[this] lazy val controllers_Vote_showVoteResult5_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("voteResult"))))
+private[this] lazy val controllers_Vote_showVoteResult5_invoker = createInvoker(
+controllers.Vote.showVoteResult(),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.Vote", "showVoteResult", Nil,"GET", """""", Routes.prefix + """voteResult"""))
         
 
 // @LINE:17
@@ -171,7 +171,7 @@ private[this] lazy val controllers_ProjectList_sc319_invoker = createInvoker(
 controllers.ProjectList.sc3(fakeValue[Integer]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.ProjectList", "sc3", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """screenshot3/$id<[^/]+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Vote.submitVote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Vote.vote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Application.getVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.rate()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.submitRate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rateResult""","""controllers.Rate.showRateResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """install""","""controllers.Application.mockDatabase()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile/$id<[^/]+>""","""controllers.ProjectList.index(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1/$id<[^/]+>""","""controllers.ProjectList.sc1(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2/$id<[^/]+>""","""controllers.ProjectList.sc2(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3/$id<[^/]+>""","""controllers.ProjectList.sc3(id:Integer)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """creater""","""controllers.Application.createProject()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """create""","""controllers.Application.addProject()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Vote.submitVote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """vote""","""controllers.Vote.vote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """voteResult""","""controllers.Vote.showVoteResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """group1""","""controllers.Application.group1()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.login()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.Login.authenticate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.index()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """quicknote""","""controllers.Quicknote.addNote()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.rate()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rate""","""controllers.Rate.submitRate()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """rateResult""","""controllers.Rate.showRateResult()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """install""","""controllers.Application.mockDatabase()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """profile/$id<[^/]+>""","""controllers.ProjectList.index(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot1/$id<[^/]+>""","""controllers.ProjectList.sc1(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot2/$id<[^/]+>""","""controllers.ProjectList.sc2(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """screenshot3/$id<[^/]+>""","""controllers.ProjectList.sc3(id:Integer)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -220,9 +220,9 @@ case controllers_Vote_vote4_route(params) => {
         
 
 // @LINE:14
-case controllers_Application_getVoteResult5_route(params) => {
+case controllers_Vote_showVoteResult5_route(params) => {
    call { 
-        controllers_Application_getVoteResult5_invoker.call(controllers.Application.getVoteResult())
+        controllers_Vote_showVoteResult5_invoker.call(controllers.Vote.showVoteResult())
    }
 }
         

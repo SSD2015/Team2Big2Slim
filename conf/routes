@@ -11,7 +11,7 @@ GET         /create              controllers.Application.addProject()
 POST        /vote                controllers.Vote.submitVote()
 GET         /vote                controllers.Vote.vote()
 
-GET         /voteResult          controllers.Application.getVoteResult()
+GET         /voteResult          controllers.Vote.showVoteResult()
 
 
 GET         /group1              controllers.Application.group1()
@@ -40,5 +40,4 @@ GET        /screenshot1/:id     controllers.ProjectList.sc1(id:Integer)
 GET        /screenshot2/:id     controllers.ProjectList.sc2(id:Integer)
 
 GET        /screenshot3/:id     controllers.ProjectList.sc3(id:Integer)
-
     
