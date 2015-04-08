@@ -33,6 +33,13 @@ public class Rate extends Controller {
         //System.out.println("score: " + ratingForm.get().getScore());
 
         RatingRecord record = Form.form(RatingRecord.class).bindFromRequest().get();
+        System.out.println("RateForm: " + record);
+       // System.out.println("ID: " + record.getID());
+        System.out.println("projectID: " + record.getProjectID());
+        System.out.println("criteriaID: " + record.getCriteriaID());
+        System.out.println("score: " + record.getScore());
+        System.out.println("----------------------------");
+
         record.save();
 		return redirect("/profile/"+record.getProjectID());
 	}
