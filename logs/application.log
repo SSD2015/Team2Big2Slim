@@ -370,3 +370,39 @@ Found bean property 'shit' of type [java.lang.String]
 2015-04-12 17:56:18,386 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
 Found bean property 'username' of type [java.lang.String]
 
+2015-04-12 18:05:45,723 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-12 18:05:45,756 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-12 18:08:56,780 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-12 18:08:56,825 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-12 18:09:06,665 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-12 18:09:06,694 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-12 18:11:34,321 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-12 18:11:34,357 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-12 18:16:23,127 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-12 18:16:23,155 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-12 18:19:33,564 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-12 18:19:33,592 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+

@@ -2,71 +2,14 @@
 @main("Main Menu") {
     <html>
         <head>
-                <!-- Bootstrap -->
-            <title>Bootstrap Case</title>
+            <title>Main menu</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/index.css")">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-
-                <!-- CSS -->
-            <style>
-            html, body {
-            max-width: 100%;
-            overflow-x: hidden;
-            margin-top: 30px;
-            background-color: #909090;
-            }
-            .header {
-            float: right;
-            /*width: 300px;     */
-            }
-            .toppanel {
-            position: fixed;
-            background-color: #ff8080;
-            color: white;
-            /*text-align: center;*/
-            padding: 20px;
-            width: 100%;
-            z-index: 1;
-            }
-            .topbar {
-            height: 40px;
-            color: lightgrey;
-            }
-            .projectlist {
-            border-color: grey;
-            }
-            .project {
-            margin: 7px;
-            margin-left: 15px;
-            width: 100%;
-            border: solid;
-            border-width: 0.1px;
-            opacity: 0.6;
-            }
-            .project:hover {
-            opacity: 1.0;
-            }
-            .container {
-            /*position: ;*/
-            margin-left: 0px;
-            }
-            .row {
-            width: 100%;
-            }
-            #voteLayer {
-            /*opacity : 0;*/
-            position: absolute;
-            }
-            clock {
-            font: serif;
-            font-size: x-large;
-            }
-            </style>
         </head>
-
 
         <body>
                 <!-- Modal -->
@@ -160,7 +103,8 @@
 
                 </div>
             </div>
-                <!-- JQuery -->
+
+            <!-- JQuery -->
             <script>
                 $(document).ready(function(){
                     function getdate(){
@@ -214,28 +158,10 @@
 
                 });
             </script>
-
-                <!-- JS -->
-            <script>
-                function camerabEvent() {
-                //open camera app
-                alert("camera");
-                }
-                function votebEvent() {
-                //actually go to vote page
-                alert("vote");
-                }
-                function logoutbEvent() {
-                //confirmation prompt out
-                confirm("Are you sure ?");
-                }
-                function redirectProfile1() {
-                    return true;
-                }
-            </script>
         </body>
     </html>
 }
+
 <script type="text/javascript">
 function theFunction () {
 // return true or false, depending on whether you want to allow the `href` property to follow through or not
