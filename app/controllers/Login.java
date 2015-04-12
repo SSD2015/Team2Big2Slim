@@ -13,7 +13,7 @@ import views.html.*;
 import javax.persistence.Entity;
 import java.util.List;
 
-import static play.data.Form.form;
+import static play.data.Form.*;
 import static play.libs.Json.toJson;
 
 public class Login extends Controller {
@@ -22,24 +22,30 @@ public class Login extends Controller {
         public String shit;
         public String username;
         public String password;
+        public String validate() {
+            if (User.authenticate(username, password) == null) {
+                return "Invalid user or password";
+            }
+            return null;
+        }
     }
 
     public static Result login() {
-        return ok( login.render());
+        return ok( login.render(Form.form(LoginInfo.class)));
         //return ok( login.render( Form.form() ) );
     }
 
-
     public static Result authenticate() {
         Form<LoginInfo> loginForm = Form.form(LoginInfo.class).bindFromRequest();
-        System.out.println("LoginForm: " + loginForm.get());
-        System.out.println("shit: " + loginForm.get().shit);
-        System.out.println("username: " + loginForm.get().username);
-        System.out.println("password: " + loginForm.get().password);
-        LoginInfo info = loginForm.get();
-        User user = User.find.where().eq("username", info.username).eq("password", info.password).findUnique();
+        //wrong username or password
+        if (loginForm.hasErrors()) {
+            return badRequest(login.render(loginForm));
+        }
+        //correct
+        else {
+            LoginInfo info = loginForm.get();
+            User user = User.find.where().eq("username", info.username).eq("password", info.password).findUnique();
 
-        if( user != null ) {
             session().clear();
             session("connected", ""+user.getID());
             //String userId = session("connected");
@@ -49,8 +55,6 @@ public class Login extends Controller {
             //System.out.println("\nI'm in");
             //return redirect(routes.Application.index());
         //}
-
-      return ok( login.render( ));
     }
 
 }

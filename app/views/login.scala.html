@@ -1,38 +1,60 @@
-@main("Login") {
+@(form: Form[Login.LoginInfo])
     <html>
+        <style>
+            #banner {
+                position: relative;
+            }
+        </style>
 
         <head>
             <!-- Bootstrap -->
-            <title>Bootstrap Case</title>
+            <title>Login</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
         </head>
 
         <body>
-        <div class="jumbotron">
-            <h1><center>Login</center></h1>
-        </div>
-
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-xs-4"></div>
-                <div class="col-xs-4">
-                    <form action="/login" method="post">
-                        Username: <input type="text" name="username" id="username">
-                        <br> <br>
-                        Password: <input type="password" name="password" id="password">
-                        <br> <br>
-                        <button class="btn-success" type="submit" name="action">Sign in</button>
-                    </form>
-                </div>
-                <div class="col-xs-4"></div>
+            <div class="jumbotron" id="banner">
+                <h1><center>Login</center></h1>
             </div>
-        </div>
 
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4"></div>
+                    <div class="col-xs-4">
+                    @if(form.hasGlobalErrors) {
+                        <div class="alert alert-danger" role="alert">
+                            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                            <span class="sr-only">Error:</span>
+                            @form.globalError.message
+                        </div>
+                    }
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+
+                    </div>
+                    <div class="col-xs-4">
+                        @helper.form(routes.Login.authenticate) {
+                            <p>Username: <input type="text" name="username" id="username"></p>
+                            <p>Password: <input type="password" name="password" id="password"></p>
+                            <p><button class="btn-success" type="submit" name="action">Sign in</button></p>
+                        }
+                    </div>
+                    <div class="col-xs-4"></div>
+                </div>
+            </div>
         </body>
 
+        <script>
+            $(document).ready(function() {
+//                TweenMax.from ( "html", 2, { opacity : 0 } ) ;
+            });
+        </script>
     </html>
-}

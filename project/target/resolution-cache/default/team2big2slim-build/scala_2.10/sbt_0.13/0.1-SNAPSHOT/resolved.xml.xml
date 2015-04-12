@@ -4,7 +4,7 @@
 		module="team2big2slim-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20150408133825"
+		publication="20150412153356"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>
