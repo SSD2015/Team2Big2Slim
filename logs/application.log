@@ -1,408 +1,207 @@
-2015-04-12 15:38:45,685 - [INFO] - from play in pool-4-thread-6 
+2015-04-14 20:52:29,998 - [INFO] - from play in pool-4-thread-4 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-04-12 15:39:53,298 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:53:02,497 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:39:53,884 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:53:03,017 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:40:09,921 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-3 
-Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
-
-2015-04-12 15:40:09,926 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 15:40:09,926 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 15:40:09,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 15:40:09,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 15:40:09,931 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 15:40:09,931 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 15:40:09,931 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-3 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 15:51:36,855 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:54:41,905 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:51:36,893 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:54:41,948 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:51:49,691 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:55:59,403 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:51:49,727 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:55:59,440 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:55:47,990 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:57:12,121 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:55:48,024 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 20:57:12,170 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:56:47,386 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:01:52,228 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:56:47,419 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:01:52,272 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:57:00,689 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:03:13,536 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:57:00,723 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:03:13,576 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:57:18,709 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:05:11,332 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:57:18,742 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:05:11,374 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:57:40,079 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:06:21,300 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:57:40,115 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:06:21,340 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:58:09,102 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:09:37,818 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:58:09,136 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:09:37,861 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:58:46,004 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:10:12,464 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:58:46,038 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:10:12,503 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 15:59:01,614 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:11:35,621 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 15:59:01,645 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:11:35,656 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 16:01:30,362 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:13:11,157 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 16:01:30,389 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:13:11,190 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 16:08:29,347 - [ERROR] - from application in New I/O worker #12 
-
-
-! @6ln7o644k - Internal server error, for (GET) [/login] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value form]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-04-12 17:38:51,093 - [ERROR] - from application in New I/O worker #13 
-
-
-! @6ln8a2gdj - Internal server error, for (GET) [/login] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: cannot find symbol]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-04-12 17:41:48,898 - [ERROR] - from application in New I/O worker #14 
-
-
-! @6ln8acje9 - Internal server error, for (GET) [/login] ->
-
-play.PlayExceptions$CompilationException: Compilation error[error: method render in class login cannot be applied to given types;]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
-
-2015-04-12 17:44:30,108 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:15:54,258 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:44:30,144 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:15:54,293 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:44:44,967 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 17:44:44,968 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:44:44,969 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:44:44,969 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 17:44:44,969 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 17:44:44,970 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 17:44:44,970 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-17 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 17:46:49,894 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:20:06,973 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:46:49,921 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:20:07,008 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:46:49,928 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 17:46:49,929 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:46:49,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:46:49,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 17:46:49,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 17:46:49,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 17:46:49,930 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-16 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 17:47:28,132 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:21:26,458 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:47:28,160 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:21:26,493 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:47:55,362 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:22:14,583 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:47:55,403 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:22:14,620 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:49:49,576 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:22:55,236 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:49:49,606 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:22:55,271 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:49:54,303 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 17:49:54,304 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:49:54,306 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:49:54,306 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 17:49:54,306 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 17:49:54,306 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 17:49:54,306 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-20 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 17:50:17,062 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:28:25,484 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:50:17,096 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:28:25,517 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:50:19,686 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 17:50:19,687 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:50:19,688 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:50:19,689 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 17:50:19,689 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 17:50:19,689 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 17:50:19,689 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-21 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 17:51:29,611 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:31:53,371 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:51:29,646 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:31:53,405 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:51:33,462 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 17:51:33,463 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:51:33,464 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:51:33,465 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 17:51:33,465 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 17:51:33,465 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 17:51:33,465 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-22 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 17:55:19,320 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:32:14,787 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:55:19,348 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:32:14,819 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:56:12,774 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:40:40,189 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 17:56:12,806 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:40:40,230 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 17:56:18,383 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
-
-2015-04-12 17:56:18,384 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Getting BeanInfo for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:56:18,386 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
-
-2015-04-12 17:56:18,386 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Found bean property 'class' of type [java.lang.Class]
-
-2015-04-12 17:56:18,386 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Found bean property 'password' of type [java.lang.String]
-
-2015-04-12 17:56:18,386 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Found bean property 'shit' of type [java.lang.String]
-
-2015-04-12 17:56:18,386 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-27 
-Found bean property 'username' of type [java.lang.String]
-
-2015-04-12 18:05:45,723 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:54:27,365 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 18:05:45,756 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:54:27,399 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 18:08:56,780 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:54:57,141 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 18:08:56,825 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:54:57,173 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 18:09:06,665 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:57:02,684 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 18:09:06,694 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 21:57:02,716 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 18:11:34,321 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 22:24:04,543 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 18:11:34,357 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 22:24:04,579 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 18:16:23,127 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 22:30:16,235 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 18:16:23,155 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-14 22:30:16,269 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-12 18:19:33,564 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-15 14:54:45,837 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-12 18:19:33,592 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-15 14:54:45,882 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 14:55:23,268 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 14:55:23,300 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 14:55:46,502 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 14:55:46,533 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 15:00:24,825 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 15:00:24,857 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 15:11:37,169 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 15:11:37,202 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 15:11:56,457 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 15:11:56,489 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 15:12:35,565 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 15:12:35,594 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-15 15:14:32,502 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-15 15:14:32,533 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 

@@ -7,13 +7,14 @@
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
             <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/index.css")">
+            <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
         </head>
 
         <body>
                 <!-- Modal -->
-            <div id="logout" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+            <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                         <div class="modal-header">
@@ -45,7 +46,27 @@
                 </div>
             </div>
 
-            <nav class="navbar navbar-inverse navbar-fixed-top votelayer">
+            <div id="votecriteriaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Choose a criterian" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><center>Select the Voting Criteria</center></h2>
+                        </div>
+                        <div class="modal-body vcField">
+                            <!-- Template Prepared for Database -->
+                            <p><button type="button" class="btn btn-warning btn-block vote-criteria" value="1" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> The Best</button>
+                            <p><button type="button" class="btn btn-danger btn-block vote-criteria" value="2" data-dismiss="modal"><span class="glyphicon glyphicon-heart"></span> The Coolest</button>
+                            <p><button type="button" class="btn btn-info btn-block vote-criteria" value="3" data-dismiss="modal"><span class="glyphicon glyphicon-cog"></span> Greatest Performance</button>
+                            <p><button type="button" class="btn btn-primary btn-block vote-criteria" value="4" data-dismiss="modal"><span class="glyphicon glyphicon-eye-open"></span> Greatest Design</button>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <nav class="navbar navbar-default navbar-fixed-top" id="votebar">
                 <div class="navbar-header">
                     <a class="navbar-brand" href="#">
                         Select the best group then click ok
@@ -58,7 +79,7 @@
                 </div>
             </nav>
 
-            <nav class="navbar navbar-inverse navbar-fixed-top topbar" id="topbar">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
                 <div class="container-fluid">
                     <div class="navbar-header">
                         <a class="navbar-brand" href="#">
@@ -72,16 +93,16 @@
 
                         <div class="container-fluid">
                             <ul class="nav navbar-nav navbar-right">
-                                <li><a href="#" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a></li>
-                                <li><a data-toggle="modal" data-target="#logout"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a></li>
+                                <li><a data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a></li>
+                                <li><a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a></li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </nav>
 
-            <div id="voteLayer">
-                <div class="container-fluid votelist">
+            <div class="voteLayer">
+                <div class="container-fluid voteList">
                     <div class="row" id="1">
                         <a value="1" class="voteB" id="project1" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
                     </div>
@@ -92,8 +113,8 @@
                 </div>
             </div>
 
-            <div id="projectlistLayer">
-                <div class="container-fluid projectlist">
+            <div class="projectListLayer">
+                <div class="container-fluid projectList">
                     <div class="row" id="1">
                         <a href="profile/1" id="project1"><image class="project img-rounded" src = "assets/g1_vector.jpg" title = "group1"></image></a>
                     </div>
@@ -107,6 +128,7 @@
             <!-- JQuery -->
             <script>
                 $(document).ready(function(){
+                    //Clock Section
                     function getdate(){
                         var today = new Date();
                         var h = today.getHours();
@@ -125,27 +147,33 @@
                         setTimeout(function(){getdate()}, 500);
                     }
                     getdate();
+                    //////////////////////////////////////////////
 
-                    $("#voteLayer" ).toggle();
-
+                    //Vote Section
                     $('#vote').click(function () {
                         var body = $("html, body");
                         body.animate({scrollTop:0}, "duration:600", "swing", function() {
-                        console.log("vote");
-                        $("#topbar").fadeOut();
-                        $("#projectlistLayer").fadeOut();
-                        $("#votebar" ).fadeIn();
-                        $("#voteLayer" ).fadeIn();
+                            //old vote animate
+//                        console.log("vote");
+//                        $("#topbar").fadeOut();
+//                        $("#projectlistLayer").fadeOut();
+//                        $("#votebar" ).fadeIn();
+//                        $("#voteLayer" ).fadeIn();
+
                         });
                     });
+                    //////////////////////////////////////////////
 
+                    //Back Button
                     $("#back" ).click(function () {
-                        console.log("back");
-                        $("#topbar" ).fadeIn();
-                        $("#projectlistLayer" ).fadeIn();
-                        $("#voteLayer" ).fadeOut();
-                    });
+                        $(".projectListLayer" ).toggle();
+                        $("#topbar" ).fadeToggle(700, "swing", function() {
 
+                        });
+                    });
+                    //////////////////////////////////////////////
+
+                    //Vote Button
                     $(".voteB" ).click(function () {
                         var name = $(this ).attr("id");
                         var value = $(this ).attr("value");
@@ -154,6 +182,20 @@
                         } ).remove();
                         $("projectname" ).append(name);
                         $("#voteValue" ).attr("value", value);
+                    });
+                    //////////////////////////////////////////////
+
+                    //Vote Criteria Section
+                    var voteCriteriaID = -1;
+                    $(".vote-criteria" ).click(function() {
+                        voteCriteriaID = $(this ).attr("value");
+                        $(".projectListLayer" ).toggle();
+                        $("#topbar" ).fadeToggle(700, "swing", function() {
+                            console.log("finish");
+                        });
+//                        $("#topbar" ).animate({width: "toggle"}, 1000, function() {
+//
+//                        });
                     });
 
                 });
