@@ -41,7 +41,7 @@ Seq[Any](format.raw/*1.18*/("""
         </head>
 
         <body>
-                <!-- Modal -->
+            <!-- Modal -->
             <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
@@ -97,26 +97,27 @@ Seq[Any](format.raw/*1.18*/("""
             <!-- votebar -->
             <nav class="navbar navbar-default navbar-fixed-top" id="votebar">
                 <div class="navbar-header pull-left">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand voteText" href="#">
                         Select the best group then click ok
                     </a>
                 </div>
                 <div class="navbar-header pull-right">
-                    <a class="navbar-brand" href="#" id="back"><span class="glyphicon glyphicon-chevron-up"></span> Back</a>
+                    <a class="navbar-brand voteText" href="#" id="back"><span class="glyphicon glyphicon-chevron-up"></span> Back</a>
                 </div>
             </nav>
 
             <!-- topbar -->
-            <nav class="navbar navbar-inverse navbar-fixed-top"  id="topbar">
-                <div class="navbar-header pull-left">
-                    <a class="navbar-brand" href="#">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                    <div class="navbar-headerll-left">
+                    <a class="navbar-brand hidden-xs" href="#">
                         ExceedVote
                     </a>
                     <a class="navbar-brand" href="#"><clock ></clock></a>
                 </div>
+
                 <div class="navbar-header pull-right">
-                        <a class="navbar-brand" data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
-                        <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                    <a class="navbar-brand" data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
+                    <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
                 </div>
             </nav>
 
@@ -146,88 +147,96 @@ Seq[Any](format.raw/*1.18*/("""
 
             <!-- JQuery -->
             <script>
-                $(document).ready(function()"""),format.raw/*121.45*/("""{"""),format.raw/*121.46*/("""
-                    """),format.raw/*122.21*/("""//Clock Section
-                    function getdate()"""),format.raw/*123.39*/("""{"""),format.raw/*123.40*/("""
-                        """),format.raw/*124.25*/("""var today = new Date();
+                $("#votebar" ).toggle();
+
+                $(document).ready(function()"""),format.raw/*124.45*/("""{"""),format.raw/*124.46*/("""
+
+                    """),format.raw/*126.21*/("""//Clock Section
+                    function getdate()"""),format.raw/*127.39*/("""{"""),format.raw/*127.40*/("""
+                        """),format.raw/*128.25*/("""var today = new Date();
                         var h = today.getHours();
                         var m = today.getMinutes();
                         var s = today.getSeconds();
-                        if(h<10) """),format.raw/*128.34*/("""{"""),format.raw/*128.35*/("""
-                            """),format.raw/*129.29*/("""h = "0"+h;
-                        """),format.raw/*130.25*/("""}"""),format.raw/*130.26*/("""
-                        """),format.raw/*131.25*/("""if(m<10) """),format.raw/*131.34*/("""{"""),format.raw/*131.35*/("""
-                            """),format.raw/*132.29*/("""m = "0"+m;
-                        """),format.raw/*133.25*/("""}"""),format.raw/*133.26*/("""
-                        """),format.raw/*134.25*/("""if(s<10)"""),format.raw/*134.33*/("""{"""),format.raw/*134.34*/("""
-                            """),format.raw/*135.29*/("""s = "0"+s;
-                        """),format.raw/*136.25*/("""}"""),format.raw/*136.26*/("""
-                        """),format.raw/*137.25*/("""$("clock").text(h+" : "+m+" : "+s);
-                        setTimeout(function()"""),format.raw/*138.46*/("""{"""),format.raw/*138.47*/("""getdate()"""),format.raw/*138.56*/("""}"""),format.raw/*138.57*/(""", 500);
-                    """),format.raw/*139.21*/("""}"""),format.raw/*139.22*/("""
-                    """),format.raw/*140.21*/("""getdate();
+                        if(h<10) """),format.raw/*132.34*/("""{"""),format.raw/*132.35*/("""
+                            """),format.raw/*133.29*/("""h = "0"+h;
+                        """),format.raw/*134.25*/("""}"""),format.raw/*134.26*/("""
+                        """),format.raw/*135.25*/("""if(m<10) """),format.raw/*135.34*/("""{"""),format.raw/*135.35*/("""
+                            """),format.raw/*136.29*/("""m = "0"+m;
+                        """),format.raw/*137.25*/("""}"""),format.raw/*137.26*/("""
+                        """),format.raw/*138.25*/("""if(s<10)"""),format.raw/*138.33*/("""{"""),format.raw/*138.34*/("""
+                            """),format.raw/*139.29*/("""s = "0"+s;
+                        """),format.raw/*140.25*/("""}"""),format.raw/*140.26*/("""
+                        """),format.raw/*141.25*/("""$("clock").text(h+" : "+m+" : "+s);
+                        setTimeout(function()"""),format.raw/*142.46*/("""{"""),format.raw/*142.47*/("""getdate()"""),format.raw/*142.56*/("""}"""),format.raw/*142.57*/(""", 500);
+                    """),format.raw/*143.21*/("""}"""),format.raw/*143.22*/("""
+                    """),format.raw/*144.21*/("""getdate();
                     //////////////////////////////////////////////
 
                     //Vote Section
-                    $('#vote').click(function () """),format.raw/*144.50*/("""{"""),format.raw/*144.51*/("""
-                        """),format.raw/*145.25*/("""var body = $("html, body");
-                        body.animate("""),format.raw/*146.38*/("""{"""),format.raw/*146.39*/("""scrollTop:0"""),format.raw/*146.50*/("""}"""),format.raw/*146.51*/(""", "duration:600", "swing", function() """),format.raw/*146.89*/("""{"""),format.raw/*146.90*/("""
-                            """),format.raw/*147.29*/("""//old vote animate
+                    $('#vote').click(function () """),format.raw/*148.50*/("""{"""),format.raw/*148.51*/("""
+                        """),format.raw/*149.25*/("""var body = $("html, body");
+                        body.animate("""),format.raw/*150.38*/("""{"""),format.raw/*150.39*/("""scrollTop:0"""),format.raw/*150.50*/("""}"""),format.raw/*150.51*/(""", "duration:600", "swing", function() """),format.raw/*150.89*/("""{"""),format.raw/*150.90*/("""
+                            """),format.raw/*151.29*/("""//old vote animate
 //                        console.log("vote");
 //                        $("#topbar").fadeOut();
 //                        $("#projectlistLayer").fadeOut();
 //                        $("#votebar" ).fadeIn();
 //                        $("#voteLayer" ).fadeIn();
 
-                        """),format.raw/*154.25*/("""}"""),format.raw/*154.26*/(""");
-                    """),format.raw/*155.21*/("""}"""),format.raw/*155.22*/(""");
+                        """),format.raw/*158.25*/("""}"""),format.raw/*158.26*/(""");
+                    """),format.raw/*159.21*/("""}"""),format.raw/*159.22*/(""");
                     //////////////////////////////////////////////
 
                     //Back Button
-                    $("#back" ).click(function () """),format.raw/*159.51*/("""{"""),format.raw/*159.52*/("""
-                        """),format.raw/*160.25*/("""$(".projectListLayer" ).toggle();
-                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*161.75*/("""{"""),format.raw/*161.76*/("""
-
-                        """),format.raw/*163.25*/("""}"""),format.raw/*163.26*/(""");
-                    """),format.raw/*164.21*/("""}"""),format.raw/*164.22*/(""");
+                    $("#back" ).click(function () """),format.raw/*163.51*/("""{"""),format.raw/*163.52*/("""
+                        """),format.raw/*164.25*/("""$(".projectListLayer" ).toggle();
+                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*165.75*/("""{"""),format.raw/*165.76*/("""
+                        """),format.raw/*166.25*/("""}"""),format.raw/*166.26*/(""");
+                        $("#votebar" ).fadeToggle(700, "swing", function() """),format.raw/*167.76*/("""{"""),format.raw/*167.77*/("""
+                        """),format.raw/*168.25*/("""}"""),format.raw/*168.26*/(""");
+                    """),format.raw/*169.21*/("""}"""),format.raw/*169.22*/(""");
                     //////////////////////////////////////////////
 
                     //Vote Button
-                    $(".voteB" ).click(function () """),format.raw/*168.52*/("""{"""),format.raw/*168.53*/("""
-                        """),format.raw/*169.25*/("""var name = $(this ).attr("id");
+                    $(".voteB" ).click(function () """),format.raw/*173.52*/("""{"""),format.raw/*173.53*/("""
+                        """),format.raw/*174.25*/("""var name = $(this ).attr("id");
                         var value = $(this ).attr("value");
-                        $("projectname").contents().filter(function () """),format.raw/*171.72*/("""{"""),format.raw/*171.73*/("""
-                        """),format.raw/*172.25*/("""return this.nodeType === 3;
-                        """),format.raw/*173.25*/("""}"""),format.raw/*173.26*/(""" """),format.raw/*173.27*/(""").remove();
+                        $("projectname").contents().filter(function () """),format.raw/*176.72*/("""{"""),format.raw/*176.73*/("""
+                        """),format.raw/*177.25*/("""return this.nodeType === 3;
+                        """),format.raw/*178.25*/("""}"""),format.raw/*178.26*/(""" """),format.raw/*178.27*/(""").remove();
                         $("projectname" ).append(name);
                         $("#voteValue" ).attr("value", value);
-                    """),format.raw/*176.21*/("""}"""),format.raw/*176.22*/(""");
+                    """),format.raw/*181.21*/("""}"""),format.raw/*181.22*/(""");
                     //////////////////////////////////////////////
 
                     //Vote Criteria Section
                     var voteCriteriaID = -1;
-                    $(".vote-criteria" ).click(function() """),format.raw/*181.59*/("""{"""),format.raw/*181.60*/("""
-                        """),format.raw/*182.25*/("""voteCriteriaID = $(this ).attr("value");
+                    $(".vote-criteria" ).click(function() """),format.raw/*186.59*/("""{"""),format.raw/*186.60*/("""
+                        """),format.raw/*187.25*/("""voteCriteriaID = $(this ).attr("value");
                         $(".projectListLayer" ).toggle();
-                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*184.75*/("""{"""),format.raw/*184.76*/("""
-                            """),format.raw/*185.29*/("""console.log("finish");
-                        """),format.raw/*186.25*/("""}"""),format.raw/*186.26*/(""");
-//                        $("#topbar" ).animate("""),format.raw/*187.49*/("""{"""),format.raw/*187.50*/("""width: "toggle""""),format.raw/*187.65*/("""}"""),format.raw/*187.66*/(""", 1000, function() """),format.raw/*187.85*/("""{"""),format.raw/*187.86*/("""
-"""),format.raw/*188.1*/("""//
-//                        """),format.raw/*189.27*/("""}"""),format.raw/*189.28*/(""");
-                    """),format.raw/*190.21*/("""}"""),format.raw/*190.22*/(""");
+                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*189.75*/("""{"""),format.raw/*189.76*/("""
+                        """),format.raw/*190.25*/("""}"""),format.raw/*190.26*/(""");
+                        $("#votebar" ).fadeToggle(700, "swing", function() """),format.raw/*191.76*/("""{"""),format.raw/*191.77*/("""
+                        """),format.raw/*192.25*/("""}"""),format.raw/*192.26*/(""");
+                    """),format.raw/*193.21*/("""}"""),format.raw/*193.22*/(""");
+                    //////////////////////////////////////////////
 
-                """),format.raw/*192.17*/("""}"""),format.raw/*192.18*/(""");
+                    var screenWidth = $(window ).width();
+                    console.log(screenWidth);
+                    if (screenWidth < 405) """),format.raw/*198.44*/("""{"""),format.raw/*198.45*/("""
+                        """),format.raw/*199.25*/("""$(".voteText" ).css("font-size", "smaller");
+                    """),format.raw/*200.21*/("""}"""),format.raw/*200.22*/("""
+                """),format.raw/*201.17*/("""}"""),format.raw/*201.18*/(""");
             </script>
         </body>
     </html>
-""")))}),format.raw/*196.2*/("""
+""")))}),format.raw/*205.2*/("""
 
-"""),format.raw/*198.1*/("""<script type="text/javascript">
-function theFunction () """),format.raw/*199.25*/("""{"""),format.raw/*199.26*/("""
-"""),format.raw/*200.1*/("""// return true or false, depending on whether you want to allow the `href` property to follow through or not
-"""),format.raw/*201.1*/("""}"""),format.raw/*201.2*/("""
-"""),format.raw/*202.1*/("""</script>"""))}
+"""),format.raw/*207.1*/("""<script type="text/javascript">
+function theFunction () """),format.raw/*208.25*/("""{"""),format.raw/*208.26*/("""
+"""),format.raw/*209.1*/("""// return true or false, depending on whether you want to allow the `href` property to follow through or not
+"""),format.raw/*210.1*/("""}"""),format.raw/*210.2*/("""
+"""),format.raw/*211.1*/("""</script>"""))}
   }
 
   def render(message:String): play.twirl.api.HtmlFormat.Appendable = apply(message)
@@ -239,11 +248,11 @@ function theFunction () """),format.raw/*199.25*/("""{"""),format.raw/*199.26*/(
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 15 15:37:50 ICT 2015
+                  DATE: Wed Apr 15 21:20:09 ICT 2015
                   SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/index.scala.html
-                  HASH: e2b51dcad9d6181dcc922f6bcd23fd08d61f4f4f
-                  MATRIX: 723->1|827->17|854->19|879->36|918->38|949->43|1319->387|1333->393|1388->428|8044->7055|8074->7056|8124->7077|8207->7131|8237->7132|8291->7157|8531->7368|8561->7369|8619->7398|8683->7433|8713->7434|8767->7459|8805->7468|8835->7469|8893->7498|8957->7533|8987->7534|9041->7559|9078->7567|9108->7568|9166->7597|9230->7632|9260->7633|9314->7658|9424->7739|9454->7740|9492->7749|9522->7750|9579->7778|9609->7779|9659->7800|9851->7963|9881->7964|9935->7989|10029->8054|10059->8055|10099->8066|10129->8067|10196->8105|10226->8106|10284->8135|10618->8440|10648->8441|10700->8464|10730->8465|10914->8620|10944->8621|10998->8646|11135->8754|11165->8755|11220->8781|11250->8782|11302->8805|11332->8806|11517->8962|11547->8963|11601->8988|11793->9151|11823->9152|11877->9177|11958->9229|11988->9230|12018->9231|12198->9382|12228->9383|12475->9601|12505->9602|12559->9627|12761->9800|12791->9801|12849->9830|12925->9877|12955->9878|13035->9929|13065->9930|13109->9945|13139->9946|13187->9965|13217->9966|13246->9967|13304->9996|13334->9997|13386->10020|13416->10021|13465->10041|13495->10042|13580->10096|13610->10098|13695->10154|13725->10155|13754->10156|13891->10265|13920->10266|13949->10267
-                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|37->9|37->9|37->9|149->121|149->121|150->122|151->123|151->123|152->124|156->128|156->128|157->129|158->130|158->130|159->131|159->131|159->131|160->132|161->133|161->133|162->134|162->134|162->134|163->135|164->136|164->136|165->137|166->138|166->138|166->138|166->138|167->139|167->139|168->140|172->144|172->144|173->145|174->146|174->146|174->146|174->146|174->146|174->146|175->147|182->154|182->154|183->155|183->155|187->159|187->159|188->160|189->161|189->161|191->163|191->163|192->164|192->164|196->168|196->168|197->169|199->171|199->171|200->172|201->173|201->173|201->173|204->176|204->176|209->181|209->181|210->182|212->184|212->184|213->185|214->186|214->186|215->187|215->187|215->187|215->187|215->187|215->187|216->188|217->189|217->189|218->190|218->190|220->192|220->192|224->196|226->198|227->199|227->199|228->200|229->201|229->201|230->202
+                  HASH: 64c0f6b30e4fc9b9549e3899163f83b442e56bea
+                  MATRIX: 723->1|827->17|854->19|879->36|918->38|949->43|1319->387|1333->393|1388->428|8103->7114|8133->7115|8184->7137|8267->7191|8297->7192|8351->7217|8591->7428|8621->7429|8679->7458|8743->7493|8773->7494|8827->7519|8865->7528|8895->7529|8953->7558|9017->7593|9047->7594|9101->7619|9138->7627|9168->7628|9226->7657|9290->7692|9320->7693|9374->7718|9484->7799|9514->7800|9552->7809|9582->7810|9639->7838|9669->7839|9719->7860|9911->8023|9941->8024|9995->8049|10089->8114|10119->8115|10159->8126|10189->8127|10256->8165|10286->8166|10344->8195|10678->8500|10708->8501|10760->8524|10790->8525|10974->8680|11004->8681|11058->8706|11195->8814|11225->8815|11279->8840|11309->8841|11416->8919|11446->8920|11500->8945|11530->8946|11582->8969|11612->8970|11797->9126|11827->9127|11881->9152|12073->9315|12103->9316|12157->9341|12238->9393|12268->9394|12298->9395|12478->9546|12508->9547|12755->9765|12785->9766|12839->9791|13041->9964|13071->9965|13125->9990|13155->9991|13262->10069|13292->10070|13346->10095|13376->10096|13428->10119|13458->10120|13705->10338|13735->10339|13789->10364|13883->10429|13913->10430|13959->10447|13989->10448|14074->10502|14104->10504|14189->10560|14219->10561|14248->10562|14385->10671|14414->10672|14443->10673
+                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|37->9|37->9|37->9|152->124|152->124|154->126|155->127|155->127|156->128|160->132|160->132|161->133|162->134|162->134|163->135|163->135|163->135|164->136|165->137|165->137|166->138|166->138|166->138|167->139|168->140|168->140|169->141|170->142|170->142|170->142|170->142|171->143|171->143|172->144|176->148|176->148|177->149|178->150|178->150|178->150|178->150|178->150|178->150|179->151|186->158|186->158|187->159|187->159|191->163|191->163|192->164|193->165|193->165|194->166|194->166|195->167|195->167|196->168|196->168|197->169|197->169|201->173|201->173|202->174|204->176|204->176|205->177|206->178|206->178|206->178|209->181|209->181|214->186|214->186|215->187|217->189|217->189|218->190|218->190|219->191|219->191|220->192|220->192|221->193|221->193|226->198|226->198|227->199|228->200|228->200|229->201|229->201|233->205|235->207|236->208|236->208|237->209|238->210|238->210|239->211
                   -- GENERATED --
               */
           

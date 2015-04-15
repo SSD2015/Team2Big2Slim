@@ -13,7 +13,7 @@
         </head>
 
         <body>
-                <!-- Modal -->
+            <!-- Modal -->
             <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
@@ -69,26 +69,27 @@
             <!-- votebar -->
             <nav class="navbar navbar-default navbar-fixed-top" id="votebar">
                 <div class="navbar-header pull-left">
-                    <a class="navbar-brand" href="#">
+                    <a class="navbar-brand voteText" href="#">
                         Select the best group then click ok
                     </a>
                 </div>
                 <div class="navbar-header pull-right">
-                    <a class="navbar-brand" href="#" id="back"><span class="glyphicon glyphicon-chevron-up"></span> Back</a>
+                    <a class="navbar-brand voteText" href="#" id="back"><span class="glyphicon glyphicon-chevron-up"></span> Back</a>
                 </div>
             </nav>
 
             <!-- topbar -->
-            <nav class="navbar navbar-inverse navbar-fixed-top"  id="topbar">
-                <div class="navbar-header pull-left">
-                    <a class="navbar-brand" href="#">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                    <div class="navbar-headerll-left">
+                    <a class="navbar-brand hidden-xs" href="#">
                         ExceedVote
                     </a>
                     <a class="navbar-brand" href="#"><clock ></clock></a>
                 </div>
+
                 <div class="navbar-header pull-right">
-                        <a class="navbar-brand" data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
-                        <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                    <a class="navbar-brand" data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
+                    <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
                 </div>
             </nav>
 
@@ -118,7 +119,10 @@
 
             <!-- JQuery -->
             <script>
+                $("#votebar" ).toggle();
+
                 $(document).ready(function(){
+
                     //Clock Section
                     function getdate(){
                         var today = new Date();
@@ -159,7 +163,8 @@
                     $("#back" ).click(function () {
                         $(".projectListLayer" ).toggle();
                         $("#topbar" ).fadeToggle(700, "swing", function() {
-
+                        });
+                        $("#votebar" ).fadeToggle(700, "swing", function() {
                         });
                     });
                     //////////////////////////////////////////////
@@ -182,13 +187,17 @@
                         voteCriteriaID = $(this ).attr("value");
                         $(".projectListLayer" ).toggle();
                         $("#topbar" ).fadeToggle(700, "swing", function() {
-                            console.log("finish");
                         });
-//                        $("#topbar" ).animate({width: "toggle"}, 1000, function() {
-//
-//                        });
+                        $("#votebar" ).fadeToggle(700, "swing", function() {
+                        });
                     });
+                    //////////////////////////////////////////////
 
+                    var screenWidth = $(window ).width();
+                    console.log(screenWidth);
+                    if (screenWidth < 405) {
+                        $(".voteText" ).css("font-size", "smaller");
+                    }
                 });
             </script>
         </body>

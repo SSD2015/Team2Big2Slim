@@ -18,8 +18,12 @@ html, body {
       z-index: 1;
 }
 .topbar {
-      height: 40px;
-      color: lightgrey;
+    height: 40px;
+    color: lightgrey;
+    font-size: large;
+}
+.voteText {
+    font-size: large;
 }
 .projectList {
       border-color: grey;
@@ -48,7 +52,7 @@ html, body {
 }
 clock {
       font: serif;
-      font-size: x-large;
+      font-size: large;
 }
 .projectListLayer {
     position: absolute;
