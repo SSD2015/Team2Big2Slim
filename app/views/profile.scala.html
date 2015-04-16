@@ -159,7 +159,8 @@
                     <h3>Please rate Project @project.ID with follow criteria :</h3>
 
                     <div>
-                        <h3>Appearance</h3>
+                        <!-- Template rating criteria -->
+                        <h3>Ease of use</h3>
                         <form action="/rate" method="post">
                             <input type="hidden" name="projectID" value=@project.ID>
                             <input type="hidden" name="criteriaID" value="1">
@@ -172,6 +173,36 @@
                             <br>
                             <button type="submit" name="action">Submit</button>
                         </form>
+
+                        <h3>Reliability</h3>
+                        <form action="/rate" method="post">
+                            <input type="hidden" name="projectID" value=@project.ID>
+                            <input type="hidden" name="criteriaID" value="1">
+                            <input type="radio" name="score" value="0" checked>
+                            <input type="radio" name="score" value="1">
+                            <input type="radio" name="score" value="2">
+                            <input type="radio" name="score" value="3">
+                            <input type="radio" name="score" value="4">
+                            <input type="radio" name="score" value="5">
+                            <br>
+                            <button type="submit" name="action">Submit</button>
+                        </form>
+
+                        <h3>Security</h3>
+                        <form action="/rate" method="post">
+                            <input type="hidden" name="projectID" value=@project.ID>
+                            <input type="hidden" name="criteriaID" value="1">
+                            <input type="radio" name="score" value="0" checked>
+                            <input type="radio" name="score" value="1">
+                            <input type="radio" name="score" value="2">
+                            <input type="radio" name="score" value="3">
+                            <input type="radio" name="score" value="4">
+                            <input type="radio" name="score" value="5">
+                            <br>
+                            <button type="submit" name="action">Submit</button>
+                        </form>
+
+                        <b
                     </div>
                 </div>
             </div>
