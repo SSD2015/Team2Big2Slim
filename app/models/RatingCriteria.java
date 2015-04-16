@@ -13,7 +13,7 @@ public class RatingCriteria extends Model {
     public int criteriaID;
     public String criteriaName;
 
-    public static Finder<Integer, RatingRecord> find = new Finder<Integer,RatingRecord>(
-            Integer.class, RatingRecord.class
+    public static Finder<Integer, RatingCriteria> find = new Finder<Integer,RatingCriteria>(
+            Integer.class, RatingCriteria.class
     );
 }

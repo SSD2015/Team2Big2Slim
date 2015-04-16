@@ -317,3 +317,45 @@ Converting String to [int] using property editor [org.springframework.beans.prop
 2015-04-16 20:13:27,728 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-24 
 Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6a075e88]
 
+2015-04-16 20:20:58,976 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:20:59,015 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:22:10,534 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:22:10,572 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:23:13,430 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:23:13,468 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:24:13,053 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:24:13,088 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:24:28,158 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:24:28,201 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:25:18,607 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:25:18,640 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:27:07,822 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:27:07,865 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+

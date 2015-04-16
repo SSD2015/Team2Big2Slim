@@ -65,10 +65,16 @@
         label > input:checked + button{
             /*already in JQuery*/
         }
-        .star, .novoteButton {
+        .star {
             opacity: 0.5;
             font-size: large;
         }
+        .novoteButton{
+            margin-left: 10px;
+            opacity: 0.5;
+            font-size: smaller;
+        }
+
     </style>
 
     <body>
@@ -229,7 +235,7 @@
                         <!-- no vote -->
                         <label class="novote" value="0">
                             <input type="radio" name="score" value="0" checked>
-                            <button class="btn btn-danger novoteButton rate1" id="1" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                            <button class="btn btn-danger btn-xs novoteButton rate1" id="1" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
                         </label>
 
                         <br>
@@ -272,6 +278,7 @@
 
         <!-- JQuery -->
         <script>
+
             $(document).ready(function(){
                 //star
                 $(".star" ).click(function() {
