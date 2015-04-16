@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
 
     <!-- Latest compiled and minified CSS -->
@@ -43,6 +44,30 @@
         }
         .hiddenSubmit {
             display : none;
+        }
+        .cog {
+            font-size: xx-large;
+        }
+        label > input{ /* HIDE RADIO */
+            display:none;
+        }
+        label > input + span{
+            cursor:pointer;
+            border:2px solid transparent;
+        }
+        label > input + button{
+            cursor:pointer;
+            border:2px solid transparent;
+        }
+        label > input:checked + span{
+            /*already in JQuery*/
+        }
+        label > input:checked + button{
+            /*already in JQuery*/
+        }
+        .star, .novoteButton {
+            opacity: 0.5;
+            font-size: large;
         }
     </style>
 
@@ -162,19 +187,51 @@
                     <h3>Please rate Project @project.ID with follow criteria :</h3></h>
                 </div>
 
-                <div id="rate">
+                <div id="rateSection">
                     <!-- Template rating criteria -->
                     <!-- Criteria should get and generate from database -->
-                    <h3>Ease of use</h3>a
+
+                    <h3>Ease of use</h3> <!-- (At)criteriaList.getName(i) -->
                     <form action="/rate" method="post">
                         <input type="hidden" name="projectID" value=@project.ID>
-                        <input type="hidden" name="criteriaID" value="1">
-                        <input type="radio" name="score" value="0" checked>
-                        <input type="radio" name="score" value="1">
-                        <input type="radio" name="score" value="2">
-                        <input type="radio" name="score" value="3">
-                        <input type="radio" name="score" value="4">
-                        <input type="radio" name="score" value="5">
+                        <input type="hidden" name="criteriaID" value="1"> <!-- value=(At)criteriaList.ID -->
+
+                        <!-- star1 -->
+                        <label class="score" value="1">
+                            <input type="radio" name="score" value="1">
+                            <span class="glyphicon glyphicon-star star rate1" id="1" value="1"></span>
+                        </label>
+
+                        <!-- star2 -->
+                        <label class="score" value="2">
+                            <input type="radio" name="score" value="2">
+                            <span class="glyphicon glyphicon-star star rate1" id="1" value="2"></span>
+                        </label>
+
+                        <!-- star3 -->
+                        <label class="score" value="3">
+                            <input type="radio" name="score" value="3">
+                            <span class="glyphicon glyphicon-star star rate1" id="1" value="3"></span>
+                        </label>
+
+                        <!-- star4 -->
+                        <label class="score" value="4">
+                            <input type="radio" name="score" value="4">
+                            <span class="glyphicon glyphicon-star star rate1" id="1" value="4"></span>
+                        </label>
+
+                        <!-- star5 -->
+                        <label class="score" value="5">
+                            <input type="radio" name="score" value="5">
+                            <span class="glyphicon glyphicon-star star rate1" id="1" value="5"></span>
+                        </label>
+
+                        <!-- no vote -->
+                        <label class="novote" value="0">
+                            <input type="radio" name="score" value="0" checked>
+                            <button class="btn btn-danger novoteButton rate1" id="1" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                        </label>
+
                         <br>
                         <button type="submit" name="action" class="hiddenSubmit">Submit</button>
                     </form>
@@ -215,24 +272,51 @@
 
         <!-- JQuery -->
         <script>
-        $(document).ready(function(){
-
-            $(".hiddenSubmit" ).click(function() {
-               return true;
-            });
-
-            $("form" ).ajaxForm(function() {
-                console.log("aaa");
-            });
-
-            $("#submitRate" ).click(function() {
-
-                $ (".hiddenSubmit" ).each(function(index) {
-                    $(this ).click();
+            $(document).ready(function(){
+                //star
+                $(".star" ).click(function() {
+                    var id = $(this ).attr("id");
+                    var value = $(this ).attr("value");
+                    $(".rate"+id ).each(function() {
+                        var otherValue = $(this ).attr("value");
+                        if (value >= otherValue) {
+                            $(this ).css("opacity", "1");
+                        }
+                        else {
+                            $(this ).css("opacity", "0.5");
+                        }
+                    });
                 });
+                //////////////////////////////////////////////
 
+                //no vote button
+                $(".novoteButton" ).click(function() {
+                    if ($(this ).css("opacity") == 1) {
+                        $(this ).css("opacity", "0.5");
+                    } else {
+                        $(this ).css("opacity", "1");
+                        var id = $(this ).attr("id");
+                        $(".star.rate"+id ).each(function() {
+                            $(this ).css("opacity", "0.5");
+                        });
+                    }
+                });
+                //////////////////////////////////////////////
+
+                //form submition
+                $("form" ).ajaxForm(function() {
+                    console.log("submitted");
+                });
+                //////////////////////////////////////////////
+
+                //dummy submit button
+                $("#submitRate" ).click(function() {
+                    $ (".hiddenSubmit" ).each(function(index) {
+                        $(this ).click();
+                    });
+                });
+                //////////////////////////////////////////////
             });
-        });
         </script>
     </body>
     <div id="content"></div>
