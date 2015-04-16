@@ -34,15 +34,30 @@
     }
     .Line2{
     border-bottom: 1px dashed;
-    border-bottom-color: #ff00ff;
+    border-bottom-color: black;
     }
     .Line3{
     border-bottom: 1px dashed;
-    border-bottom-color: blue;
+    border-bottom-color: black;
     }
     .Line4{
     border-bottom: 1px dashed;
-    border-bottom-color: darkred;
+    border-bottom-color: black;
+    }
+    .ProPicBack{
+    background-color: darkcyan;
+    }
+    .DesBack{
+    background-color: lightgrey;
+    }
+    .SceenBack{
+    background-color: lightpink;
+    }
+    .blankSpace1{
+    background-color: green;
+    }
+    .blankSpace2{
+    background-color: pink;
     }
 
     .carousel-inner > .item > img,
@@ -54,6 +69,7 @@
     width : 600px;
     height : 400px;
     }
+
     </style>
 
     <body>
@@ -90,16 +106,26 @@
                 </div>
             </div>
                 <!--black space-->
+            <div class = "blankSpace1">
             <div class="row">
                 <div class="col-xs-12">
                     <span style="padding-left:1px"></span>
                 </div>
             </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "blankSpace2">
             <div class="row">
                 <div class="col-xs-12">
                     <span style="padding-left:1px"></span>
                 </div>
             </div>
+            </div>
+            <div class = "ProPicBack">
             <div class="row">
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-7">
@@ -109,74 +135,83 @@
                 </div>
                 <div class = "col-xs-2"> </div>
             </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
+                <div  class="row">
+                <div  class = "col-xs-2"></div>
                 <div class="col-xs-8">
-                    <div class = "PictureProject">
+                    <div  class = "PictureProject">
                         <p> <img src = @project.PicProject style="width:700px;height:450px"> </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
             </div>
+            </div>
+
             <!--black space-->
+            <div class = "blankSpace2">
             <div class="row">
                 <div class="col-xs-12">
                         <span style="padding-left:1px"></span>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <span style="padding-left:1px"></span>
-                </div>
             </div>
             <div class="row">
                 <div class="col-xs-12">
                     <div class = "Line2"></div>
                 </div>
             </div>
-                <!--black space-->
+            <div class = "blankSpace1">
             <div class="row">
                 <div class="col-xs-12">
                     <span style="padding-left:1px"></span>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <span style="padding-left:1px"></span>
-                </div>
             </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = "Description">
-                        <h style="font-family:verdana" >Description</h>
+            <div class = "DesBack">
+                    <!--black space-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
                     </div>
                 </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = "Information">
-                        <p>Project name: @project.projectName</p>
-                        <p>Type of project: @project.typeApp</p>
-                        <h4 style="font-family:verdana" >Member:</h4>
-                        @member.map { person =>
-                            <p>@person.name @person.surname @person.kuNo</p>
-                        }
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
                     </div>
                 </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-                <!--black space-->
-            <div class="row">
-                <div class="col-xs-12">
-                    <span style="padding-left:1px"></span>
+
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = "Description">
+                            <h style="font-family:verdana" >Description</h>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <span style="padding-left:1px"></span>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = "Information">
+                            <p>Project name: @project.projectName</p>
+                            <p>Type of project: @project.typeApp</p>
+                            <h4 style="font-family:verdana" >Member:</h4>
+                            @member.map { person =>
+                                <p>@person.name @person.surname @person.kuNo</p>
+                            }
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                    <!--black space-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
                 </div>
             </div>
             <div class="row">
@@ -275,7 +310,7 @@
         <div class="row">
             <div class = "col-xs-2"> </div>
             <div class="col-xs-8">
-                <div class = ScreenShot>
+                <div class = Rate>
                     <h style="font-family:verdana" >Rate
                     <h3>Please rate Project @project.ID with follow criteria :</h3>
 
