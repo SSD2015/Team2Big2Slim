@@ -280,6 +280,10 @@
         <script>
 
             $(document).ready(function(){
+                var ratingCriteriaList = @RatingCriteriaList.getDummyList().criteriaList;
+
+                console.log(ratingCriteriaList[0]);
+
                 //star
                 $(".star" ).click(function() {
                     var id = $(this ).attr("id");

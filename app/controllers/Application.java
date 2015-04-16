@@ -65,6 +65,12 @@ public class Application extends Controller {
         Member.create(4,"Piyaphat","Tulakoop","5610545731",(long)2);
         Member.create(5,"Nut","Kaewnak","5610545676",(long)2);
         User.create(1, "admin", "admin");
+        RatingCriteria.create(1, "Ease of use");
+        RatingCriteria.create(2, "Reliability");
+        RatingCriteria.create(3, "Completeness");
+        RatingCriteria.create(4, "Security");
+        RatingCriteria.create(5, "Quality of UI");
+        RatingCriteriaList.create();
         return redirect(routes.Application.index());
     }
 }

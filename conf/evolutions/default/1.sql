@@ -30,6 +30,18 @@ create table project (
   constraint pk_project primary key (id))
 ;
 
+create table rating_criteria (
+  id                        integer auto_increment not null,
+  criteria_id               integer,
+  criteria_name             varchar(255),
+  constraint pk_rating_criteria primary key (id))
+;
+
+create table rating_criteria_list (
+  id                        integer auto_increment not null,
+  constraint pk_rating_criteria_list primary key (id))
+;
+
 create table rating_record (
   id                        integer auto_increment not null,
   project_id                integer,
@@ -64,6 +76,10 @@ drop table member;
 drop table note;
 
 drop table project;
+
+drop table rating_criteria;
+
+drop table rating_criteria_list;
 
 drop table rating_record;
 
