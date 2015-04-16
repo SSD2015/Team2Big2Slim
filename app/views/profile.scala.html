@@ -7,40 +7,43 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>
 
-        <!-- Latest compiled and minified CSS -->
+    <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-    .NameProject{
-    font-size : 250%;
-    color : black;
-    }
-    .Description{
-    font-size : 250%;
-    color : black;
-    }
-    .ScreenShot{
-    font-size : 250%;
-    color : black;
-    }
-    p{
-    font-style: normal;
-    }
-    .Line{
-    border-bottom: 1px dashed;
-    }
-
-    .carousel-inner > .item > img,
-    .carousel-inner > .item > a > img {
-    width: auto;
-    margin: auto;
-    }
-    .container{
-    width : 600px;
-    height : 400px;
-    }
+        .NameProject{
+            font-size : 250%;
+            color : black;
+        }
+        .Description{
+            font-size : 250%;
+            color : black;
+        }
+        .ScreenShot{
+            font-size : 250%;
+            color : black;
+        }
+        p{
+            font-style: normal;
+        }
+        .Line{
+            border-bottom: 1px dashed;
+        }
+        .carousel-inner > .item > img,
+        .carousel-inner > .item > a > img {
+            width: auto;
+            margin: auto;
+        }
+        .container{
+            width : 600px;
+            height : 400px;
+        }
+        .hiddenSubmit {
+            display : none;
+        }
     </style>
 
     <body>
@@ -156,58 +159,81 @@
             <div class="col-xs-8">
                 <div class = ScreenShot>
                     <h style="font-family:verdana" >Rate
-                    <h3>Please rate Project @project.ID with follow criteria :</h3>
+                    <h3>Please rate Project @project.ID with follow criteria :</h3></h>
+                </div>
 
-                    <div>
-                        <!-- Template rating criteria -->
-                        <h3>Ease of use</h3>
-                        <form action="/rate" method="post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="hidden" name="criteriaID" value="1">
-                            <input type="radio" name="score" value="0" checked>
-                            <input type="radio" name="score" value="1">
-                            <input type="radio" name="score" value="2">
-                            <input type="radio" name="score" value="3">
-                            <input type="radio" name="score" value="4">
-                            <input type="radio" name="score" value="5">
-                            <br>
-                            <button type="submit" name="action">Submit</button>
-                        </form>
+                <div id="rate">
+                    <!-- Template rating criteria -->
+                    <!-- Criteria should get and generate from database -->
+                    <h3>Ease of use</h3>a
+                    <form action="/rate" method="post">
+                        <input type="hidden" name="projectID" value=@project.ID>
+                        <input type="hidden" name="criteriaID" value="1">
+                        <input type="radio" name="score" value="0" checked>
+                        <input type="radio" name="score" value="1">
+                        <input type="radio" name="score" value="2">
+                        <input type="radio" name="score" value="3">
+                        <input type="radio" name="score" value="4">
+                        <input type="radio" name="score" value="5">
+                        <br>
+                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
+                    </form>
 
-                        <h3>Reliability</h3>
-                        <form action="/rate" method="post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="hidden" name="criteriaID" value="1">
-                            <input type="radio" name="score" value="0" checked>
-                            <input type="radio" name="score" value="1">
-                            <input type="radio" name="score" value="2">
-                            <input type="radio" name="score" value="3">
-                            <input type="radio" name="score" value="4">
-                            <input type="radio" name="score" value="5">
-                            <br>
-                            <button type="submit" name="action">Submit</button>
-                        </form>
+                    <h3>Reliability</h3>
+                    <form action="/rate" method="post">
+                        <input type="hidden" name="projectID" value=@project.ID>
+                        <input type="hidden" name="criteriaID" value="2">
+                        <input type="radio" name="score" value="0" checked>
+                        <input type="radio" name="score" value="1">
+                        <input type="radio" name="score" value="2">
+                        <input type="radio" name="score" value="3">
+                        <input type="radio" name="score" value="4">
+                        <input type="radio" name="score" value="5">
+                        <br>
+                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
+                    </form>
 
-                        <h3>Security</h3>
-                        <form action="/rate" method="post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="hidden" name="criteriaID" value="1">
-                            <input type="radio" name="score" value="0" checked>
-                            <input type="radio" name="score" value="1">
-                            <input type="radio" name="score" value="2">
-                            <input type="radio" name="score" value="3">
-                            <input type="radio" name="score" value="4">
-                            <input type="radio" name="score" value="5">
-                            <br>
-                            <button type="submit" name="action">Submit</button>
-                        </form>
+                    <h3>Security</h3>
+                    <form action="/rate" method="post">
+                        <input type="hidden" name="projectID" value=@project.ID>
+                        <input type="hidden" name="criteriaID" value="3">
+                        <input type="radio" name="score" value="0" checked>
+                        <input type="radio" name="score" value="1">
+                        <input type="radio" name="score" value="2">
+                        <input type="radio" name="score" value="3">
+                        <input type="radio" name="score" value="4">
+                        <input type="radio" name="score" value="5">
+                        <br>
+                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
+                    </form>
 
-                        <b
-                    </div>
+                    <button type="button" id="submitRate">Submit</button>
                 </div>
             </div>
             <div class = "col-xs-2"> </div>
         </div>
+
+        <!-- JQuery -->
+        <script>
+        $(document).ready(function(){
+
+            $(".hiddenSubmit" ).click(function() {
+               return true;
+            });
+
+            $("form" ).ajaxForm(function() {
+                console.log("aaa");
+            });
+
+            $("#submitRate" ).click(function() {
+
+                $ (".hiddenSubmit" ).each(function(index) {
+                    $(this ).click();
+                });
+
+            });
+        });
+        </script>
     </body>
     <div id="content"></div>
 </html>
