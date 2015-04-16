@@ -25,11 +25,20 @@
     font-size : 250%;
     color : black;
     }
-    p{
+    .p{
     font-style: normal;
     }
-    .Line{
+    .Line1{
     border-bottom: 1px dashed;
+    border-bottom-color: #ff00ff;
+    }
+    .Line2{
+    border-bottom: 1px dashed;
+    border-bottom-color: blue;
+    }
+    .Line3{
+    border-bottom: 1px dashed;
+    border-bottom-color: darkred;
     }
 
     .carousel-inner > .item > img,
@@ -44,7 +53,38 @@
     </style>
 
     <body>
+        <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><center>Are you sure ?</center></h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="location.href='http://localhost:9000/login'" type="button" class="btn btn-default">Ok</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
+            <div class="row">
+                <div class="col-xs-12">
+                        <!-- topbar -->
+                    <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                        <div class="navbar-headerll-left">
+                            <a class="navbar-brand hidden-xs" href="#">
+                                ExceedVote
+                            </a>
+                            <a class="navbar-brand" href="#"><clock ></clock></a>
+                        </div>
+
+                        <div class="navbar-header pull-right">
+                            <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span><font color="#F0F0F0" style="font-size:large"> Back</font></a>
+                            <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
             <div class="row">
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-7">
@@ -65,7 +105,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class = "Line"></div>
+                    <div class = "Line1"></div>
                 </div>
             </div>
             <div class="row">
@@ -93,7 +133,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class = "Line"></div>
+                    <div class = "Line2"></div>
                 </div>
             </div>
             <div class="row">
@@ -148,7 +188,7 @@
         </div>
         <div class="row">
             <div class="col-xs-12">
-                <div class = "Line"></div>
+                <div class = "Line3"></div>
             </div>
         </div>
         <div class="row">
@@ -208,6 +248,89 @@
             </div>
             <div class = "col-xs-2"> </div>
         </div>
+
+            <!-- JQuery -->
+        <script>
+            $("#votebar" ).toggle();
+            $(document).ready(function(){
+
+        //Clock Section
+        function getdate(){
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        if(h<10) {
+        h = "0"+h;
+        }
+        if(m<10) {
+        m = "0"+m;
+        }
+        if(s<10){
+        s = "0"+s;
+        }
+        $("clock").text(h+" : "+m+" : "+s);
+        setTimeout(function(){getdate()}, 500);
+        }
+        getdate();
+        //////////////////////////////////////////////
+
+        //Vote Section
+        $('#vote').click(function () {
+        var body = $("html, body");
+        body.animate({scrollTop:0}, "duration:600", "swing", function() {
+        //old vote animate
+        //                        console.log("vote");
+        //                        $("#topbar").fadeOut();
+        //                        $("#projectlistLayer").fadeOut();
+        //                        $("#votebar" ).fadeIn();
+        //                        $("#voteLayer" ).fadeIn();
+
+        });
+        });
+        //////////////////////////////////////////////
+
+        //Back Button
+        $("#back" ).click(function () {
+        $(".projectListLayer" ).toggle();
+        $("#topbar" ).fadeToggle(700, "swing", function() {
+        });
+        $("#votebar" ).fadeToggle(700, "swing", function() {
+        });
+        });
+        //////////////////////////////////////////////
+
+        //Vote Button
+        $(".voteB" ).click(function () {
+        var name = $(this ).attr("id");
+        var value = $(this ).attr("value");
+        $("projectname").contents().filter(function () {
+        return this.nodeType === 3;
+        } ).remove();
+        $("projectname" ).append(name);
+        $("#voteValue" ).attr("value", value);
+        });
+        //////////////////////////////////////////////
+
+        //Vote Criteria Section
+        var voteCriteriaID = -1;
+        $(".vote-criteria" ).click(function() {
+        voteCriteriaID = $(this ).attr("value");
+        $(".projectListLayer" ).toggle();
+        $("#topbar" ).fadeToggle(700, "swing", function() {
+        });
+        $("#votebar" ).fadeToggle(700, "swing", function() {
+        });
+        });
+        //////////////////////////////////////////////
+
+        var screenWidth = $(window ).width();
+        console.log(screenWidth);
+        if (screenWidth < 405) {
+        $(".voteText" ).css("font-size", "smaller");
+        }
+        });
+        </script>
     </body>
     <div id="content"></div>
 </html>

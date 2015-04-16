@@ -65,6 +65,8 @@ public class Application extends Controller {
         Member.create(4,"Piyaphat","Tulakoop","5610545731",(long)2);
         Member.create(5,"Nut","Kaewnak","5610545676",(long)2);
         User.create(1, "admin", "admin");
+
+
         return redirect(routes.Application.index());
     }
 }
