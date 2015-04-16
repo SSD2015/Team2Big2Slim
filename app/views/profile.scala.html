@@ -1,4 +1,4 @@
-@(project : Project )(member : List[Member])
+@(project : Project )(member : List[Member])(rcList : List[RatingCriteria])
 <!DOCTYPE HTML>
 <html lang = "en">
     <title>@project.projectName</title>
@@ -280,9 +280,16 @@
         <script>
 
             $(document).ready(function(){
-                var ratingCriteriaList = @RatingCriteriaList.getDummyList().criteriaList;
 
-                console.log(ratingCriteriaList[0]);
+                //generating rate section base on database value
+                @rcList.map { rc => //for each
+                    var rateFormat = "";
+                    //append the html code
+                }
+
+                console.log(rcList);
+                //////////////////////////////////////////////
+
 
                 //star
                 $(".star" ).click(function() {

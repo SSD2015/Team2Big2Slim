@@ -4,6 +4,8 @@ import play.db.ebean.Model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by momomomomo on 4/8/2015.
@@ -23,5 +25,13 @@ public class RatingCriteria extends Model {
         rc.ID = id;
         rc.criteriaName = name;
         rc.save();
+    }
+
+    public static int getNum() {
+        return 1;
+    }
+
+    public static List<RatingCriteria> getAllRatingCriteria() {
+        return RatingCriteria.find.all();
     }
 }

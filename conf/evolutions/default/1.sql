@@ -32,7 +32,6 @@ create table project (
 
 create table rating_criteria (
   id                        integer auto_increment not null,
-  criteria_id               integer,
   criteria_name             varchar(255),
   constraint pk_rating_criteria primary key (id))
 ;

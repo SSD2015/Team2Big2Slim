@@ -10,7 +10,8 @@ public class ProjectList extends Controller {
     public static Result index(Integer id){
         Project project = Project.find.byId(id);
         List member = Member.find.where().eq("projectId", id).findList();
-        return ok(profile.render(project,member));
+        List rcList = RatingCriteria.getAllRatingCriteria();
+        return ok(profile.render(project,member,rcList));
     }
     public static Result sc1(Integer id){
         Project project = Project.find.byId(id);
