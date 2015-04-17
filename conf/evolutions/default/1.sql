@@ -11,6 +11,7 @@ create table project (
   sc1                       varchar(255),
   sc2                       varchar(255),
   sc3                       varchar(255),
+  description               varchar(255),
   constraint pk_project primary key (id))
 ;
 
