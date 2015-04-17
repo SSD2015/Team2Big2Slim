@@ -16,7 +16,7 @@ import static play.libs.Json.toJson;
 public class Application extends Controller {
 
     public static Result index() {
-		//VotingCriteria vc = VotingCriteria.find.where().findUnique();;
+		//VotingCriteria vc = VotingCriteria.find.where().findUnique();
         return ok(index.render(VotingCriteria.find.all()));
     }
 
@@ -24,7 +24,10 @@ public class Application extends Controller {
 
     public static Result createProject() {
         Project project = Form.form(Project.class).bindFromRequest().get();
-        project.save();
+		if(project != null)
+		{
+			project.save();
+		}
         return ok(vote.render());
     }
 
