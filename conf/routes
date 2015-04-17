@@ -3,34 +3,35 @@
 # ~~~~
 
 # Home page
-GET         /                    controllers.Application.index()
+GET         /                       controllers.Application.index()
 
-POST        /vote                controllers.Vote.submitVote()
+POST        /vote                   controllers.Vote.submitVote()
 
-GET         /voteResult          controllers.Vote.showVoteResult()
+GET         /voteResult             controllers.Vote.showVoteResult()
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file        controllers.Assets.at(path="/public", file)
+GET         /assets/*file           controllers.Assets.at(path="/public", file)
 
 
-GET         /login               controllers.Login.login()
-POST        /login               controllers.Login.authenticate()
+GET         /login                  controllers.Login.login()
+POST        /login                  controllers.Login.authenticate()
 
-GET         /logout              controllers.Application.logout()
-
-
-POST        /rate                controllers.Rate.submitRate()
-GET         /rateResult          controllers.Rate.showRateResult()
-
-GET         /install             controllers.Application.mockDatabase()
+GET         /logout                 controllers.Application.logout()
 
 
-GET        /profile/:id         controllers.ProjectList.index(id:Integer)
+POST        /rate                   controllers.Rate.submitRate()
+GET         /rateResult             controllers.Rate.showRateResult()
 
-GET        /screenshot1/:id     controllers.ProjectList.sc1(id:Integer)
+GET         /install                controllers.Application.mockDatabase()
 
-GET        /screenshot2/:id     controllers.ProjectList.sc2(id:Integer)
 
-GET        /screenshot3/:id     controllers.ProjectList.sc3(id:Integer)
+GET         /profile/:id            controllers.ProjectList.index(id:Integer)
+GET         /profile/assets/*file   controllers.Assets.at(path="/public", file)
+
+GET         /screenshot1/:id        controllers.ProjectList.sc1(id:Integer)
+
+GET         /screenshot2/:id        controllers.ProjectList.sc2(id:Integer)
+
+GET         /screenshot3/:id        controllers.ProjectList.sc3(id:Integer)
     
