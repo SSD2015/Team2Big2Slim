@@ -13,7 +13,6 @@ public class VotingRecord extends Model{
     public int userID;
     public int criteriaID;
     public int projectID;
-	public int score;
 
 
     public static Model.Finder<Integer, VotingRecord> find = new Model.Finder<Integer,VotingRecord>(
@@ -35,16 +34,6 @@ public class VotingRecord extends Model{
     public int getUserID() {
         return this.userID;
     }
-	
-	public int getScore()
-	{
-		return this.score;
-	}
-	
-	public void updateScore()
-	{
-		this.score++;
-	}
 
     public void changeProject(int projectID) {
         this.projectID = projectID;

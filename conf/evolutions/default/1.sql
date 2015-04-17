@@ -74,7 +74,6 @@ create table voting_record (
   user_id                   integer,
   criteria_id               integer,
   project_id                integer,
-  score                     integer,
   constraint pk_voting_record primary key (id))
 ;
 

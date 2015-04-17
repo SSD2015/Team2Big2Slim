@@ -2,6 +2,7 @@ package controllers;
 
 import models.RatingRecord;
 import models.User;
+import models.VotingRecord;
 import play.*;
 import play.mvc.*;
 import play.data.Form;
@@ -29,24 +30,21 @@ public class Vote extends Controller {
     }
 
     public static Result submitVote() {
-		//VotingRecord record = Form.form(VotingRecord.class).bindFromRequest().get();
-        Form<VoteInfo> voteForm = Form.form(VoteInfo.class).bindFromRequest();
-        VoteInfo info = voteForm.get();
-//        System.out.println("ID: "+info.projectID);
-        //VotingRecord oldRecord = VotingRecord.find.where().eq("userID", record.getUserID()).eq("projectID", record.getProjectID()).eq("criteriaID", record.getCriteriaID()).findUnique();
-        Project existProject = Project.find.where().eq("ID", info.projectID).findUnique();
+        VotingRecord record = Form.form(VotingRecord.class).bindFromRequest().get();
+        System.out.println("User ID: " + record.getUserID());
+        System.out.println("VoteForm: " + record);
+        System.out.println("projectID: " + record.getProjectID());
+        System.out.println("criteriaID: " + record.getCriteriaID());
+        System.out.println("----------------------------");
 
-		/*if( oldRecord != null ) {
-            oldRecord.updateScore();
+        VotingRecord oldRecord = VotingRecord.find.where().eq("userID", record.getUserID()).eq("criteriaID", record.getCriteriaID()).findUnique();
+
+        if( oldRecord != null ) {
+            oldRecord.changeProject(record.getProjectID());
             oldRecord.save();
         }
-		else
-		{
-			record.save();
-		}*/
-        if( existProject != null ) {
-            //existProject.updateVote();
-            existProject.save();
+        else {
+            record.save();
         }
 		
         return redirect("/");
