@@ -1,135 +1,1791 @@
-2015-04-16 23:40:48,845 - [INFO] - from play in pool-4-thread-3 
+2015-04-17 09:23:35,074 - [INFO] - from play in pool-4-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-04-16 23:41:08,686 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:39:40,238 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6log8dknn - Internal server error, for (GET) [/profile/1] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value rc]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-04-17 09:39:40,301 - [WARN] - from play in New I/O worker #1 
+No application found at invoker init
+
+2015-04-17 09:39:52,058 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6log8ecal - Internal server error, for (GET) [/profile/1] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value rc]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-04-17 09:39:53,682 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6log8eel7 - Internal server error, for (GET) [/profile/1] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value rc]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-04-17 09:39:54,722 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6log8eg98 - Internal server error, for (GET) [/profile/1] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value rc]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-04-17 09:39:55,744 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6log8ehmf - Internal server error, for (GET) [/profile/1] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value rc]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-04-17 09:39:56,741 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6log8ej8o - Internal server error, for (GET) [/profile/1] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value rc]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2015-04-17 09:40:19,209 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-16 23:41:09,174 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:40:19,572 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-16 23:41:21,274 - [INFO] - from play in play-internal-execution-context-2 
+2015-04-17 09:40:40,347 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-16 23:41:21,343 - [INFO] - from play in play-internal-execution-context-2 
+2015-04-17 09:40:40,398 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 00:52:44,860 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:41:21,386 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 00:52:44,930 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:41:21,441 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 00:58:00,881 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:42:48,021 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 00:58:00,978 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:42:48,065 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 00:59:44,909 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:43:41,171 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 00:59:44,954 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:43:41,211 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:00:31,332 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:44:02,388 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:00:31,401 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:44:02,431 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:00:54,311 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:48:52,118 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:00:54,355 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:48:52,164 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:01:30,121 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:53:30,443 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:01:30,176 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:53:30,490 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:02:41,763 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:53:59,735 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:02:41,837 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 09:53:59,774 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:03:19,482 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:07:54,288 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:03:19,519 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:07:54,329 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:21:03,351 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:08:11,439 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:21:03,406 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:08:11,478 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:22:53,292 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:09:26,643 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:22:53,336 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:09:26,680 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:23:18,268 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:10:57,327 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:23:18,315 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:10:57,364 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:23:42,717 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:11:25,932 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:23:42,807 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:11:25,978 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:25:47,715 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:11:55,600 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:25:47,753 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:11:55,652 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:25:58,936 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:12:46,541 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:25:58,978 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:12:46,584 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:28:16,678 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:14:43,652 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:28:16,715 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:14:43,694 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:28:35,341 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:15:00,800 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:28:35,383 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:15:00,837 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:28:43,718 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:15:29,591 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:28:43,763 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:15:29,628 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:33:49,636 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:15:56,863 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:33:49,676 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:15:56,901 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:34:09,374 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:16:14,263 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:34:09,410 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:16:14,299 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-17 01:58:32,217 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:19:17,938 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 
-2015-04-17 01:58:32,274 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-17 10:19:17,977 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
+
+2015-04-17 10:20:01,316 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:20:01,353 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:20:20,714 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:20:20,751 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:20:42,360 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:20:42,396 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:22:50,516 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:22:50,564 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:23:18,725 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:23:18,768 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:27:22,509 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:27:22,545 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:27:48,354 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:27:48,390 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:32:16,611 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:32:16,646 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:32:48,734 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:32:48,774 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:33:54,940 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:33:54,974 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:34:13,657 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:34:13,694 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:39:08,990 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:39:09,038 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 10:41:22,809 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 10:41:22,845 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:28:32,817 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:28:32,852 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:28:54,748 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:28:54,831 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:30:14,107 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:30:14,142 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:31:21,608 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:31:21,644 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:33:07,552 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:33:07,586 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:34:06,205 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:34:06,246 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:38:23,151 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:38:23,187 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:41:32,736 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:41:32,772 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:44:30,380 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:44:30,417 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:45:41,534 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:45:41,570 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:46:20,522 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-53 
+Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
+
+2015-04-17 11:46:20,525 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:46:20,525 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:46:20,525 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:46:20,525 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:46:20,525 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:46:20,525 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:46:20,525 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:46:20,525 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:46:20,525 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:46:20,525 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:46:20,525 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:46:20,525 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:46:20,533 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:46:20,533 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:46:20,535 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:46:20,535 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:46:20,535 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:46:20,535 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:46:20,535 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:46:20,535 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-54 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-51 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:46:20,536 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-53 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:46:20,537 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:46:20,537 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:46:20,537 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:46:20,537 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-52 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:46:20,538 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:46:20,539 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-55 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:46:20,551 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@53daab51]
+
+2015-04-17 11:46:20,551 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6e9fba58]
+
+2015-04-17 11:46:20,551 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7b073e48]
+
+2015-04-17 11:46:20,551 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6411e66]
+
+2015-04-17 11:46:20,551 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5aed7e3a]
+
+2015-04-17 11:46:20,551 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@40fcb9b]
+
+2015-04-17 11:46:20,553 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5aed7e3a]
+
+2015-04-17 11:46:20,553 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@53daab51]
+
+2015-04-17 11:46:20,553 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7b073e48]
+
+2015-04-17 11:46:20,553 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6411e66]
+
+2015-04-17 11:46:20,553 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6e9fba58]
+
+2015-04-17 11:46:20,553 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@40fcb9b]
+
+2015-04-17 11:46:20,556 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@40fcb9b]
+
+2015-04-17 11:46:20,556 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5aed7e3a]
+
+2015-04-17 11:46:20,556 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7b073e48]
+
+2015-04-17 11:46:20,556 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6411e66]
+
+2015-04-17 11:46:20,556 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@53daab51]
+
+2015-04-17 11:46:20,556 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6e9fba58]
+
+2015-04-17 11:46:20,636 - [ERROR] - from play in play-akka.actor.default-dispatcher-49 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: No value
+
+2015-04-17 11:46:20,636 - [ERROR] - from play in play-akka.actor.default-dispatcher-51 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: No value
+
+2015-04-17 11:46:20,636 - [ERROR] - from play in play-akka.actor.default-dispatcher-53 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: No value
+
+2015-04-17 11:46:20,636 - [ERROR] - from play in play-akka.actor.default-dispatcher-55 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: No value
+
+2015-04-17 11:46:20,636 - [ERROR] - from play in play-akka.actor.default-dispatcher-54 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: No value
+
+2015-04-17 11:46:20,636 - [ERROR] - from play in play-akka.actor.default-dispatcher-52 
+Cannot invoke the action, eventually got an error: java.lang.IllegalStateException: No value
+
+2015-04-17 11:46:20,645 - [ERROR] - from application in play-akka.actor.default-dispatcher-51 
+
+
+! @6logp463c - Internal server error, for (POST) [/rate] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: No value]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.IllegalStateException: No value
+	at play.libs.F$None.get(F.java:805) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.data.Form.get(Form.java:542) ~[play-java_2.11-2.3.8.jar:2.3.8]
+	at controllers.Rate.submitRate(Rate.java:35) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:46:20,645 - [ERROR] - from application in play-akka.actor.default-dispatcher-53 
+
+
+! @6logp463c - Internal server error, for (POST) [/rate] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: No value]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.IllegalStateException: No value
+	at play.libs.F$None.get(F.java:805) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.data.Form.get(Form.java:542) ~[play-java_2.11-2.3.8.jar:2.3.8]
+	at controllers.Rate.submitRate(Rate.java:35) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:46:20,645 - [ERROR] - from application in play-akka.actor.default-dispatcher-55 
+
+
+! @6logp463c - Internal server error, for (POST) [/rate] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: No value]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.IllegalStateException: No value
+	at play.libs.F$None.get(F.java:805) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.data.Form.get(Form.java:542) ~[play-java_2.11-2.3.8.jar:2.3.8]
+	at controllers.Rate.submitRate(Rate.java:35) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:46:20,645 - [ERROR] - from application in play-akka.actor.default-dispatcher-54 
+
+
+! @6logp463c - Internal server error, for (POST) [/rate] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: No value]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.IllegalStateException: No value
+	at play.libs.F$None.get(F.java:805) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.data.Form.get(Form.java:542) ~[play-java_2.11-2.3.8.jar:2.3.8]
+	at controllers.Rate.submitRate(Rate.java:35) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:46:20,645 - [ERROR] - from application in play-akka.actor.default-dispatcher-52 
+
+
+! @6logp463c - Internal server error, for (POST) [/rate] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: No value]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.IllegalStateException: No value
+	at play.libs.F$None.get(F.java:805) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.data.Form.get(Form.java:542) ~[play-java_2.11-2.3.8.jar:2.3.8]
+	at controllers.Rate.submitRate(Rate.java:35) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:46:20,645 - [ERROR] - from application in play-akka.actor.default-dispatcher-49 
+
+
+! @6logp463c - Internal server error, for (POST) [/rate] ->
+
+play.api.Application$$anon$1: Execution exception[[IllegalStateException: No value]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.IllegalStateException: No value
+	at play.libs.F$None.get(F.java:805) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.data.Form.get(Form.java:542) ~[play-java_2.11-2.3.8.jar:2.3.8]
+	at controllers.Rate.submitRate(Rate.java:35) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$14$$anonfun$apply$14.apply(routes_routing.scala:289) ~[na:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:53:50,680 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:53:50,716 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:54:16,073 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:54:16,075 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:54:16,073 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:54:16,075 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:54:16,075 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:54:16,075 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:54:16,077 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:54:16,077 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-59 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:54:16,079 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-61 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c1a6f81]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@35c1cb0b]
+
+2015-04-17 11:54:16,080 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c1a6f81]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c1a6f81]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@35c1cb0b]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-58 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-57 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:54:16,081 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@35c1cb0b]
+
+2015-04-17 11:54:16,082 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7cb55d5f]
+
+2015-04-17 11:54:16,082 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7cb55d5f]
+
+2015-04-17 11:54:16,082 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@42c76e33]
+
+2015-04-17 11:54:16,082 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7cb55d5f]
+
+2015-04-17 11:54:16,082 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@42c76e33]
+
+2015-04-17 11:54:16,082 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@42c76e33]
+
+2015-04-17 11:54:16,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-60 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7111220b]
+
+2015-04-17 11:54:16,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-63 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4933dfaa]
+
+2015-04-17 11:54:16,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-60 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7111220b]
+
+2015-04-17 11:54:16,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-63 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4933dfaa]
+
+2015-04-17 11:54:16,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-60 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7111220b]
+
+2015-04-17 11:54:16,083 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-63 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4933dfaa]
+
+2015-04-17 11:55:33,718 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-64 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@18979aed]
+
+2015-04-17 11:55:33,719 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-64 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@18979aed]
+
+2015-04-17 11:55:33,719 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-64 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@18979aed]
+
+2015-04-17 11:55:33,721 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-65 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@259a0ce8]
+
+2015-04-17 11:55:33,721 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-65 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@259a0ce8]
+
+2015-04-17 11:55:33,721 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-65 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@259a0ce8]
+
+2015-04-17 11:55:33,723 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5f1fa804]
+
+2015-04-17 11:55:33,723 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5f1fa804]
+
+2015-04-17 11:55:33,724 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5f1fa804]
+
+2015-04-17 11:55:33,725 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-64 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@576d7db4]
+
+2015-04-17 11:55:33,725 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-64 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@576d7db4]
+
+2015-04-17 11:55:33,726 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-64 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@576d7db4]
+
+2015-04-17 11:55:33,726 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@10e547ac]
+
+2015-04-17 11:55:33,726 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@10e547ac]
+
+2015-04-17 11:55:33,727 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@10e547ac]
+
+2015-04-17 11:55:33,729 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-67 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4e5c626f]
+
+2015-04-17 11:55:33,729 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-67 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4e5c626f]
+
+2015-04-17 11:55:33,730 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-67 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4e5c626f]
+
+2015-04-17 11:57:37,555 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@70cab8e3]
+
+2015-04-17 11:57:37,555 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@70cab8e3]
+
+2015-04-17 11:57:37,555 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@70cab8e3]
+
+2015-04-17 11:57:37,559 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-71 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@778d56e1]
+
+2015-04-17 11:57:37,559 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-71 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@778d56e1]
+
+2015-04-17 11:57:37,559 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-71 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@778d56e1]
+
+2015-04-17 11:57:37,560 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-72 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@436c38f8]
+
+2015-04-17 11:57:37,560 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-72 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@436c38f8]
+
+2015-04-17 11:57:37,560 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-72 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@436c38f8]
+
+2015-04-17 11:57:37,562 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@74842490]
+
+2015-04-17 11:57:37,563 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@74842490]
+
+2015-04-17 11:57:37,564 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-66 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@74842490]
+
+2015-04-17 11:57:37,564 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-72 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c96c4de]
+
+2015-04-17 11:57:37,565 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-72 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c96c4de]
+
+2015-04-17 11:57:37,565 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-72 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c96c4de]
+
+2015-04-17 11:57:37,567 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-71 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3877ac5b]
+
+2015-04-17 11:57:37,567 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-71 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3877ac5b]
+
+2015-04-17 11:57:37,567 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-71 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3877ac5b]
+
+2015-04-17 12:04:03,249 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:04:03,290 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:04:15,953 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:04:15,954 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:04:15,953 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:04:15,954 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:04:15,954 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:04:15,954 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:04:15,956 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:04:15,957 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-75 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-76 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-76 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@73499583]
+
+2015-04-17 12:04:15,958 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-75 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1fbdb0c7]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-78 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@172e90b7]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-75 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1fbdb0c7]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-78 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@172e90b7]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-77 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-75 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1fbdb0c7]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-78 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@172e90b7]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-77 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3aa17943]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-76 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@73499583]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-77 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3aa17943]
+
+2015-04-17 12:04:15,959 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-76 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@73499583]
+
+2015-04-17 12:04:15,960 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-77 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3aa17943]
+
+2015-04-17 12:04:15,961 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:04:15,961 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:04:15,961 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:04:15,961 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:04:15,961 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:04:15,961 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-79 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:04:15,962 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-79 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d536270]
+
+2015-04-17 12:04:15,962 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-79 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d536270]
+
+2015-04-17 12:04:15,962 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-79 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d536270]
+
+2015-04-17 12:04:15,965 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-80 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@48a44912]
+
+2015-04-17 12:04:15,966 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-80 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@48a44912]
+
+2015-04-17 12:04:15,966 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-80 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@48a44912]
+
+2015-04-17 12:05:39,930 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c3a41eb]
+
+2015-04-17 12:05:39,930 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c3a41eb]
+
+2015-04-17 12:05:39,931 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c3a41eb]
+
+2015-04-17 12:05:39,936 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@13c0be27]
+
+2015-04-17 12:05:39,936 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@13c0be27]
+
+2015-04-17 12:05:39,936 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@13c0be27]
+
+2015-04-17 12:05:39,939 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6548ea60]
+
+2015-04-17 12:05:39,940 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6548ea60]
+
+2015-04-17 12:05:39,940 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6548ea60]
+
+2015-04-17 12:05:39,944 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5cf55e8a]
+
+2015-04-17 12:05:39,944 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5cf55e8a]
+
+2015-04-17 12:05:39,944 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5cf55e8a]
+
+2015-04-17 12:05:39,948 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@430f83c3]
+
+2015-04-17 12:05:39,948 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@430f83c3]
+
+2015-04-17 12:05:39,948 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@430f83c3]
+
+2015-04-17 12:05:39,951 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@53a64502]
+
+2015-04-17 12:05:39,951 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@53a64502]
+
+2015-04-17 12:05:39,951 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-81 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@53a64502]
+
+2015-04-17 12:23:16,125 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:23:16,161 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:26:06,237 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:26:06,271 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:27:07,949 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:27:07,980 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:31:17,250 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:31:17,288 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:31:41,284 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:31:41,317 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:31:41,325 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:31:41,325 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:31:41,325 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:31:41,325 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:31:41,326 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:31:41,325 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 12:31:41,326 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:31:41,326 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:31:41,326 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:31:41,326 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-98 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-95 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:31:41,330 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-93 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-94 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Found bean property 'ID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-93 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@33cf16b0]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-95 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@eccc0ca]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-94 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c2b8e91]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-98 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@712c8aa1]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-96 
+Found bean property 'score' of type [int]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-98 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@712c8aa1]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-95 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@eccc0ca]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-93 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@33cf16b0]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-94 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c2b8e91]
+
+2015-04-17 12:31:41,331 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-96 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@16d39c57]
+
+2015-04-17 12:31:41,332 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-96 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@16d39c57]
+
+2015-04-17 12:31:41,332 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-93 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@33cf16b0]
+
+2015-04-17 12:31:41,332 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-98 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@712c8aa1]
+
+2015-04-17 12:31:41,332 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-94 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5c2b8e91]
+
+2015-04-17 12:31:41,332 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-95 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@eccc0ca]
+
+2015-04-17 12:31:41,332 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-96 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@16d39c57]
+
+2015-04-17 12:32:36,716 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-100 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@db77461]
+
+2015-04-17 12:32:36,716 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-100 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@db77461]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-100 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@db77461]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-103 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@300648ef]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-102 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6a862769]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-104 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4c47cadc]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-103 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@300648ef]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-102 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6a862769]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-104 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4c47cadc]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-103 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@300648ef]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-102 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6a862769]
+
+2015-04-17 12:32:36,717 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-104 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@4c47cadc]
+
+2015-04-17 12:32:36,718 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-97 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@d3c79c]
+
+2015-04-17 12:32:36,718 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-97 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@d3c79c]
+
+2015-04-17 12:32:36,719 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-97 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@d3c79c]
 

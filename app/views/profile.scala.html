@@ -74,6 +74,12 @@
             opacity: 0.5;
             font-size: smaller;
         }
+        #template {
+            display: none;
+        }
+        .notSubmit {
+
+        }
 
     </style>
 
@@ -196,98 +202,106 @@
                 <div id="rateSection">
                     <!-- Template rating criteria -->
                     <!-- Criteria should get and generate from database -->
-
-                    <h3>Ease of use</h3> <!-- (At)criteriaList.getName(i) -->
-                    <form action="/rate" method="post">
-                        <input type="hidden" name="projectID" value=@project.ID>
-                        <input type="hidden" name="criteriaID" value="1"> <!-- value=(At)criteriaList.ID -->
-
-                        <!-- star1 -->
-                        <label class="score" value="1">
-                            <input type="radio" name="score" value="1">
-                            <span class="glyphicon glyphicon-star star rate1" id="1" value="1"></span>
-                        </label>
-
-                        <!-- star2 -->
-                        <label class="score" value="2">
-                            <input type="radio" name="score" value="2">
-                            <span class="glyphicon glyphicon-star star rate1" id="1" value="2"></span>
-                        </label>
-
-                        <!-- star3 -->
-                        <label class="score" value="3">
-                            <input type="radio" name="score" value="3">
-                            <span class="glyphicon glyphicon-star star rate1" id="1" value="3"></span>
-                        </label>
-
-                        <!-- star4 -->
-                        <label class="score" value="4">
-                            <input type="radio" name="score" value="4">
-                            <span class="glyphicon glyphicon-star star rate1" id="1" value="4"></span>
-                        </label>
-
-                        <!-- star5 -->
-                        <label class="score" value="5">
-                            <input type="radio" name="score" value="5">
-                            <span class="glyphicon glyphicon-star star rate1" id="1" value="5"></span>
-                        </label>
-
-                        <!-- no vote -->
-                        <label class="novote" value="0">
-                            <input type="radio" name="score" value="0" checked>
-                            <button class="btn btn-danger btn-xs novoteButton rate1" id="1" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
-                        </label>
-
-                        <br>
-                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
-                    </form>
-
-                    <h3>Reliability</h3>
-                    <form action="/rate" method="post">
-                        <input type="hidden" name="projectID" value=@project.ID>
-                        <input type="hidden" name="criteriaID" value="2">
-                        <input type="radio" name="score" value="0" checked>
-                        <input type="radio" name="score" value="1">
-                        <input type="radio" name="score" value="2">
-                        <input type="radio" name="score" value="3">
-                        <input type="radio" name="score" value="4">
-                        <input type="radio" name="score" value="5">
-                        <br>
-                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
-                    </form>
-
-                    <h3>Security</h3>
-                    <form action="/rate" method="post">
-                        <input type="hidden" name="projectID" value=@project.ID>
-                        <input type="hidden" name="criteriaID" value="3">
-                        <input type="radio" name="score" value="0" checked>
-                        <input type="radio" name="score" value="1">
-                        <input type="radio" name="score" value="2">
-                        <input type="radio" name="score" value="3">
-                        <input type="radio" name="score" value="4">
-                        <input type="radio" name="score" value="5">
-                        <br>
-                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
-                    </form>
-
-                    <button type="button" id="submitRate">Submit</button>
+                    <button class="btn btn-default" type="button" id="submitRate">Submit</button>
                 </div>
             </div>
             <div class = "col-xs-2"> </div>
+
+            <div id="template">
+                <h3></h3> <!-- (At)criteriaList.getName(i) -->
+                <form action="/rate" method="post">
+                    <input type="hidden" name="projectID" value=@project.ID>
+                    <input type="hidden" name="criteriaID" value=""> <!-- value=(At)criteriaList.ID -->
+
+                    <!-- star1 -->
+                    <label class="score" value="1">
+                        <input type="radio" name="score" value="1">
+                        <span class="glyphicon glyphicon-star star" id="" value="1"></span>
+                    </label>
+
+                        <!-- star2 -->
+                    <label class="score" value="2">
+                        <input type="radio" name="score" value="2">
+                        <span class="glyphicon glyphicon-star star" id="" value="2"></span>
+                    </label>
+
+                        <!-- star3 -->
+                    <label class="score" value="3">
+                        <input type="radio" name="score" value="3">
+                        <span class="glyphicon glyphicon-star star" id="" value="3"></span>
+                    </label>
+
+                        <!-- star4 -->
+                    <label class="score" value="4">
+                        <input type="radio" name="score" value="4">
+                        <span class="glyphicon glyphicon-star star" id="" value="4"></span>
+                    </label>
+
+                        <!-- star5 -->
+                    <label class="score" value="5">
+                        <input type="radio" name="score" value="5">
+                        <span class="glyphicon glyphicon-star star" id="" value="5"></span>
+                    </label>
+
+                        <!-- no vote -->
+                    <label class="novote" value="0">
+                        <input type="radio" name="score" value="0" checked>
+                        <button class="btn btn-danger btn-xs novoteButton" id="" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                    </label>
+                    <br>
+                    <button type="submit" name="action" class="hiddenSubmit">Submit</button>
+                </form>
+            </div>
         </div>
+
+        <div class="test">
+            </div>
 
         <!-- JQuery -->
         <script>
 
+
+            $(".test" ).attr("class", function(){
+                var a = $(this ).attr("class");
+                var b = " rate"+"9";
+                a += b;
+                return a;
+            });
+
             $(document).ready(function(){
 
                 //generating rate section base on database value
+                var size = @rcList.size();
+                var i = 0;
                 @rcList.map { rc => //for each
-                    var rateFormat = "";
                     //append the html code
+                    var name = "@rc.criteriaName";
+                    $("#template" ).children("form" ).children("input[name='criteriaID']" ).attr("value", "@rc.ID");
+                    $("#template" ).children ( "h3" ).text (name);
+                    $("#template" ).children("form" ).children("label" ).children("span" ).each(function() {
+                        $(this ).attr("class", function() {
+                            var a = "glyphicon glyphicon-star star";
+                            var b = " rate"+"@rc.ID";
+                            a += b;
+                            return a;
+                        });
+                        $(this ).attr("id", "@rc.ID");
+                    });
+                    $("#template" ).children("form" ).children("label" ).children("button" ).each(function(){
+                        $(this ).attr("class", function() {
+                            var a = "btn btn-danger btn-xs novoteButton";
+                            var b = " rate"+"@rc.ID";
+                            a += b;
+                            return a;
+                        });
+                        $(this ).attr("id", "@rc.ID");
+                    });
+                    $("#rateSection" ).prepend($("#template" ).html());
+                    i++;
+                    if (i == size) {
+                        $("#template" ).children("form" ).children("button[type='submit']" ).attr("type","button");
+                    }
                 }
-
-                console.log(rcList);
                 //////////////////////////////////////////////
 
 
