@@ -63,6 +63,12 @@ create table user (
   constraint pk_user primary key (id))
 ;
 
+create table voting_criteria (
+  id                        integer auto_increment not null,
+  criteria_name             varchar(255),
+  constraint pk_voting_criteria primary key (id))
+;
+
 
 
 
@@ -85,6 +91,8 @@ drop table rating_record;
 drop table regular_user;
 
 drop table user;
+
+drop table voting_criteria;
 
 SET FOREIGN_KEY_CHECKS=1;
 

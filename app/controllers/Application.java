@@ -16,7 +16,8 @@ import static play.libs.Json.toJson;
 public class Application extends Controller {
 
     public static Result index() {
-        return ok(index.render("Your new application is ready."));
+		//VotingCriteria vc = VotingCriteria.find.where().findUnique();;
+        return ok(index.render(VotingCriteria.find.all()));
     }
 
 
@@ -70,6 +71,7 @@ public class Application extends Controller {
         RatingCriteria.create(3, "Completeness");
         RatingCriteria.create(4, "Security");
         RatingCriteria.create(5, "Quality of UI");
+		VotingCriteria.create(1, "Best of Exceed Camp");
         RatingCriteriaList.create();
         return redirect(routes.Application.index());
     }

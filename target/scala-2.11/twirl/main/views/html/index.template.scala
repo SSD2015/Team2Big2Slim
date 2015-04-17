@@ -20,13 +20,13 @@ import play.mvc.Http.Context.Implicit._
 import views.html._
 
 /**/
-object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[String,play.twirl.api.HtmlFormat.Appendable] {
+object index extends BaseScalaTemplate[play.twirl.api.HtmlFormat.Appendable,Format[play.twirl.api.HtmlFormat.Appendable]](play.twirl.api.HtmlFormat) with play.twirl.api.Template1[List[VotingCriteria],play.twirl.api.HtmlFormat.Appendable] {
 
   /**/
-  def apply/*1.2*/(message:String):play.twirl.api.HtmlFormat.Appendable = {
+  def apply/*1.2*/(voteCriteria: List[VotingCriteria]):play.twirl.api.HtmlFormat.Appendable = {
       _display_ {
 
-Seq[Any](format.raw/*1.18*/("""
+Seq[Any](format.raw/*1.38*/("""
 """),_display_(/*2.2*/main("Main Menu")/*2.19*/ {_display_(Seq[Any](format.raw/*2.21*/("""
     """),format.raw/*3.5*/("""<html>
         <head>
@@ -82,10 +82,13 @@ Seq[Any](format.raw/*1.18*/("""
                         </div>
                         <div class="modal-body vcField">
                             <!-- Template Prepared for Database -->
-                            <p><button type="button" class="btn btn-warning btn-block vote-criteria" value="1" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> The Best</button>
-                            <p><button type="button" class="btn btn-danger btn-block vote-criteria" value="2" data-dismiss="modal"><span class="glyphicon glyphicon-heart"></span> The Coolest</button>
+							"""),_display_(/*57.9*/voteCriteria/*57.21*/.map/*57.25*/ { vote =>_display_(Seq[Any](format.raw/*57.35*/("""
+								"""),format.raw/*58.9*/("""<p><button type="button" class="btn btn-warning btn-block vote-criteria" value="1" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> """),_display_(/*58.161*/vote/*58.165*/.criteriaName),format.raw/*58.178*/("""</button>
+							""")))}),format.raw/*59.9*/("""
+                            
+                            """),format.raw/*61.29*/("""<!-- <p><button type="button" class="btn btn-danger btn-block vote-criteria" value="2" data-dismiss="modal"><span class="glyphicon glyphicon-heart"></span> The Coolest</button>
                             <p><button type="button" class="btn btn-info btn-block vote-criteria" value="3" data-dismiss="modal"><span class="glyphicon glyphicon-cog"></span> Greatest Performance</button>
-                            <p><button type="button" class="btn btn-primary btn-block vote-criteria" value="4" data-dismiss="modal"><span class="glyphicon glyphicon-eye-open"></span> Greatest Design</button>
+                            <p><button type="button" class="btn btn-primary btn-block vote-criteria" value="4" data-dismiss="modal"><span class="glyphicon glyphicon-eye-open"></span> Greatest Design</button> -->
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
@@ -149,110 +152,110 @@ Seq[Any](format.raw/*1.18*/("""
             <script>
                 $("#votebar" ).toggle();
 
-                $(document).ready(function()"""),format.raw/*124.45*/("""{"""),format.raw/*124.46*/("""
+                $(document).ready(function()"""),format.raw/*127.45*/("""{"""),format.raw/*127.46*/("""
 
-                    """),format.raw/*126.21*/("""//Clock Section
-                    function getdate()"""),format.raw/*127.39*/("""{"""),format.raw/*127.40*/("""
-                        """),format.raw/*128.25*/("""var today = new Date();
+                    """),format.raw/*129.21*/("""//Clock Section
+                    function getdate()"""),format.raw/*130.39*/("""{"""),format.raw/*130.40*/("""
+                        """),format.raw/*131.25*/("""var today = new Date();
                         var h = today.getHours();
                         var m = today.getMinutes();
                         var s = today.getSeconds();
-                        if(h<10) """),format.raw/*132.34*/("""{"""),format.raw/*132.35*/("""
-                            """),format.raw/*133.29*/("""h = "0"+h;
-                        """),format.raw/*134.25*/("""}"""),format.raw/*134.26*/("""
-                        """),format.raw/*135.25*/("""if(m<10) """),format.raw/*135.34*/("""{"""),format.raw/*135.35*/("""
-                            """),format.raw/*136.29*/("""m = "0"+m;
+                        if(h<10) """),format.raw/*135.34*/("""{"""),format.raw/*135.35*/("""
+                            """),format.raw/*136.29*/("""h = "0"+h;
                         """),format.raw/*137.25*/("""}"""),format.raw/*137.26*/("""
-                        """),format.raw/*138.25*/("""if(s<10)"""),format.raw/*138.33*/("""{"""),format.raw/*138.34*/("""
-                            """),format.raw/*139.29*/("""s = "0"+s;
+                        """),format.raw/*138.25*/("""if(m<10) """),format.raw/*138.34*/("""{"""),format.raw/*138.35*/("""
+                            """),format.raw/*139.29*/("""m = "0"+m;
                         """),format.raw/*140.25*/("""}"""),format.raw/*140.26*/("""
-                        """),format.raw/*141.25*/("""$("clock").text(h+" : "+m+" : "+s);
-                        setTimeout(function()"""),format.raw/*142.46*/("""{"""),format.raw/*142.47*/("""getdate()"""),format.raw/*142.56*/("""}"""),format.raw/*142.57*/(""", 500);
-                    """),format.raw/*143.21*/("""}"""),format.raw/*143.22*/("""
-                    """),format.raw/*144.21*/("""getdate();
+                        """),format.raw/*141.25*/("""if(s<10)"""),format.raw/*141.33*/("""{"""),format.raw/*141.34*/("""
+                            """),format.raw/*142.29*/("""s = "0"+s;
+                        """),format.raw/*143.25*/("""}"""),format.raw/*143.26*/("""
+                        """),format.raw/*144.25*/("""$("clock").text(h+" : "+m+" : "+s);
+                        setTimeout(function()"""),format.raw/*145.46*/("""{"""),format.raw/*145.47*/("""getdate()"""),format.raw/*145.56*/("""}"""),format.raw/*145.57*/(""", 500);
+                    """),format.raw/*146.21*/("""}"""),format.raw/*146.22*/("""
+                    """),format.raw/*147.21*/("""getdate();
                     //////////////////////////////////////////////
 
                     //Vote Section
-                    $('#vote').click(function () """),format.raw/*148.50*/("""{"""),format.raw/*148.51*/("""
-                        """),format.raw/*149.25*/("""var body = $("html, body");
-                        body.animate("""),format.raw/*150.38*/("""{"""),format.raw/*150.39*/("""scrollTop:0"""),format.raw/*150.50*/("""}"""),format.raw/*150.51*/(""", "duration:600", "swing", function() """),format.raw/*150.89*/("""{"""),format.raw/*150.90*/("""
-                            """),format.raw/*151.29*/("""//old vote animate
+                    $('#vote').click(function () """),format.raw/*151.50*/("""{"""),format.raw/*151.51*/("""
+                        """),format.raw/*152.25*/("""var body = $("html, body");
+                        body.animate("""),format.raw/*153.38*/("""{"""),format.raw/*153.39*/("""scrollTop:0"""),format.raw/*153.50*/("""}"""),format.raw/*153.51*/(""", "duration:600", "swing", function() """),format.raw/*153.89*/("""{"""),format.raw/*153.90*/("""
+                            """),format.raw/*154.29*/("""//old vote animate
 //                        console.log("vote");
 //                        $("#topbar").fadeOut();
 //                        $("#projectlistLayer").fadeOut();
 //                        $("#votebar" ).fadeIn();
 //                        $("#voteLayer" ).fadeIn();
 
-                        """),format.raw/*158.25*/("""}"""),format.raw/*158.26*/(""");
-                    """),format.raw/*159.21*/("""}"""),format.raw/*159.22*/(""");
+                        """),format.raw/*161.25*/("""}"""),format.raw/*161.26*/(""");
+                    """),format.raw/*162.21*/("""}"""),format.raw/*162.22*/(""");
                     //////////////////////////////////////////////
 
                     //Back Button
-                    $("#back" ).click(function () """),format.raw/*163.51*/("""{"""),format.raw/*163.52*/("""
-                        """),format.raw/*164.25*/("""$(".projectListLayer" ).toggle();
-                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*165.75*/("""{"""),format.raw/*165.76*/("""
-                        """),format.raw/*166.25*/("""}"""),format.raw/*166.26*/(""");
-                        $("#votebar" ).fadeToggle(700, "swing", function() """),format.raw/*167.76*/("""{"""),format.raw/*167.77*/("""
-                        """),format.raw/*168.25*/("""}"""),format.raw/*168.26*/(""");
-                    """),format.raw/*169.21*/("""}"""),format.raw/*169.22*/(""");
+                    $("#back" ).click(function () """),format.raw/*166.51*/("""{"""),format.raw/*166.52*/("""
+                        """),format.raw/*167.25*/("""$(".projectListLayer" ).toggle();
+                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*168.75*/("""{"""),format.raw/*168.76*/("""
+                        """),format.raw/*169.25*/("""}"""),format.raw/*169.26*/(""");
+                        $("#votebar" ).fadeToggle(700, "swing", function() """),format.raw/*170.76*/("""{"""),format.raw/*170.77*/("""
+                        """),format.raw/*171.25*/("""}"""),format.raw/*171.26*/(""");
+                    """),format.raw/*172.21*/("""}"""),format.raw/*172.22*/(""");
                     //////////////////////////////////////////////
 
                     //Vote Button
-                    $(".voteB" ).click(function () """),format.raw/*173.52*/("""{"""),format.raw/*173.53*/("""
-                        """),format.raw/*174.25*/("""var name = $(this ).attr("id");
+                    $(".voteB" ).click(function () """),format.raw/*176.52*/("""{"""),format.raw/*176.53*/("""
+                        """),format.raw/*177.25*/("""var name = $(this ).attr("id");
                         var value = $(this ).attr("value");
-                        $("projectname").contents().filter(function () """),format.raw/*176.72*/("""{"""),format.raw/*176.73*/("""
-                        """),format.raw/*177.25*/("""return this.nodeType === 3;
-                        """),format.raw/*178.25*/("""}"""),format.raw/*178.26*/(""" """),format.raw/*178.27*/(""").remove();
+                        $("projectname").contents().filter(function () """),format.raw/*179.72*/("""{"""),format.raw/*179.73*/("""
+                        """),format.raw/*180.25*/("""return this.nodeType === 3;
+                        """),format.raw/*181.25*/("""}"""),format.raw/*181.26*/(""" """),format.raw/*181.27*/(""").remove();
                         $("projectname" ).append(name);
                         $("#voteValue" ).attr("value", value);
-                    """),format.raw/*181.21*/("""}"""),format.raw/*181.22*/(""");
+                    """),format.raw/*184.21*/("""}"""),format.raw/*184.22*/(""");
                     //////////////////////////////////////////////
 
                     //Vote Criteria Section
                     var voteCriteriaID = -1;
-                    $(".vote-criteria" ).click(function() """),format.raw/*186.59*/("""{"""),format.raw/*186.60*/("""
-                        """),format.raw/*187.25*/("""voteCriteriaID = $(this ).attr("value");
+                    $(".vote-criteria" ).click(function() """),format.raw/*189.59*/("""{"""),format.raw/*189.60*/("""
+                        """),format.raw/*190.25*/("""voteCriteriaID = $(this ).attr("value");
                         $(".projectListLayer" ).toggle();
-                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*189.75*/("""{"""),format.raw/*189.76*/("""
-                        """),format.raw/*190.25*/("""}"""),format.raw/*190.26*/(""");
-                        $("#votebar" ).fadeToggle(700, "swing", function() """),format.raw/*191.76*/("""{"""),format.raw/*191.77*/("""
-                        """),format.raw/*192.25*/("""}"""),format.raw/*192.26*/(""");
-                    """),format.raw/*193.21*/("""}"""),format.raw/*193.22*/(""");
+                        $("#topbar" ).fadeToggle(700, "swing", function() """),format.raw/*192.75*/("""{"""),format.raw/*192.76*/("""
+                        """),format.raw/*193.25*/("""}"""),format.raw/*193.26*/(""");
+                        $("#votebar" ).fadeToggle(700, "swing", function() """),format.raw/*194.76*/("""{"""),format.raw/*194.77*/("""
+                        """),format.raw/*195.25*/("""}"""),format.raw/*195.26*/(""");
+                    """),format.raw/*196.21*/("""}"""),format.raw/*196.22*/(""");
                     //////////////////////////////////////////////
 
                     var screenWidth = $(window ).width();
                     console.log(screenWidth);
-                    if (screenWidth < 405) """),format.raw/*198.44*/("""{"""),format.raw/*198.45*/("""
-                        """),format.raw/*199.25*/("""$(".voteText" ).css("font-size", "smaller");
-                    """),format.raw/*200.21*/("""}"""),format.raw/*200.22*/("""
-                """),format.raw/*201.17*/("""}"""),format.raw/*201.18*/(""");
+                    if (screenWidth < 405) """),format.raw/*201.44*/("""{"""),format.raw/*201.45*/("""
+                        """),format.raw/*202.25*/("""$(".voteText" ).css("font-size", "smaller");
+                    """),format.raw/*203.21*/("""}"""),format.raw/*203.22*/("""
+                """),format.raw/*204.17*/("""}"""),format.raw/*204.18*/(""");
             </script>
         </body>
     </html>
-""")))}),format.raw/*205.2*/("""
+""")))}),format.raw/*208.2*/("""
 
-"""),format.raw/*207.1*/("""<script type="text/javascript">
-function theFunction () """),format.raw/*208.25*/("""{"""),format.raw/*208.26*/("""
-"""),format.raw/*209.1*/("""// return true or false, depending on whether you want to allow the `href` property to follow through or not
-"""),format.raw/*210.1*/("""}"""),format.raw/*210.2*/("""
-"""),format.raw/*211.1*/("""</script>"""))}
+"""),format.raw/*210.1*/("""<script type="text/javascript">
+function theFunction () """),format.raw/*211.25*/("""{"""),format.raw/*211.26*/("""
+"""),format.raw/*212.1*/("""// return true or false, depending on whether you want to allow the `href` property to follow through or not
+"""),format.raw/*213.1*/("""}"""),format.raw/*213.2*/("""
+"""),format.raw/*214.1*/("""</script>"""))}
   }
 
-  def render(message:String): play.twirl.api.HtmlFormat.Appendable = apply(message)
+  def render(voteCriteria:List[VotingCriteria]): play.twirl.api.HtmlFormat.Appendable = apply(voteCriteria)
 
-  def f:((String) => play.twirl.api.HtmlFormat.Appendable) = (message) => apply(message)
+  def f:((List[VotingCriteria]) => play.twirl.api.HtmlFormat.Appendable) = (voteCriteria) => apply(voteCriteria)
 
   def ref: this.type = this
 
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Apr 15 21:20:09 ICT 2015
-                  SOURCE: /Users/Punpikorn/Desktop/2Big2Slim/Team2Big2Slim/app/views/index.scala.html
-                  HASH: 64c0f6b30e4fc9b9549e3899163f83b442e56bea
-                  MATRIX: 723->1|827->17|854->19|879->36|918->38|949->43|1319->387|1333->393|1388->428|8103->7114|8133->7115|8184->7137|8267->7191|8297->7192|8351->7217|8591->7428|8621->7429|8679->7458|8743->7493|8773->7494|8827->7519|8865->7528|8895->7529|8953->7558|9017->7593|9047->7594|9101->7619|9138->7627|9168->7628|9226->7657|9290->7692|9320->7693|9374->7718|9484->7799|9514->7800|9552->7809|9582->7810|9639->7838|9669->7839|9719->7860|9911->8023|9941->8024|9995->8049|10089->8114|10119->8115|10159->8126|10189->8127|10256->8165|10286->8166|10344->8195|10678->8500|10708->8501|10760->8524|10790->8525|10974->8680|11004->8681|11058->8706|11195->8814|11225->8815|11279->8840|11309->8841|11416->8919|11446->8920|11500->8945|11530->8946|11582->8969|11612->8970|11797->9126|11827->9127|11881->9152|12073->9315|12103->9316|12157->9341|12238->9393|12268->9394|12298->9395|12478->9546|12508->9547|12755->9765|12785->9766|12839->9791|13041->9964|13071->9965|13125->9990|13155->9991|13262->10069|13292->10070|13346->10095|13376->10096|13428->10119|13458->10120|13705->10338|13735->10339|13789->10364|13883->10429|13913->10430|13959->10447|13989->10448|14074->10502|14104->10504|14189->10560|14219->10561|14248->10562|14385->10671|14414->10672|14443->10673
-                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|37->9|37->9|37->9|152->124|152->124|154->126|155->127|155->127|156->128|160->132|160->132|161->133|162->134|162->134|163->135|163->135|163->135|164->136|165->137|165->137|166->138|166->138|166->138|167->139|168->140|168->140|169->141|170->142|170->142|170->142|170->142|171->143|171->143|172->144|176->148|176->148|177->149|178->150|178->150|178->150|178->150|178->150|178->150|179->151|186->158|186->158|187->159|187->159|191->163|191->163|192->164|193->165|193->165|194->166|194->166|195->167|195->167|196->168|196->168|197->169|197->169|201->173|201->173|202->174|204->176|204->176|205->177|206->178|206->178|206->178|209->181|209->181|214->186|214->186|215->187|217->189|217->189|218->190|218->190|219->191|219->191|220->192|220->192|221->193|221->193|226->198|226->198|227->199|228->200|228->200|229->201|229->201|233->205|235->207|236->208|236->208|237->209|238->210|238->210|239->211
+                  DATE: Fri Apr 17 14:48:27 ICT 2015
+                  SOURCE: C:/Team2Big2Slim/app/views/index.scala.html
+                  HASH: 0270f4e3b1ef34bfa73baf3bd2e85127c5c34b40
+                  MATRIX: 737->1|861->37|889->40|914->57|953->59|985->65|1361->415|1375->421|1430->456|4213->3213|4234->3225|4247->3229|4295->3239|4332->3249|4512->3401|4526->3405|4561->3418|4610->3437|4698->3497|8562->7332|8592->7333|8645->7357|8729->7412|8759->7413|8814->7439|9058->7654|9088->7655|9147->7685|9212->7721|9242->7722|9297->7748|9335->7757|9365->7758|9424->7788|9489->7824|9519->7825|9574->7851|9611->7859|9641->7860|9700->7890|9765->7926|9795->7927|9850->7953|9961->8035|9991->8036|10029->8045|10059->8046|10117->8075|10147->8076|10198->8098|10394->8265|10424->8266|10479->8292|10574->8358|10604->8359|10644->8370|10674->8371|10741->8409|10771->8410|10830->8440|11171->8752|11201->8753|11254->8777|11284->8778|11472->8937|11502->8938|11557->8964|11695->9073|11725->9074|11780->9100|11810->9101|11918->9180|11948->9181|12003->9207|12033->9208|12086->9232|12116->9233|12305->9393|12335->9394|12390->9420|12584->9585|12614->9586|12669->9612|12751->9665|12781->9666|12811->9667|12994->9821|13024->9822|13276->10045|13306->10046|13361->10072|13565->10247|13595->10248|13650->10274|13680->10275|13788->10354|13818->10355|13873->10381|13903->10382|13956->10406|13986->10407|14238->10630|14268->10631|14323->10657|14418->10723|14448->10724|14495->10742|14525->10743|14614->10801|14646->10805|14732->10862|14762->10863|14792->10865|14930->10975|14959->10976|14989->10978
+                  LINES: 26->1|29->1|30->2|30->2|30->2|31->3|37->9|37->9|37->9|85->57|85->57|85->57|85->57|86->58|86->58|86->58|86->58|87->59|89->61|155->127|155->127|157->129|158->130|158->130|159->131|163->135|163->135|164->136|165->137|165->137|166->138|166->138|166->138|167->139|168->140|168->140|169->141|169->141|169->141|170->142|171->143|171->143|172->144|173->145|173->145|173->145|173->145|174->146|174->146|175->147|179->151|179->151|180->152|181->153|181->153|181->153|181->153|181->153|181->153|182->154|189->161|189->161|190->162|190->162|194->166|194->166|195->167|196->168|196->168|197->169|197->169|198->170|198->170|199->171|199->171|200->172|200->172|204->176|204->176|205->177|207->179|207->179|208->180|209->181|209->181|209->181|212->184|212->184|217->189|217->189|218->190|220->192|220->192|221->193|221->193|222->194|222->194|223->195|223->195|224->196|224->196|229->201|229->201|230->202|231->203|231->203|232->204|232->204|236->208|238->210|239->211|239->211|240->212|241->213|241->213|242->214
                   -- GENERATED --
               */
           
