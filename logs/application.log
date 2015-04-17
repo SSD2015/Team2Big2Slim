@@ -265,3 +265,256 @@ database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 2015-04-17 11:39:14,647 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+2015-04-17 11:42:52,319 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:42:52,355 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:43:09,031 - [TRACE] - from org.springframework.core.io.support.SpringFactoriesLoader in play-akka.actor.default-dispatcher-72 
+Loaded [org.springframework.beans.BeanInfoFactory] names: [org.springframework.beans.ExtendedBeanInfoFactory]
+
+2015-04-17 11:43:09,036 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Not strongly caching class [models.RatingRecord] because it is not cache-safe
+
+2015-04-17 11:43:09,036 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Getting BeanInfo for class [models.RatingRecord]
+
+2015-04-17 11:43:09,042 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Caching PropertyDescriptors for class [models.RatingRecord]
+
+2015-04-17 11:43:09,042 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Found bean property 'ID' of type [int]
+
+2015-04-17 11:43:09,043 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 11:43:09,043 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Found bean property 'criteriaID' of type [int]
+
+2015-04-17 11:43:09,043 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Found bean property 'projectID' of type [int]
+
+2015-04-17 11:43:09,043 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-72 
+Found bean property 'score' of type [int]
+
+2015-04-17 11:43:09,181 - [ERROR] - from play in play-akka.actor.default-dispatcher-72 
+Cannot invoke the action, eventually got an error: java.lang.NullPointerException
+
+2015-04-17 11:43:09,205 - [ERROR] - from application in play-akka.actor.default-dispatcher-72 
+
+
+! @6logoj8o0 - Internal server error, for (GET) [/profile/0] ->
+
+play.api.Application$$anon$1: Execution exception[[NullPointerException: null]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.NullPointerException: null
+	at views.html.profile$.apply(profile.template.scala:32) ~[classes/:na]
+	at views.html.profile$.render(profile.template.scala:512) ~[classes/:na]
+	at views.html.profile.render(profile.template.scala) ~[classes/:na]
+	at controllers.ProjectList.index(ProjectList.java:13) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$17$$anonfun$apply$17.apply(routes_routing.scala:313) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$17$$anonfun$apply$17.apply(routes_routing.scala:313) ~[classes/:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+
+2015-04-17 11:45:23,603 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:45:23,653 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:47:44,933 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:47:44,980 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:48:51,641 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:48:51,680 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:53:07,308 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:53:07,352 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:56:27,435 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:56:27,481 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:59:25,734 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:59:25,772 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 11:59:52,580 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 11:59:52,612 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 12:00:00,719 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 12:00:00,754 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:05:24,075 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:05:24,140 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:09:21,350 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:09:21,394 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:11:07,994 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:11:08,025 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:12:07,687 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:12:07,724 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:13:13,786 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:13:13,819 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:15:24,374 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:15:24,411 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:17:01,243 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:17:01,283 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:19:35,590 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:19:35,628 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:20:20,236 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:20:20,273 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:21:19,971 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:21:20,002 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:24:16,251 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:24:16,307 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:25:47,922 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:25:47,956 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:29:26,973 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:29:27,024 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:30:19,234 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:30:19,294 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:32:08,471 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:32:08,503 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:34:35,536 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:34:35,569 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-17 15:35:16,169 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 15:35:16,217 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
