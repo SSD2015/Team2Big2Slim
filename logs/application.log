@@ -869,3 +869,339 @@ Converting String to [int] using property editor [org.springframework.beans.prop
 2015-04-17 22:35:19,255 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-48 
 Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@125a9428]
 
+2015-04-17 22:39:28,559 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Not strongly caching class [controllers.Login$LoginInfo] because it is not cache-safe
+
+2015-04-17 22:39:28,560 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Getting BeanInfo for class [controllers.Login$LoginInfo]
+
+2015-04-17 22:39:28,561 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Caching PropertyDescriptors for class [controllers.Login$LoginInfo]
+
+2015-04-17 22:39:28,561 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 22:39:28,561 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'password' of type [java.lang.String]
+
+2015-04-17 22:39:28,561 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'shit' of type [java.lang.String]
+
+2015-04-17 22:39:28,561 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-49 
+Found bean property 'username' of type [java.lang.String]
+
+2015-04-17 22:39:38,715 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@587748c7]
+
+2015-04-17 22:39:38,716 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@587748c7]
+
+2015-04-17 22:39:38,716 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@587748c7]
+
+2015-04-17 22:39:38,716 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@587748c7]
+
+2015-04-17 22:39:38,721 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@113cb63e]
+
+2015-04-17 22:39:38,721 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@113cb63e]
+
+2015-04-17 22:39:38,722 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@113cb63e]
+
+2015-04-17 22:39:38,722 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-49 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@113cb63e]
+
+2015-04-17 22:39:38,724 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7035961b]
+
+2015-04-17 22:39:38,725 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7035961b]
+
+2015-04-17 22:39:38,725 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7035961b]
+
+2015-04-17 22:39:38,726 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-51 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7035961b]
+
+2015-04-17 22:39:38,729 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@56b1c481]
+
+2015-04-17 22:39:38,729 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@56b1c481]
+
+2015-04-17 22:39:38,730 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@56b1c481]
+
+2015-04-17 22:39:38,730 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-52 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@56b1c481]
+
+2015-04-17 22:39:38,734 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e7e1071]
+
+2015-04-17 22:39:38,735 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e7e1071]
+
+2015-04-17 22:39:38,735 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e7e1071]
+
+2015-04-17 22:39:38,736 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e7e1071]
+
+2015-04-17 22:40:17,182 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3f87982c]
+
+2015-04-17 22:40:17,182 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3f87982c]
+
+2015-04-17 22:40:17,182 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3f87982c]
+
+2015-04-17 22:40:17,182 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@3f87982c]
+
+2015-04-17 22:40:17,185 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@50656690]
+
+2015-04-17 22:40:17,186 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@50656690]
+
+2015-04-17 22:40:17,186 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@50656690]
+
+2015-04-17 22:40:17,186 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@50656690]
+
+2015-04-17 22:40:17,189 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@755ee4c4]
+
+2015-04-17 22:40:17,189 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@755ee4c4]
+
+2015-04-17 22:40:17,190 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@755ee4c4]
+
+2015-04-17 22:40:17,190 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-50 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@755ee4c4]
+
+2015-04-17 22:40:17,195 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@66fc4a57]
+
+2015-04-17 22:40:17,196 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@66fc4a57]
+
+2015-04-17 22:40:17,196 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@66fc4a57]
+
+2015-04-17 22:40:17,196 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@66fc4a57]
+
+2015-04-17 22:40:17,198 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@23ef344d]
+
+2015-04-17 22:40:17,198 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@23ef344d]
+
+2015-04-17 22:40:17,199 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@23ef344d]
+
+2015-04-17 22:40:17,199 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@23ef344d]
+
+2015-04-17 22:40:30,110 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@2d2cfb46]
+
+2015-04-17 22:40:30,111 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f9f88d7]
+
+2015-04-17 22:40:30,111 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@2d2cfb46]
+
+2015-04-17 22:40:30,111 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f9f88d7]
+
+2015-04-17 22:40:30,112 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f9f88d7]
+
+2015-04-17 22:40:30,112 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@2d2cfb46]
+
+2015-04-17 22:40:30,113 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@2d2cfb46]
+
+2015-04-17 22:40:30,113 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1f9f88d7]
+
+2015-04-17 22:40:30,115 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6c15d47b]
+
+2015-04-17 22:40:30,115 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6c15d47b]
+
+2015-04-17 22:40:30,116 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6c15d47b]
+
+2015-04-17 22:40:30,116 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6c15d47b]
+
+2015-04-17 22:40:30,118 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@21ab1aba]
+
+2015-04-17 22:40:30,119 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@21ab1aba]
+
+2015-04-17 22:40:30,119 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@21ab1aba]
+
+2015-04-17 22:40:30,119 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-53 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@21ab1aba]
+
+2015-04-17 22:40:30,122 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ab0212c]
+
+2015-04-17 22:40:30,123 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ab0212c]
+
+2015-04-17 22:40:30,123 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ab0212c]
+
+2015-04-17 22:40:30,123 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-57 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ab0212c]
+
+2015-04-17 22:40:45,431 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19aac6fd]
+
+2015-04-17 22:40:45,431 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19aac6fd]
+
+2015-04-17 22:40:45,431 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19aac6fd]
+
+2015-04-17 22:40:45,431 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@19aac6fd]
+
+2015-04-17 22:40:45,433 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c3a2b34]
+
+2015-04-17 22:40:45,433 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c3a2b34]
+
+2015-04-17 22:40:45,433 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c3a2b34]
+
+2015-04-17 22:40:45,433 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@c3a2b34]
+
+2015-04-17 22:40:45,437 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e9f2f16]
+
+2015-04-17 22:40:45,437 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e9f2f16]
+
+2015-04-17 22:40:45,438 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e9f2f16]
+
+2015-04-17 22:40:45,438 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@e9f2f16]
+
+2015-04-17 22:40:45,439 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ee80b2f]
+
+2015-04-17 22:40:45,440 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ee80b2f]
+
+2015-04-17 22:40:45,440 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ee80b2f]
+
+2015-04-17 22:40:45,440 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@7ee80b2f]
+
+2015-04-17 22:40:45,443 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@874d3bf]
+
+2015-04-17 22:40:45,443 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@874d3bf]
+
+2015-04-17 22:40:45,443 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@874d3bf]
+
+2015-04-17 22:40:45,443 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-56 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@874d3bf]
+
+2015-04-17 22:41:04,815 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d7aaedf]
+
+2015-04-17 22:41:04,815 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d7aaedf]
+
+2015-04-17 22:41:04,815 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d7aaedf]
+
+2015-04-17 22:41:04,816 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-54 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@6d7aaedf]
+
+2015-04-17 22:41:04,818 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1480c746]
+
+2015-04-17 22:41:04,818 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1480c746]
+
+2015-04-17 22:41:04,818 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1480c746]
+
+2015-04-17 22:41:04,819 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-58 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@1480c746]
+
+2015-04-17 22:41:04,820 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5d60d790]
+
+2015-04-17 22:41:04,820 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5d60d790]
+
+2015-04-17 22:41:04,821 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5d60d790]
+
+2015-04-17 22:41:04,821 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-55 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@5d60d790]
+
+2015-04-17 22:41:04,823 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72deb83a]
+
+2015-04-17 22:41:04,823 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72deb83a]
+
+2015-04-17 22:41:04,823 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72deb83a]
+
+2015-04-17 22:41:04,824 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-59 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@72deb83a]
+
+2015-04-17 22:41:04,826 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@573eac1d]
+
+2015-04-17 22:41:04,826 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@573eac1d]
+
+2015-04-17 22:41:04,827 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@573eac1d]
+
+2015-04-17 22:41:04,827 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-61 
+Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@573eac1d]
+
+2015-04-17 22:44:38,698 - [DEBUG] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-62 
+Not strongly caching class [controllers.Vote$VoteInfo] because it is not cache-safe
+
+2015-04-17 22:44:38,698 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-62 
+Getting BeanInfo for class [controllers.Vote$VoteInfo]
+
+2015-04-17 22:44:38,699 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-62 
+Caching PropertyDescriptors for class [controllers.Vote$VoteInfo]
+
+2015-04-17 22:44:38,699 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-62 
+Found bean property 'class' of type [java.lang.Class]
+
+2015-04-17 22:44:38,699 - [TRACE] - from org.springframework.beans.CachedIntrospectionResults in play-akka.actor.default-dispatcher-62 
+Found bean property 'projectID' of type [java.lang.String]
+
