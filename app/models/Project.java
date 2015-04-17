@@ -14,7 +14,6 @@ public class Project extends Model {
     @Id
     public int ID;
     public String projectName;
-    public int voteScore;
     public String PicProject;
     public String typeApp;
     public String sc1;
@@ -36,7 +35,6 @@ public class Project extends Model {
         project.sc1 = sc1;
         project.sc2 = sc2;
         project.sc3 = sc3;
-        project.voteScore = 0;
         project.save();
     }
 
@@ -48,8 +46,5 @@ public class Project extends Model {
         return projectName;
     }
 
-    public void updateVote() {
-        voteScore++;
-    }
 
 }

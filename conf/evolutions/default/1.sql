@@ -21,7 +21,6 @@ create table note (
 create table project (
   id                        integer auto_increment not null,
   project_name              varchar(255),
-  vote_score                integer,
   pic_project               varchar(255),
   type_app                  varchar(255),
   sc1                       varchar(255),

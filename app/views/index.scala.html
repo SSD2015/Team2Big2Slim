@@ -1,4 +1,4 @@
-@(voteCriteria: List[VotingCriteria])
+@(voteCriteria: List[VotingCriteria])(currentUser : User)
 @main("Main Menu") {
     <html>
         <head>
@@ -89,7 +89,11 @@
                         ExceedVote
                     </a>
                     <a class="navbar-brand" href="#"><clock ></clock></a>
+                        <a class="navbar-brand hidden-xs" href="#">
+                            Hello @currentUser.username
+                        </a>
                 </div>
+
 
                 <div class="navbar-header pull-right">
                     <a class="navbar-brand" data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>

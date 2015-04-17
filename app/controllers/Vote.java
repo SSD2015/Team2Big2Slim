@@ -45,7 +45,7 @@ public class Vote extends Controller {
 			record.save();
 		}*/
         if( existProject != null ) {
-            existProject.updateVote();
+            //existProject.updateVote();
             existProject.save();
         }
 		

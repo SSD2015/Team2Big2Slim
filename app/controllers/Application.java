@@ -17,8 +17,13 @@ public class Application extends Controller {
 
     @Security.Authenticated(Secured.class)
     public static Result index() {
-		//VotingCriteria vc = VotingCriteria.find.where().findUnique();
-        return ok(index.render(VotingCriteria.find.all()));
+        //VotingCriteria vc = VotingCriteria.find.where().findUnique();
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        System.out.println("This user = " + currentUser.username);
+
+        return ok(index.render( VotingCriteria.find.all(), currentUser ));
     }
 
 
