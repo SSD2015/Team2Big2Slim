@@ -15,6 +15,7 @@ import static play.libs.Json.toJson;
 
 public class Application extends Controller {
 
+    @Security.Authenticated(Secured.class)
     public static Result index() {
 		//VotingCriteria vc = VotingCriteria.find.where().findUnique();;
         return ok(index.render(VotingCriteria.find.all()));
@@ -52,6 +53,13 @@ public class Application extends Controller {
 		return ok(group1.render( Math.random()*5) );
 	}
 
+    public static Result logout() {
+        session().clear();
+        flash("success", "You've been logged out");
+        return redirect(
+                routes.Login.login()
+        );
+    }
     public static Result mockDatabase() {
         Project.create(1,"Grand Theft Auto V","http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg","Game",
                 "http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg","http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg",
