@@ -55,3 +55,183 @@ database [default] connected at jdbc:mysql://localhost:3306/exceedvote
 2015-04-16 20:38:28,016 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
+2015-04-16 20:44:11,105 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:44:11,161 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:45:14,034 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:45:14,126 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:47:14,617 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:47:14,674 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:48:36,718 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:48:36,770 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:49:47,973 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:49:48,030 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:51:02,150 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:51:02,201 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:52:11,105 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:52:11,160 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:54:40,656 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:54:40,719 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:55:35,137 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:55:35,199 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:57:49,159 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:57:49,216 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:58:52,903 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:58:52,954 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 20:59:10,053 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 20:59:10,119 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:01:17,644 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:01:17,696 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:02:15,109 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:02:15,164 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:07:39,180 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:07:39,229 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:09:32,052 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:09:32,101 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:11:15,598 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:11:15,656 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:13:25,224 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:13:25,280 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:18:41,481 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:18:41,529 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:20:21,351 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:20:21,390 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:23:42,096 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:23:42,146 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:24:26,901 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:24:26,949 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:25:00,079 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:25:00,153 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:27:45,817 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:27:45,871 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:28:06,282 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:28:06,332 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:28:58,929 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:28:58,983 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:30:42,833 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:30:42,880 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:32:43,880 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:32:43,923 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:34:47,184 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:34:47,227 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-16 21:35:31,809 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-16 21:35:31,855 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+

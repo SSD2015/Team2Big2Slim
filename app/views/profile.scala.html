@@ -25,39 +25,47 @@
     font-size : 250%;
     color : black;
     }
+    .Rate{
+    font-size : 250%;
+    color : black;
+    }
     .p{
     font-style: normal;
     }
     .Line1{
     border-bottom: 1px dashed;
-    border-bottom-color: yellow;
+    border-bottom-color: black;
     }
     .Line2{
-    border-bottom: 1px dashed;
+    border-bottom: 1px solid;
     border-bottom-color: black;
     }
     .Line3{
-    border-bottom: 1px dashed;
+    border-bottom: 1px solid;
     border-bottom-color: black;
     }
     .Line4{
-    border-bottom: 1px dashed;
+    border-bottom: 1px solid;
     border-bottom-color: black;
     }
     .ProPicBack{
-    background-color: darkcyan;
+    background-color: lightskyblue;
     }
     .DesBack{
     background-color: lightgrey;
     }
     .SceenBack{
-    background-color: lightpink;
+    background-color: lightskyblue;
+    }
+    .RateBack{
+    background-color: lightgrey;
     }
     .blankSpace1{
-    background-color: green;
+    background-color: black
+    ;
     }
     .blankSpace2{
-    background-color: pink;
+    background-color: grey;
     }
 
     .carousel-inner > .item > img,
@@ -106,6 +114,11 @@
                 </div>
             </div>
                 <!--black space-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
             <div class = "blankSpace1">
             <div class="row">
                 <div class="col-xs-12">
@@ -115,7 +128,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class = "Line2"></div>
+                    <div class = "Line1"></div>
                 </div>
             </div>
             <div class = "blankSpace2">
@@ -124,6 +137,11 @@
                     <span style="padding-left:1px"></span>
                 </div>
             </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line1"></div>
+                </div>
             </div>
             <div class = "ProPicBack">
             <div class="row">
@@ -147,6 +165,11 @@
             </div>
 
             <!--black space-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line1"></div>
+                </div>
+            </div>
             <div class = "blankSpace2">
             <div class="row">
                 <div class="col-xs-12">
@@ -156,7 +179,7 @@
             </div>
             <div class="row">
                 <div class="col-xs-12">
-                    <div class = "Line2"></div>
+                    <div class = "Line1"></div>
                 </div>
             </div>
             <div class = "blankSpace1">
@@ -165,6 +188,11 @@
                     <span style="padding-left:1px"></span>
                 </div>
             </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
             </div>
             <div class = "DesBack">
                     <!--black space-->
@@ -183,7 +211,7 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = "Description">
-                            <h style="font-family:verdana" >Description</h>
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span> Description
                         </div>
                     </div>
                     <div class = "col-xs-2"> </div>
@@ -220,151 +248,155 @@
                 </div>
             </div>
                 <!--black space-->
-            <div class="row">
-                <div class="col-xs-12">
-                    <span style="padding-left:1px"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <span style="padding-left:1px"></span>
-                </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = ScreenShot>
-                        <h style="font-family:verdana" >Screenshot</h>
+            <div class="SceenBack">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
                     </div>
                 </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-1"> </div>
-                <div class="col-xs-9">
-                    <div class="container">
-                        <br>
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-
-                                <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1/' + @project.ID"> </button>
-                                </div>
-                                <div class="item">
-                                    <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2/' + @project.ID"> </button>
-                                </div>
-                                <div class="item">
-                                    <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.ID"> </button>
-                                </div>
-                            </div>
-
-                                <!-- Left and right controls -->
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = ScreenShot>
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> Screenshot
                         </div>
                     </div>
+                    <div class = "col-xs-2"> </div>
                 </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-        </div>
-            <!--black space-->
-        <div class="row">
-            <div class="col-xs-12">
-                <span style="padding-left:1px"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <span style="padding-left:1px"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class = "Line4"></div>
-            </div>
-        </div>
-            <!--black space-->
-        <div class="row">
-            <div class="col-xs-12">
-                <span style="padding-left:1px"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <span style="padding-left:1px"></span>
-            </div>
-        </div>
-        <div class="row">
-            <div class = "col-xs-2"> </div>
-            <div class="col-xs-8">
-                <div class = Rate>
-                    <h style="font-family:verdana" >Rate
-                    <h3>Please rate Project @project.ID with follow criteria :</h3>
-
-                    <div>
-                        <!-- Template rating criteria -->
-                        <h3>Ease of use</h3>
-                        <form action="/rate" method="post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="hidden" name="criteriaID" value="1">
-                            <input type="radio" name="score" value="0" checked>
-                            <input type="radio" name="score" value="1">
-                            <input type="radio" name="score" value="2">
-                            <input type="radio" name="score" value="3">
-                            <input type="radio" name="score" value="4">
-                            <input type="radio" name="score" value="5">
+                <div class="row">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-9">
+                        <div class="container">
                             <br>
-                            <button type="submit" name="action">Submit</button>
-                        </form>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
 
-                        <h3>Reliability</h3>
-                        <form action="/rate" method="post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="hidden" name="criteriaID" value="1">
-                            <input type="radio" name="score" value="0" checked>
-                            <input type="radio" name="score" value="1">
-                            <input type="radio" name="score" value="2">
-                            <input type="radio" name="score" value="3">
-                            <input type="radio" name="score" value="4">
-                            <input type="radio" name="score" value="5">
-                            <br>
-                            <button type="submit" name="action">Submit</button>
-                        </form>
+                                    <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1/' + @project.ID"> </button>
+                                    </div>
+                                    <div class="item">
+                                        <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2/' + @project.ID"> </button>
+                                    </div>
+                                    <div class="item">
+                                        <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.ID"> </button>
+                                    </div>
+                                </div>
 
-                        <h3>Security</h3>
-                        <form action="/rate" method="post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="hidden" name="criteriaID" value="1">
-                            <input type="radio" name="score" value="0" checked>
-                            <input type="radio" name="score" value="1">
-                            <input type="radio" name="score" value="2">
-                            <input type="radio" name="score" value="3">
-                            <input type="radio" name="score" value="4">
-                            <input type="radio" name="score" value="5">
-                            <br>
-                            <button type="submit" name="action">Submit</button>
-                        </form>
+                                    <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
 
-                        <b
+
+                <!--black space-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <span style="padding-left:1px"></span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <span style="padding-left:1px"></span>
+                </div>
+            </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line4"></div>
+                </div>
+            </div>
+                <!--black space-->
+            <div class = "RateBack">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
                     </div>
                 </div>
-            </div>
-            <div class = "col-xs-2"> </div>
-        </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = Rate>
+                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span> Rate
+                            <h3>Please rate Project @project.ID with follow criteria :</h3>
 
+                            <div>
+                                <!-- Template rating criteria -->
+                                <h3>Ease of use</h3>
+                                <form action="/rate" method="post">
+                                    <input type="hidden" name="projectID" value=@project.ID>
+                                    <input type="hidden" name="criteriaID" value="1">
+                                    <input type="radio" name="score" value="0" checked>
+                                    <input type="radio" name="score" value="1">
+                                    <input type="radio" name="score" value="2">
+                                    <input type="radio" name="score" value="3">
+                                    <input type="radio" name="score" value="4">
+                                    <input type="radio" name="score" value="5">
+                                    <br>
+                                    <button type="submit" name="action">Submit</button>
+                                </form>
+
+                                <h3>Reliability</h3>
+                                <form action="/rate" method="post">
+                                    <input type="hidden" name="projectID" value=@project.ID>
+                                    <input type="hidden" name="criteriaID" value="1">
+                                    <input type="radio" name="score" value="0" checked>
+                                    <input type="radio" name="score" value="1">
+                                    <input type="radio" name="score" value="2">
+                                    <input type="radio" name="score" value="3">
+                                    <input type="radio" name="score" value="4">
+                                    <input type="radio" name="score" value="5">
+                                    <br>
+                                    <button type="submit" name="action">Submit</button>
+                                </form>
+
+                                <h3>Security</h3>
+                                <form action="/rate" method="post">
+                                    <input type="hidden" name="projectID" value=@project.ID>
+                                    <input type="hidden" name="criteriaID" value="1">
+                                    <input type="radio" name="score" value="0" checked>
+                                    <input type="radio" name="score" value="1">
+                                    <input type="radio" name="score" value="2">
+                                    <input type="radio" name="score" value="3">
+                                    <input type="radio" name="score" value="4">
+                                    <input type="radio" name="score" value="5">
+                                    <br>
+                                    <button type="submit" name="action">Submit</button>
+                                </form>
+
+                                <b
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+            </div>
             <!-- JQuery -->
         <script>
             $("#votebar" ).toggle();
