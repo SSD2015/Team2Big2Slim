@@ -70,6 +70,15 @@ create table voting_criteria (
   constraint pk_voting_criteria primary key (id))
 ;
 
+create table voting_record (
+  id                        integer auto_increment not null,
+  user_id                   integer,
+  criteria_id               integer,
+  project_id                integer,
+  score                     integer,
+  constraint pk_voting_record primary key (id))
+;
+
 
 
 
@@ -94,6 +103,8 @@ drop table regular_user;
 drop table user;
 
 drop table voting_criteria;
+
+drop table voting_record;
 
 SET FOREIGN_KEY_CHECKS=1;
 
