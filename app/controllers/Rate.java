@@ -43,9 +43,15 @@ public class Rate extends Controller {
         System.out.println("score: " + record.getScore());
         System.out.println("----------------------------");
 
-        //RatingRecord oldRecord = RatingRecord.find.where().eq()
+        RatingRecord oldRecord = RatingRecord.find.where().eq("userID", record.getUserID()).eq("projectID", record.getProjectID()).eq("criteriaID", record.getCriteriaID()).findUnique();
+        if( oldRecord != null ) {
+            oldRecord.changeScore(record.getScore());
+            oldRecord.save();
+        }
+        else {
+            record.save();
+        }
 
-        record.save();
 		return redirect("/profile/"+record.getProjectID());
 	}
 	

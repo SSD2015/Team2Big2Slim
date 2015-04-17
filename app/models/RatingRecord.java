@@ -43,5 +43,9 @@ public class RatingRecord extends Model {
         return this.userID;
     }
 
+    public void changeScore(int score) {
+        this.score = score;
+    }
+
 
 }
