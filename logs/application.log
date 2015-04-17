@@ -1,9 +1,0 @@
-2558-04-17 17:50:49,556 - [INFO] - from play in pool-4-thread-4 
-Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-
-2558-04-17 17:50:54,241 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost:3306/exceedvote
-
-2558-04-17 17:50:54,989 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-

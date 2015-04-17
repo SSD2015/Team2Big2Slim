@@ -17,6 +17,7 @@ public class RatingRecord extends Model {
     public int projectID;
     public int criteriaID;
     public int score;
+    public int userID;
 
     public static Finder<Integer, RatingRecord> find = new Finder<Integer,RatingRecord>(
             Integer.class, RatingRecord.class
@@ -36,6 +37,14 @@ public class RatingRecord extends Model {
 
     public int getScore() {
         return this.score;
+    }
+
+    public int getUserID() {
+        return this.userID;
+    }
+
+    public void changeScore(int score) {
+        this.score = score;
     }
 
 

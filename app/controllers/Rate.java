@@ -33,14 +33,25 @@ public class Rate extends Controller {
         //System.out.println("score: " + ratingForm.get().getScore());
 
         RatingRecord record = Form.form(RatingRecord.class).bindFromRequest().get();
+
+        //int userID = Integer.parseInt(session().get("userID"));
+
+        System.out.println("User ID: " + record.getUserID());
         System.out.println("RateForm: " + record);
-       // System.out.println("ID: " + record.getID());
         System.out.println("projectID: " + record.getProjectID());
         System.out.println("criteriaID: " + record.getCriteriaID());
         System.out.println("score: " + record.getScore());
         System.out.println("----------------------------");
 
-        record.save();
+        RatingRecord oldRecord = RatingRecord.find.where().eq("userID", record.getUserID()).eq("projectID", record.getProjectID()).eq("criteriaID", record.getCriteriaID()).findUnique();
+        if( oldRecord != null ) {
+            oldRecord.changeScore(record.getScore());
+            oldRecord.save();
+        }
+        else {
+            record.save();
+        }
+
 		return redirect("/profile/"+record.getProjectID());
 	}
 	

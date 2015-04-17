@@ -46,6 +46,7 @@ create table rating_record (
   project_id                integer,
   criteria_id               integer,
   score                     integer,
+  user_id                   integer,
   constraint pk_rating_record primary key (id))
 ;
 

@@ -47,7 +47,7 @@ public class Login extends Controller {
             User user = User.find.where().eq("username", info.username).eq("password", info.password).findUnique();
 
             session().clear();
-            session("connected", ""+user.getID());
+            session("userID", ""+user.getID());
             //String userId = session("connected");
             return redirect(routes.Application.index());
         }
