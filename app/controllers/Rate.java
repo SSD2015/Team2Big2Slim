@@ -44,7 +44,15 @@ public class Rate extends Controller {
 
     @Security.Authenticated(Secured.class)
 	public static Result showRateResult() {
-		return ok(rateResult.render(RatingRecord.find.all()));
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        if(currentUser.projectId == 99 ) {
+            return ok(rateResult.render(RatingRecord.find.all()));
+        }
+        else {
+            return redirect( routes.Application.index() );
+        }
 	}
 
 }

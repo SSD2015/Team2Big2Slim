@@ -48,6 +48,15 @@ public class Vote extends Controller {
 
     @Security.Authenticated(Secured.class)
     public static Result showVoteResult() {
-        return ok(voteResult.render( Project.find.all()) );
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        if(currentUser.projectId == 99 ) {
+            return ok(voteResult.render( Project.find.all()) );
+        }
+        else {
+            return redirect( routes.Application.index() );
+        }
+
     }
 }
