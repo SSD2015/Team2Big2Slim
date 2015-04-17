@@ -15,7 +15,9 @@ import static play.libs.Json.toJson;
 
 public class Application extends Controller {
 
+    @Security.Authenticated(Secured.class)
     public static Result index() {
+        //System.out.println(user.getID());
 		//VotingCriteria vc = VotingCriteria.find.where().findUnique();;
         return ok(index.render(VotingCriteria.find.all()));
     }
@@ -46,6 +48,12 @@ public class Application extends Controller {
     public static Result getVoteResult(){
         List<Project> projects = new Model.Finder<String, Project>(String.class, Project.class).all();
         return ok(toJson(projects));
+    }
+
+    public static Result logout() {
+        session().clear();
+        flash("success", "You've been logged out");
+        return redirect(routes.Login.login());
     }
 
 	public static Result group1() {

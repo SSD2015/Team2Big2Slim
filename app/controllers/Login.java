@@ -22,6 +22,7 @@ public class Login extends Controller {
         public String shit;
         public String username;
         public String password;
+
         public String validate() {
             if (User.authenticate(username, password) == null) {
                 return "Invalid user or password";
@@ -47,7 +48,7 @@ public class Login extends Controller {
             User user = User.find.where().eq("username", info.username).eq("password", info.password).findUnique();
 
             session().clear();
-            session("connected", ""+user.getID());
+            session("userID", ""+user.getID());
             //String userId = session("connected");
             return redirect(routes.Application.index());
         }
