@@ -38,21 +38,17 @@ public class Application extends Controller {
     public static Result mockDatabase() {
 
         //project
-        Project.create(1,"Saint4","http://1.bp.blogspot.com/-kopuh2DtFoM/UcAFJnywwQI/AAAAAAAAAGQ/eKCXZQc9KhA/s1600/Line.png","App",
-                "http://www.cubrid.org/files/attach/images/220547/690/355/line_app_android.jpeg" ,
-                "http://www.trutower.com/wp-content/uploads/2013/08/Line-app-for-smartphones.jpg",
-                "http://k-popped.com/kpopped2012/wp-content/uploads/2014/06/stickers-600x303.jpg", "project2 description");
-        Project.create(2,"Manat","http://1.bp.blogspot.com/-kopuh2DtFoM/UcAFJnywwQI/AAAAAAAAAGQ/eKCXZQc9KhA/s1600/Line.png","App",
-                "http://www.cubrid.org/files/attach/images/220547/690/355/line_app_android.jpeg" ,
-                "http://www.trutower.com/wp-content/uploads/2013/08/Line-app-for-smartphones.jpg",
-                "http://k-popped.com/kpopped2012/wp-content/uploads/2014/06/stickers-600x303.jpg", "project3 description");
-        Project.create(3,"2Big2Slim","http://static.sportskeeda.com/wp-content/uploads/2014/08/gta-v-1409058623.jpg","App",
-                "http://i.ytimg.com/vi/1gnbUusxRks/maxresdefault.jpg","http://i.ytimg.com/vi/0YEY4PVbg0E/maxresdefault.jpg",
-                "http://i.ytimg.com/vi/lAdBJQXoCpc/maxresdefault.jpg", "project1 description");
-        Project.create(4,"Fatcat","http://1.bp.blogspot.com/-kopuh2DtFoM/UcAFJnywwQI/AAAAAAAAAGQ/eKCXZQc9KhA/s1600/Line.png","App",
-                "http://www.cubrid.org/files/attach/images/220547/690/355/line_app_android.jpeg" ,
-                "http://www.trutower.com/wp-content/uploads/2013/08/Line-app-for-smartphones.jpg",
-                "http://k-popped.com/kpopped2012/wp-content/uploads/2014/06/stickers-600x303.jpg", "project4 description");
+        String picProject1 = "assets/project/saint4_cat.jpg";
+        String picProject2 = "assets/project/manat_cat.jpg";
+        String picProject3 = "assets/project/2big2slim_cat.jpg";
+        String picProject4 = "assets/project/fatcat_cat.jpg";
+        String ss1 = "assets/ss/screenshot1.jpg";
+        String ss2 = "assets/ss/screenshot2.jpg";
+        String ss3 = "assets/ss/screenshot3.jpg";
+        Project.create(1, "Saint4", picProject1, "App", ss1, ss2, ss3, "This is a project1 description. Something is here.");
+        Project.create(2, "Manat", picProject2, "App", ss1, ss2, ss3, "This is a project2 description. Something is here.");
+        Project.create(3, "2Big2Slim", picProject3, "App", ss1, ss2, ss3, "This is a project3 description. Something is here.");
+        Project.create(4, "Fatcat", picProject4, "App", ss1, ss2, ss3, "This is a project4 description. Something is here.");
 
         //Users
         //admin projectId=99
