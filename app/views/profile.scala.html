@@ -134,7 +134,7 @@
                         <h2><center>Are you sure ?</center></h2>
                     </div>
                     <div class="modal-footer">
-                        <button onclick="location.href='http://2big2slim.linuxd.org:9000/login'" type="button" class="btn btn-default">Ok</button>
+                        <button onclick="location.href='/login'" type="button" class="btn btn-default">Ok</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                     </div>
                 </div>
@@ -341,13 +341,13 @@
                                     <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
                                     <div class="item active">
-                                        <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="100%" onclick="location.href='http://localhost:9000/screenshot1/' + @project.ID"> </button>
+                                        <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="100%" onclick="location.href='/screenshot1/' + @project.ID"> </button>
                                     </div>
                                     <div class="item">
-                                        <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="100%" onclick="location.href='http://localhost:9000/screenshot2/' + @project.ID"> </button>
+                                        <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="100%" onclick="location.href='/screenshot2/' + @project.ID"> </button>
                                     </div>
                                     <div class="item">
-                                        <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="100%" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.ID"> </button>
+                                        <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="100%" onclick="location.href='/screenshot3/' +  @project.ID"> </button>
                                     </div>
                                 </div>
 
@@ -553,6 +553,27 @@
         });
         //////////////////////////////////////////////
         });
+
+        //Clock Section
+//        function getdate(){
+//        var today = new Date();
+//        var h = today.getHours();
+//        var m = today.getMinutes();
+//        var s = today.getSeconds();
+//        if(h<10) {
+//        h = "0"+h;
+//        }
+//        if(m<10) {
+//        m = "0"+m;
+//        }
+//        if(s<10){
+//        s = "0"+s;
+//        }
+//        $("clock").text(h+" : "+m+" : "+s);
+//        setTimeout(function(){getdate()}, 500);
+//        }
+//        getdate();
+
         </script>
     </body>
     <div id="content"></div>

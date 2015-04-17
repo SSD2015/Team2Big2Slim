@@ -601,3 +601,343 @@ Converting String to [int] using property editor [org.springframework.beans.prop
 2015-04-17 20:58:15,681 - [TRACE] - from org.springframework.beans.TypeConverterDelegate in play-akka.actor.default-dispatcher-44 
 Converting String to [int] using property editor [org.springframework.beans.propertyeditors.CustomNumberEditor@320dbbb0]
 
+2015-04-17 21:05:45,136 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:05:45,198 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:06:28,625 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:06:28,679 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:13:46,133 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:13:46,187 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:17:29,565 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:17:29,619 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:20:28,173 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:20:28,227 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:22:59,506 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:22:59,562 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:23:23,437 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:23:23,493 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:26:19,329 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:26:19,372 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:27:25,915 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:27:25,962 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:29:24,059 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:29:24,104 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:30:26,778 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:30:26,837 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:48:32,314 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:48:32,358 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:50:09,033 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:50:09,099 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 21:50:56,175 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 21:50:56,231 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2015-04-17 22:08:59,895 - [ERROR] - from com.jolbox.bonecp.hooks.AbstractConnectionHook in play-internal-execution-context-2 
+Failed to obtain initial connection Sleeping for 0ms and trying again. Attempts left: 0. Exception: org.mariadb.jdbc.internal.common.QueryException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES).Message:Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+
+2015-04-17 22:08:59,920 - [ERROR] - from application in New I/O worker #2 
+
+
+! @6lok2nl8d - Internal server error, for (GET) [/xampp/] ->
+
+play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
+	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:94) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Configuration.reportError(Configuration.scala:743) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:247) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.map(List.scala:274) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.BoneCPPlugin.onStart(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+Caused by: java.sql.SQLException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.get(SQLExceptionMapper.java:149) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.throwException(SQLExceptionMapper.java:106) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:115) ~[mariadb-java-client-1.1.8.jar:na]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0_40]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0_40]
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:240) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	... 26 common frames omitted
+Caused by: org.mariadb.jdbc.internal.common.QueryException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.checkErrorPacket(MySQLProtocol.java:558) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:500) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:709) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.<init>(MySQLProtocol.java:280) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:111) ~[mariadb-java-client-1.1.8.jar:na]
+	... 32 common frames omitted
+
+2015-04-17 22:09:09,843 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6lok2nl8d - Internal server error, for (GET) [/profile/1] ->
+
+play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
+	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:94) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Configuration.reportError(Configuration.scala:743) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:247) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.map(List.scala:274) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.BoneCPPlugin.onStart(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+Caused by: java.sql.SQLException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.get(SQLExceptionMapper.java:149) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.throwException(SQLExceptionMapper.java:106) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:115) ~[mariadb-java-client-1.1.8.jar:na]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0_40]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0_40]
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:240) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	... 26 common frames omitted
+Caused by: org.mariadb.jdbc.internal.common.QueryException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.checkErrorPacket(MySQLProtocol.java:558) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:500) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:709) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.<init>(MySQLProtocol.java:280) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:111) ~[mariadb-java-client-1.1.8.jar:na]
+	... 32 common frames omitted
+
+2015-04-17 22:09:11,908 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6lok2nl8d - Internal server error, for (GET) [/profile/1] ->
+
+play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
+	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:94) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Configuration.reportError(Configuration.scala:743) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:247) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.map(List.scala:274) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.BoneCPPlugin.onStart(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+Caused by: java.sql.SQLException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.get(SQLExceptionMapper.java:149) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.throwException(SQLExceptionMapper.java:106) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:115) ~[mariadb-java-client-1.1.8.jar:na]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0_40]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0_40]
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:240) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	... 26 common frames omitted
+Caused by: org.mariadb.jdbc.internal.common.QueryException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.checkErrorPacket(MySQLProtocol.java:558) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:500) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:709) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.<init>(MySQLProtocol.java:280) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:111) ~[mariadb-java-client-1.1.8.jar:na]
+	... 32 common frames omitted
+
+2015-04-17 22:09:13,682 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6lok2nl8d - Internal server error, for (GET) [/profile/1] ->
+
+play.api.Configuration$$anon$1: Configuration error[Cannot connect to database [default]]
+	at play.api.Configuration$.play$api$Configuration$$configError(Configuration.scala:94) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Configuration.reportError(Configuration.scala:743) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:247) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.map(List.scala:274) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.BoneCPPlugin.onStart(DB.scala:238) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+Caused by: java.sql.SQLException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.get(SQLExceptionMapper.java:149) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.SQLExceptionMapper.throwException(SQLExceptionMapper.java:106) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:115) ~[mariadb-java-client-1.1.8.jar:na]
+	at java.sql.DriverManager.getConnection(DriverManager.java:664) ~[na:1.8.0_40]
+	at java.sql.DriverManager.getConnection(DriverManager.java:247) ~[na:1.8.0_40]
+	at com.jolbox.bonecp.BoneCP.obtainRawInternalConnection(BoneCP.java:363) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCP.<init>(BoneCP.java:416) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at com.jolbox.bonecp.BoneCPDataSource.getConnection(BoneCPDataSource.java:120) ~[bonecp-0.8.0.RELEASE.jar:na]
+	at play.api.db.BoneCPPlugin$$anonfun$onStart$1.apply(DB.scala:240) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	... 26 common frames omitted
+Caused by: org.mariadb.jdbc.internal.common.QueryException: Could not connect: Access denied for user 'root'@'localhost' (using password: YES)
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.checkErrorPacket(MySQLProtocol.java:558) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:500) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.connect(MySQLProtocol.java:709) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.internal.mysql.MySQLProtocol.<init>(MySQLProtocol.java:280) ~[mariadb-java-client-1.1.8.jar:na]
+	at org.mariadb.jdbc.Driver.connect(Driver.java:111) ~[mariadb-java-client-1.1.8.jar:na]
+	... 32 common frames omitted
+
+2015-04-17 22:10:26,533 - [WARN] - from play in play-internal-execution-context-2 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:383) [scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+
+2015-04-17 22:10:26,571 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost:3306/exceedvote
+
+2015-04-17 22:10:26,624 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
