@@ -9,346 +9,536 @@
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
     <script src="http://malsup.github.com/jquery.form.js"></script>
-
-    <!-- Latest compiled and minified CSS -->
+        <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-        .NameProject{
-            font-size : 250%;
-            color : black;
-        }
-        .Description{
-            font-size : 250%;
-            color : black;
-        }
-        .ScreenShot{
-            font-size : 250%;
-            color : black;
-        }
-        p{
-            font-style: normal;
-        }
-        .Line{
-            border-bottom: 1px dashed;
-        }
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img {
-            width: auto;
-            margin: auto;
-        }
-        .container{
-            width : 600px;
-            height : 400px;
-        }
-        .hiddenSubmit {
-            display : none;
-        }
-        .cog {
-            font-size: xx-large;
-        }
-        label > input{ /* HIDE RADIO */
-            display:none;
-        }
-        label > input + span{
-            cursor:pointer;
-            border:2px solid transparent;
-        }
-        label > input + button{
-            cursor:pointer;
-            border:2px solid transparent;
-        }
-        label > input:checked + span{
-            /*already in JQuery*/
-        }
-        label > input:checked + button{
-            /*already in JQuery*/
-        }
-        .star {
-            opacity: 0.5;
-            font-size: large;
-        }
-        .novoteButton{
-            margin-left: 10px;
-            opacity: 0.5;
-            font-size: smaller;
-        }
-        #template {
-            display: none;
-        }
-        .notSubmit {
+    .NameProject{
+    font-size : 250%;
+    color : black;
+    text-align:center;
+    }
+    .Description{
+    font-size : 250%;
+    color : black;
+    }
+    .ScreenShot{
+    font-size : 250%;
+    color : black;
+    }
+    .Rate{
+    font-size : 250%;
+    color : black;
+    }
+    .p{
+    font-style: normal;
+    }
+    p{
+    font-style: normal;
+    }
+    /* DASHED LINE*/
+    .Line1{
+    border-bottom: 1px dashed;
+    border-bottom-color: black;
+    }
+    /* SOLID LINE*/
+    .Line2{
+    border-bottom: 1px solid;
+    border-bottom-color: white;
+    }
+    /* RESERVE LINE
+    .Line3{
+        border-bottom: 1px solid;
+        border-bottom-color: black;
+    }
+    .Line4{
+        border-bottom: 1px solid;
+        border-bottom-color: black;
+    }
+    */
+    .ProPicBack{
+    background-color: lightskyblue;
+    }
+    .DesBack{
+    background-color: lightgrey;
+    }
+    .SceenBack{
+    background-color: lightskyblue;
+    }
+    .RateBack{
+    background-color: lightgrey;
+    }
+    .blankSpace1{
+    background-color: black;
+    }
+    .blankSpace2{
+    background-color: grey;
+    }
+    /*
+    .carousel-inner > .item > img,
+    .carousel-inner > .item > a > img{
+        width: auto;
+        margin: auto;
+    }
+    */
+    .container{
+    width : 100%;
+    }
+    .hiddenSubmit {
+    display : none;
+    }
+    .cog {
+    font-size: xx-large;
+    }
+    label > input{ /* HIDE RADIO */
+    display:none;
+    }
+    label > input + span{
+    cursor:pointer;
+    border:2px solid transparent;
+    }
+    label > input + button{
+    cursor:pointer;
+    border:2px solid transparent;
+    }
+    label > input:checked + span{
+    /*already in JQuery*/
+    }
+    label > input:checked + button{
+    /*already in JQuery*/
+    }
+    .star {
+    opacity: 0.5;
+    font-size: large;
+    }
+    .novoteButton{
+    margin-left: 10px;
+    opacity: 0.5;
+    font-size: smaller;
+    }
+    #template {
+    display: none;
+    }
+    .notSubmit {
 
-        }
+    }
 
     </style>
-
     <body>
+        <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><center>Are you sure ?</center></h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="location.href='http://localhost:9000/login'" type="button" class="btn btn-default">Ok</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <div class="container-fluid">
+                <!-- topbar -->
             <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-7">
-                    <div class = "NameProject jumbotron">
+                <div class="col-xs-12">
+                    <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                        <div class="navbar-headerll-left">
+                            <a class="navbar-brand hidden-xs" href="#">ExceedVote</a>
+                            <a class="navbar-brand" href="#"><clock ></clock></a>
+                        </div>
+                        <div class="navbar-header pull-right">
+                            <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span><font color="#F0F0F0" style="font-size:large"> Back</font></a>
+                            <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+                <!--Grey and black space with line-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "blankSpace1">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "blankSpace2">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "ProPicBack">
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = "NameProject jumbotron">
                             <h style="font-family:verdana" >@project.projectName</h>
-                    </div>
-                </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = "PictureProject">
-                        <p> <img src = @project.PicProject style="width:700px;height:450px"> </p>
-                    </div>
-                </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class = "Line"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = "Description">
-                        <h style="font-family:verdana" >Description</h>
-                    </div>
-                </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = "Information">
-                        <p>Project name: @project.projectName</p>
-                        <p>Type of project: @project.typeApp</p>
-                        <h4 style="font-family:verdana" >Member:</h4>
-                        @member.map { person =>
-                            <p>@person.name @person.surname @person.kuNo</p>
-                        }
-                    </div>
-                </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class = "Line"></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-2"> </div>
-                <div class="col-xs-8">
-                    <div class = ScreenShot>
-                        <h style="font-family:verdana" >Screenshot</h>
-                    </div>
-                </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-            <div class="row">
-                <div class = "col-xs-1"> </div>
-                <div class="col-xs-9">
-                    <div class="container">
-                        <br>
-                        <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                <!-- Indicators -->
-                            <ol class="carousel-indicators">
-                                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                <li data-target="#myCarousel" data-slide-to="1"></li>
-                                <li data-target="#myCarousel" data-slide-to="2"></li>
-                            </ol>
-
-                                <!-- Wrapper for slides -->
-                            <div class="carousel-inner" role="listbox">
-                                <div class="item active">
-                                    <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot1/' + @project.ID"> </button>
-                                </div>
-                                <div class="item">
-                                    <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot2/' + @project.ID"> </button>
-                                </div>
-                                <div class="item">
-                                    <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="553.5" height="345" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.ID"> </button>
-                                </div>
-                            </div>
-
-                                <!-- Left and right controls -->
-                            <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-                                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                                <span class="sr-only">Previous</span>
-                            </a>
-                            <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-                                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                                <span class="sr-only">Next</span>
-                            </a>
                         </div>
                     </div>
+                    <div class = "col-xs-2"> </div>
                 </div>
-                <div class = "col-xs-2"> </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-xs-12">
-                <div class = "Line"></div>
-            </div>
-        </div>
-        <div class="row">
-            <div class = "col-xs-2"> </div>
-            <div class="col-xs-8">
-                <div class = ScreenShot>
-                    <h style="font-family:verdana" >Rate
-                    <h3>Please rate Project @project.ID with follow criteria :</h3></h>
-                </div>
-
-                <div id="rateSection">
-                    <!-- Template rating criteria -->
-                    <!-- Criteria should get and generate from database -->
-                    <button class="btn btn-default" type="button" id="submitRate">Submit</button>
+                <div  class="row">
+                    <div  class = "col-xs-2"></div>
+                    <div class="col-xs-8">
+                        <div  class = "PictureProject">
+                            <p> <img src = @project.PicProject style="width:100%"> </p>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
                 </div>
             </div>
-            <div class = "col-xs-2"> </div>
+                <!--Grey and black space with line-->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "blankSpace2">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "blankSpace1">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class = "DesBack">
+                    <!--black space-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = "Description">
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span> Description
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = "Information">
+                            <p>Project name: @project.projectName</p>
+                            <p>Type of project: @project.typeApp</p>
+                            <h4 style="font-family:verdana" >Member:</h4>
+                                <!--for each-->
+                            @member.map { person =>
+                                <p>@person.name @person.surname @person.kuNo</p>
+                            }
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                    <!--blank space and solid line-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+            </div>
+                <!--solid line -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+            <div class="SceenBack">
+                    <!--blank space-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = ScreenShot>
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> Screenshot
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class="container">
+                            <br>
+                            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <!-- Indicators -->
+                                <ol class="carousel-indicators">
+                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                                </ol>
 
-            <div id="template">
-                <h3></h3> <!-- (At)criteriaList.getName(i) -->
-                <form action="/rate" method="post">
-                    <input type="hidden" name="projectID" value=@project.ID>
-                    <input type="hidden" name="criteriaID" value=""> <!-- value=(At)criteriaList.ID -->
+                                    <!-- Wrapper for slides -->
+                                <div class="carousel-inner" role="listbox">
+                                    <div class="item active">
+                                        <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="100%" onclick="location.href='http://localhost:9000/screenshot1/' + @project.ID"> </button>
+                                    </div>
+                                    <div class="item">
+                                        <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="100%" onclick="location.href='http://localhost:9000/screenshot2/' + @project.ID"> </button>
+                                    </div>
+                                    <div class="item">
+                                        <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="100%" onclick="location.href='http://localhost:9000/screenshot3/' +  @project.ID"> </button>
+                                    </div>
+                                </div>
 
-                    <!-- star1 -->
-                    <label class="score" value="1">
-                        <input type="radio" name="score" value="1">
-                        <span class="glyphicon glyphicon-star star" id="" value="1"></span>
-                    </label>
+                                    <!-- Left and right controls -->
+                                <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+                                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                                    <span class="sr-only">Previous</span>
+                                </a>
+                                <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+                                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                                    <span class="sr-only">Next</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                    <!--blank space-->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+            </div>
+                <!--solid line -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class = "Line2"></div>
+                </div>
+            </div>
+                <!--blank space-->
+            <div class = "RateBack">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-8">
+                        <div class = Rate>
+                            <h style="font-family:verdana" >Rate
+                                <h3>Please rate Project @project.ID with follow criteria :</h3></h>
+                        </div>
+                        <div id="rateSection">
+                                <!-- Template rating criteria -->
+                                <!-- Criteria should get and generate from database -->
+                            <button class="btn btn-default" type="button" id="submitRate">Submit</button>
+                        </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                <div id="template">
+                    <h3></h3> <!-- (At)criteriaList.getName(i) -->
+                    <form action="/rate" method="post">
+                        <input type="hidden" name="projectID" value=@project.ID>
+                        <input type="hidden" name="criteriaID" value=""> <!-- value=(At)criteriaList.ID -->
 
-                        <!-- star2 -->
-                    <label class="score" value="2">
-                        <input type="radio" name="score" value="2">
-                        <span class="glyphicon glyphicon-star star" id="" value="2"></span>
-                    </label>
+                        <!-- star1 -->
+                        <label class="score" value="1">
+                            <input type="radio" name="score" value="1">
+                            <span class="glyphicon glyphicon-star star" id="" value="1"></span>
+                        </label>
 
-                        <!-- star3 -->
-                    <label class="score" value="3">
-                        <input type="radio" name="score" value="3">
-                        <span class="glyphicon glyphicon-star star" id="" value="3"></span>
-                    </label>
+                            <!-- star2 -->
+                        <label class="score" value="2">
+                            <input type="radio" name="score" value="2">
+                            <span class="glyphicon glyphicon-star star" id="" value="2"></span>
+                        </label>
 
-                        <!-- star4 -->
-                    <label class="score" value="4">
-                        <input type="radio" name="score" value="4">
-                        <span class="glyphicon glyphicon-star star" id="" value="4"></span>
-                    </label>
+                            <!-- star3 -->
+                        <label class="score" value="3">
+                            <input type="radio" name="score" value="3">
+                            <span class="glyphicon glyphicon-star star" id="" value="3"></span>
+                        </label>
 
-                        <!-- star5 -->
-                    <label class="score" value="5">
-                        <input type="radio" name="score" value="5">
-                        <span class="glyphicon glyphicon-star star" id="" value="5"></span>
-                    </label>
+                            <!-- star4 -->
+                        <label class="score" value="4">
+                            <input type="radio" name="score" value="4">
+                            <span class="glyphicon glyphicon-star star" id="" value="4"></span>
+                        </label>
 
-                        <!-- no vote -->
-                    <label class="novote" value="0">
-                        <input type="radio" name="score" value="0" checked>
-                        <button class="btn btn-danger btn-xs novoteButton" id="" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
-                    </label>
-                    <br>
-                    <button type="submit" name="action" class="hiddenSubmit">Submit</button>
-                </form>
+                            <!-- star5 -->
+                        <label class="score" value="5">
+                            <input type="radio" name="score" value="5">
+                            <span class="glyphicon glyphicon-star star" id="" value="5"></span>
+                        </label>
+
+                            <!-- no vote -->
+                        <label class="novote" value="0">
+                            <input type="radio" name="score" value="0" checked>
+                            <button class="btn btn-danger btn-xs novoteButton" id="" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                        </label>
+                        <br>
+                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="test">
-            </div>
 
-        <!-- JQuery -->
+            <!-- JQuery -->
         <script>
 
+        $(document).ready(function(){
 
-            $(".test" ).attr("class", function(){
-                var a = $(this ).attr("class");
-                var b = " rate"+"9";
-                a += b;
-                return a;
+        //generating rate section base on database value
+        var size = @rcList.size();
+        var i = 0;
+            @rcList.map { rc => //for each
+            //append the html code
+            var name = "@rc.criteriaName";
+            $("#template" ).children("form" ).children("input[name='criteriaID']" ).attr("value", "@rc.ID");
+            $("#template" ).children ( "h3" ).text (name);
+            $("#template" ).children("form" ).children("label" ).children("span" ).each(function() {
+            $(this ).attr("class", function() {
+            var a = "glyphicon glyphicon-star star";
+            var b = " rate"+"@rc.ID";
+            a += b;
+            return a;
             });
-
-            $(document).ready(function(){
-
-                //generating rate section base on database value
-                var size = @rcList.size();
-                var i = 0;
-                @rcList.map { rc => //for each
-                    //append the html code
-                    var name = "@rc.criteriaName";
-                    $("#template" ).children("form" ).children("input[name='criteriaID']" ).attr("value", "@rc.ID");
-                    $("#template" ).children ( "h3" ).text (name);
-                    $("#template" ).children("form" ).children("label" ).children("span" ).each(function() {
-                        $(this ).attr("class", function() {
-                            var a = "glyphicon glyphicon-star star";
-                            var b = " rate"+"@rc.ID";
-                            a += b;
-                            return a;
-                        });
-                        $(this ).attr("id", "@rc.ID");
-                    });
-                    $("#template" ).children("form" ).children("label" ).children("button" ).each(function(){
-                        $(this ).attr("class", function() {
-                            var a = "btn btn-danger btn-xs novoteButton";
-                            var b = " rate"+"@rc.ID";
-                            a += b;
-                            return a;
-                        });
-                        $(this ).attr("id", "@rc.ID");
-                    });
-                    $("#rateSection" ).prepend($("#template" ).html());
-                    i++;
-                    if (i == size) {
-                        $("#template" ).children("form" ).children("button[type='submit']" ).attr("type","button");
-                    }
-                }
-                //////////////////////////////////////////////
-
-
-                //star
-                $(".star" ).click(function() {
-                    var id = $(this ).attr("id");
-                    var value = $(this ).attr("value");
-                    $(".rate"+id ).each(function() {
-                        var otherValue = $(this ).attr("value");
-                        if (value >= otherValue) {
-                            $(this ).css("opacity", "1");
-                        }
-                        else {
-                            $(this ).css("opacity", "0.5");
-                        }
-                    });
-                });
-                //////////////////////////////////////////////
-
-                //no vote button
-                $(".novoteButton" ).click(function() {
-                    if ($(this ).css("opacity") == 1) {
-                        $(this ).css("opacity", "0.5");
-                    } else {
-                        $(this ).css("opacity", "1");
-                        var id = $(this ).attr("id");
-                        $(".star.rate"+id ).each(function() {
-                            $(this ).css("opacity", "0.5");
-                        });
-                    }
-                });
-                //////////////////////////////////////////////
-
-                //form submition
-                $("form" ).ajaxForm(function() {
-                    console.log("submitted");
-                });
-                //////////////////////////////////////////////
-
-                //dummy submit button
-                $("#submitRate" ).click(function() {
-                    $ (".hiddenSubmit" ).each(function(index) {
-                        $(this ).click();
-                    });
-                });
-                //////////////////////////////////////////////
+            $(this ).attr("id", "@rc.ID");
             });
+            $("#template" ).children("form" ).children("label" ).children("button" ).each(function(){
+            $(this ).attr("class", function() {
+            var a = "btn btn-danger btn-xs novoteButton";
+            var b = " rate"+"@rc.ID";
+            a += b;
+            return a;
+            });
+            $(this ).attr("id", "@rc.ID");
+            });
+            $("#rateSection" ).prepend($("#template" ).html());
+            i++;
+            if (i == size) {
+            $("#template" ).children("form" ).children("button[type='submit']" ).attr("type","button");
+            }
+            }
+        //////////////////////////////////////////////
+
+
+        //star
+        $(".star" ).click(function() {
+        var id = $(this ).attr("id");
+        var value = $(this ).attr("value");
+        $(".rate"+id ).each(function() {
+        var otherValue = $(this ).attr("value");
+        if (value >= otherValue) {
+        $(this ).css("opacity", "1");
+        }
+        else {
+        $(this ).css("opacity", "0.5");
+        }
+        });
+        });
+        //////////////////////////////////////////////
+
+        //no vote button
+        $(".novoteButton" ).click(function() {
+        if ($(this ).css("opacity") == 1) {
+        $(this ).css("opacity", "0.5");
+        } else {
+        $(this ).css("opacity", "1");
+        var id = $(this ).attr("id");
+        $(".star.rate"+id ).each(function() {
+        $(this ).css("opacity", "0.5");
+        });
+        }
+        });
+        //////////////////////////////////////////////
+
+        //form submition
+        $("form" ).ajaxForm(function() {
+        console.log("submitted");
+        });
+        //////////////////////////////////////////////
+
+        //dummy submit button
+        $("#submitRate" ).click(function() {
+        $ (".hiddenSubmit" ).each(function(index) {
+        $(this ).click();
+        });
+        });
+        //////////////////////////////////////////////
+        });
         </script>
     </body>
     <div id="content"></div>
