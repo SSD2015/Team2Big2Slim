@@ -12,7 +12,9 @@
         <!-- Optional theme -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
     <style>
-
+    .picture{
+        margin-top: 100px;
+    }
 
     </style>
 
@@ -21,12 +23,39 @@
         <title></title>
     </head>
     <body>
+        <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><center>Are you sure ?</center></h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="location.href='/logout'" type="button" class="btn btn-default">Ok</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
         <div class="container-fluid">
+                <!-- topbar -->
+            <div class="row">
+                <div class="col-xs-12">
+                    <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                        <div class="navbar-headerll-left">
+                            <a class="navbar-brand hidden-xs" href="#">ExceedVote</a>
+                            <a class="navbar-brand" href="#"><clock ></clock></a>
+                        </div>
+                        <div class="navbar-header pull-right">
+                            <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
             <div class="row">
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
-                    <div class = "Picture">
-                        <p> <img src = @project.sc2 style="width:600px;height:350px"> </p>
+                    <div class = "picture">
+                        <p> <img src = @project.sc2 width="100%"> </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
@@ -36,12 +65,93 @@
                 <div class="col-xs-8">
                     <div class = "Button">
                         <button
-                            type="button" class="btn btn-default -lg" onclick="location.href='http://localhost:9000/profile/' + @project.ID"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
+                            type="button" class="btn btn-default -lg" onclick="location.href='/profile/' + @project.ID"> <span class="glyphicon glyphicon-arrow-left" aria-hidden="true" ></span> Go Back
                         </button>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
             </div>
         </div>
+        <script>
+        $("#votebar" ).toggle();
+        $(document).ready(function(){
+
+        //Clock Section
+        function getdate(){
+        var today = new Date();
+        var h = today.getHours();
+        var m = today.getMinutes();
+        var s = today.getSeconds();
+        if(h<10) {
+        h = "0"+h;
+        }
+        if(m<10) {
+        m = "0"+m;
+        }
+        if(s<10){
+        s = "0"+s;
+        }
+        $("clock").text(h+" : "+m+" : "+s);
+        setTimeout(function(){getdate()}, 500);
+        }
+        getdate();
+        //////////////////////////////////////////////
+
+        //Vote Section
+        $('#vote').click(function () {
+        var body = $("html, body");
+        body.animate({scrollTop:0}, "duration:600", "swing", function() {
+        //old vote animate
+        //                        console.log("vote");
+        //                        $("#topbar").fadeOut();
+        //                        $("#projectlistLayer").fadeOut();
+        //                        $("#votebar" ).fadeIn();
+        //                        $("#voteLayer" ).fadeIn();
+
+        });
+        });
+        //////////////////////////////////////////////
+
+        //Back Button
+        $("#back" ).click(function () {
+        $(".projectListLayer" ).toggle();
+        $("#topbar" ).fadeToggle(700, "swing", function() {
+        });
+        $("#votebar" ).fadeToggle(700, "swing", function() {
+        });
+        });
+        //////////////////////////////////////////////
+
+        //Vote Button
+        $(".voteB" ).click(function () {
+        var name = $(this ).attr("id");
+        var value = $(this ).attr("value");
+        $("projectname").contents().filter(function () {
+        return this.nodeType === 3;
+        } ).remove();
+        $("projectname" ).append(name);
+        $("#voteValue" ).attr("value", value);
+        });
+        //////////////////////////////////////////////
+
+        //Vote Criteria Section
+        var voteCriteriaID = -1;
+        $(".vote-criteria" ).click(function() {
+        voteCriteriaID = $(this ).attr("value");
+        $(".projectListLayer" ).toggle();
+        $("#topbar" ).fadeToggle(700, "swing", function() {
+        });
+        $("#votebar" ).fadeToggle(700, "swing", function() {
+        });
+        });
+        //////////////////////////////////////////////
+
+        var screenWidth = $(window ).width();
+        console.log(screenWidth);
+        if (screenWidth < 405) {
+        $(".voteText" ).css("font-size", "smaller");
+        }
+        });
+        </script>
     </body>
 </html>
