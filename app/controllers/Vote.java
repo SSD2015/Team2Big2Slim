@@ -29,25 +29,25 @@ public class Vote extends Controller {
     }
 
     public static Result submitVote() {
-		VotingRecord record = Form.form(VotingRecord.class).bindFromRequest().get();
-        //Form<VoteInfo> voteForm = Form.form(VoteInfo.class).bindFromRequest();
-        //VoteInfo info = voteForm.get();
+		//VotingRecord record = Form.form(VotingRecord.class).bindFromRequest().get();
+        Form<VoteInfo> voteForm = Form.form(VoteInfo.class).bindFromRequest();
+        VoteInfo info = voteForm.get();
 //        System.out.println("ID: "+info.projectID);
-        VotingRecord oldRecord = VotingRecord.find.where().eq("userID", record.getUserID()).eq("projectID", record.getProjectID()).eq("criteriaID", record.getCriteriaID()).findUnique();
-        //Project existProject = Project.find.where().eq("ID", info.projectID).findUnique();
+        //VotingRecord oldRecord = VotingRecord.find.where().eq("userID", record.getUserID()).eq("projectID", record.getProjectID()).eq("criteriaID", record.getCriteriaID()).findUnique();
+        Project existProject = Project.find.where().eq("ID", info.projectID).findUnique();
 
-		if( oldRecord != null ) {
+		/*if( oldRecord != null ) {
             oldRecord.updateScore();
             oldRecord.save();
         }
 		else
 		{
 			record.save();
-		}
-        /*if( existProject != null ) {
+		}*/
+        if( existProject != null ) {
             existProject.updateVote();
             existProject.save();
-        }*/
+        }
 		
         return redirect("/");
     }

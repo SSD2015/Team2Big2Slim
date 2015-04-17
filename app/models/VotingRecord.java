@@ -36,7 +36,7 @@ public class VotingRecord {
 	
 	public int getScore()
 	{
-		return this.score();
+		return this.score;
 	}
 	
 	public void updateScore()
