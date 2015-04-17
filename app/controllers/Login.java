@@ -19,7 +19,6 @@ import static play.libs.Json.toJson;
 public class Login extends Controller {
 
     public static class LoginInfo {
-        public String shit;
         public String username;
         public String password;
         public String validate() {
@@ -32,15 +31,16 @@ public class Login extends Controller {
 
     public static Result login() {
         return ok( login.render(Form.form(LoginInfo.class)));
-        //return ok( login.render( Form.form() ) );
     }
 
     public static Result authenticate() {
         Form<LoginInfo> loginForm = Form.form(LoginInfo.class).bindFromRequest();
+
         //wrong username or password
         if (loginForm.hasErrors()) {
             return badRequest(login.render(loginForm));
         }
+
         //correct
         else {
             LoginInfo info = loginForm.get();
@@ -48,13 +48,9 @@ public class Login extends Controller {
 
             session().clear();
             session("userID", ""+user.getID());
-            //String userId = session("connected");
             return redirect(routes.Application.index());
         }
-       // if( loginForm.get().username.equals("admin") && loginForm.get().password.equals("admin") )  {
-            //System.out.println("\nI'm in");
-            //return redirect(routes.Application.index());
-        //}
+
     }
 
 }

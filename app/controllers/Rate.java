@@ -25,16 +25,7 @@ public class Rate extends Controller {
 	
 	public static Result submitRate() {
 
-        //Form<RatingRecord> ratingForm = Form.form(RatingRecord.class).bindFromRequest();
-        //System.out.println("RateForm: " + ratingForm.get());
-        //System.out.println("ID: " + ratingForm.get().getID());
-        //System.out.println("projectID: " + ratingForm.get().getProjectID());
-        //System.out.println("criteriaID: " + ratingForm.get().getCriteriaID());
-        //System.out.println("score: " + ratingForm.get().getScore());
-
         RatingRecord record = Form.form(RatingRecord.class).bindFromRequest().get();
-
-        //int userID = Integer.parseInt(session().get("userID"));
 
         System.out.println("User ID: " + record.getUserID());
         System.out.println("RateForm: " + record);
@@ -55,9 +46,7 @@ public class Rate extends Controller {
 		return redirect("/profile/"+record.getProjectID());
 	}
 	
-	public static Result showRateResult()
-	{
-	//RatingRecord.find.all()
+	public static Result showRateResult() {
 		return ok(rateResult.render(RatingRecord.find.all()));
 	}
 

@@ -17,7 +17,6 @@ public class Application extends Controller {
 
     @Security.Authenticated(Secured.class)
     public static Result index() {
-        //VotingCriteria vc = VotingCriteria.find.where().findUnique();
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
 
@@ -41,25 +40,13 @@ public class Application extends Controller {
         return ok(vote.render());
     }
 
-    /*public static Result vote(String id){
-        Project projects = Project.find.byId(id);
-        projects.score++;
-        projects.save();
-        return redirect(routes.Application.getVoteResult());
-    }*/
 
-    public static Result addProject(){
-        return ok(creater.render("create project"));
-    }
 
     public static Result getVoteResult(){
         List<Project> projects = new Model.Finder<String, Project>(String.class, Project.class).all();
         return ok(toJson(projects));
     }
-
-	public static Result group1() {
-		return ok(group1.render( Math.random()*5) );
-	}
+    
 
     public static Result logout() {
         session().clear();

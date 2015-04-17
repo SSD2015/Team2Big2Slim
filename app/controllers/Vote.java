@@ -52,6 +52,5 @@ public class Vote extends Controller {
 
     public static Result showVoteResult() {
         return ok(voteResult.render( Project.find.all()) );
-        //return ok("hello");
     }
 }

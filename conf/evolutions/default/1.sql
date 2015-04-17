@@ -12,12 +12,6 @@ create table member (
   constraint pk_member primary key (id))
 ;
 
-create table note (
-  id                        bigint auto_increment not null,
-  name                      varchar(255),
-  constraint pk_note primary key (id))
-;
-
 create table project (
   id                        integer auto_increment not null,
   project_name              varchar(255),
@@ -85,8 +79,6 @@ create table voting_record (
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table member;
-
-drop table note;
 
 drop table project;
 
