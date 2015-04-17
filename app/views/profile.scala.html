@@ -1,4 +1,4 @@
-@(project : Project )(member : List[Member])(rcList : List[RatingCriteria])
+@(project : Project )(member : List[Member])(rcList : List[RatingCriteria])(currentUserID : Integer)
 <!DOCTYPE HTML>
 <html lang = "en">
     <title>@project.projectName</title>
@@ -413,6 +413,7 @@
                 <div id="template">
                     <h3></h3> <!-- (At)criteriaList.getName(i) -->
                     <form action="/rate" method="post">
+                        <input type="hidden" name="userID" value=@currentUserID>
                         <input type="hidden" name="projectID" value=@project.ID>
                         <input type="hidden" name="criteriaID" value=""> <!-- value=(At)criteriaList.ID -->
 
