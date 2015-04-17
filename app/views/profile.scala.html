@@ -1,4 +1,4 @@
-@(project : Project )(member : List[Member])
+@(project : Project )(member : List[Member])(rcList : List[RatingCriteria])
 <!DOCTYPE HTML>
 <html lang = "en">
     <title>@project.projectName</title>
@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
+    <script src="http://malsup.github.com/jquery.form.js"></script>    
         <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <!-- Optional theme -->
@@ -30,6 +32,9 @@
         color : black;
     }
     .p{
+        font-style: normal;
+    }
+    p{
         font-style: normal;
     }
     /* DASHED LINE*/
@@ -80,6 +85,45 @@
     .container{
         width : 100%;
     }
+    .hiddenSubmit {
+            display : none;
+    }
+    .cog {
+            font-size: xx-large;
+    }
+    label > input{ /* HIDE RADIO */
+        display:none;
+    }
+    label > input + span{
+        cursor:pointer;
+        border:2px solid transparent;
+    }
+    label > input + button{
+        cursor:pointer;
+        border:2px solid transparent;
+    }
+    label > input:checked + span{
+        /*already in JQuery*/
+    }
+    label > input:checked + button{
+        /*already in JQuery*/
+    }
+    .star {
+        opacity: 0.5;
+        font-size: large;
+    }
+    .novoteButton{
+        margin-left: 10px;
+        opacity: 0.5;
+        font-size: smaller;
+    }
+    #template {
+        display: none;
+    }
+    .notSubmit {
+
+    }
+
     </style>
     <body>
         <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
@@ -341,58 +385,61 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = Rate>
-                            <span class="glyphicon glyphicon-thumbs-up" aria-hidden="true" ></span> Rate
-                            <h3>Please rate Project @project.ID with follow criteria :</h3>
-
-                            <div>
-                                <!-- Template rating criteria -->
-                                <h3>Ease of use</h3>
-                                <form action="/rate" method="post">
-                                    <input type="hidden" name="projectID" value=@project.ID>
-                                    <input type="hidden" name="criteriaID" value="1">
-                                    <input type="radio" name="score" value="0" checked>
-                                    <input type="radio" name="score" value="1">
-                                    <input type="radio" name="score" value="2">
-                                    <input type="radio" name="score" value="3">
-                                    <input type="radio" name="score" value="4">
-                                    <input type="radio" name="score" value="5">
-                                    <br>
-                                    <button type="submit" name="action">Submit</button>
-                                </form>
-
-                                <h3>Reliability</h3>
-                                <form action="/rate" method="post">
-                                    <input type="hidden" name="projectID" value=@project.ID>
-                                    <input type="hidden" name="criteriaID" value="1">
-                                    <input type="radio" name="score" value="0" checked>
-                                    <input type="radio" name="score" value="1">
-                                    <input type="radio" name="score" value="2">
-                                    <input type="radio" name="score" value="3">
-                                    <input type="radio" name="score" value="4">
-                                    <input type="radio" name="score" value="5">
-                                    <br>
-                                    <button type="submit" name="action">Submit</button>
-                                </form>
-
-                                <h3>Security</h3>
-                                <form action="/rate" method="post">
-                                    <input type="hidden" name="projectID" value=@project.ID>
-                                    <input type="hidden" name="criteriaID" value="1">
-                                    <input type="radio" name="score" value="0" checked>
-                                    <input type="radio" name="score" value="1">
-                                    <input type="radio" name="score" value="2">
-                                    <input type="radio" name="score" value="3">
-                                    <input type="radio" name="score" value="4">
-                                    <input type="radio" name="score" value="5">
-                                    <br>
-                                    <button type="submit" name="action">Submit</button>
-                                </form>
-
-                                <b
-                            </div>
+                            <h style="font-family:verdana" >Rate
+                            <h3>Please rate Project @project.ID with follow criteria :</h3></h>
+                        </div>
+                        <div id="rateSection">
+                            <!-- Template rating criteria -->
+                            <!-- Criteria should get and generate from database -->
+                            <button class="btn btn-default" type="button" id="submitRate">Submit</button>
                         </div>
                     </div>
                     <div class = "col-xs-2"> </div>
+                </div>
+                <div id="template">
+                    <h3></h3> <!-- (At)criteriaList.getName(i) -->
+                    <form action="/rate" method="post">
+                        <input type="hidden" name="projectID" value=@project.ID>
+                        <input type="hidden" name="criteriaID" value=""> <!-- value=(At)criteriaList.ID -->
+
+                        <!-- star1 -->
+                        <label class="score" value="1">
+                            <input type="radio" name="score" value="1">
+                            <span class="glyphicon glyphicon-star star" id="" value="1"></span>
+                        </label>
+
+                            <!-- star2 -->
+                        <label class="score" value="2">
+                            <input type="radio" name="score" value="2">
+                            <span class="glyphicon glyphicon-star star" id="" value="2"></span>
+                        </label>
+
+                            <!-- star3 -->
+                        <label class="score" value="3">
+                            <input type="radio" name="score" value="3">
+                            <span class="glyphicon glyphicon-star star" id="" value="3"></span>
+                        </label>
+
+                            <!-- star4 -->
+                        <label class="score" value="4">
+                            <input type="radio" name="score" value="4">
+                            <span class="glyphicon glyphicon-star star" id="" value="4"></span>
+                        </label>
+
+                            <!-- star5 -->
+                        <label class="score" value="5">
+                            <input type="radio" name="score" value="5">
+                            <span class="glyphicon glyphicon-star star" id="" value="5"></span>
+                        </label>
+
+                            <!-- no vote -->
+                        <label class="novote" value="0">
+                            <input type="radio" name="score" value="0" checked>
+                            <button class="btn btn-danger btn-xs novoteButton" id="" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                        </label>
+                        <br>
+                        <button type="submit" name="action" class="hiddenSubmit">Submit</button>
+                    </form>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
@@ -405,90 +452,101 @@
                     </div>
                 </div>
             </div>
-
         </div>
+
 
             <!-- JQuery -->
         <script>
-            $("#votebar" ).toggle();
+
+
+            $(".test" ).attr("class", function(){
+                var a = $(this ).attr("class");
+                var b = " rate"+"9";
+                a += b;
+                return a;
+            });
+
             $(document).ready(function(){
 
-        //Clock Section
-        function getdate(){
-        var today = new Date();
-        var h = today.getHours();
-        var m = today.getMinutes();
-        var s = today.getSeconds();
-        if(h<10) {
-        h = "0"+h;
-        }
-        if(m<10) {
-        m = "0"+m;
-        }
-        if(s<10){
-        s = "0"+s;
-        }
-        $("clock").text(h+" : "+m+" : "+s);
-        setTimeout(function(){getdate()}, 500);
-        }
-        getdate();
-        //////////////////////////////////////////////
+                //generating rate section base on database value
+                var size = @rcList.size();
+                var i = 0;
+                @rcList.map { rc => //for each
+                    //append the html code
+                    var name = "@rc.criteriaName";
+                    $("#template" ).children("form" ).children("input[name='criteriaID']" ).attr("value", "@rc.ID");
+                    $("#template" ).children ( "h3" ).text (name);
+                    $("#template" ).children("form" ).children("label" ).children("span" ).each(function() {
+                        $(this ).attr("class", function() {
+                            var a = "glyphicon glyphicon-star star";
+                            var b = " rate"+"@rc.ID";
+                            a += b;
+                            return a;
+                        });
+                        $(this ).attr("id", "@rc.ID");
+                    });
+                    $("#template" ).children("form" ).children("label" ).children("button" ).each(function(){
+                        $(this ).attr("class", function() {
+                            var a = "btn btn-danger btn-xs novoteButton";
+                            var b = " rate"+"@rc.ID";
+                            a += b;
+                            return a;
+                        });
+                        $(this ).attr("id", "@rc.ID");
+                    });
+                    $("#rateSection" ).prepend($("#template" ).html());
+                    i++;
+                    if (i == size) {
+                        $("#template" ).children("form" ).children("button[type='submit']" ).attr("type","button");
+                    }
+                }
+                //////////////////////////////////////////////
 
-        //Vote Section
-        $('#vote').click(function () {
-        var body = $("html, body");
-        body.animate({scrollTop:0}, "duration:600", "swing", function() {
-        //old vote animate
-        //                        console.log("vote");
-        //                        $("#topbar").fadeOut();
-        //                        $("#projectlistLayer").fadeOut();
-        //                        $("#votebar" ).fadeIn();
-        //                        $("#voteLayer" ).fadeIn();
 
-        });
-        });
-        //////////////////////////////////////////////
+                //star
+                $(".star" ).click(function() {
+                    var id = $(this ).attr("id");
+                    var value = $(this ).attr("value");
+                    $(".rate"+id ).each(function() {
+                        var otherValue = $(this ).attr("value");
+                        if (value >= otherValue) {
+                            $(this ).css("opacity", "1");
+                        }
+                        else {
+                            $(this ).css("opacity", "0.5");
+                        }
+                    });
+                });
+                //////////////////////////////////////////////
 
-        //Back Button
-        $("#back" ).click(function () {
-        $(".projectListLayer" ).toggle();
-        $("#topbar" ).fadeToggle(700, "swing", function() {
-        });
-        $("#votebar" ).fadeToggle(700, "swing", function() {
-        });
-        });
-        //////////////////////////////////////////////
+                //no vote button
+                $(".novoteButton" ).click(function() {
+                    if ($(this ).css("opacity") == 1) {
+                        $(this ).css("opacity", "0.5");
+                    } else {
+                        $(this ).css("opacity", "1");
+                        var id = $(this ).attr("id");
+                        $(".star.rate"+id ).each(function() {
+                            $(this ).css("opacity", "0.5");
+                        });
+                    }
+                });
+                //////////////////////////////////////////////
 
-        //Vote Button
-        $(".voteB" ).click(function () {
-        var name = $(this ).attr("id");
-        var value = $(this ).attr("value");
-        $("projectname").contents().filter(function () {
-        return this.nodeType === 3;
-        } ).remove();
-        $("projectname" ).append(name);
-        $("#voteValue" ).attr("value", value);
-        });
-        //////////////////////////////////////////////
+                //form submition
+                $("form" ).ajaxForm(function() {
+                    console.log("submitted");
+                });
+                //////////////////////////////////////////////
 
-        //Vote Criteria Section
-        var voteCriteriaID = -1;
-        $(".vote-criteria" ).click(function() {
-        voteCriteriaID = $(this ).attr("value");
-        $(".projectListLayer" ).toggle();
-        $("#topbar" ).fadeToggle(700, "swing", function() {
-        });
-        $("#votebar" ).fadeToggle(700, "swing", function() {
-        });
-        });
-        //////////////////////////////////////////////
-
-        var screenWidth = $(window ).width();
-        console.log(screenWidth);
-        if (screenWidth < 405) {
-        $(".voteText" ).css("font-size", "smaller");
-        }
-        });
+                //dummy submit button
+                $("#submitRate" ).click(function() {
+                    $ (".hiddenSubmit" ).each(function(index) {
+                        $(this ).click();
+                    });
+                });
+                //////////////////////////////////////////////
+            });
         </script>
     </body>
     <div id="content"></div>
