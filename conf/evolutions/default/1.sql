@@ -3,15 +3,6 @@
 
 # --- !Ups
 
-create table member (
-  id                        bigint auto_increment not null,
-  name                      varchar(255),
-  surname                   varchar(255),
-  ku_no                     varchar(255),
-  project_id                bigint,
-  constraint pk_member primary key (id))
-;
-
 create table project (
   id                        integer auto_increment not null,
   project_name              varchar(255),
@@ -29,11 +20,6 @@ create table rating_criteria (
   constraint pk_rating_criteria primary key (id))
 ;
 
-create table rating_criteria_list (
-  id                        integer auto_increment not null,
-  constraint pk_rating_criteria_list primary key (id))
-;
-
 create table rating_record (
   id                        integer auto_increment not null,
   project_id                integer,
@@ -47,6 +33,9 @@ create table regular_user (
   id                        integer auto_increment not null,
   username                  varchar(255),
   password                  varchar(255),
+  name                      varchar(255),
+  project_id                integer,
+  ku_no                     varchar(255),
   constraint pk_regular_user primary key (id))
 ;
 
@@ -54,6 +43,9 @@ create table user (
   id                        integer auto_increment not null,
   username                  varchar(255),
   password                  varchar(255),
+  name                      varchar(255),
+  project_id                integer,
+  ku_no                     varchar(255),
   constraint pk_user primary key (id))
 ;
 
@@ -78,13 +70,9 @@ create table voting_record (
 
 SET FOREIGN_KEY_CHECKS=0;
 
-drop table member;
-
 drop table project;
 
 drop table rating_criteria;
-
-drop table rating_criteria_list;
 
 drop table rating_record;
 

@@ -25,10 +25,6 @@ public class Vote extends Controller {
 		public int criteriaID;
     }
 
-    public static Result vote() {
-        return ok(vote.render());
-    }
-
     public static Result submitVote() {
         VotingRecord record = Form.form(VotingRecord.class).bindFromRequest().get();
         System.out.println("User ID: " + record.getUserID());
@@ -50,6 +46,7 @@ public class Vote extends Controller {
         return redirect("/");
     }
 
+    @Security.Authenticated(Secured.class)
     public static Result showVoteResult() {
         return ok(voteResult.render( Project.find.all()) );
     }

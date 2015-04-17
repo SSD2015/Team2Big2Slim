@@ -3,7 +3,9 @@ package models;
 /**
  * Created by nicole on 3/5/15 AD.
  */
+import controllers.Secured;
 import play.db.ebean.Model;
+import play.mvc.Security;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -45,6 +47,4 @@ public class Project extends Model {
     public String getProjectName() {
         return projectName;
     }
-
-
 }

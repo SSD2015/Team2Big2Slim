@@ -1,4 +1,4 @@
-@(project : Project )(member : List[Member])(rcList : List[RatingCriteria])(currentUserID : Integer)
+@(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)
 <!DOCTYPE HTML>
 <html lang = "en">
     <title>@project.projectName</title>
@@ -280,7 +280,7 @@
                             <h4 style="font-family:verdana" >Member:</h4>
                                 <!--for each-->
                             @member.map { person =>
-                                <p>@person.name @person.surname @person.kuNo</p>
+                                <p>@person.name ID: @person.kuNo</p>
                             }
                         </div>
                     </div>

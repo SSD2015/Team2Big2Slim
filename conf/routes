@@ -6,7 +6,6 @@
 GET         /                    controllers.Application.index()
 
 POST        /vote                controllers.Vote.submitVote()
-GET         /vote                controllers.Vote.vote()
 
 GET         /voteResult          controllers.Vote.showVoteResult()
 
@@ -21,7 +20,6 @@ POST        /login               controllers.Login.authenticate()
 GET         /logout              controllers.Application.logout()
 
 
-GET         /rate                controllers.Rate.rate()
 POST        /rate                controllers.Rate.submitRate()
 GET         /rateResult          controllers.Rate.showRateResult()
 

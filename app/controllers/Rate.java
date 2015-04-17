@@ -18,10 +18,6 @@ import static play.data.Form.form;
 import static play.libs.Json.toJson;
 
 public class Rate extends Controller {
-
-    public static Result rate() {
-        return ok(rate.render());
-    }
 	
 	public static Result submitRate() {
 
@@ -45,7 +41,8 @@ public class Rate extends Controller {
 
 		return redirect("/profile/"+record.getProjectID());
 	}
-	
+
+    @Security.Authenticated(Secured.class)
 	public static Result showRateResult() {
 		return ok(rateResult.render(RatingRecord.find.all()));
 	}

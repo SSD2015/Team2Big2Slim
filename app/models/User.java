@@ -13,16 +13,22 @@ public class User extends Model{
     protected int ID;
     public String username;
     public String password;
+    public String name;
+    public int projectId;
+    public String kuNo;
 
     public static Finder<Integer, User> find = new Finder<Integer,User>(
             Integer.class, User.class
     );
 
-    public static void create(int id, String username, String password){
+    public static void create(int id, String username, String password, String name, int projectId, String kuNo){
         User user = new User();
         user.ID = id;
         user.username = username;
         user.password = password;
+        user.name = name;
+        user.projectId = projectId;
+        user.kuNo = kuNo;
         user.save();
     }
 
