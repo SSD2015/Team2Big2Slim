@@ -1,6 +1,12 @@
+<<<<<<< HEAD
 // @SOURCE:C:/Team2Big2Slim/conf/routes
 // @HASH:c32a6596921eb542a516bb1ba6c776c900949a75
 // @DATE:Fri Apr 17 12:46:50 ICT 2015
+=======
+// @SOURCE:/Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/conf/routes
+// @HASH:902ccbfd5b1afc2c7b81c2226d42ac838564771e
+// @DATE:Fri Apr 17 14:19:57 ICT 2015
+>>>>>>> c353ba6c7af9280be2b53018f6dcb419a8c0ae6d
 
 
 import play.core._

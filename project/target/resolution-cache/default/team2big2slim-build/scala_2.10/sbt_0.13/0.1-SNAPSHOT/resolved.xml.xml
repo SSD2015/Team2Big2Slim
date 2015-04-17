@@ -4,8 +4,13 @@
 		module="team2big2slim-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
+<<<<<<< HEAD
 		publication="25580417124602"
 		e:scalaVersion="2.10" e:sbtVersion="0.13"
+=======
+		publication="20150417141943"
+		e:sbtVersion="0.13" e:scalaVersion="2.10"
+>>>>>>> c353ba6c7af9280be2b53018f6dcb419a8c0ae6d
 	>
 		<description>
 		team2big2slim-build

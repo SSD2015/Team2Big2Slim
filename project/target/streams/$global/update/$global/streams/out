@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 [0m[[0minfo[0m] [0mUpdating {file:/C:/Team2Big2Slim/project/}team2big2slim-build...[0m
+=======
+[0m[[0minfo[0m] [0mUpdating {file:/Users/nutkaewnak/Desktop/untitled%20folder%202/Team2Big2Slim/project/}team2big2slim-build...[0m
+>>>>>>> c353ba6c7af9280be2b53018f6dcb419a8c0ae6d
 [0m[[0mdebug[0m] [0m:: resolving dependencies :: default#team2big2slim-build;0.1-SNAPSHOT[0m
 [0m[[0mdebug[0m] [0m	confs: [compile, runtime, test, provided, optional, compile-internal, runtime-internal, test-internal, plugin, sources, docs, pom, scala-tool][0m
 [0m[[0mdebug[0m] [0m	validate = true[0m
@@ -158,9 +162,15 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->master][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->master(*)][0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile][0m
+=======
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->com.google.guava#guava;16.0.1 [compile->compile(*)][0m
+>>>>>>> c353ba6c7af9280be2b53018f6dcb419a8c0ae6d
 [0m[[0mdebug[0m] [0m== resolving dependencies com.typesafe.play#sbt-plugin;2.3.8->org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 [compile->default(compile)][0m
 [0m[[0minfo[0m] [0mResolving org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.avaje.ebeanorm#avaje-ebeanorm-agent;3.2.2 {compile=[default(compile)]}[0m
@@ -401,6 +411,7 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->compile(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [compile->compile][0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->default(compile)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile][0m
@@ -411,6 +422,18 @@
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime(*)][0m
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile][0m
+=======
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [runtime->runtime(*)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.apache.commons#commons-compress;1.7->org.tukaani#xz;1.4 [runtime->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->default(compile)][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->runtime][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->compile][0m
+[0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.commons#commons-compress;1.7 [compile->master][0m
+>>>>>>> c353ba6c7af9280be2b53018f6dcb419a8c0ae6d
 [0m[[0mdebug[0m] [0m== resolving dependencies org.vafer#jdeb;1.3->org.apache.maven#maven-core;3.2.2 [compile->master(*)][0m
 [0m[[0minfo[0m] [0mResolving org.apache.maven#maven-core;3.2.2 ...[0m
 [0m[[0mdebug[0m] [0msbt-chain: Checking cache for: dependency: org.apache.maven#maven-core;3.2.2 {compile=[compile(*), master(*)], runtime=[runtime(*)]}[0m
@@ -12317,6 +12340,7 @@
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-sbt#apply-macro;0.13.5!apply-macro.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.scala-lang#jline;2.10.4!jline.jar[0m
 [0m[[0mdebug[0m] [0m	[NOT REQUIRED] org.fusesource.jansi#jansi;1.4!jansi.jar[0m
+<<<<<<< HEAD
 [0m[[0mdebug[0m] [0m:: resolution report :: resolve 10349ms :: artifacts dl 283ms[0m
 [0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in C:\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-compile.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in C:\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-runtime.xml[0m
@@ -12332,4 +12356,21 @@
 [0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in C:\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-pom.xml[0m
 [0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in C:\Team2Big2Slim\project\target\resolution-cache\reports\default-team2big2slim-build-scala-tool.xml[0m
 [0m[[0mdebug[0m] [0m	resolve done (10349ms resolve - 283ms download)[0m
+=======
+[0m[[0mdebug[0m] [0m:: resolution report :: resolve 5301ms :: artifacts dl 95ms[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT compile produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT runtime produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT test produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT provided produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-provided.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT optional produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-optional.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT compile-internal produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-compile-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT runtime-internal produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-runtime-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT test-internal produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-test-internal.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT plugin produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-plugin.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT sources produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-sources.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT docs produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-docs.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT pom produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-pom.xml[0m
+[0m[[0mdebug[0m] [0m	report for default#team2big2slim-build;0.1-SNAPSHOT scala-tool produced in /Users/nutkaewnak/Desktop/untitled folder 2/Team2Big2Slim/project/target/resolution-cache/reports/default-team2big2slim-build-scala-tool.xml[0m
+[0m[[0mdebug[0m] [0m	resolve done (5301ms resolve - 95ms download)[0m
+>>>>>>> c353ba6c7af9280be2b53018f6dcb419a8c0ae6d
 [0m[[0minfo[0m] [0mDone updating.[0m
