@@ -37,6 +37,14 @@ public class User extends Model{
         return user;
     }
 
+    public boolean hasVoted(int criteriaId) {
+        VotingRecord oldVote = VotingRecord.find.where().eq("userID", ID).eq("criteriaID", criteriaId).findUnique();
+        if (oldVote == null)
+            return false;
+        else
+            return true;
+    }
+
     public int getID() {
         return ID;
     }

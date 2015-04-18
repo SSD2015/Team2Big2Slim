@@ -23,7 +23,8 @@ GET         /logout                          controllers.Application.logout()
 POST        /rate                            controllers.Rate.submitRate()
 GET         /rateResult                      controllers.Rate.showRateResult()
 
-GET         /install                         controllers.Application.mockDatabase()
+#Comment so, no one can't install
+#GET         /install                         controllers.Application.mockDatabase()
 
 
 GET         /profile/:id                     controllers.ProjectList.index(id:Integer)
