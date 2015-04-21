@@ -11,6 +11,9 @@ import models.Project;
 import views.html.*;
 
 import javax.persistence.Entity;
+import java.time.Clock;
+import java.time.LocalDateTime;
+import java.util.Calendar;
 import java.util.List;
 
 import static play.data.Form.*;
@@ -23,6 +26,7 @@ public class Login extends Controller {
         public String password;
         public String validate() {
             if (User.authenticate(username, password) == null) {
+                Logger.warn("username: "+username+" has entered wrong password");
                 return "Invalid user or password";
             }
             return null;
@@ -48,6 +52,9 @@ public class Login extends Controller {
 
             session().clear();
             session("userID", ""+user.getID());
+
+            Logger.info("username : "+ info.username+" has logged in to the system at "+ LocalDateTime.now());
+
             return redirect(routes.Application.index());
         }
 

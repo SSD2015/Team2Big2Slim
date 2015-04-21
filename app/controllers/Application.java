@@ -9,6 +9,7 @@ import models.*;
 
 import views.html.*;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static play.libs.Json.toJson;
@@ -20,7 +21,7 @@ public class Application extends Controller {
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
 
-        System.out.println("This user = " + currentUser.username);
+//        System.out.println("This user = " + currentUser.username);
 
         return ok(index.render( VotingCriteria.find.all(), currentUser ));
     }
@@ -29,6 +30,8 @@ public class Application extends Controller {
     public static Result logout() {
         session().clear();
         flash("success", "You've been logged out");
+        String username = User.find.byId(Integer.parseInt(session().get("userID"))).username;
+        Logger.info("username: "+username+" has logged out at "+ LocalDateTime.now());
         return redirect(
                 routes.Login.login()
         );

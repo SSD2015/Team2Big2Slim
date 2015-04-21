@@ -13,6 +13,7 @@ import models.Project;
 import views.html.*;
 
 import javax.persistence.Entity;
+import java.time.LocalDateTime;
 import java.util.List;
 
 import static play.data.Form.form;
@@ -37,9 +38,11 @@ public class Vote extends Controller {
 
         if( oldRecord != null ) {
             oldRecord.changeProject(record.getProjectID());
+            Logger.info("username: " + User.find.byId(record.userID).username + " change vote of " + record.projectID + " criteria: " + record.criteriaID + " at " + LocalDateTime.now());
             oldRecord.save();
         }
         else {
+            Logger.info("username: " + User.find.byId(record.userID).username + " vote " + record.projectID + " criteria: " + record.criteriaID + " at " + LocalDateTime.now());
             record.save();
         }
 		
