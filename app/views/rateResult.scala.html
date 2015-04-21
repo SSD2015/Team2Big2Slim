@@ -6,7 +6,7 @@
     @projects.map { project =>
 		Project ID: @project.ID, ProjectName: @project.projectName <br>
         @criteria.map { criterion =>
-          Criteria ID: @criterion.ID, CriteriaName: @criterion.criteriaName, Score: @result.get(project, criterion).asInstanceOf[Int]<br>
+          Criteria ID: @criterion.ID, CriteriaName: @criterion.criteriaName, Score: @result.get(project, criterion).asInstanceOf[RatingRecord.ScoreSummarize].summation, Average: @result.get(project, criterion).asInstanceOf[RatingRecord.ScoreSummarize].averageScore <br>
         }
       <br>
     }
