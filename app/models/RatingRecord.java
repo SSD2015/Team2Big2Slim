@@ -6,6 +6,10 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.IdClass;
 
+import org.apache.commons.collections.map.MultiKeyMap;
+
+import java.util.List;
+
 /**
  * Created by momomomomo on 3/27/2015.
  */
@@ -48,4 +52,27 @@ public class RatingRecord extends Model {
     }
 
 
+    public static MultiKeyMap summarize() {
+        MultiKeyMap result = new MultiKeyMap();
+        List<Project> projects = Project.find.all();
+        List<RatingCriteria> criteria = RatingCriteria.find.all();
+
+        for(Project project : projects) {
+            for(RatingCriteria criterion : criteria) {
+
+                int scoreSummation = 0;
+
+                //Got a list of a project with this criteria
+                List<RatingRecord> criterionScore = find.where().eq("projectID", project.ID).eq("criteriaID", criterion.ID).findList();
+                for(RatingRecord eachScore : criterionScore) {
+                    scoreSummation += eachScore.getScore();
+                    //System.out.println(scoreSummation);
+                }
+
+                System.out.println("Project" + project.getID() + ", Criteria" + criterion.ID + ", score: " + scoreSummation);
+                result.put(project, criterion, scoreSummation);
+            }
+        }
+        return result;
+    }
 }

@@ -1,5 +1,6 @@
 package controllers;
 
+import models.RatingCriteria;
 import models.RatingRecord;
 import models.User;
 import play.*;
@@ -18,6 +19,8 @@ import java.util.List;
 
 import static play.data.Form.form;
 import static play.libs.Json.toJson;
+
+import org.apache.commons.collections.map.MultiKeyMap;
 
 public class Rate extends Controller {
 	
@@ -52,7 +55,15 @@ public class Rate extends Controller {
         User currentUser = User.find.byId( currentUserID );
 
         if(currentUser.projectId == 99 ) {
-            return ok(rateResult.render(RatingRecord.find.all()));
+            List<Project> projects = Project.find.all();
+            List<RatingCriteria> criteria = RatingCriteria.find.all();
+
+            MultiKeyMap result = RatingRecord.summarize();
+
+            //System.out.println("hello " + result.get(projects.get(1), criteria.get(1)) );
+
+            //return ok(rateResult.render(RatingRecord.find.all()));
+            return ok(rateResult.render(projects, criteria, result));
         }
         else {
             return redirect( routes.Application.index() );
