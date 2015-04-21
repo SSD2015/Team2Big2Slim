@@ -1,10 +1,13 @@
-@(rates: List[RatingRecord])
+@(projects: List[Project])(criteria: List[RatingCriteria])(result: org.apache.commons.collections.map.MultiKeyMap)
 	
 
 @main("Rate Result") {
-    
-	@rates.map { rate =>
-		User ID: @rate.userID, ID: @rate.projectID, Criteria ID: @rate.criteriaID, Criteria Score: @rate.score <br>
 
+    @projects.map { project =>
+		Project ID: @project.ID, ProjectName: @project.projectName <br>
+        @criteria.map { criterion =>
+          Criteria ID: @criterion.ID, CriteriaName: @criterion.criteriaName, Score: @result.get(project, criterion).asInstanceOf[Int]<br>
+        }
+      <br>
     }
 }

@@ -66,9 +66,11 @@ public class RatingRecord extends Model {
                 List<RatingRecord> criterionScore = find.where().eq("projectID", project.ID).eq("criteriaID", criterion.ID).findList();
                 for(RatingRecord eachScore : criterionScore) {
                     scoreSummation += eachScore.getScore();
+                    //System.out.println(scoreSummation);
                 }
 
-                result.put(criterion, project, scoreSummation);
+                System.out.println("Project" + project.getID() + ", Criteria" + criterion.ID + ", score: " + scoreSummation);
+                result.put(project, criterion, scoreSummation);
             }
         }
         return result;
