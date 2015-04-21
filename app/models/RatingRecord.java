@@ -60,19 +60,45 @@ public class RatingRecord extends Model {
         for(Project project : projects) {
             for(RatingCriteria criterion : criteria) {
 
+                ScoreSummarize rateResult = new ScoreSummarize();
+
                 int scoreSummation = 0;
+                int noRateCount = 0;
+                int participant = 10;
+                double averageScore = 0;
 
                 //Got a list of a project with this criteria
                 List<RatingRecord> criterionScore = find.where().eq("projectID", project.ID).eq("criteriaID", criterion.ID).findList();
                 for(RatingRecord eachScore : criterionScore) {
-                    scoreSummation += eachScore.getScore();
+                    if( eachScore.getScore() == 0 ) {
+                        noRateCount++;
+                    }
+                    else {
+                        scoreSummation += eachScore.getScore();
+                    }
                     //System.out.println(scoreSummation);
                 }
+                //System.out.println("no " + noRateCount);
+                //System.out.println("par " + criterionScore.size());
+                participant = criterionScore.size() - noRateCount;
+                if( participant == 0 ) {
+                    averageScore = 0;
+                }
+                else {
+                    averageScore = scoreSummation / participant;
+                }
 
-                System.out.println("Project" + project.getID() + ", Criteria" + criterion.ID + ", score: " + scoreSummation);
-                result.put(project, criterion, scoreSummation);
+                //System.out.println("Project" + project.getID() + ", Criteria" + criterion.ID + ", score: " + scoreSummation);
+                rateResult.summation = scoreSummation;
+                rateResult.averageScore = averageScore;
+                result.put(project, criterion, rateResult);
             }
         }
         return result;
+    }
+
+    public static class ScoreSummarize {
+        public int summation;
+        public double averageScore;
     }
 }
