@@ -1,6 +1,13 @@
-@(votes: List[Project])
+@(criteria: List[VotingCriteria])(projects: List[Project])(result: org.apache.commons.collections.map.MultiKeyMap)
 
 
 @main("Vote Result") {
 
+    @criteria.map { criterion =>
+    Criteria ID: @criterion.ID, CriteriaName: @criterion.criteriaName <br>
+        @projects.map { project =>
+        Project ID: @project.ID, ProjectName: @project.projectName, Score: @result.get(criterion, project).asInstanceOf[Int]<br>
+        }
+        <br>
+    }
 }

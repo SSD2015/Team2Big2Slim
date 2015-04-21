@@ -56,7 +56,7 @@ public class Rate extends Controller {
 
             MultiKeyMap result = RatingRecord.summarize();
 
-            System.out.println("hello " + result.get(projects.get(1), criteria.get(1)) );
+            //System.out.println("hello " + result.get(projects.get(1), criteria.get(1)) );
 
             //return ok(rateResult.render(RatingRecord.find.all()));
             return ok(rateResult.render(projects, criteria, result));

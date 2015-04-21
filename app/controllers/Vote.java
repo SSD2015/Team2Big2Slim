@@ -1,14 +1,12 @@
 package controllers;
 
-import models.RatingRecord;
-import models.User;
-import models.VotingRecord;
+import models.*;
+import org.apache.commons.collections.map.MultiKeyMap;
 import play.*;
 import play.mvc.*;
 import play.data.Form;
 import play.db.*;
 import play.db.ebean.Model;
-import models.Project;
 
 import views.html.*;
 
@@ -52,7 +50,16 @@ public class Vote extends Controller {
         User currentUser = User.find.byId( currentUserID );
 
         if(currentUser.projectId == 99 ) {
-            return ok(voteResult.render( Project.find.all()) );
+            List<Project> projects = Project.find.all();
+            List<VotingCriteria> criteria = VotingCriteria.find.all();
+
+            MultiKeyMap result = VotingRecord.summarize();
+
+            //System.out.println("hello " + result.get(projects.get(1), criteria.get(1)) );
+
+            //return ok(rateResult.render(RatingRecord.find.all()));
+            return ok(voteResult.render(criteria, projects, result));
+            //return ok(voteResult.render( Project.find.all()) );
         }
         else {
             return redirect( routes.Application.index() );
