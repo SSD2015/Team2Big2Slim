@@ -64,7 +64,7 @@ public class RatingRecord extends Model {
 
                 int scoreSummation = 0;
                 int noRateCount = 0;
-                int participant = 10;
+                double participant = 10;
                 double averageScore = 0;
 
                 //Got a list of a project with this criteria

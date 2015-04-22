@@ -28,9 +28,9 @@ public class Application extends Controller {
 
 
     public static Result logout() {
+        String username = User.find.byId(Integer.parseInt(session().get("userID"))).username;
         session().clear();
         flash("success", "You've been logged out");
-        String username = User.find.byId(Integer.parseInt(session().get("userID"))).username;
         Logger.info("username: "+username+" has logged out at "+ LocalDateTime.now());
         return redirect(
                 routes.Login.login()
