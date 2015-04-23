@@ -66,4 +66,8 @@ public class VotingRecord extends Model{
         }
         return result;
     }
+
+    public static int getTotalVote(int cid) {
+        return VotingRecord.find.where().eq("criteriaID", cid).findList().size();
+    }
 }

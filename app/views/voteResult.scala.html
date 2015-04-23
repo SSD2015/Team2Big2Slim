@@ -1,13 +1,155 @@
 @(criteria: List[VotingCriteria])(projects: List[Project])(result: org.apache.commons.collections.map.MultiKeyMap)
-
-
 @main("Vote Result") {
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Main menu</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
-    @criteria.map { criterion =>
-    Criteria ID: @criterion.ID, CriteriaName: @criterion.criteriaName <br>
-        @projects.map { project =>
-        Project ID: @project.ID, ProjectName: @project.projectName, Score: @result.get(criterion, project).asInstanceOf[Int]<br>
+    </head>
+
+    <style>
+        .content {
+            position: absolute;
+            display: none;
         }
-        <br>
-    }
+        .line {
+            border-bottom: 1px solid #7c7c7c ;
+        }
+    </style>
+
+    <body>
+        <div class="jumbotron">
+            <div class="container-fluid">
+                <h1>Vote Result</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <!-- Nav bar -->
+            <ul class="nav nav-tabs" id="navigation">
+                <li id="list" role="presentation" class="active"><a href="#">List</a></li>
+                <li id="chart" role="presentation"><a href="#">Chart</a></li>
+                <li id="percentage" role="presentation"><a href="#">Percentage</a></li>
+            </ul>
+
+            <!-- List content -->
+            <div class="content" id="list-content">
+            @criteria.map { criterion =>
+                <div id="@criterion.criteriaName">
+                    <h4>
+                        <span class="label label-info"> @criterion.criteriaName ID: @criterion.ID </span>
+                    </h4>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>ProjectID</th>
+                                <th>ProjectName</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+
+                            <!-- Data part -->
+                        <tbody>
+                        @projects.map { project =>
+                            <tr>
+                                <td>@project.ID</td>
+                                <td>@project.projectName</td>
+                                <td>@result.get(criterion, project).asInstanceOf[Int]</td>
+                            </tr>
+                        }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            </div>
+
+            <!-- Chart content -->
+            <div class="content" id="chart-content">
+                @criteria.map { criterion =>
+                    <h4>@criterion.criteriaName</h4>
+                    <div id="@criterion.criteriaName">
+                    </div>
+                }
+            </div>
+
+            <!-- Percentage content -->
+            <div class="content" id="percentage-content">
+                @criteria.map { criterion =>
+                    <h4>
+                        <span class="label label-info"> @criterion.criteriaName ID: @criterion.ID </span>
+                    </h4>
+
+                    @projects.map { project =>
+                        <h4>@project.projectName</h4>
+                        <div class="progress progress-@project.projectName">
+                            <div class="progress-bar" role="progressbar" aria-valuenow="@project.getVoteScoreAverage(criterion.ID)" aria-valuemin="0" aria-valuemax="100" style="width: @project.getVoteScoreAverage(criterion.ID)%;">
+                                <!--label-->
+                                @project.getVoteScoreAverage(criterion.ID)%
+                            </div>
+                        </div>
+                    }
+                    <div class="line"></div>
+                    <br>
+                }
+            </div>
+        </div>
+
+    </body>
+
+    <script>
+        $(document).ready(function(){
+            $("#list-content.content" ).toggle(true);
+
+            // Deactivate The Navigation Bar
+            var deactivateNav = function() {
+                $("#navigation" ).children("li").each(function() {
+                    $(this ).removeClass("active");
+                });
+            }
+            //////////////////////////////////////////////
+
+            // Deactivate All Contents
+            var deactivateContent = function() {
+                $(".content" ).each(function() {
+                   $(this ).toggle(false);
+                });
+            }
+            //////////////////////////////////////////////
+
+            // Chart (Haven't implement)
+
+            //////////////////////////////////////////////
+
+            // Clicking function
+            $("#list" ).click(function() {
+                deactivateNav();
+                $(this ).addClass("active");
+                deactivateContent();
+                $("#list-content" ).toggle(true);
+            });
+
+            $("#chart" ).click(function() {
+                deactivateNav();
+                $(this ).addClass("active");
+                deactivateContent();
+                $("#chart-content" ).toggle(true);
+            });
+
+            $("#percentage" ).click(function() {
+                deactivateNav();
+                $(this ).addClass("active");
+                deactivateContent();
+                $("#percentage-content" ).toggle(true);
+            });
+            //////////////////////////////////////////////
+        });
+    </script>
+
+</html>
 }

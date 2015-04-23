@@ -48,4 +48,16 @@ public class Project extends Model {
     public String getProjectName() {
         return projectName;
     }
+
+    public int getVoteScore(int vc) {
+       return VotingRecord.find.where().eq("projectID", this.ID).eq("criteriaID", vc).findList().size();
+    }
+
+    public int getVoteScoreAverage(int vc) {
+        int voteScore = getVoteScore(vc);
+        double allVotes = VotingRecord.getTotalVote(vc);
+        double avg = voteScore / allVotes;
+        avg *= 100;
+        return (int)Math.round(avg);
+    }
 }

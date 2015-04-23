@@ -3,6 +3,8 @@ package models;
 import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by nicole on 3/23/15 AD.
@@ -43,6 +45,18 @@ public class User extends Model{
             return false;
         else
             return true;
+    }
+
+    //return list of integer array which are in this form {projectID, criteriaID}
+    public ArrayList<int[]> getVotedList() {
+        List<VotingRecord> voteList = VotingRecord.find.where().eq("userID", ID).findList();
+        ArrayList<int[]> a = new ArrayList<int[]>();
+        for (VotingRecord record : voteList) {
+            int[] x = {record.projectID, record.criteriaID};
+            a.add(x);
+            System.out.println(record.projectID+" "+record.criteriaID);
+        }
+        return a;
     }
 
     public int getID() {

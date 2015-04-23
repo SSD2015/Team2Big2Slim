@@ -34,4 +34,8 @@ public class VotingCriteria extends Model {
     public static List<VotingCriteria> getAllVotingCriteria() {
         return VotingCriteria.find.all();
     }
+
+    public int getNumberOfVotingRecord() {
+        return VotingRecord.getTotalVote(this.ID);
+    }
 }
