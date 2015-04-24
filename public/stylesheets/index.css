@@ -60,3 +60,7 @@ clock {
 .voteLayer {
     position: absolute;
 }
+.dropdown-menu {
+    background-color: rgba(240, 112, 109, 0.78);
+    width: 35%;
+}

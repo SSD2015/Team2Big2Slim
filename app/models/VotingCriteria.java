@@ -38,4 +38,10 @@ public class VotingCriteria extends Model {
     public int getNumberOfVotingRecord() {
         return VotingRecord.getTotalVote(this.ID);
     }
+
+    public String getDashName() {
+        String name = this.criteriaName;
+        name = name.replaceAll(" ", "-");
+        return name;
+    }
 }

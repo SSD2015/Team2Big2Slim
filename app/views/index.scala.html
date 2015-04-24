@@ -85,20 +85,30 @@
 
             <!-- topbar -->
             <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
-                    <div class="navbar-headerll-left">
+                <div class="navbar-headerll-left">
+                <a class="navbar-brand hidden-xs" href="#">
+                    ExceedVote
+                </a>
+                <a class="navbar-brand" href="#"><clock ></clock></a>
                     <a class="navbar-brand hidden-xs" href="#">
-                        ExceedVote
+                        Hello @currentUser.username
                     </a>
-                    <a class="navbar-brand" href="#"><clock ></clock></a>
-                        <a class="navbar-brand hidden-xs" href="#">
-                            Hello @currentUser.username
-                        </a>
                 </div>
 
 
-                <div class="navbar-header pull-right">
-                    <a class="navbar-brand" data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
-                    <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                <div class="navbar-header pull-right" id="optionPanel">
+                    <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                        <span class="glyphicon glyphicon-apple"></span>a
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
+                        <li>
+                            <a data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
+                        </li>
+                        <li role="presentation" class="divider"></li>
+                        <li>
+                            <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                        </li>
+                    </ul>
                 </div>
             </nav>
 
@@ -140,6 +150,7 @@
             <!-- JQuery -->
             <script>
                 $("#votebar" ).toggle();
+                var state = 0;
 
                 $(document).ready(function(){
 
@@ -221,6 +232,16 @@
                     if (screenWidth < 405) {
                         $(".voteText" ).css("font-size", "smaller");
                     }
+
+
+                    $("#optionmenu" ).click( function() {
+                       $(document ).blur();
+                    });
+
+                    $(document ).click(function() {
+                        if ($(this ).attr("id") == "optionmenu")
+                            console.log("clicked");
+                    });
                 });
 
             </script>

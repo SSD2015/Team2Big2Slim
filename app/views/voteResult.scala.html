@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
     </head>
 
@@ -19,6 +20,11 @@
         }
         .line {
             border-bottom: 1px solid #7c7c7c ;
+        }
+        #chart-content {
+            padding-left: 5%;
+            position: absolute;
+            opacity: 0;
         }
     </style>
 
@@ -69,15 +75,6 @@
             }
             </div>
 
-            <!-- Chart content -->
-            <div class="content" id="chart-content">
-                @criteria.map { criterion =>
-                    <h4>@criterion.criteriaName</h4>
-                    <div id="@criterion.criteriaName">
-                    </div>
-                }
-            </div>
-
             <!-- Percentage content -->
             <div class="content" id="percentage-content">
                 @criteria.map { criterion =>
@@ -100,11 +97,34 @@
             </div>
         </div>
 
+        <!-- Chart content -->
+        <div id="chart-content">
+        @criteria.map { criterion =>
+            <h4><span class="label label-info"> @criterion.criteriaName ID: @criterion.ID </span></h4>
+            <div id="@criterion.criteriaName-element">
+                <canvas id="@criterion.getDashName()" width="60%" height="60%"></canvas>
+            </div>
+        }
+        </div>
+
     </body>
 
     <script>
         $(document).ready(function(){
             $("#list-content.content" ).toggle(true);
+
+            // Random color function
+            var rgbRandom = function() {
+                return [Math.random() * 256, Math.random() * 256, Math.random() * 256];
+            }
+
+            var getBrightColor = function(rgb, brightness) {
+                //6 levels of brightness from 0 to 5, 0 being the darkest
+                var mix = [brightness*51, brightness*51, brightness*51]; //51 => 255/5
+                var mixedrgb = [rgb[0] + mix[0], rgb[1] + mix[1], rgb[2] + mix[2]].map(function(x){ return Math.round(x/2.0)})
+                return "rgb(" + mixedrgb.join(",") + ")";
+            };
+            //////////////////////////////////////////////
 
             // Deactivate The Navigation Bar
             var deactivateNav = function() {
@@ -122,8 +142,28 @@
             }
             //////////////////////////////////////////////
 
-            // Chart (Haven't implement)
-
+            // Chart
+            var data = [];
+            @criteria.map { criterion =>
+                var i =0;
+                var projectList = [];
+                @projects.map { project =>
+                    var value = @result.get(criterion, project).asInstanceOf[Int];
+                    var rgb = rgbRandom();
+                    var color = getBrightColor(rgb, 2);
+                    var highlight = getBrightColor(rgb, 4);
+                    var label = "@project.projectName";
+                    var obj = {
+                        value: value,
+                        color: color,
+                        highlight: highlight,
+                        label: label
+                    };
+                    projectList.push(obj);
+                }
+                data.push(projectList);
+            }
+            console.log(data);
             //////////////////////////////////////////////
 
             // Clicking function
@@ -138,7 +178,12 @@
                 deactivateNav();
                 $(this ).addClass("active");
                 deactivateContent();
-                $("#chart-content" ).toggle(true);
+                @criteria.map { criterion =>
+                    var name = "@criterion.getDashName()";
+                    var ctx = $("#"+name).get(0).getContext("2d");
+                    var myNewChart = new Chart(ctx).Doughnut(data[0], {animateRotate: true, animateScale: true, responsive: true});
+                }
+                $("#chart-content" ).animate({opacity: 1}, 1000, function() {});
             });
 
             $("#percentage" ).click(function() {
