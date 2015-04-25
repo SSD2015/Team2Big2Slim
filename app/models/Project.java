@@ -53,6 +53,14 @@ public class Project extends Model {
        return VotingRecord.find.where().eq("projectID", this.ID).eq("criteriaID", vc).findList().size();
     }
 
+    public int getNoOfRate(int rc) {
+        return RatingRecord.find.where().eq("projectID", this.ID).eq("criteriaID", rc).findList().size();
+    }
+
+    public int getNoOfNoRate(int rc) {
+        return RatingRecord.find.where().eq("projectID", this.ID).eq("criteriaID", rc).eq("score", 0).findList().size();
+    }
+
     public int getVoteScoreAverage(int vc) {
         int voteScore = getVoteScore(vc);
         double allVotes = VotingRecord.getTotalVote(vc);

@@ -3,7 +3,7 @@
 <!DOCTYPE HTML>
 <html>
     <head>
-        <title>Main menu</title>
+        <title>Vote Result</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -63,15 +63,15 @@
                             </tr>
                         </thead>
 
-                            <!-- Data part -->
+                        <!-- Data part -->
                         <tbody>
-                        @projects.map { project =>
-                            <tr>
-                                <td>@project.ID</td>
-                                <td>@project.projectName</td>
-                                <td>@result.get(criterion, project).asInstanceOf[Int]</td>
-                            </tr>
-                        }
+                            @projects.map { project =>
+                                <tr>
+                                    <td>@project.ID</td>
+                                    <td>@project.projectName</td>
+                                    <td>@result.get(criterion, project).asInstanceOf[Int]</td>
+                                </tr>
+                            }
                         </tbody>
                     </table>
                 </div>

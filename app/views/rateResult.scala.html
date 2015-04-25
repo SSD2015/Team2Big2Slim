@@ -1,13 +1,127 @@
 @(projects: List[Project])(criteria: List[RatingCriteria])(result: org.apache.commons.collections.map.MultiKeyMap)
-	
-
 @main("Rate Result") {
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>Rate Result</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    </head>
 
-    @projects.map { project =>
-		Project ID: @project.ID, ProjectName: @project.projectName <br>
-        @criteria.map { criterion =>
-          Criteria ID: @criterion.ID, CriteriaName: @criterion.criteriaName, Score: @result.get(project, criterion).asInstanceOf[RatingRecord.ScoreSummarize].summation, Average: @result.get(project, criterion).asInstanceOf[RatingRecord.ScoreSummarize].averageScore <br>
+    <style>
+        .content {
+            position: absolute;
+            display: none;
         }
-      <br>
-    }
+        #navigation {
+            margin-bottom: 2%;
+        }
+        .line {
+            border-bottom: 1px solid #7c7c7c ;
+        }
+    </style>
+
+    <body>
+        <div class="jumbotron" id="header">
+            <div class="container-fluid">
+                <h1>Rate Result</h1>
+            </div>
+        </div>
+
+        <div class="container-fluid">
+
+            <!-- Nav bar -->
+            <ul class="nav nav-tabs" id="navigation">
+                <li id="list" role="presentation" class="active"><a href="#">List</a></li>
+                <li id="order" role="presentation"><a href="#">Order</a></li>
+            </ul>
+
+            <!-- List content -->
+            <div class="content" id="list-content">
+                @projects.map { project =>
+                    <div id="@project.projectName">
+                        <h4><span class="label label-info">@project.projectName ID: @project.ID</span></h4>
+                        <table class="table table-striped">
+                            <thead>
+                                <tr>
+                                    <th>criterionID</th>
+                                    <th>criterionName</th>
+                                    <th>#ofVoter</th>
+                                    <th>#ofNoRate</th>
+                                    <th>Avg score</th>
+                                </tr>
+                            </thead>
+
+                            <!-- Data part -->
+                            <tbody>
+                                @criteria.map { criterion =>
+                                    <tr>
+                                        <td>@criterion.ID</td>
+                                        <td>@criterion.criteriaName</td>
+                                        <td>@project.getNoOfRate(criterion.ID)</td>
+                                        <td>@project.getNoOfNoRate(criterion.ID)</td>
+                                        <td>@result.get(project, criterion).asInstanceOf[RatingRecord.ScoreSummarize].averageScore</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    </div>
+                    <br><div class="line"></div><br>
+                }
+            </div>
+
+            <!-- Order content -->
+            <div class="content" id="order-content">
+                Order
+            </div>
+
+        </div>
+    </body>
+
+    <script>
+        $(document ).ready(function() {
+
+            $("#list-content.content" ).toggle(true);
+
+            // Deactivate The Navigation Bar
+            var deactivateNav = function() {
+                $("#navigation" ).children("li").each(function() {
+                    $(this ).removeClass("active");
+                });
+            }
+            ////////////////////////////////////
+
+            // Deactivate All Contents
+            var deactivateContent = function() {
+                $(".content" ).each(function() {
+                    $(this ).toggle(false);
+                });
+            }
+            ///////////////////////////////////
+
+            // Clicking function
+            $("#list" ).click(function() {
+                deactivateNav();
+                $(this ).addClass("active");
+                deactivateContent();
+                $("#list-content" ).toggle(true);
+            });
+
+            $("#order" ).click(function() {
+                deactivateNav();
+                $(this ).addClass("active");
+                deactivateContent();
+                $("#order-content" ).toggle(true);
+            });
+
+        });
+    </script>
+</html>
+
+
+    <br><br><br><br><br>
+
 }
