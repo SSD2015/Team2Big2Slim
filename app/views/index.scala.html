@@ -5,11 +5,11 @@
             <title>Main menu</title>
             <meta charset="utf-8">
             <meta name="viewport" content="width=device-width, initial-scale=1">
-            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
             <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/index.css")">
             <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.16.1/TweenMax.min.js"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         </head>
 
         <body>
@@ -90,15 +90,15 @@
                     ExceedVote
                 </a>
                 <a class="navbar-brand" href="#"><clock ></clock></a>
-                    <a class="navbar-brand hidden-xs" href="#">
-                        Hello @currentUser.username
+                    <a class="navbar-brand" href="#">
+                        @currentUser.username
                     </a>
                 </div>
 
 
                 <div class="navbar-header pull-right" id="optionPanel">
                     <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
-                        <span class="glyphicon glyphicon-apple"></span>a
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
                     </a>
                     <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
                         <li>
@@ -143,7 +143,6 @@
                     <div class="row" id="4">
                         <a href="profile/4" id="Fatcat"><image class="project img-rounded" src = "assets/project/fatcat_cat.jpg" title = "Fatcat"></image></a>
                     </div>
-
                 </div>
             </div>
 
