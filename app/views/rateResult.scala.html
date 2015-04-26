@@ -1,4 +1,6 @@
 @(projects: List[Project])(criteria: List[RatingCriteria])(result: org.apache.commons.collections.map.MultiKeyMap)
+@helper.javascriptRouter("jsRoutes")()
+
 @main("Rate Result") {
 <!DOCTYPE HTML>
 <html>
@@ -75,7 +77,13 @@
 
             <!-- Order content -->
             <div class="content" id="order-content">
-                Order
+                @criteria.map { criterion =>
+                    <h4><span class="label label-info">@criterion.criteriaName ID: @criterion.ID</span></h4>
+                    <div id="@criterion.getDashName()">
+
+                    </div>
+                    <br><div class="line"></div><br>
+                }
             </div>
 
         </div>
@@ -116,6 +124,24 @@
                 deactivateContent();
                 $("#order-content" ).toggle(true);
             });
+            ////////////////////////////////////
+
+            // Order
+            @criteria.map { criterion =>
+                var scoreList = @criterion.getRateScoreOrderList();
+                var nameList = "@criterion.getRateScoreOrderNameList()";
+                nameList = nameList.split(",");
+                var order = 1;
+                var last = 0;
+                for (var i = 0 ; i < nameList.length ; i++) {
+                    var id = "@criterion.getDashName()";
+                    if (last != scoreList[i] && i != 0)
+                        order++;
+                    var text = order+". "+nameList[i]+", score: "+scoreList[i]+"<br>";
+                    $("#"+id ).append(text);
+                    last = scoreList[i];
+                }
+            }
 
         });
     </script>
