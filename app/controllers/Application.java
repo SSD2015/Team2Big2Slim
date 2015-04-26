@@ -9,7 +9,7 @@ import models.*;
 
 import views.html.*;
 
-import java.time.LocalDateTime;
+//import java.time.LocalDateTime;
 import java.util.List;
 
 import static play.libs.Json.toJson;
@@ -31,7 +31,7 @@ public class Application extends Controller {
         String username = User.find.byId(Integer.parseInt(session().get("userID"))).username;
         session().clear();
         flash("success", "You've been logged out");
-        Logger.info("username: "+username+" has logged out at "+ LocalDateTime.now());
+        //Logger.info("username: "+username+" has logged out at "+ LocalDateTime.now());
         return redirect(
                 routes.Login.login()
         );
@@ -112,6 +112,8 @@ public class Application extends Controller {
         RatingCriteria.create(1, "Quality of UI");
         //vote criteria
 		VotingCriteria.create(1, "Best of Exceed Camp");
+		VotingCriteria.create(2, "Test");
+
 
         return redirect(routes.Application.index());
     }

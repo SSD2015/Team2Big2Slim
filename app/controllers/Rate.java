@@ -13,8 +13,8 @@ import models.Project;
 import views.html.*;
 
 import javax.persistence.Entity;
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+//import java.time.LocalDate;
+//import java.time.LocalDateTime;
 import java.util.List;
 
 import static play.data.Form.form;
@@ -38,11 +38,11 @@ public class Rate extends Controller {
         RatingRecord oldRecord = RatingRecord.find.where().eq("userID", record.getUserID()).eq("projectID", record.getProjectID()).eq("criteriaID", record.getCriteriaID()).findUnique();
         if( oldRecord != null ) {
             oldRecord.changeScore(record.getScore());
-            Logger.info("username: " + User.find.byId(record.userID).username + " change the rate of " + record.projectID + " criteria: " + record.criteriaID + " score: " + record.score + " at " + LocalDateTime.now());
+            //Logger.info("username: " + User.find.byId(record.userID).username + " change the rate of " + record.projectID + " criteria: " + record.criteriaID + " score: " + record.score + " at " + LocalDateTime.now());
             oldRecord.save();
         }
         else {
-            Logger.info("username: " + User.find.byId(record.userID).username + " rate " + record.projectID + " criteria: " + record.criteriaID + " score: " + record.score + "at " + LocalDateTime.now());
+            //Logger.info("username: " + User.find.byId(record.userID).username + " rate " + record.projectID + " criteria: " + record.criteriaID + " score: " + record.score + "at " + LocalDateTime.now());
             record.save();
         }
 
