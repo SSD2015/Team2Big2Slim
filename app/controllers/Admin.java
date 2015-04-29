@@ -1,12 +1,15 @@
 package controllers;
 
+import models.RatingCriteria;
 import models.User;
 
 import play.*;
 import play.data.Form;
 import play.mvc.*;
+import views.html.addRateCriteria;
 import views.html.addUser;
 import views.html.adminMain;
+
 import views.html.index;
 
 public class Admin extends Controller {
@@ -50,6 +53,26 @@ public class Admin extends Controller {
         newUser.save();
 
         return redirect( routes.Admin.addUserPage() );
+    }
+
+    public static Result addRatingCriteriaPage() {
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        if( currentUser.projectId == 99) {
+
+            return ok(addRateCriteria.render());
+        }
+        return null;
+    }
+
+    public static Result addRatingCriteria() {
+        RatingCriteria newRatingCriteria = Form.form(RatingCriteria.class).bindFromRequest().get();
+        System.out.println("criteriaName: " + newRatingCriteria.criteriaName);
+
+        newRatingCriteria.save();
+
+        return redirect( routes.Admin.addRatingCriteriaPage() );
     }
 
 }
