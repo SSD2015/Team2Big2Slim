@@ -38,4 +38,5 @@ GET         /screenshot2/assets/*file        controllers.Assets.at(path="/public
 
 GET         /screenshot3/:id                 controllers.ProjectList.sc3(id:Integer)
 GET         /screenshot3/assets/*file        controllers.Assets.at(path="/public", file)
-    
+
+GET         /admin                           controllers.Admin.adminIndex()
