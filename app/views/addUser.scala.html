@@ -8,7 +8,14 @@
         <h1>Add User</h1>
 
         <div>
-            <input  type="text"  name="parameter">
+            <form action="/admin/addUser" method="post">
+                Username:  <input  type="text"  name="username"><br><br>
+                Password:  <input  type="text"  name="password"><br><br>
+                Name:      <input  type="text"  name="name"><br><br>
+                ProjectID: <input  type="text"  name="projectId"><br><br>
+                KUno:      <input  type="text"  name="kuNo"><br><br>
+                <button type="submit" name="action" class="Submit">Submit</button>
+            </form>
         </div>
         <br>
 

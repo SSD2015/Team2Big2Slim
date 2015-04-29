@@ -3,6 +3,7 @@ package controllers;
 import models.User;
 
 import play.*;
+import play.data.Form;
 import play.mvc.*;
 import views.html.addUser;
 import views.html.adminMain;
@@ -24,7 +25,31 @@ public class Admin extends Controller {
     }
 
     @Security.Authenticated(Secured.class)
-    public static Result addUser() {
-        return ok(addUser.render());
+    public static Result addUserPage() {
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        if( currentUser.projectId == 99) {
+            return ok(addUser.render());
+        }
+        else {
+            return redirect(routes.Application.index() );
+        }
     }
+
+
+    public static Result addUser() {
+        User newUser = Form.form(User.class).bindFromRequest().get();
+        System.out.println("Username: " + newUser.username);
+        System.out.println("Password: " + newUser.password);
+        System.out.println("Name: " + newUser.name);
+        System.out.println("ProjectID: " + newUser.projectId);
+        System.out.println("KuNo: " + newUser.kuNo);
+        System.out.println("----------------------------");
+
+        newUser.save();
+
+        return redirect( routes.Admin.addUserPage() );
+    }
+
 }

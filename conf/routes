@@ -40,4 +40,5 @@ GET         /screenshot3/:id                 controllers.ProjectList.sc3(id:Inte
 GET         /screenshot3/assets/*file        controllers.Assets.at(path="/public", file)
 
 GET         /admin                           controllers.Admin.adminIndex()
-GET         /admin/addUser                   controllers.Admin.addUser()
+GET         /admin/addUser                   controllers.Admin.addUserPage()
+POST        /admin/addUser                   controllers.Admin.addUser()
