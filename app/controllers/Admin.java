@@ -4,6 +4,7 @@ import models.User;
 
 import play.*;
 import play.mvc.*;
+import views.html.addUser;
 import views.html.adminMain;
 import views.html.index;
 
@@ -20,5 +21,10 @@ public class Admin extends Controller {
         else {
             return redirect(routes.Application.index() );
         }
+    }
+
+    @Security.Authenticated(Secured.class)
+    public static Result addUser() {
+        return ok(addUser.render());
     }
 }
