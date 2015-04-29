@@ -3,14 +3,11 @@ package controllers;
 import models.RatingCriteria;
 import models.User;
 
+import models.VotingCriteria;
 import play.*;
 import play.data.Form;
 import play.mvc.*;
-import views.html.addRateCriteria;
-import views.html.addUser;
-import views.html.adminMain;
-
-import views.html.index;
+import views.html.*;
 
 public class Admin extends Controller {
 
@@ -39,8 +36,6 @@ public class Admin extends Controller {
             return redirect(routes.Application.index() );
         }
     }
-
-
     public static Result addUser() {
         User newUser = Form.form(User.class).bindFromRequest().get();
         System.out.println("Username: " + newUser.username);
@@ -55,6 +50,7 @@ public class Admin extends Controller {
         return redirect( routes.Admin.addUserPage() );
     }
 
+    @Security.Authenticated(Secured.class)
     public static Result addRatingCriteriaPage() {
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
@@ -63,16 +59,35 @@ public class Admin extends Controller {
 
             return ok(addRateCriteria.render());
         }
-        return null;
+        return redirect(routes.Application.index() );
     }
-
     public static Result addRatingCriteria() {
         RatingCriteria newRatingCriteria = Form.form(RatingCriteria.class).bindFromRequest().get();
-        System.out.println("criteriaName: " + newRatingCriteria.criteriaName);
+        System.out.println("RateCriteriaName: " + newRatingCriteria.criteriaName);
 
         newRatingCriteria.save();
 
         return redirect( routes.Admin.addRatingCriteriaPage() );
     }
+
+    @Security.Authenticated(Secured.class)
+    public static Result addVotingCriteriaPage() {
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        if( currentUser.projectId == 99) {
+            return ok(addVoteCriteria.render());
+        }
+        return redirect(routes.Application.index() );
+    }
+    public static Result addVotingCriteria() {
+        VotingCriteria newVotingCriteria = Form.form(VotingCriteria.class).bindFromRequest().get();
+        System.out.println("VoteCriteriaName: " + newVotingCriteria.criteriaName);
+
+        newVotingCriteria.save();
+
+        return redirect( routes.Admin.addVotingCriteriaPage() );
+    }
+
 
 }
