@@ -34,7 +34,7 @@ public class User extends Model{
         user.save();
     }
 
-    public static Object authenticate(String username, String password) {
+    public static User authenticate(String username, String password) {
         User user = User.find.where().eq("username", username).eq("password", password).findUnique();
         return user;
     }
