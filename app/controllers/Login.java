@@ -8,6 +8,7 @@ import play.db.*;
 import play.db.ebean.Model;
 import models.Project;
 
+import util.Authenticator;
 import views.html.*;
 
 import javax.persistence.Entity;
@@ -25,7 +26,9 @@ public class Login extends Controller {
         public String username;
         public String password;
         public String validate() {
-            if (User.authenticate(username, password) == null) {
+
+            User authenUser = Authenticator.getInstance().authenticate(username, password);
+            if (authenUser == null) {
                 Logger.warn("username: "+username+" has entered wrong password");
                 return "Invalid user or password";
             }
