@@ -23,6 +23,13 @@
     font-size : 250%;
     color : black;
     }
+    .Member{
+    font-size : 150%;
+    color : black;
+    }
+    h{
+    font-family:superclarendon;
+    }
     .ScreenShot{
     font-size : 250%;
     color : black;
@@ -215,7 +222,7 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = "NameProject jumbotron">
-                            <h style="font-family:verdana" >@project.projectName</h>
+                            <h>@project.projectName</h>
                         </div>
                     </div>
                     <div class = "col-xs-2"> </div>
@@ -253,7 +260,10 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = "Description">
-                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span> Description
+                            <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
+                                <h>
+                                    Description
+                                </h>
                         </div>
                     </div>
                     <div class = "col-xs-2"> </div>
@@ -261,7 +271,7 @@
                 <div class="row">
                     <div class="col-xs-2"></div>
                     <div class="col-xs-8">
-                        <div id="description" class="jumbotron"><p>@project.description</p></div>
+                        <div id="description" class="jumbotron"><p><h>@project.description</h></p></div>
                     </div>
                     <div class="col-xs-2"></div>
                 </div>
@@ -270,12 +280,12 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = "Information">
-                            <p>Project name: @project.projectName</p>
-                            <p>Type of project: @project.typeApp</p>
-                            <h4 style="font-family:verdana" >Member:</h4>
+                            <p><h>Project name: @project.projectName</h></p>
+                            <p><h>Type of project: @project.typeApp</h></p>
+                            <p><div class = "Member"><h>Member:</h></div></p>
                                 <!--for each-->
                             @member.map { person =>
-                                <p>@person.name ID: @person.kuNo</p>
+                                <p><h>@person.name ID: @person.kuNo</h></p>
                             }
                         </div>
                     </div>
@@ -317,7 +327,7 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = ScreenShot>
-                            <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> Screenshot
+                            <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> <h>Screenshot</h>
                         </div>
                     </div>
                     <div class = "col-xs-2"> </div>
@@ -398,8 +408,8 @@
                     <div class = "col-xs-2"> </div>
                     <div class="col-xs-8">
                         <div class = Rate>
-                            <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Rate
-                                <h3>Please rate Project @project.ID with follow criteria :</h3></h>
+                            <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h>Rate</h>
+                                <h3><h>Please rate Project @project.ID with follow criteria :</h></h3></h>
                         </div>
                         <div id="rateSection">
                                 <!-- Template rating criteria -->
