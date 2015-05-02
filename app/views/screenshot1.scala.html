@@ -1,4 +1,4 @@
-@(project : Project )
+@(project : Project )(currentUser : User)
 <!DOCTYPE html>
 <html>
     <style>
@@ -45,6 +45,9 @@
                         <div class="navbar-headerll-left">
                             <a class="navbar-brand hidden-xs" href="#">ExceedVote</a>
                             <a class="navbar-brand" href="#"><clock ></clock></a>
+                            <a class="navbar-brand" href="#">
+                                @currentUser.name
+                            </a>
                         </div>
                         <div class="navbar-header pull-right">
                             <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>

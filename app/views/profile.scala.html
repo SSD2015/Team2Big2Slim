@@ -1,4 +1,4 @@
-@(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)
+@(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)(currentUser : User)
 <!DOCTYPE HTML>
 <html lang = "en">
     <title>@project.projectName</title>
@@ -169,6 +169,9 @@
                         <div class="navbar-headerll-left">
                             <a class="navbar-brand hidden-xs" href="#">ExceedVote</a>
                             <a class="navbar-brand" href="#"><clock ></clock></a>
+                            <a class="navbar-brand" href="#">
+                            @currentUser.name
+                            </a>
                         </div>
                         <div class="navbar-header pull-right">
                             <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span><font color="#F0F0F0" style="font-size:large"> Back</font></a>
