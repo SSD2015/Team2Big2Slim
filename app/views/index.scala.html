@@ -11,7 +11,11 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         </head>
-
+        <style>
+            .STDFont{
+                font-family: superclarendon;
+            }
+        </style>
         <body>
             <!-- Modal -->
             <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
@@ -87,11 +91,15 @@
             <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
                 <div class="navbar-headerll-left">
                 <a class="navbar-brand hidden-xs" href="#">
+                   <div class = "STDFont">
                     ExceedVote
+                   </div>
                 </a>
                 <a class="navbar-brand" href="#"><clock ></clock></a>
                     <a class="navbar-brand" href="#">
+                        <div class = "STDFont">
                         @currentUser.name
+                        </div>
                     </a>
                 </div>
 
