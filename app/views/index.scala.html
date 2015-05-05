@@ -36,7 +36,10 @@
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h3>You vote <b><projectName></projectName></b> <p>Are you sure ?</h3>
+                            <h2>Vote Confirmation</h2>
+                        </div>
+                        <div class="modal-body">
+                            <h4>You vote <b><projectName></projectName></b> for <b><voteCriteria></voteCriteria></b>. <p>Are you sure ?</h4>
                         </div>
                         <div class="modal-footer">
                             <form action="/vote" method="post">
@@ -62,12 +65,8 @@
                         <div class="modal-body vcField">
                             <!-- Template Prepared for Database -->
 							@voteCriteria.map { vote =>
-								<p><button type="button" class="btn btn-warning btn-block vote-criteria" value="1" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> @vote.criteriaName</button>
+								<p><button type="button" class="btn btn-warning btn-block vote-criteria" value="@vote.ID" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> @vote.criteriaName</button>
 							}
-                            
-                            <!-- <p><button type="button" class="btn btn-danger btn-block vote-criteria" value="2" data-dismiss="modal"><span class="glyphicon glyphicon-heart"></span> The Coolest</button>
-                            <p><button type="button" class="btn btn-info btn-block vote-criteria" value="3" data-dismiss="modal"><span class="glyphicon glyphicon-cog"></span> Greatest Performance</button>
-                            <p><button type="button" class="btn btn-primary btn-block vote-criteria" value="4" data-dismiss="modal"><span class="glyphicon glyphicon-eye-open"></span> Greatest Design</button> -->
                         </div>
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
@@ -158,9 +157,11 @@
             <!-- JQuery -->
             <script>
                 $("#votebar" ).toggle();
-                var state = 0;
 
                 $(document).ready(function(){
+
+                    var voteCriteriaNameList = "@VotingCriteria.getAllVotingCriteriaName()";
+                    voteCriteriaNameList = voteCriteriaNameList.split(",");
 
                     //Clock Section
                     function getdate(){
@@ -226,10 +227,10 @@
                         voteCriteriaID = $(this ).attr("value");
                         $(".projectListLayer" ).toggle();
 						$("#criteriaValue" ).attr("value", voteCriteriaID);
-                        $("#topbar" ).fadeToggle(700, "swing", function() {
-                        });
-                        $("#votebar" ).fadeToggle(700, "swing", function() {
-                        });
+                        $("#topbar" ).fadeToggle(700, "swing", function() {});
+                        $("#votebar" ).fadeToggle(700, "swing", function() {});
+                        //id starts with 1, so -1
+                        $("voteCriteria" ).html(voteCriteriaNameList[voteCriteriaID-1]);
                     });
                     //////////////////////////////////////////////
 
@@ -241,16 +242,6 @@
                     if (screenWidth < 405) {
                         $(".voteText" ).css("font-size", "smaller");
                     }
-
-
-                    $("#optionmenu" ).click( function() {
-                       $(document ).blur();
-                    });
-
-                    $(document ).click(function() {
-                        if ($(this ).attr("id") == "optionmenu")
-                            console.log("clicked");
-                    });
                 });
 
             </script>

@@ -40,7 +40,7 @@ public class Vote extends Controller {
             oldRecord.save();
         }
         else {
-            Logger.info("username: " + User.find.byId(record.userID).username + " vote " + record.projectID + " criteria: " + record.criteriaID + " at " + LocalDateTime.now());
+            Logger.info("username: " + User.find.byId(record.userID).username + " vote projectID: " + record.projectID + " criteria: " + record.criteriaID + " at " + LocalDateTime.now());
             record.save();
         }
 		

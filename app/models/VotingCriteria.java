@@ -5,6 +5,7 @@ import play.db.ebean.Model;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -31,8 +32,15 @@ public class VotingCriteria extends Model {
         return 1;
     }
 
-    public static List<VotingCriteria> getAllVotingCriteria() {
-        return VotingCriteria.find.all();
+    public static String getAllVotingCriteriaName() {
+        List<VotingCriteria> list = VotingCriteria.find.all();
+        String nameList = "";
+        for (int i = 0 ; i < list.size() ; i++) {
+            nameList += list.get(i).criteriaName;
+            if (i+1 < list.size())
+                nameList += ",";
+        }
+        return nameList;
     }
 
     public int getNumberOfVotingRecord() {
