@@ -112,10 +112,17 @@
                         <li>
                             <a data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
                         </li>
+                        @if( currentUser.projectId > 0 && currentUser.projectId < 100 && currentUser.projectId != 88 ) {
+                            <li role="presentation" class="divider"></li>
+                            <li>
+                                <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
+                            </li>
+                        }
                         <li role="presentation" class="divider"></li>
                         <li>
                             <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
                         </li>
+
                     </ul>
                 </div>
             </nav>
