@@ -59,15 +59,21 @@
             <div id="votecriteriaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Choose a criterian" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h2><center>Select the Voting Criteria</center></h2>
-                        </div>
-                        <div class="modal-body vcField">
-                            <!-- Template Prepared for Database -->
-							@voteCriteria.map { vote =>
-								<p><button type="button" class="btn btn-warning btn-block vote-criteria" value="@vote.ID" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> @vote.criteriaName</button>
-							}
-                        </div>
+                        @if(Secured.TimesUp() == false) {
+                            <div class="modal-header">
+                                <h2><center>Select the Voting Criteria</center></h2>
+                            </div>
+                            <div class="modal-body vcField">
+                                    <!-- Template Prepared for Database -->
+                                @voteCriteria.map { vote =>
+                                    <p><button type="button" class="btn btn-warning btn-block vote-criteria" value="@vote.ID" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> @vote.criteriaName</button>
+                                }
+                            </div>
+                        } else {
+                            <div class="modal-header">
+                                <h2><center><span class="glyphicon glyphicon-time"></span> Time's up</center></h2>
+                            </div>
+                        }
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                         </div>

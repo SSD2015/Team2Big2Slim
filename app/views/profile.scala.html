@@ -491,10 +491,14 @@
                                     <button type="submit" name="action" class="hiddenSubmit">Submit</button>
                                 </form>
                             }
-                            @rcList.map { c =>
-                                @rateCode(criterion = c)
+                            @if(Secured.TimesUp() == false) {
+                                @rcList.map { c =>
+                                    @rateCode(criterion = c)
+                                }
+                                <button class="btn btn-default" type="button" id="submitRate" data-toggle="modal" data-target="#successModal" >Submit</button>
+                            } else {
+                                <h2><span class="glyphicon glyphicon-time"></span> Time's up</h2>
                             }
-                            <button class="btn btn-default" type="button" id="submitRate" data-toggle="modal" data-target="#successModal" >Submit</button>
                         </div>
                     </div>
                     <div class = "col-xs-2"> </div>
