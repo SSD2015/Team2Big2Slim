@@ -22,7 +22,6 @@
             height: 40px;
             color: lightgrey;
             font-size: large;
-
         }
         #option-panel {
             margin-right: 10px;
@@ -86,7 +85,10 @@
         background-color: lavenderblush;
         }
         .DesBack{
-        background-color: lightgrey;
+            background-color: lightgrey;
+            margin-left: auto;
+            margin-right: auto;
+            padding-top: 30px;
         }
         .SceenBack{
         background-color: lightskyblue;
@@ -280,38 +282,32 @@
                 </div>
                 <p> <img class="picture-project" src = "@project.PicProject"> </p>
             </div>
+            <div class = "Line2"></div>
 
             <div class = "DesBack">
-                    <!--black space-->
                 <div class="row">
-                    <div class="col-xs-12">
-                        <span style="padding-left:1px"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <span style="padding-left:1px"></span>
-                    </div>
-                </div>
-                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
                         <div class = "Description title">
                             <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
                             <h>
                                 Description
                             </h>
                         </div>
+                    </div>
+                    <div class="col-xs-0.5"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-8">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
                         <div id="description" class="jumbotron"><div class = "STDFont"><p>@project.description</p></div></div>
                     </div>
-                    <div class="col-xs-2"></div>
+                    <div class="col-xs-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = "Information">
                             <div class = "STDFont">
                                 <p>Project name: @project.projectName</p>
@@ -330,7 +326,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                     <!--blank space and solid line-->
                 <div class="row">
@@ -365,17 +361,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = ScreenShot>
                             <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> <h>Screenshot</h>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class="container">
                             <br>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -411,7 +407,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                     <!--blank space-->
                 <div class="row">
@@ -446,10 +442,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = Rate>
-                                <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h>Rate</h></h>
+                                <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h> Rate</h></h>
                         </div>
                         <div class = "STDFont">
                             <p><h>Please rate Project @project.ID with follow criteria,</h></p>
@@ -513,7 +509,7 @@
                             }
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
@@ -556,8 +552,6 @@
                     <div class = "Line2"></div>
                 </div>
             </div>
-
-
 
             <!-- JQuery -->
         <script>
