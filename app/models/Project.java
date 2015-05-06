@@ -75,4 +75,10 @@ public class Project extends Model {
         int amount = projectList.size();
         return amount;
     }
+
+    public static Project getProjectByID(int id) {
+        Project thisProject = find.byId(id);
+        return thisProject;
+    }
+
 }
