@@ -1,4 +1,5 @@
 @(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)(currentUser : User)
+@import utils.Time
 <!DOCTYPE HTML>
 <html lang = "en">
     <head>
@@ -491,7 +492,7 @@
                                     <button type="submit" name="action" class="hiddenSubmit">Submit</button>
                                 </form>
                             }
-                            @if(Secured.TimesUp() == false) {
+                            @if(Time.TimesUp() == false) {
                                 @rcList.map { c =>
                                     @rateCode(criterion = c)
                                 }

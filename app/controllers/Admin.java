@@ -8,6 +8,7 @@ import models.VotingCriteria;
 import play.*;
 import play.data.Form;
 import play.mvc.*;
+import utils.Time;
 import views.html.*;
 
 public class Admin extends Controller {
@@ -93,5 +94,33 @@ public class Admin extends Controller {
         return redirect( routes.Admin.addVotingCriteriaPage() );
     }
 
+    @Security.Authenticated(Secured.class)
+    public static Result setTimePage() {
+        return ok(changeDueTime.render());
+    }
+
+    public static Result changeDueTime() {
+        TimeBundle timeForm = Form.form(TimeBundle.class).bindFromRequest().get();
+//        System.out.println("Hour = " + timeForm.hour);
+//        System.out.println("Minute = " + timeForm.minute);
+//        System.out.println("Second = " + timeForm.second);
+
+        Time.setTime(timeForm.hour, timeForm.minute, timeForm.second);
+
+        System.out.println("SetHour = " + Time.limitHour);
+        System.out.println("SetMinute = " + Time.limitMinute);
+        System.out.println("SetSecond = " + Time.limitSecond);
+        System.out.println("====================================");
+
+
+
+        return ok(changeDueTime.render());
+    }
+
+    public static class TimeBundle {
+        public int hour;
+        public int minute;
+        public int second;
+    }
 
 }
