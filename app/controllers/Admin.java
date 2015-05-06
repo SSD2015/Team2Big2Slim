@@ -10,6 +10,8 @@ import play.data.Form;
 import play.mvc.*;
 import utils.Time;
 import views.html.*;
+import org.mindrot.jbcrypt.BCrypt;
+
 
 public class Admin extends Controller {
 
@@ -43,6 +45,7 @@ public class Admin extends Controller {
     }
     public static Result addUser() {
         User newUser = Form.form(User.class).bindFromRequest().get();
+		newUser.password = BCrypt.hashpw(newUser.password, BCrypt.gensalt());
         System.out.println("Username: " + newUser.username);
         System.out.println("Password: " + newUser.password);
         System.out.println("Name: " + newUser.name);
