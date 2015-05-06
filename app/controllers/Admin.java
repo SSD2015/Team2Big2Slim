@@ -6,6 +6,7 @@ import models.User;
 
 import models.VotingCriteria;
 import play.*;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
 import utils.Time;
@@ -121,11 +122,14 @@ public class Admin extends Controller {
     }
 
     public static Result adminEditProject() {
-        Project thisProject = Form.form(Project.class).bindFromRequest().get();
+        DynamicForm projectF = new DynamicForm().bindFromRequest();
+        int projectID = Integer.parseInt(projectF.get("ID"));
 
-        System.out.println("getID = " + thisProject.ID);
-        System.out.println("getName = " + thisProject.projectName);
+        Project editedProject = Project.getProjectByID(projectID);
+        editedProject.projectName = projectF.get("projectName");
+        editedProject.description = projectF.get("description");
 
+        editedProject.save();
 
         int size = Project.getSizeOfProjectList();
         return ok(adminEditProject.render(size));
