@@ -95,6 +95,24 @@ public class Admin extends Controller {
     }
 
     @Security.Authenticated(Secured.class)
+    public static Result addProjectPage() {
+       // Form<LoginInfo> loginForm = Form.form(LoginInfo.class).bindFromRequest();
+        return ok(addProject.render());
+    }
+
+    public static Result addProject() {
+        NewProject np = Form.form(NewProject.class).bindFromRequest().get();
+        System.out.println("got = " + np.amount);
+
+        for(int i = 0; i < np.amount; i++) {
+            Project.createTemplate();
+        }
+
+        return ok(addProject.render());
+    }
+
+
+    @Security.Authenticated(Secured.class)
     public static Result setTimePage() {
         return ok(changeDueTime.render());
     }
@@ -121,6 +139,10 @@ public class Admin extends Controller {
         public int hour;
         public int minute;
         public int second;
+    }
+
+    public static class NewProject {
+        public int amount;
     }
 
 }

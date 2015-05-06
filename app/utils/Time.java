@@ -4,13 +4,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 
-/**
- * Created by momomomomo on 5/6/2015.
- */
 public class Time {
     public static int limitHour = 0;
     public static int limitMinute = 0;
-    public static int limitSecond = 10;
+    public static int limitSecond = 0;
 
 
     public static void setTime(int hour, int minute, int second) {
