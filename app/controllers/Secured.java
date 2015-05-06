@@ -8,9 +8,9 @@ import models.*;
 
 public class Secured extends Security.Authenticator {
     //system due time
-    public static int myHour = 20;
-    public static int myMinute = 46;
-    public static int mySecond = 0;
+    public static int myHour = 23;
+    public static int myMinute = 59;
+    public static int mySecond = 59;
 
     @Override
     public String getUsername(Context ctx) {
