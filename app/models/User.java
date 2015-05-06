@@ -5,6 +5,7 @@ import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
 import java.util.List;
+import org.mindrot.jbcrypt.BCrypt;
 
 /**
  * Created by nicole on 3/23/15 AD.
@@ -27,16 +28,18 @@ public class User extends Model{
         User user = new User();
         user.ID = id;
         user.username = username;
-        user.password = password;
+        user.password = BCrypt.hashpw(password, BCrypt.gensalt());
         user.name = name;
         user.projectId = projectId;
         user.kuNo = kuNo;
         user.save();
     }
 
-    public static Object authenticate(String username, String password) {
-        User user = User.find.where().eq("username", username).eq("password", password).findUnique();
-        return user;
+    public static Object authenticate(String username, String passwd) {
+         User user = User.find.where().eq("username", username).findUnique();
+        if (user == null) return null;
+        if ( BCrypt.checkpw(passwd, user.password) ) return user;
+        return null;
     }
 
     public boolean hasVoted(int criteriaId) {
