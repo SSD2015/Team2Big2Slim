@@ -13,15 +13,21 @@ import play.mvc.*;
 public class EditPage extends Controller{
 
     @Security.Authenticated(Secured.class)
-    public static Result typeCheck(Integer userType) {
-        if (userType == 88) {
+    public static Result typeCheck(Integer projectId) {
+        int currentUserID = Integer.parseInt(session().get("userID"));
+        User currentUser = User.find.byId( currentUserID );
+
+        if(projectId == 88) {
             return redirect("/");
         }
-        else if (userType == 99) {
+        else if(projectId == 99) {
             return redirect("/admin");
         }
+        else if(currentUser.projectId == projectId) {
+            return ok(edit.render(projectId));
+        }
         else {
-            return ok(edit.render(userType));
+            return redirect("/");
         }
     }
 
@@ -40,8 +46,8 @@ public class EditPage extends Controller{
         System.out.println("ProjectName = " + thisProject.projectName);
         System.out.println("Description = " + thisProject.projectName);
         System.out.println("=============================");
-        
+
         thisProject.save();
-        return redirect( routes.EditPage.typeCheck(thisProject.getID()) );
+        return redirect("/edit/"+projectId);
     }
 }
