@@ -1,4 +1,4 @@
-@(project : Project )(currentUser : User)
+@(project : Project )(currentUser : User)(screenShot : String)
 <!DOCTYPE html>
 <html>
     <style>
@@ -15,7 +15,7 @@
     </style>
 
     <head lang="en">
-        <title>Screentshot1</title>
+        <title>Screentshot</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
@@ -64,7 +64,7 @@
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "picture">
-                        <p> <img src = @project.sc1 width="100%" > </p>
+                        <p> <img src = @screenShot width="100%" > </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>

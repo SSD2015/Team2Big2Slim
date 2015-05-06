@@ -21,26 +21,25 @@ public class ProjectList extends Controller {
         return ok(profile.render(project,userList,rcList, currentUserID, currentUser));
     }
 
-    public static Result sc1(Integer id){
-        Project project = Project.find.byId(id);
+    public static Result sc1(Integer idPr, Integer idSc){
+        Project project = Project.find.byId(idPr);
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
-        return ok(screenshot1.render(project, currentUser));
+        String screenShot = null;
+        if(idSc == 1){
+            screenShot = project.sc1;
+        }
+        if(idSc == 2){
+            screenShot = project.sc2;
+        }
+        if(idSc == 3){
+            screenShot = project.sc3;
+        }
+
+        return ok(screenshot1.render(project, currentUser, screenShot));
     }
 
-    public static Result sc2(Integer id){
-        Project project = Project.find.byId(id);
-        int currentUserID = Integer.parseInt(session().get("userID"));
-        User currentUser = User.find.byId( currentUserID );
-        return ok(screenshot2.render(project, currentUser));
-    }
 
-    public static Result sc3(Integer id){
-        Project project = Project.find.byId(id);
-        int currentUserID = Integer.parseInt(session().get("userID"));
-        User currentUser = User.find.byId( currentUserID );
-        return ok(screenshot3.render(project, currentUser));
-    }
 
 
 }
