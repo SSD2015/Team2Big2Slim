@@ -65,5 +65,6 @@ public class User extends Model{
     public int getID() {
         return ID;
     }
+    public int getProjectId(){return projectId;}
 
 }

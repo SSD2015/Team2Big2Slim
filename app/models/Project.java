@@ -22,6 +22,8 @@ public class Project extends Model {
     public String sc1;
     public String sc2;
     public String sc3;
+    public String sc4;
+    public String sc5;
     public String description;
 
     public static Finder<Integer, Project> find = new Finder<Integer,Project>(
@@ -29,15 +31,12 @@ public class Project extends Model {
 
     );
 
-    public static void create(String name,String PicProject,String typeApp,String sc1,String sc2,String sc3, String description){
+    public static void create(String name,String PicProject,String typeApp,String description){
         Project project = new Project();
         //project.ID = id;
         project.projectName = name;
         project.PicProject = PicProject;
         project.typeApp = typeApp;
-        project.sc1 = sc1;
-        project.sc2 = sc2;
-        project.sc3 = sc3;
         project.description = description;
         project.save();
     }
@@ -86,16 +85,7 @@ public class Project extends Model {
     }
 
     public static void createTemplate() {
-        create( "Untitle", "404", "404", "404", "404", "404", "404");
-//        Project project = new Project();
-//        project.projectName = "Untitle";
-//        project.PicProject = "404";
-//        project.typeApp = "404";
-//        project.sc1 = "404";
-//        project.sc2 = "404";
-//        project.sc3 = "404";
-//        project.description = "404";
-//        project.save();
+        create( "Untitle", "assets/project/cat_temp.jpg", "Untitle", "This is description");
     }
 
     public static List<Project> getAllProject() {

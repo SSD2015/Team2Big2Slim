@@ -6,6 +6,7 @@ import models.User;
 
 import models.VotingCriteria;
 import play.*;
+import play.data.DynamicForm;
 import play.data.Form;
 import play.mvc.*;
 import utils.Time;
@@ -99,20 +100,41 @@ public class Admin extends Controller {
 
     @Security.Authenticated(Secured.class)
     public static Result addProjectPage() {
-       // Form<LoginInfo> loginForm = Form.form(LoginInfo.class).bindFromRequest();
         return ok(addProject.render());
     }
 
     public static Result addProject() {
-        NewProject np = Form.form(NewProject.class).bindFromRequest().get();
-        System.out.println("got = " + np.amount);
+        DynamicForm projectF = new DynamicForm().bindFromRequest();
+        int amount = Integer.parseInt(projectF.get("amount"));
+        System.out.println("got = " + amount);
 
-        for(int i = 0; i < np.amount; i++) {
+        for(int i = 0; i < amount; i++) {
             Project.createTemplate();
         }
 
         return ok(addProject.render());
     }
+
+    @Security.Authenticated(Secured.class)
+    public static Result adminEditProjectPage() {
+        int size = Project.getSizeOfProjectList();
+        return ok(adminEditProject.render(size));
+    }
+
+    public static Result adminEditProject() {
+        DynamicForm projectF = new DynamicForm().bindFromRequest();
+        int projectID = Integer.parseInt(projectF.get("ID"));
+
+        Project editedProject = Project.getProjectByID(projectID);
+        editedProject.projectName = projectF.get("projectName");
+        editedProject.description = projectF.get("description");
+
+        editedProject.save();
+
+        int size = Project.getSizeOfProjectList();
+        return ok(adminEditProject.render(size));
+    }
+
 
 
     @Security.Authenticated(Secured.class)
@@ -122,9 +144,6 @@ public class Admin extends Controller {
 
     public static Result changeDueTime() {
         TimeBundle timeForm = Form.form(TimeBundle.class).bindFromRequest().get();
-//        System.out.println("Hour = " + timeForm.hour);
-//        System.out.println("Minute = " + timeForm.minute);
-//        System.out.println("Second = " + timeForm.second);
 
         Time.setTime(timeForm.hour, timeForm.minute, timeForm.second);
 
@@ -142,10 +161,6 @@ public class Admin extends Controller {
         public int hour;
         public int minute;
         public int second;
-    }
-
-    public static class NewProject {
-        public int amount;
     }
 
 }

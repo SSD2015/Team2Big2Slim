@@ -51,29 +51,30 @@ public class Application extends Controller {
         String ss2 = "assets/ss/screenshot2.jpg";
         String ss3 = "assets/ss/screenshot3.jpg";
 
+
         //Create Temp Project
-        Project.create("GG", picProject1, "App", ss1, ss2, ss3, "This is a project1 description. Something is here.");
-        Project.create("Manat", picProject2, "App", ss1, ss2, ss3, "This is a project2 description. Something is here.");
-        Project.create("Saint4", picProject3, "App", ss1, ss2, ss3, "This is a project3 description. Something is here.");
-        Project.create("TheFrank", picProject4, "App", ss1, ss2, ss3, "This is a project4 description. Something is here.");
+        Project.create("GG", picProject1, "App", "This is a project1 description. Something is here.");
+        Project.create("Manat", picProject2, "App", "This is a project2 description. Something is here.");
+        Project.create("Saint4", picProject3, "App", "This is a project3 description. Something is here.");
+        Project.create("TheFrank", picProject4, "App", "This is a project4 description. Something is here.");
 
         //////Users
         //ADMIN -> projectId = 99
         User.create("admin", "admin", "admin", 99, "9999999999");
 
         //2Big2Slim - GUEST
-        User.create("b5610545722", "punpikorn.r", "Punpikorn", 3, "5610545722");
-        User.create("b5610545668", "nathakorn.s", "Nathakorn", 3, "5610545668");
-        User.create("b5610545731", "piyaphat.t", "Piyaphat", 3, "5610545731");
-        User.create("b5610546711", "nabhat.y", "Nabhat", 3, "5610546711");
-        User.create("b5610545676", "nut.k", "Nut", 3, "5610545676");
+        User.create("b5610545722", "punpikorn.r", "Punpikorn", 88, "5610545722");
+        User.create("b5610545668", "nathakorn.s", "Nathakorn", 88, "5610545668");
+        User.create("b5610545731", "piyaphat.t", "Piyaphat", 88, "5610545731");
+        User.create("b5610546711", "nabhat.y", "Nabhat", 88, "5610546711");
+        User.create("b5610545676", "nut.k", "Nut", 88, "5610545676");
 
         //Saint4 - Group3
-        User.create("b5610545765", "muninthorn.t", "Muninthorn", 1, "5610545765");
-        User.create("b5610545781", "runyasak.c", "Runyasak", 1, "5610545781");
-        User.create("b5610545706", "nara.s", "Nara", 1, "5610545706");
-        User.create("b5610546788", "vasupol.c", "Vasupol", 1, "5610546788");
-        User.create("b5610545803", "wuttipong.k", "Wuttipong", 1, "5610545803");
+        User.create("b5610545765", "muninthorn.t", "Muninthorn", 3, "5610545765");
+        User.create("b5610545781", "runyasak.c", "Runyasak", 3, "5610545781");
+        User.create("b5610545706", "nara.s", "Nara", 3, "5610545706");
+        User.create("b5610546788", "vasupol.c", "Vasupol", 3, "5610546788");
+        User.create("b5610545803", "wuttipong.k", "Wuttipong", 3, "5610545803");
 
         //Manat - Group2
         User.create("b5610546231", "chinnaporn.s", "Chinnaporn", 2, "5610546231");
@@ -83,23 +84,23 @@ public class Application extends Controller {
         User.create("b5610546800", "supason.k", "Supason", 2, "5610546800");
 
         //FatCat - GUEST
-        User.create("b5610546702", "jiratchaya.i", "Jiratchaya", 4, "5610546702");
-        User.create("b5610545684", "nichamon.h", "Nichamon", 4, "5610545684");
-        User.create("b5610546222", "chonnipa.k", "Chonnipa", 4, "5610546222");
-        User.create("b5610546257", "natchanon.c", "Natchanon", 4, "5610546257");
-        User.create("b5610546699", "kittipat.p", "Kittipat", 4, "5610546699");
+        User.create("b5610546702", "jiratchaya.i", "Jiratchaya", 88, "5610546702");
+        User.create("b5610545684", "nichamon.h", "Nichamon", 88, "5610545684");
+        User.create("b5610546222", "chonnipa.k", "Chonnipa", 88, "5610546222");
+        User.create("b5610546257", "natchanon.c", "Natchanon", 88, "5610546257");
+        User.create("b5610546699", "kittipat.p", "Kittipat", 88, "5610546699");
 
         //GG - Group1
-        User.create("b5610545757", "manatsawin.h", "Manatsawin", 88, "5610545757");
-        User.create("b5610546770", "varis.k", "Varis", 88, "5610546770");
-        User.create("b5610545749", "pongsachon.p", "Pongsachon", 88, "5610545749");
+        User.create("b5610545757", "manatsawin.h", "Manatsawin", 1, "5610545757");
+        User.create("b5610546770", "varis.k", "Varis", 1, "5610546770");
+        User.create("b5610545749", "pongsachon.p", "Pongsachon", 1, "5610545749");
 
         //TheFrank - Group4
-        User.create("b5610546681", "kittinan.n", "Kittinan", 88, "5610546681");
-        User.create("b5610546281", "perawith.j", "Perawith", 88, "5610546281");
-        User.create("b5610546753", "nathas.y", "Nathas", 88, "5610546753");
-        User.create("b5610545692", "thanachote.v", "Thanachote", 88, "5610545692");
-        User.create("b5610546729", "thanaphon.k", "Thanaphon", 88, "5610546729");
+        User.create("b5610546681", "kittinan.n", "Kittinan", 4, "5610546681");
+        User.create("b5610546281", "perawith.j", "Perawith", 4, "5610546281");
+        User.create("b5610546753", "nathas.y", "Nathas", 4, "5610546753");
+        User.create("b5610545692", "thanachote.v", "Thanachote", 4, "5610545692");
+        User.create("b5610546729", "thanaphon.k", "Thanaphon", 4, "5610546729");
 
         //Malee - GUEST
         User.create("b5610545048", "tanatorn.a", "Tanatorn", 88, "5610545048");

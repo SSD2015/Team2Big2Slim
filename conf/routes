@@ -26,16 +26,19 @@ GET         /rateResult                               controllers.Rate.showRateR
 #Comment so, no one can't install
 GET         /install                                  controllers.Application.mockDatabase()
 
+POST        /upload                                    controllers.Upload.submitUpload()
+GET         /profile/:id                               controllers.ProjectList.index(id:Integer)
+GET         /profile/assets/*file                      controllers.Assets.at(path="/public", file)
 
-GET         /profile/:id                              controllers.ProjectList.index(id:Integer)
-GET         /profile/assets/*file                     controllers.Assets.at(path="/public", file)
 
-GET         /profile/:idPr/screenshot/:idSc           controllers.ProjectList.sc1(idPr:Integer, idSc: Integer)
+GET         /profile/:idPr/screenshot/getimg/:idSc           controllers.ProjectList.sc1(idPr:Integer, idSc: Integer)
 GET         /profile/1/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
 GET         /profile/2/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
 GET         /profile/3/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
 GET         /profile/4/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
 
+POST        /upload                                    controllers.Upload.submitUpload()
+GET         /getimg/:id                               controllers.Upload.getImage(id:Integer)
 GET         /edit/:projectId                          controllers.EditPage.typeCheck(projectId:Integer)
 POST        /edit/:projectId                          controllers.EditPage.editProject(projectId:Integer)
 GET         /admin                                    controllers.Admin.adminIndex()
@@ -47,9 +50,7 @@ GET         /admin/addVotingCriteria                  controllers.Admin.addVotin
 POST        /admin/addVotingCriteria                  controllers.Admin.addVotingCriteria()
 GET         /admin/addProject                         controllers.Admin.addProjectPage()
 POST        /admin/addProject                         controllers.Admin.addProject()
+GET         /admin/editProject                        controllers.Admin.adminEditProjectPage()
+POST        /admin/editProject                        controllers.Admin.adminEditProject()
 GET         /admin/setTime                            controllers.Admin.setTimePage()
 POST        /admin/changeDueTime                      controllers.Admin.changeDueTime()
-
-
-
-

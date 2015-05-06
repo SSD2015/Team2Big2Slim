@@ -1,4 +1,4 @@
-@(project : Project )(currentUser : User)(screenShot : String)
+@(project : Project )(currentUser : User)(SCNo : Integer)
 <!DOCTYPE html>
 <html>
     <style>
@@ -64,7 +64,7 @@
                 <div class = "col-xs-2"> </div>
                 <div class="col-xs-8">
                     <div class = "picture">
-                        <p> <img src = @screenShot width="100%" > </p>
+                        <p> <img src = "/getimg/@SCNo" width="100%" > </p>
                     </div>
                 </div>
                 <div class = "col-xs-2"> </div>
