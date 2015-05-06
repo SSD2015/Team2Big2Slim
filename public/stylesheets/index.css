@@ -4,6 +4,9 @@ html, body {
       margin-top: 30px;
       background-color: #909090;
 }
+.STDFont{
+    font-family: Helventica;
+}
 .header {
       float: right;
       /*width: 300px;     */

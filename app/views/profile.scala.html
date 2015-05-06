@@ -1,4 +1,5 @@
 @(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)(currentUser : User)(screenShot : List[UploadRecord])
+@import utils.Time
 <!DOCTYPE HTML>
 <html lang = "en">
     <head>
@@ -17,6 +18,21 @@
     </head>
 
     <style>
+        html {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            width: 100%;
+        }
+        .topbar {
+            height: 40px;
+            color: lightgrey;
+            font-size: large;
+        }
+        #option-panel {
+            /*margin-right: 10px;*/
+        }
         .NameProject{
         font-size : 200%;
         color : black;
@@ -31,86 +47,69 @@
         color : black;
         }
         h{
-        font-family: superclarendon;
+        font-family: Helvetica;
         }
         .ScreenShot{
-        font-size : 200%;
-        color : black;
+            font-size : 200%;
+            color : black;
         }
         .Rate{
-        font-size : 200%;
-        color : black;
+            font-size : 200%;
+            color : black;
         }
         .p{
-        font-style: normal;
+            font-style: normal;
         }
         p{
-        font-style: normal;
+            font-style: normal;
         }
         /* DASHED LINE*/
         .Line1{
-        border-bottom: 1px dashed;
-        border-bottom-color: black;
+            border-bottom: 1px dashed;
+            border-bottom-color: black;
         }
         /* SOLID LINE*/
         .Line2{
         border-bottom: 1px solid;
         border-bottom-color: white;
         }
-        /* RESERVE LINE
-        .Line3{
-            border-bottom: 1px solid;
-            border-bottom-color: black;
-        }
-        .Line4{
-            border-bottom: 1px solid;
-            border-bottom-color: black;
-        }
-        */
         .ProPicBack{
-        background-color: lightskyblue;
+            background-color: lightskyblue;
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
         .descriptionSection {
-        background-color: lavenderblush;
+            background-color: lavenderblush;
         }
         .DesBack{
-        background-color: lightgrey;
+            background-color: lightgrey;
+            padding-top: 30px;
         }
         .SceenBack{
-        background-color: lightskyblue;
+            background-color: lightskyblue;
         }
         .RateBack{
-        background-color: lightgrey;
+            background-color: lightgrey;
         }
         .blankSpace1{
-        background-color: black;
+            background-color: black;
         }
         .blankSpace2{
-        background-color: grey;
-        }
-        /*
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img{
-            width: auto;
-            margin: auto;
-        }
-        */
-        .container{
-        width : 100%;
+            background-color: grey;
         }
         .hiddenSubmit {
-        display : none;
+            display: none;
         }
         label > input{ /* HIDE RADIO */
-        display:none;
+            display:none;
         }
         label > input + span{
-        cursor:pointer;
-        border:2px solid transparent;
+            cursor:pointer;
+            border:2px solid transparent;
         }
         label > input + button{
-        cursor:pointer;
-        border:2px solid transparent;
+            cursor:pointer;
+            border:2px solid transparent;
         }
         label > input:checked + span{
         /*already in JQuery*/
@@ -118,17 +117,24 @@
         label > input:checked + button{
         /*already in JQuery*/
         }
+        .picture-project {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 90%;
+        }
         .star {
-        opacity: 0.4;
-        font-size: large;
+            opacity: 0.4;
+            font-size: large;
         }
         .novoteButton{
-        margin-left: 10px;
-        opacity: 0.5;
-        font-size: smaller;
+            margin-left: 10px;
+            opacity: 0.2;
+            font-size: large;
+            color: red;
         }
         #template {
-        display: none;
+            display: none;
         }
         #description {
             font-size: 150%;
@@ -140,8 +146,16 @@
             margin-bottom: 2%;
         }
         .STDFont{
-            font-family:superclarendon;
+            font-family:Helvetica;
             font-size: 100%;
+        }
+        .dropdown-menu {
+            background-color: rgba(64, 63, 62, 0.78);
+            width: 25%;
+        }
+        .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+            background-image: none;
+            background-color: #706f6e;
         }
     </style>
 
@@ -205,23 +219,36 @@
             </div>
         </div>
 
-        <div class="container-fluid">
-                <!-- topbar -->
-            <div class="row">
-                <div class="col-xs-12">
-                    <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
-                        <div class="navbar-headerll-left">
-                            <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
-                            <a class="navbar-brand" href="#"><clock></clock></a>
-                        </div>
-                        <div class="navbar-header pull-right">
-                            <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span><font color="#F0F0F0" style="font-size:large"><h> Back</h> </font></a>
-                            <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large"><h> Logout</h></font></a>
-                        </div>
-                    </nav>
+
+        <!-- topbar -->
+        <div class="container-fluid" style="width: 100%;">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                <div class="navbar-headerll-left">
+                    <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
+                    <a class="navbar-brand" href="#"><clock></clock></a>
                 </div>
-            </div>
-                <!--Grey and black space with line-->
+                <div class="navbar-header pull-right" id="option-panel">
+                    <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span></a>
+                    <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
+                        @if( currentUser.projectId > 0 && currentUser.projectId < 100 && currentUser.projectId != 88 ) {
+                            <li>
+                                <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
+                            </li>
+                        }
+                    <li role="presentation" class="divider"></li>
+                    <li>
+                        <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <div class="container-fluid">
+            <!--Grey and black space with line-->
             <div class="row">
                 <div class="col-xs-12">
                     <div class = "Line2"></div>
@@ -246,73 +273,39 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class = "Line1"></div>
-                </div>
-            </div>
-            <div class = "ProPicBack">
-                <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
-                        <div class = "NameProject jumbotron">
-                            <h>@project.projectName</h>
-                        </div>
-                    </div>
-                    <div class = "col-xs-2"> </div>
-                </div>
-                <div  class="row">
-                    <div  class = "col-xs-2"></div>
-                    <div class="col-xs-8">
-                        <div  class = "PictureProject">
-                            <p> <img src = @project.PicProject style="width:100%"> </p>
-                        </div>
-                    </div>
-                    <div class = "col-xs-2"> </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class = "Line2"></div>
-                    </div>
-                </div>
-            </div>
 
+            <div class = "ProPicBack">
+                <div class = "NameProject jumbotron">
+                    <h>@project.projectName</h>
+                </div>
+                <p> <img class="picture-project" src = "@project.PicProject"> </p>
+            </div>
+            <div class = "Line2"></div>
 
             <div class = "DesBack">
-                    <!--black space-->
                 <div class="row">
-                    <div class="col-xs-12">
-                        <span style="padding-left:1px"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <span style="padding-left:1px"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
-                        <div class = "Description">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
+                        <div class = "Description title">
                             <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
-                                <h>
-                                    Description
-                                </h>
+                            <h>
+                                Description
+                            </h>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class="col-xs-0.5"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-8">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
                         <div id="description" class="jumbotron"><div class = "STDFont"><p>@project.description</p></div></div>
                     </div>
-                    <div class="col-xs-2"></div>
+                    <div class="col-xs-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = "Information">
                             <div class = "STDFont">
                                 <p>Project name: @project.projectName</p>
@@ -331,7 +324,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                     <!--blank space and solid line-->
                 <div class="row">
@@ -366,17 +359,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = ScreenShot>
                             <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> <h>Screenshot</h>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class="container">
                             <br>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -416,7 +409,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <!-- Upload -->
                 <div class="row">
@@ -424,18 +417,7 @@
                         <span style="padding-left:1px"></span>
                     </div>
                 </div>
-                <div class="row">
-                    <div class = "col-xs-3"> </div>
-                    <div class="col-xs-7">
-                        <form action="/upload" method = "post">
-                            <input type="hidden" name="projectID" value=@project.ID>
-                            <input type="file" name="pic" accept="image/*">
-                            <input type="submit" id = "submitUpload">
-                        </form>
 
-                    </div>
-                    <div class = "col-xs-2"> </div>
-                </div>
                     <!--blank space-->
                 <div class="row">
                     <div class="col-xs-12">
@@ -455,7 +437,6 @@
                 </div>
             </div>
 
-
                 <!--blank space-->
             <div class = "RateBack">
                 <div class="row">
@@ -469,10 +450,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = Rate>
-                                <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h>Rate</h></h>
+                                <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h> Rate</h></h>
                         </div>
                         <div class = "STDFont">
                             <p><h>Please rate Project @project.ID with follow criteria,</h></p>
@@ -520,19 +501,23 @@
                                         <!-- no vote -->
                                     <label class="novote" value="0">
                                         <input type="radio" name="score" value="0">
-                                        <button class="btn btn-danger btn-xs novoteButton rate@criterion.ID" id="@criterion.ID" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                                        <span class="glyphicon glyphicon-remove novoteButton" id="@criterion.ID" value="0"></span>
                                     </label>
                                     <br>
                                     <button type="submit" name="action" class="hiddenSubmit">Submit</button>
                                 </form>
                             }
-                            @rcList.map { c =>
-                                @rateCode(criterion = c)
+                            @if(Time.TimesUp() == false) {
+                                @rcList.map { c =>
+                                    @rateCode(criterion = c)
+                                }
+                                <button class="btn btn-default" type="button" id="submitRate" data-toggle="modal" data-target="#successModal" >Submit</button>
+                            } else {
+                                <h2><span class="glyphicon glyphicon-time"></span> Time's up</h2>
                             }
-                            <button class="btn btn-default" type="button" id="submitRate" data-toggle="modal" data-target="#successModal" >Submit</button>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
@@ -576,7 +561,7 @@
                 </div>
             </div>
         </div>
-
+        </body>
 
             <!-- JQuery -->
         <script>
@@ -609,6 +594,7 @@
             $(".star" ).click(function() {
                 var id = $(this ).attr("id");
                 var value = $(this ).attr("value");
+                $(".novoteButton #"+id ).css("opacity", "0.2");
                 $(".rate"+id ).each(function() {
                     var otherValue = $(this ).attr("value");
                     if (value >= otherValue) {
@@ -658,17 +644,19 @@
                         if ($(this ).prop("checked") == true) {
                             score = $(this ).prop("value");
                             if (score == "0") {
-                                score = "<span class='label label-danger pull-right' >no vote</span>" ;
+                                score = "<span class='label label-danger pull-right' >no rate</span>" ;
                             }
                             else {
                                 score = "<span class='label label-success pull-right'>" + score + "</span>" ;
                             }
                         }
+                        //unchecked
                         else {
                             //should be multiplier of 5 (6 checked - 1)
                             i++;
                         }
                     });
+                    console.log("i = "+i);
                     if (i % 5 != 0) { //if the user hasn't checked all scores
                         return false;
                     }
@@ -682,13 +670,12 @@
             });
             //////////////////////////////////////////////
         $("#submitUpload" ).click(function() {
-            if(currentUser  )
+
             $("#UploadModal" ).modal('toggle');
 
         });
             //////////////////////////////////////////////
         });
         </script>
-    </body>
     <div id="content"></div>
 </html>

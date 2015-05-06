@@ -3,32 +3,33 @@
 # ~~~~
 
 # Home page
-GET         /                                          controllers.Application.index()
+GET         /                                         controllers.Application.index()
 
-POST        /vote                                      controllers.Vote.submitVote()
+POST        /vote                                     controllers.Vote.submitVote()
 
-GET         /voteResult                                controllers.Vote.showVoteResult()
+GET         /voteResult                               controllers.Vote.showVoteResult()
 
 
 # Map static resources from the /public folder to the /assets URL path
-GET         /assets/*file                              controllers.Assets.at(path="/public", file)
+GET         /assets/*file                             controllers.Assets.at(path="/public", file)
 
 
-GET         /login                                     controllers.Login.login()
-POST        /login                                     controllers.Login.authenticate()
+GET         /login                                    controllers.Login.login()
+POST        /login                                    controllers.Login.authenticate()
 
-GET         /logout                                    controllers.Application.logout()
+GET         /logout                                   controllers.Application.logout()
 
 
-POST        /rate                                      controllers.Rate.submitRate()
-GET         /rateResult                                controllers.Rate.showRateResult()
+POST        /rate                                     controllers.Rate.submitRate()
+GET         /rateResult                               controllers.Rate.showRateResult()
 
 #Comment so, no one can't install
-GET         /install                                   controllers.Application.mockDatabase()
+GET         /install                                  controllers.Application.mockDatabase()
 
 POST        /upload                                    controllers.Upload.submitUpload()
 GET         /profile/:id                               controllers.ProjectList.index(id:Integer)
 GET         /profile/assets/*file                      controllers.Assets.at(path="/public", file)
+
 
 GET         /profile/:idPr/screenshot/getimg/:idSc           controllers.ProjectList.sc1(idPr:Integer, idSc: Integer)
 GET         /profile/1/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
@@ -36,12 +37,18 @@ GET         /profile/2/screenshot/assets/*file        controllers.Assets.at(path
 GET         /profile/3/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
 GET         /profile/4/screenshot/assets/*file        controllers.Assets.at(path="/public", file)
 
+POST        /upload                                    controllers.Upload.submitUpload()
 GET         /getimg/:id                               controllers.Upload.getImage(id:Integer)
-
-GET         /admin                                     controllers.Admin.adminIndex()
-GET         /admin/addUser                             controllers.Admin.addUserPage()
-POST        /admin/addUser                             controllers.Admin.addUser()
-GET         /admin/addRatingCriteria                   controllers.Admin.addRatingCriteriaPage()
-POST        /admin/addRatingCriteria                   controllers.Admin.addRatingCriteria()
-GET         /admin/addVotingCriteria                   controllers.Admin.addVotingCriteriaPage()
-POST        /admin/addVotingCriteria                   controllers.Admin.addVotingCriteria()
+GET         /edit/:projectId                          controllers.EditPage.typeCheck(projectId:Integer)
+POST        /edit/:projectId                          controllers.EditPage.editProject(projectId:Integer)
+GET         /admin                                    controllers.Admin.adminIndex()
+GET         /admin/addUser                            controllers.Admin.addUserPage()
+POST        /admin/addUser                            controllers.Admin.addUser()
+GET         /admin/addRatingCriteria                  controllers.Admin.addRatingCriteriaPage()
+POST        /admin/addRatingCriteria                  controllers.Admin.addRatingCriteria()
+GET         /admin/addVotingCriteria                  controllers.Admin.addVotingCriteriaPage()
+POST        /admin/addVotingCriteria                  controllers.Admin.addVotingCriteria()
+GET         /admin/addProject                         controllers.Admin.addProjectPage()
+POST        /admin/addProject                         controllers.Admin.addProject()
+GET         /admin/setTime                            controllers.Admin.setTimePage()
+POST        /admin/changeDueTime                      controllers.Admin.changeDueTime()

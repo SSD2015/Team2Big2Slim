@@ -10,6 +10,7 @@ import play.mvc.Security;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Project extends Model {
@@ -30,17 +31,12 @@ public class Project extends Model {
 
     );
 
-    public static void create(int id,String name,String PicProject,String typeApp,String sc1,String sc2,String sc3,String sc4,String sc5, String description){
+    public static void create(String name,String PicProject,String typeApp,String description){
         Project project = new Project();
-        project.ID = id;
+        //project.ID = id;
         project.projectName = name;
         project.PicProject = PicProject;
         project.typeApp = typeApp;
-        project.sc1 = sc1;
-        project.sc2 = sc2;
-        project.sc3 = sc3;
-        project.sc4 = sc4;
-        project.sc5 = sc5;
         project.description = description;
         project.save();
     }
@@ -72,4 +68,28 @@ public class Project extends Model {
         avg *= 100;
         return (int)Math.round(avg);
     }
+
+    public String getLowerCaseName() {
+        return this.projectName.toLowerCase();
+    }
+
+    public static int getSizeOfProjectList() {
+        List<Project> projectList = find.all();
+        int amount = projectList.size();
+        return amount;
+    }
+
+    public static Project getProjectByID(int id) {
+        Project thisProject = find.byId(id);
+        return thisProject;
+    }
+
+    public static void createTemplate() {
+        create( "Untitle", "assets/project/cat_temp.jpg", "Untitle", "This is description");
+    }
+
+    public static List<Project> getAllProject() {
+        return Project.find.all();
+    }
+
 }

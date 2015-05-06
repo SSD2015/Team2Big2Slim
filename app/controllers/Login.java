@@ -48,7 +48,7 @@ public class Login extends Controller {
         //correct
         else {
             LoginInfo info = loginForm.get();
-            User user = User.find.where().eq("username", info.username).eq("password", info.password).findUnique();
+            User user = User.find.where().eq("username", info.username).findUnique();
 
             session().clear();
             session("userID", ""+user.getID());

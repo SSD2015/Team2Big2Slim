@@ -1,0 +1,15 @@
+@main("Change Due Time") {
+    <html>
+        <body>
+            <h1>Change Due Time</h1>
+            <div>
+                <form action="/admin/changeDueTime" method="post">
+                    Hour <select name="hour">@for(i <- 0 to 23){<option value=@i>@i</option>}</select>
+                    Minute <select name="minute">@for(i <- 0 to 59){<option value=@i>@i</option>}</select>
+                    Second <select name="second">@for(i <- 0 to 59){<option value=@i>@i</option>}</select>
+                        <button type="submit" name="action" class="Submit">Submit</button>
+                </form>
+            </div>
+        </body>
+    </html>
+}

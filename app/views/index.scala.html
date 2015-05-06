@@ -1,4 +1,5 @@
 @(voteCriteria: List[VotingCriteria])(currentUser : User)
+@import utils._
 @main("Main Menu") {
     <html>
         <head>
@@ -11,11 +12,6 @@
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
             <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         </head>
-        <style>
-            .STDFont{
-                font-family: superclarendon;
-            }
-        </style>
         <body>
             <!-- Modal -->
             <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
@@ -59,15 +55,21 @@
             <div id="votecriteriaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Choose a criterian" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h2><center>Select the Voting Criteria</center></h2>
-                        </div>
-                        <div class="modal-body vcField">
-                            <!-- Template Prepared for Database -->
-							@voteCriteria.map { vote =>
-								<p><button type="button" class="btn btn-warning btn-block vote-criteria" value="@vote.ID" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> @vote.criteriaName</button>
-							}
-                        </div>
+                        @if(Time.TimesUp() == false) {
+                            <div class="modal-header">
+                                <h2><center>Select the Voting Criteria</center></h2>
+                            </div>
+                            <div class="modal-body vcField">
+                                    <!-- Template Prepared for Database -->
+                                @voteCriteria.map { vote =>
+                                    <p><button type="button" class="btn btn-warning btn-block vote-criteria" value="@vote.ID" data-dismiss="modal"><span class="glyphicon glyphicon-star"></span> @vote.criteriaName</button>
+                                }
+                            </div>
+                        } else {
+                            <div class="modal-header">
+                                <h2><center><span class="glyphicon glyphicon-time"></span> Time's up</center></h2>
+                            </div>
+                        }
                         <div class="modal-footer">
                             <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
                         </div>
@@ -112,45 +114,41 @@
                         <li>
                             <a data-toggle="modal" data-target="#votecriteriaModal" id="vote"><span class="glyphicon glyphicon-star" aria-hidden="true"></span><font color="#F0F0F0" style="font-size:large"> Vote</font></a>
                         </li>
+                        @if( currentUser.projectId > 0 && currentUser.projectId < 100 && currentUser.projectId != 88 ) {
+                            <li role="presentation" class="divider"></li>
+                            <li>
+                                <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
+                            </li>
+                        }
                         <li role="presentation" class="divider"></li>
                         <li>
                             <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
                         </li>
+
                     </ul>
                 </div>
             </nav>
 
+            <!-- vote layer -->
             <div class="voteLayer">
                 <div class="container-fluid voteList">
-                    <div class="row" id="1">
-                        <a value="1" class="voteB" id="Saint4" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/saint4_cat.jpg" title = "Saint4"></image></a>
-                    </div>
-                    <div class="row" id="2">
-                        <a value="2" class="voteB" id="Manat" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/manat_cat.jpg" title = "Manat"></image></a>
-                    </div>
-                    <div class="row" id="3">
-                        <a value="3" class="voteB" id="2Big2Slim" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/2big2slim_cat.jpg" title = "2Big2Slim"></image></a>
-                    </div>
-                    <div class="row" id="4">
-                        <a value="4" class="voteB" id="Fatcat" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/fatcat_cat.jpg" title = "Fatcat"></image></a>
-                    </div>
+                    @Project.getAllProject().map { project =>
+                        <div class="row" id="@project.ID">
+                            <a value="@project.ID" class="voteB" id="@project.projectName" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src="@project.PicProject" title="@project.projectName"></image></a>
+                        </div>
+                    }
+
                 </div>
             </div>
 
+            <!-- project layer -->
             <div class="projectListLayer">
                 <div class="container-fluid projectList">
-                    <div class="row" id="1">
-                        <a href="profile/1" id="Saint4"><image class="project img-rounded" src = "assets/project/saint4_cat.jpg" title = "Saint4"></image></a>
-                    </div>
-                    <div class="row" id="2">
-                        <a href="profile/2" id="Manat"><image class="project img-rounded" src = "assets/project/manat_cat.jpg" title = "Manat"></image></a>
-                    </div>
-                    <div class="row" id="3">
-                        <a href="profile/3" id="2Big2Slim"><image class="project img-rounded" src = "assets/project/2big2slim_cat.jpg" title = "2Big2Slim"></image></a>
-                    </div>
-                    <div class="row" id="4">
-                        <a href="profile/4" id="Fatcat"><image class="project img-rounded" src = "assets/project/fatcat_cat.jpg" title = "Fatcat"></image></a>
-                    </div>
+                    @Project.getAllProject().map { project =>
+                        <div class="row" id="@project.ID">
+                            <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.PicProject" title="@project.projectName"></image></a>
+                        </div>
+                    }
                 </div>
             </div>
 

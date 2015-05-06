@@ -28,7 +28,7 @@ public class Upload extends Controller{
             return true;
         if(user.getProjectId() == 99)
             return true;
-        return false;
+        return true;
     }
     public static Result submitUpload() {
         Http.MultipartFormData body = request().body().asMultipartFormData();
