@@ -15,7 +15,7 @@ public class EditPage extends Controller{
             return redirect("/");
         }
         else if (userType == 99) {
-            return ok(adminMain.render());
+            return redirect("/admin");
         }
         else {
             return ok(edit.render(userType));
