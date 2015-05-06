@@ -1,3 +1,4 @@
+@(projectListSize: Integer)
 @main("Add User") {
 
     <html>
@@ -12,7 +13,18 @@
                 Username:  <input  type="text"  name="username"><br><br>
                 Password:  <input  type="text"  name="password"><br><br>
                 Name:      <input  type="text"  name="name"><br><br>
-                ProjectID: <input  type="text"  name="projectId"><br><br>
+                ProjectID or UserType:
+                        <select name="projectId">
+                        <ul>
+                        @for(i <- 1 to projectListSize) {
+                            <option value=@i>@i</option>
+                            }
+                        </ul>
+                            <option value=88>Guest</option>
+                            <option value=99>Admin</option>
+                        </select>
+                   <br><br>
+
                 KUno:      <input  type="text"  name="kuNo"><br><br>
                 <button type="submit" name="action" class="Submit">Submit</button>
             </form>

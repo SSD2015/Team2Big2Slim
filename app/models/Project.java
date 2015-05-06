@@ -10,6 +10,7 @@ import play.mvc.Security;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import java.util.ArrayList;
+import java.util.List;
 
 @Entity
 public class Project extends Model {
@@ -67,5 +68,11 @@ public class Project extends Model {
         double avg = voteScore / allVotes;
         avg *= 100;
         return (int)Math.round(avg);
+    }
+
+    public static int getSizeOfProjectList() {
+        List<Project> projectList = find.all();
+        int amount = projectList.size();
+        return amount;
     }
 }

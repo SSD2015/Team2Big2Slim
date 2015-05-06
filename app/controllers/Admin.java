@@ -1,5 +1,6 @@
 package controllers;
 
+import models.Project;
 import models.RatingCriteria;
 import models.User;
 
@@ -28,9 +29,12 @@ public class Admin extends Controller {
     public static Result addUserPage() {
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
+        int size = Project.getSizeOfProjectList();
+
+        System.out.println("Current ProjectList Size = " + size + "\n=====");
 
         if( currentUser.projectId == 99) {
-            return ok(addUser.render());
+            return ok(addUser.render(size));
         }
         else {
             return redirect(routes.Application.index() );
