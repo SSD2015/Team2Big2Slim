@@ -18,6 +18,15 @@
     </head>
 
     <style>
+        .topbar {
+            height: 40px;
+            color: lightgrey;
+            font-size: large;
+
+        }
+        #option-panel {
+            margin-right: 10px;
+        }
         .NameProject{
         font-size : 200%;
         color : black;
@@ -69,7 +78,9 @@
         }
         */
         .ProPicBack{
-        background-color: lightskyblue;
+            background-color: lightskyblue;
+            padding-top: 20px;
+            padding-bottom: 10px;
         }
         .descriptionSection {
         background-color: lavenderblush;
@@ -119,14 +130,21 @@
         label > input:checked + button{
         /*already in JQuery*/
         }
+        .picture-project {
+            margin-left: auto;
+            margin-right: auto;
+            display: block;
+            width: 90%;
+        }
         .star {
         opacity: 0.4;
         font-size: large;
         }
         .novoteButton{
         margin-left: 10px;
-        opacity: 0.5;
-        font-size: smaller;
+        opacity: 0.2;
+        font-size: large;
+        color: red;
         }
         #template {
         display: none;
@@ -143,6 +161,14 @@
         .STDFont{
             font-family:superclarendon;
             font-size: 100%;
+        }
+        .dropdown-menu {
+            background-color: rgba(64, 63, 62, 0.78);
+            width: 25%;
+        }
+        .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+            background-image: none;
+            background-color: #706f6e;
         }
     </style>
 
@@ -193,23 +219,36 @@
             </div>
         </div>
 
+
+        <!-- topbar -->
         <div class="container-fluid">
-                <!-- topbar -->
-            <div class="row">
-                <div class="col-xs-12">
-                    <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
-                        <div class="navbar-headerll-left">
-                            <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
-                            <a class="navbar-brand" href="#"><clock></clock></a>
-                        </div>
-                        <div class="navbar-header pull-right">
-                            <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span><font color="#F0F0F0" style="font-size:large"><h> Back</h> </font></a>
-                            <a class="navbar-brand" data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large"><h> Logout</h></font></a>
-                        </div>
-                    </nav>
-                </div>
+
+        </div>
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+            <div class="navbar-headerll-left">
+                <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
+                <a class="navbar-brand" href="#"><clock></clock></a>
             </div>
-                <!--Grey and black space with line-->
+            <div class="navbar-header pull-right" id="option-panel">
+                <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span></a>
+                <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
+                    @if( currentUser.projectId > 0 && currentUser.projectId < 100 && currentUser.projectId != 88 ) {
+                        <li>
+                            <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
+                        </li>
+                    }
+                <li role="presentation" class="divider"></li>
+                <li>
+                    <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                </li>
+                </ul>
+            </div>
+        </nav>
+
+            <!--Grey and black space with line-->
             <div class="row">
                 <div class="col-xs-12">
                     <div class = "Line2"></div>
@@ -234,37 +273,13 @@
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div class = "Line1"></div>
-                </div>
-            </div>
-            <div class = "ProPicBack">
-                <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
-                        <div class = "NameProject jumbotron">
-                            <h>@project.projectName</h>
-                        </div>
-                    </div>
-                    <div class = "col-xs-2"> </div>
-                </div>
-                <div  class="row">
-                    <div  class = "col-xs-2"></div>
-                    <div class="col-xs-8">
-                        <div  class = "PictureProject">
-                            <p> <img src = @project.PicProject style="width:100%"> </p>
-                        </div>
-                    </div>
-                    <div class = "col-xs-2"> </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class = "Line2"></div>
-                    </div>
-                </div>
-            </div>
 
+            <div class = "ProPicBack">
+                <div class = "NameProject jumbotron">
+                    <h>@project.projectName</h>
+                </div>
+                <p> <img class="picture-project" src = "@project.PicProject"> </p>
+            </div>
 
             <div class = "DesBack">
                     <!--black space-->
@@ -279,16 +294,12 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
-                        <div class = "Description">
+                        <div class = "Description title">
                             <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
-                                <h>
-                                    Description
-                                </h>
+                            <h>
+                                Description
+                            </h>
                         </div>
-                    </div>
-                    <div class = "col-xs-2"> </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-2"></div>
@@ -486,7 +497,7 @@
                                         <!-- no vote -->
                                     <label class="novote" value="0">
                                         <input type="radio" name="score" value="0">
-                                        <button class="btn btn-danger btn-xs novoteButton rate@criterion.ID" id="@criterion.ID" type="button"><span class="glyphicon glyphicon-remove"></span> no vote</button>
+                                        <span class="glyphicon glyphicon-remove novoteButton" id="@criterion.ID" value="0"></span>
                                     </label>
                                     <br>
                                     <button type="submit" name="action" class="hiddenSubmit">Submit</button>
@@ -545,7 +556,7 @@
                     <div class = "Line2"></div>
                 </div>
             </div>
-        </div>
+
 
 
             <!-- JQuery -->
@@ -579,6 +590,7 @@
             $(".star" ).click(function() {
                 var id = $(this ).attr("id");
                 var value = $(this ).attr("value");
+                $(".novoteButton #"+id ).css("opacity", "0.2");
                 $(".rate"+id ).each(function() {
                     var otherValue = $(this ).attr("value");
                     if (value >= otherValue) {
@@ -628,17 +640,19 @@
                         if ($(this ).prop("checked") == true) {
                             score = $(this ).prop("value");
                             if (score == "0") {
-                                score = "<span class='label label-danger pull-right' >no vote</span>" ;
+                                score = "<span class='label label-danger pull-right' >no rate</span>" ;
                             }
                             else {
                                 score = "<span class='label label-success pull-right'>" + score + "</span>" ;
                             }
                         }
+                        //unchecked
                         else {
                             //should be multiplier of 5 (6 checked - 1)
                             i++;
                         }
                     });
+                    console.log("i = "+i);
                     if (i % 5 != 0) { //if the user hasn't checked all scores
                         return false;
                     }

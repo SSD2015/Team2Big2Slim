@@ -70,6 +70,10 @@ public class Project extends Model {
         return (int)Math.round(avg);
     }
 
+    public String getLowerCaseName() {
+        return this.projectName.toLowerCase();
+    }
+
     public static int getSizeOfProjectList() {
         List<Project> projectList = find.all();
         int amount = projectList.size();
@@ -80,7 +84,7 @@ public class Project extends Model {
         Project thisProject = find.byId(id);
         return thisProject;
     }
-
+    
     public static void createTemplate() {
         //create(0, "Untitle", "404", "404", "404", "404", "404", "404");
         Project project = new Project();
@@ -92,6 +96,10 @@ public class Project extends Model {
         project.sc3 = "404";
         project.description = "404";
         project.save();
+    }
+
+    public static List<Project> getAllProject() {
+        return Project.find.all();
     }
 
 }
