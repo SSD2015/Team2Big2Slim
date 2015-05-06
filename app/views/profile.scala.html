@@ -1,4 +1,4 @@
-@(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)(currentUser : User)
+@(project : Project )(member : List[User])(rcList : List[RatingCriteria])(currentUserID : Integer)(currentUser : User)(screenShot : List[UploadRecord])
 <!DOCTYPE HTML>
 <html lang = "en">
     <head>
@@ -156,6 +156,19 @@
                     <div class="modal-footer">
                         <button onclick="location.href='/logout'" type="button" class="btn btn-default">Ok</button>
                         <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="UploadModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h2><center>Upload complete</center></h2>
+                    </div>
+                    <div class="modal-footer">
+                        <button onclick="location.href='/profile/' + @project.ID" type="button" class="btn btn-default">Ok</button>
                     </div>
                 </div>
             </div>
@@ -372,19 +385,23 @@
                                     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
                                     <li data-target="#myCarousel" data-slide-to="1"></li>
                                     <li data-target="#myCarousel" data-slide-to="2"></li>
+                                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                                    <li data-target="#myCarousel" data-slide-to="4"></li>
                                 </ol>
 
                                     <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
-                                    <div class="item active">
-                                        <button class = "Picture"> <img src= @project.sc1 alt="Chania" width="100%" onclick="location.href='/profile/' + @project.ID + '/screenshot/1'"> </button>
-                                    </div>
-                                    <div class="item">
-                                        <button class = "Picture"> <img src= @project.sc2 alt="Chania" width="100%" onclick="location.href='/profile/' + @project.ID + '/screenshot/2'"> </button>
-                                    </div>
-                                    <div class="item">
-                                        <button class = "Picture"> <img src= @project.sc3 alt="Flower" width="100%" onclick="location.href='/profile/' + @project.ID + '/screenshot/3'"> </button>
-                                    </div>
+                                @screenShot.zipWithIndex.map { case (screenShot, index) =>
+                                     @if(index == 0){
+                                        <div class="item active">
+                                            <button class = "Picture"> <img src="/getimg/@screenShot.getID" alt="Chania" width="100%" onclick="location.href='/profile/' + @project.ID + '/screenshot/getimg/' + @screenShot.getID"> </button>
+                                        </div>
+                                     }else{
+                                        <div class="item">
+                                            <button class = "Picture"> <img src="/getimg/@screenShot.getID" alt="Chania" width="100%" onclick="location.href='/profile/' + @project.ID + '/screenshot/getimg/' + @screenShot.getID"> </button>
+                                        </div>
+                                    }
+                                }
                                 </div>
 
                                     <!-- Left and right controls -->
@@ -398,6 +415,24 @@
                                 </a>
                             </div>
                         </div>
+                    </div>
+                    <div class = "col-xs-2"> </div>
+                </div>
+                <!-- Upload -->
+                <div class="row">
+                    <div class="col-xs-12">
+                        <span style="padding-left:1px"></span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class = "col-xs-3"> </div>
+                    <div class="col-xs-7">
+                        <form action="/upload" method = "post">
+                            <input type="hidden" name="projectID" value=@project.ID>
+                            <input type="file" name="pic" accept="image/*">
+                            <input type="submit" id = "submitUpload">
+                        </form>
+
                     </div>
                     <div class = "col-xs-2"> </div>
                 </div>
@@ -645,6 +680,12 @@
                     $("#rerateModal" ).modal('toggle');
                 }
             });
+            //////////////////////////////////////////////
+        $("#submitUpload" ).click(function() {
+            if(currentUser  )
+            $("#UploadModal" ).modal('toggle');
+
+        });
             //////////////////////////////////////////////
         });
         </script>

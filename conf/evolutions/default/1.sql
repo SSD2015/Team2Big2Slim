@@ -11,6 +11,8 @@ create table project (
   sc1                       varchar(255),
   sc2                       varchar(255),
   sc3                       varchar(255),
+  sc4                       varchar(255),
+  sc5                       varchar(255),
   description               varchar(255),
   constraint pk_project primary key (id))
 ;
@@ -38,6 +40,13 @@ create table regular_user (
   project_id                integer,
   ku_no                     varchar(255),
   constraint pk_regular_user primary key (id))
+;
+
+create table upload_record (
+  id                        integer auto_increment not null,
+  project_id                integer,
+  data                      longblob,
+  constraint pk_upload_record primary key (id))
 ;
 
 create table user (
@@ -78,6 +87,8 @@ drop table rating_criteria;
 drop table rating_record;
 
 drop table regular_user;
+
+drop table upload_record;
 
 drop table user;
 

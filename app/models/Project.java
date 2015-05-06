@@ -21,6 +21,8 @@ public class Project extends Model {
     public String sc1;
     public String sc2;
     public String sc3;
+    public String sc4;
+    public String sc5;
     public String description;
 
     public static Finder<Integer, Project> find = new Finder<Integer,Project>(
@@ -28,7 +30,7 @@ public class Project extends Model {
 
     );
 
-    public static void create(int id,String name,String PicProject,String typeApp,String sc1,String sc2,String sc3, String description){
+    public static void create(int id,String name,String PicProject,String typeApp,String sc1,String sc2,String sc3,String sc4,String sc5, String description){
         Project project = new Project();
         project.ID = id;
         project.projectName = name;
@@ -37,6 +39,8 @@ public class Project extends Model {
         project.sc1 = sc1;
         project.sc2 = sc2;
         project.sc3 = sc3;
+        project.sc4 = sc4;
+        project.sc5 = sc5;
         project.description = description;
         project.save();
     }

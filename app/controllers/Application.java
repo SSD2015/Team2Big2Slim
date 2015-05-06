@@ -48,10 +48,10 @@ public class Application extends Controller {
         String ss1 = "assets/ss/screenshot1.jpg";
         String ss2 = "assets/ss/screenshot2.jpg";
         String ss3 = "assets/ss/screenshot3.jpg";
-        Project.create(1, "Saint4", picProject1, "App", ss1, ss2, ss3, "This is a project1 description. Something is here.");
-        Project.create(2, "Manat", picProject2, "App", ss1, ss2, ss3, "This is a project2 description. Something is here.");
-        Project.create(3, "2Big2Slim", picProject3, "App", ss1, ss2, ss3, "This is a project3 description. Something is here.");
-        Project.create(4, "Fatcat", picProject4, "App", ss1, ss2, ss3, "This is a project4 description. Something is here.");
+        Project.create(1, "Saint4", picProject1, "App", ss1, ss2, ss3,null,null, "This is a project1 description. Something is here.");
+        Project.create(2, "Manat", picProject2, "App", ss1, ss2, ss3,null,null, "This is a project2 description. Something is here.");
+        Project.create(3, "2Big2Slim", picProject3, "App", ss1, ss2,null,null, ss3, "This is a project3 description. Something is here.");
+        Project.create(4, "Fatcat", picProject4, "App", ss1, ss2, ss3,null,null, "This is a project4 description. Something is here.");
 
         //Users
         //admin projectId=99
