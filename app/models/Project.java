@@ -29,9 +29,9 @@ public class Project extends Model {
 
     );
 
-    public static void create(int id,String name,String PicProject,String typeApp,String sc1,String sc2,String sc3, String description){
+    public static void create(String name,String PicProject,String typeApp,String sc1,String sc2,String sc3, String description){
         Project project = new Project();
-        project.ID = id;
+        //project.ID = id;
         project.projectName = name;
         project.PicProject = PicProject;
         project.typeApp = typeApp;
@@ -84,7 +84,7 @@ public class Project extends Model {
         Project thisProject = find.byId(id);
         return thisProject;
     }
-    
+
     public static void createTemplate() {
         //create(0, "Untitle", "404", "404", "404", "404", "404", "404");
         Project project = new Project();

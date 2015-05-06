@@ -21,9 +21,9 @@ public class VotingCriteria extends Model {
         Integer.class, VotingCriteria.class
     );
 
-    public static void create(int id, String name) {
+    public static void create(String name) {
         VotingCriteria vc = new VotingCriteria();
-        vc.ID = id;
+       // vc.ID = id;
         vc.criteriaName = name;
         vc.save();
     }

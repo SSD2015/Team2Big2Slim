@@ -24,9 +24,9 @@ public class User extends Model{
             Integer.class, User.class
     );
 
-    public static void create(int id, String username, String password, String name, int projectId, String kuNo){
+    public static void create(String username, String password, String name, int projectId, String kuNo){
         User user = new User();
-        user.ID = id;
+        //user.ID = id;
         user.username = username;
         user.password = BCrypt.hashpw(password, BCrypt.gensalt());
         user.name = name;

@@ -21,9 +21,9 @@ public class RatingCriteria extends Model {
         Integer.class, RatingCriteria.class
     );
 
-    public static void create(int id, String name) {
+    public static void create(String name) {
         RatingCriteria rc = new RatingCriteria();
-        rc.ID = id;
+        //rc.ID = id;
         rc.criteriaName = name;
         rc.save();
     }
