@@ -70,6 +70,10 @@ public class Project extends Model {
         return (int)Math.round(avg);
     }
 
+    public String getLowerCaseName() {
+        return this.projectName.toLowerCase();
+    }
+
     public static int getSizeOfProjectList() {
         List<Project> projectList = find.all();
         int amount = projectList.size();
@@ -81,4 +85,7 @@ public class Project extends Model {
         return thisProject;
     }
 
+    public static List<Project> getAllProject() {
+        return Project.find.all();
+    }
 }

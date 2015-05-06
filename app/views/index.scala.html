@@ -133,37 +133,26 @@
                 </div>
             </nav>
 
+            <!-- vote layer -->
             <div class="voteLayer">
                 <div class="container-fluid voteList">
-                    <div class="row" id="1">
-                        <a value="1" class="voteB" id="Saint4" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/saint4_cat.jpg" title = "Saint4"></image></a>
-                    </div>
-                    <div class="row" id="2">
-                        <a value="2" class="voteB" id="Manat" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/manat_cat.jpg" title = "Manat"></image></a>
-                    </div>
-                    <div class="row" id="3">
-                        <a value="3" class="voteB" id="2Big2Slim" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/2big2slim_cat.jpg" title = "2Big2Slim"></image></a>
-                    </div>
-                    <div class="row" id="4">
-                        <a value="4" class="voteB" id="Fatcat" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src = "assets/project/fatcat_cat.jpg" title = "Fatcat"></image></a>
-                    </div>
+                    @Project.getAllProject().map { project =>
+                        <div class="row" id="@project.ID">
+                            <a value="@project.ID" class="voteB" id="@project.projectName" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src="assets/project/@project.getLowerCaseName()_cat.jpg" title="@project.projectName"></image></a>
+                        </div>
+                    }
+
                 </div>
             </div>
 
+            <!-- project layer -->
             <div class="projectListLayer">
                 <div class="container-fluid projectList">
-                    <div class="row" id="1">
-                        <a href="profile/1" id="Saint4"><image class="project img-rounded" src = "assets/project/saint4_cat.jpg" title = "Saint4"></image></a>
-                    </div>
-                    <div class="row" id="2">
-                        <a href="profile/2" id="Manat"><image class="project img-rounded" src = "assets/project/manat_cat.jpg" title = "Manat"></image></a>
-                    </div>
-                    <div class="row" id="3">
-                        <a href="profile/3" id="2Big2Slim"><image class="project img-rounded" src = "assets/project/2big2slim_cat.jpg" title = "2Big2Slim"></image></a>
-                    </div>
-                    <div class="row" id="4">
-                        <a href="profile/4" id="Fatcat"><image class="project img-rounded" src = "assets/project/fatcat_cat.jpg" title = "Fatcat"></image></a>
-                    </div>
+                    @Project.getAllProject().map { project =>
+                        <div class="row" id="@project.ID">
+                            <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="assets/project/@project.getLowerCaseName()_cat.jpg" title="@project.projectName"></image></a>
+                        </div>
+                    }
                 </div>
             </div>
 
