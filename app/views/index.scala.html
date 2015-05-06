@@ -1,4 +1,5 @@
 @(voteCriteria: List[VotingCriteria])(currentUser : User)
+@import utils._
 @main("Main Menu") {
     <html>
         <head>
@@ -59,7 +60,7 @@
             <div id="votecriteriaModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Choose a criterian" aria-hidden="true">
                 <div class="modal-dialog modal-sm">
                     <div class="modal-content">
-                        @if(Secured.TimesUp() == false) {
+                        @if(Time.TimesUp() == false) {
                             <div class="modal-header">
                                 <h2><center>Select the Voting Criteria</center></h2>
                             </div>

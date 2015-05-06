@@ -45,3 +45,9 @@ GET         /admin/addRatingCriteria                  controllers.Admin.addRatin
 POST        /admin/addRatingCriteria                  controllers.Admin.addRatingCriteria()
 GET         /admin/addVotingCriteria                  controllers.Admin.addVotingCriteriaPage()
 POST        /admin/addVotingCriteria                  controllers.Admin.addVotingCriteria()
+GET         /admin/setTime                            controllers.Admin.setTimePage()
+POST        /admin/changeDueTime                      controllers.Admin.changeDueTime()
+
+
+
+
