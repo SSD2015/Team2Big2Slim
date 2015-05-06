@@ -139,7 +139,7 @@
                 <div class="container-fluid voteList">
                     @Project.getAllProject().map { project =>
                         <div class="row" id="@project.ID">
-                            <a value="@project.ID" class="voteB" id="@project.projectName" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src="assets/project/@project.getLowerCaseName()_cat.jpg" title="@project.projectName"></image></a>
+                            <a value="@project.ID" class="voteB" id="@project.projectName" data-toggle="modal" data-target="#voteConfirm"><image class="project img-rounded" src="@project.PicProject" title="@project.projectName"></image></a>
                         </div>
                     }
 

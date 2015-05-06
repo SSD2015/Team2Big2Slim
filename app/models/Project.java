@@ -86,16 +86,7 @@ public class Project extends Model {
     }
 
     public static void createTemplate() {
-        create( "Untitle", "404", "404", "404", "404", "404", "404");
-//        Project project = new Project();
-//        project.projectName = "Untitle";
-//        project.PicProject = "404";
-//        project.typeApp = "404";
-//        project.sc1 = "404";
-//        project.sc2 = "404";
-//        project.sc3 = "404";
-//        project.description = "404";
-//        project.save();
+        create( "Untitle", "assets/project/cat_temp.jpg", "Untitle", "assets/ss/screenshot1.jpg", "assets/ss/screenshot2.jpg", "assets/ss/screenshot3.jpg", "This is description");
     }
 
     public static List<Project> getAllProject() {
