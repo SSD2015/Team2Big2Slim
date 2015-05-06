@@ -18,14 +18,20 @@
     </head>
 
     <style>
+        html {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            align-content: center;
+            width: 100%;
+        }
         .topbar {
             height: 40px;
             color: lightgrey;
             font-size: large;
-
         }
         #option-panel {
-            margin-right: 10px;
+            /*margin-right: 10px;*/
         }
         .NameProject{
         font-size : 200%;
@@ -41,88 +47,69 @@
         color : black;
         }
         h{
-        font-family: superclarendon;
+        font-family: Helvetica;
         }
         .ScreenShot{
-        font-size : 200%;
-        color : black;
+            font-size : 200%;
+            color : black;
         }
         .Rate{
-        font-size : 200%;
-        color : black;
+            font-size : 200%;
+            color : black;
         }
         .p{
-        font-style: normal;
+            font-style: normal;
         }
         p{
-        font-style: normal;
+            font-style: normal;
         }
         /* DASHED LINE*/
         .Line1{
-        border-bottom: 1px dashed;
-        border-bottom-color: black;
+            border-bottom: 1px dashed;
+            border-bottom-color: black;
         }
         /* SOLID LINE*/
         .Line2{
         border-bottom: 1px solid;
         border-bottom-color: white;
         }
-        /* RESERVE LINE
-        .Line3{
-            border-bottom: 1px solid;
-            border-bottom-color: black;
-        }
-        .Line4{
-            border-bottom: 1px solid;
-            border-bottom-color: black;
-        }
-        */
         .ProPicBack{
             background-color: lightskyblue;
             padding-top: 20px;
             padding-bottom: 10px;
         }
         .descriptionSection {
-        background-color: lavenderblush;
+            background-color: lavenderblush;
         }
         .DesBack{
-        background-color: lightgrey;
+            background-color: lightgrey;
+            padding-top: 30px;
         }
         .SceenBack{
-        background-color: lightskyblue;
+            background-color: lightskyblue;
         }
         .RateBack{
-        background-color: lightgrey;
+            background-color: lightgrey;
         }
         .blankSpace1{
-        background-color: black;
+            background-color: black;
         }
         .blankSpace2{
-        background-color: grey;
-        }
-        /*
-        .carousel-inner > .item > img,
-        .carousel-inner > .item > a > img{
-            width: auto;
-            margin: auto;
-        }
-        */
-        .container{
-        width : 100%;
+            background-color: grey;
         }
         .hiddenSubmit {
-        display : none;
+            display: none;
         }
         label > input{ /* HIDE RADIO */
-        display:none;
+            display:none;
         }
         label > input + span{
-        cursor:pointer;
-        border:2px solid transparent;
+            cursor:pointer;
+            border:2px solid transparent;
         }
         label > input + button{
-        cursor:pointer;
-        border:2px solid transparent;
+            cursor:pointer;
+            border:2px solid transparent;
         }
         label > input:checked + span{
         /*already in JQuery*/
@@ -137,17 +124,17 @@
             width: 90%;
         }
         .star {
-        opacity: 0.4;
-        font-size: large;
+            opacity: 0.4;
+            font-size: large;
         }
         .novoteButton{
-        margin-left: 10px;
-        opacity: 0.2;
-        font-size: large;
-        color: red;
+            margin-left: 10px;
+            opacity: 0.2;
+            font-size: large;
+            color: red;
         }
         #template {
-        display: none;
+            display: none;
         }
         #description {
             font-size: 150%;
@@ -159,7 +146,7 @@
             margin-bottom: 2%;
         }
         .STDFont{
-            font-family:superclarendon;
+            font-family:Helvetica;
             font-size: 100%;
         }
         .dropdown-menu {
@@ -221,33 +208,33 @@
 
 
         <!-- topbar -->
-        <div class="container-fluid">
-
+        <div class="container-fluid" style="width: 100%;">
+            <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                <div class="navbar-headerll-left">
+                    <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
+                    <a class="navbar-brand" href="#"><clock></clock></a>
+                </div>
+                <div class="navbar-header pull-right" id="option-panel">
+                    <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span></a>
+                    <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                        <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                    </a>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
+                        @if( currentUser.projectId > 0 && currentUser.projectId < 100 && currentUser.projectId != 88 ) {
+                            <li>
+                                <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
+                            </li>
+                        }
+                    <li role="presentation" class="divider"></li>
+                    <li>
+                        <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                    </li>
+                    </ul>
+                </div>
+            </nav>
         </div>
-        <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
-            <div class="navbar-headerll-left">
-                <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
-                <a class="navbar-brand" href="#"><clock></clock></a>
-            </div>
-            <div class="navbar-header pull-right" id="option-panel">
-                <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span></a>
-                <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
-                    <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
-                </a>
-                <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
-                    @if( currentUser.projectId > 0 && currentUser.projectId < 100 && currentUser.projectId != 88 ) {
-                        <li>
-                            <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
-                        </li>
-                    }
-                <li role="presentation" class="divider"></li>
-                <li>
-                    <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
-                </li>
-                </ul>
-            </div>
-        </nav>
 
+        <div class="container-fluid">
             <!--Grey and black space with line-->
             <div class="row">
                 <div class="col-xs-12">
@@ -280,38 +267,32 @@
                 </div>
                 <p> <img class="picture-project" src = "@project.PicProject"> </p>
             </div>
+            <div class = "Line2"></div>
 
             <div class = "DesBack">
-                    <!--black space-->
                 <div class="row">
-                    <div class="col-xs-12">
-                        <span style="padding-left:1px"></span>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-xs-12">
-                        <span style="padding-left:1px"></span>
-                    </div>
-                </div>
-                <div class="row">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
                         <div class = "Description title">
                             <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ></span>
                             <h>
                                 Description
                             </h>
                         </div>
+                    </div>
+                    <div class="col-xs-0.5"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-2"></div>
-                    <div class="col-xs-8">
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-10">
                         <div id="description" class="jumbotron"><div class = "STDFont"><p>@project.description</p></div></div>
                     </div>
-                    <div class="col-xs-2"></div>
+                    <div class="col-xs-1"></div>
                 </div>
 
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = "Information">
                             <div class = "STDFont">
                                 <p>Project name: @project.projectName</p>
@@ -330,7 +311,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                     <!--blank space and solid line-->
                 <div class="row">
@@ -365,17 +346,17 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = ScreenShot>
                             <span class="glyphicon glyphicon-picture" aria-hidden="true" ></span> <h>Screenshot</h>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class="container">
                             <br>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
@@ -411,7 +392,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                     <!--blank space-->
                 <div class="row">
@@ -432,7 +413,6 @@
                 </div>
             </div>
 
-
                 <!--blank space-->
             <div class = "RateBack">
                 <div class="row">
@@ -446,10 +426,10 @@
                     </div>
                 </div>
                 <div class="row">
-                    <div class = "col-xs-2"> </div>
-                    <div class="col-xs-8">
+                    <div class = "col-xs-1"> </div>
+                    <div class="col-xs-10">
                         <div class = Rate>
-                                <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h>Rate</h></h>
+                                <h style="font-family:verdana" ><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span><h> Rate</h></h>
                         </div>
                         <div class = "STDFont">
                             <p><h>Please rate Project @project.ID with follow criteria,</h></p>
@@ -513,7 +493,7 @@
                             }
                         </div>
                     </div>
-                    <div class = "col-xs-2"> </div>
+                    <div class = "col-xs-1"> </div>
                 </div>
                 <div class="row">
                     <div class="col-xs-12">
@@ -556,8 +536,8 @@
                     <div class = "Line2"></div>
                 </div>
             </div>
-
-
+        </div>
+        </body>
 
             <!-- JQuery -->
         <script>
