@@ -151,7 +151,7 @@
                 <div class="container-fluid projectList">
                     @Project.getAllProject().map { project =>
                         <div class="row" id="@project.ID">
-                            <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="assets/project/@project.getLowerCaseName()_cat.jpg" title="@project.projectName"></image></a>
+                            <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.PicProject" title="@project.projectName"></image></a>
                         </div>
                     }
                 </div>
