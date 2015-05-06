@@ -114,6 +114,24 @@ public class Admin extends Controller {
         return ok(addProject.render());
     }
 
+    @Security.Authenticated(Secured.class)
+    public static Result adminEditProjectPage() {
+        int size = Project.getSizeOfProjectList();
+        return ok(adminEditProject.render(size));
+    }
+
+    public static Result adminEditProject() {
+        Project thisProject = Form.form(Project.class).bindFromRequest().get();
+
+        System.out.println("getID = " + thisProject.ID);
+        System.out.println("getName = " + thisProject.projectName);
+
+
+        int size = Project.getSizeOfProjectList();
+        return ok(adminEditProject.render(size));
+    }
+
+
 
     @Security.Authenticated(Secured.class)
     public static Result setTimePage() {
