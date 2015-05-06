@@ -86,16 +86,16 @@ public class Project extends Model {
     }
 
     public static void createTemplate() {
-        //create(0, "Untitle", "404", "404", "404", "404", "404", "404");
-        Project project = new Project();
-        project.projectName = "Untitle";
-        project.PicProject = "404";
-        project.typeApp = "404";
-        project.sc1 = "404";
-        project.sc2 = "404";
-        project.sc3 = "404";
-        project.description = "404";
-        project.save();
+        create( "Untitle", "404", "404", "404", "404", "404", "404");
+//        Project project = new Project();
+//        project.projectName = "Untitle";
+//        project.PicProject = "404";
+//        project.typeApp = "404";
+//        project.sc1 = "404";
+//        project.sc2 = "404";
+//        project.sc3 = "404";
+//        project.description = "404";
+//        project.save();
     }
 
     public static List<Project> getAllProject() {
