@@ -594,7 +594,11 @@
             $(".star" ).click(function() {
                 var id = $(this ).attr("id");
                 var value = $(this ).attr("value");
-                $(".novoteButton #"+id ).css("opacity", "0.2");
+                $(".novoteButton" ).each(function() {
+                    if ($(this ).attr("id") == id) {
+                        $ ( this ).css ( "opacity", "0.2" ) ;
+                    }
+                });
                 $(".rate"+id ).each(function() {
                     var otherValue = $(this ).attr("value");
                     if (value >= otherValue) {

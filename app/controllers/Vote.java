@@ -8,6 +8,7 @@ import play.data.Form;
 import play.db.*;
 import play.db.ebean.Model;
 
+import utils.Time;
 import views.html.*;
 
 import javax.persistence.Entity;
@@ -52,7 +53,7 @@ public class Vote extends Controller {
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
 
-        if(currentUser.projectId == 99 ) {
+        if(currentUser.projectId == 99 || Time.TimesUp() == true) {
             List<Project> projects = Project.find.all();
             List<VotingCriteria> criteria = VotingCriteria.find.all();
 
