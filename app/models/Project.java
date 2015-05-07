@@ -92,4 +92,8 @@ public class Project extends Model {
         return Project.find.all();
     }
 
+    public UploadRecord getBanner(int id){
+        UploadRecord banner = UploadRecord.find.where().eq("projectID", id).eq("type", "banner").findUnique();
+        return banner;
+    }
 }

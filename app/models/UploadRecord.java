@@ -33,6 +33,7 @@ public class UploadRecord extends Model {
     @Id
     public int ID;
     public int projectID;
+    public String type;
     @Lob
     private byte[] data;
 
@@ -52,14 +53,18 @@ public class UploadRecord extends Model {
         return this.ID;
 
     }
-
-    public void changePic(String pic) {
-
+    public void changeData(byte[] data){
+        this.data = data;
     }
 
-    public UploadRecord(int projectID, File pic) {
+    public String getType() {
+        return this.type;
+    }
+
+    public UploadRecord(int projectID, File pic, String type) {
         this.projectID = projectID;
         this.data = new byte[(int) pic.length()];
+        this.type = type;
         InputStream inStream = null;
         try {
             inStream = new BufferedInputStream(new FileInputStream(pic));

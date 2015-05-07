@@ -45,6 +45,7 @@ create table regular_user (
 create table upload_record (
   id                        integer auto_increment not null,
   project_id                integer,
+  type                      varchar(255),
   data                      longblob,
   constraint pk_upload_record primary key (id))
 ;

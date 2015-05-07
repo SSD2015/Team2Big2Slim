@@ -10,8 +10,17 @@
                 <button type="submit" name="action" class="Submit">Submit</button>
             </form>
         </div>
+        <h1>Upload banner</h1>
         <form action="/upload" method = "post" enctype="multipart/form-data">
             <input type="hidden" name="projectID" value=@projectId>
+            <input type="hidden" name="type" value=banner>
+            <input type="file" name="pic" accept="image/*">
+            <input type="submit" id = "submitUpload">
+        </form>
+        <h1>Upload screenshot</h1>
+        <form action="/upload" method = "post" enctype="multipart/form-data">
+            <input type="hidden" name="projectID" value=@projectId>
+            <input type="hidden" name="type" value=screenshot>
             <input type="file" name="pic" accept="image/*">
             <input type="submit" id = "submitUpload">
         </form>

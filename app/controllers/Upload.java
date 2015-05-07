@@ -34,6 +34,7 @@ public class Upload extends Controller{
         Http.MultipartFormData body = request().body().asMultipartFormData();
         File file = body.getFile("pic").getFile();
         String pId = body.asFormUrlEncoded().get("projectID")[0];
+        String type = body.asFormUrlEncoded().get("type")[0];
         System.out.println(pId);
         System.out.println(file);
         int projectId = Integer.parseInt(pId);
@@ -44,8 +45,18 @@ public class Upload extends Controller{
             return redirect(routes.Application.index());
         }
         else{
-            UploadRecord uploadRecord = new UploadRecord(projectId, file);
-            //Logger.info(Project.findById(projectId).getProjectName()+" upload new picture["+project.getId()+"]");
+
+            UploadRecord oldRecord =  UploadRecord.find.where().eq("projectID", projectId).eq("type", type).findUnique();
+            if( oldRecord != null ) {
+                oldRecord.changeData(new byte[(int) file.length()]);
+                //Logger.info("username: " + User.find.byId(record.userID).username + " change the rate of " + record.projectID + " criteria: " + record.criteriaID + " score: " + record.score + " at " + LocalDateTime.now());
+                oldRecord.save();
+            }
+            else {
+                UploadRecord uploadRecord = new UploadRecord(projectId, file, type);
+                //Logger.info(Project.findById(projectId).getProjectName()+" upload new picture["+project.getId()+"]");
+            }
+
             return ok("success!");
         }
     }
