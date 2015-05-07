@@ -49,6 +49,21 @@ public class Upload extends Controller{
             UploadRecord oldRecord =  UploadRecord.find.where().eq("projectID", projectId).eq("type", type).findUnique();
             if( oldRecord != null ) {
                 oldRecord.changeData(new byte[(int) file.length()]);
+                InputStream inStream = null;
+                try {
+                    inStream = new BufferedInputStream(new FileInputStream(file));
+                    inStream.read(oldRecord.getData());
+                } catch (IOException e) {
+                    e.printStackTrace();
+                } finally {
+                    if (inStream != null) {
+                        try {
+                            inStream.close();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
                 //Logger.info("username: " + User.find.byId(record.userID).username + " change the rate of " + record.projectID + " criteria: " + record.criteriaID + " score: " + record.score + " at " + LocalDateTime.now());
                 oldRecord.save();
             }

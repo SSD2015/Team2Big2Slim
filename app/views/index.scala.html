@@ -144,20 +144,17 @@
             <!-- project layer -->
             <div class="projectListLayer">
                 <div class="container-fluid projectList">
-                    <div class="row" id="@project.ID">
-                        <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.getBanner(project.getID)" title="@project.projectName"></image></a>
-                    </div>
-                    <div class="row" id="@project.ID">
-                        <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.getBanner(project.getID)" title="@project.projectName"></image></a>
-                    </div>
-                    <div class="row" id="@project.ID">
-                        <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.getBanner(project.getID)" title="@project.projectName"></image></a>
-                    </div>
-                    <div class="row" id="@project.ID">
-                        <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.getBanner(project.getID)" title="@project.projectName"></image></a>
-                    </div>
-
-                    }
+                   @Project.getAllProject().map { project =>
+                        @if(project.getBanner(project.getID) != null) {
+                            <div class="row" id="@project.ID">
+                                <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="/getimg/@project.getBanner(project.getID).getID()" title="@project.projectName"></image></a>
+                            </div>
+                        }else{
+                            <div class="row" id="@project.ID">
+                                <a href="profile/@project.ID" id="@project.projectName"><image class="project img-rounded" src="@project.PicProject" title="@project.projectName"></image></a>
+                            </div>
+                        }
+                   }
                 </div>
             </div>
 

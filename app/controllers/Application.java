@@ -20,7 +20,6 @@ public class Application extends Controller {
     public static Result index() {
         int currentUserID = Integer.parseInt(session().get("userID"));
         User currentUser = User.find.byId( currentUserID );
-        List<project>
 //        System.out.println("This user = " + currentUser.username);
 
         return ok(index.render( VotingCriteria.find.all(), currentUser ));
