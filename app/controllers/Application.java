@@ -42,7 +42,7 @@ public class Application extends Controller {
 
         //Temp Banner Pic
         String picProject1 = "assets/project/GG.jpg";
-        String picProject2 = "assets/project/Manat.jpg";
+        String picProject2 = "assets/project/manat.jpg";
         String picProject3 = "assets/project/saint4.jpg";
         String picProject4 = "assets/project/theFrank.jpg";
 
