@@ -278,7 +278,11 @@
                 <div class = "NameProject jumbotron">
                     <h>@project.projectName</h>
                 </div>
-                <p> <img class="picture-project" src = "/getimg/@project.getBanner(project.getID).getID()"> </p>
+               @if(project.getBanner(project.getID) != null){
+                    <p> <img class="picture-project" src = "/getimg/@project.getBanner(project.getID).getID()"> </p>
+               }else{
+                   <p> <img class="picture-project" src = @project.PicProject> </p>
+               }
             </div>
             <div class = "Line2"></div>
 
@@ -373,15 +377,6 @@
                         <div class="container">
                             <br>
                             <div id="myCarousel" class="carousel slide" data-ride="carousel">
-                                    <!-- Indicators -->
-                                <ol class="carousel-indicators">
-                                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                                    <li data-target="#myCarousel" data-slide-to="1"></li>
-                                    <li data-target="#myCarousel" data-slide-to="2"></li>
-                                    <li data-target="#myCarousel" data-slide-to="3"></li>
-                                    <li data-target="#myCarousel" data-slide-to="4"></li>
-                                </ol>
-
                                     <!-- Wrapper for slides -->
                                 <div class="carousel-inner" role="listbox">
                                 @screenShot.zipWithIndex.map { case (screenShot, index) =>
