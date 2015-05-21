@@ -11,10 +11,10 @@ public class ProjectList extends Controller {
     @Security.Authenticated(Secured.class)
     public static Result index(Integer id){
         Project project = Project.find.byId(id);
-
+        String screenshot = "screenshot";
         List<User> userList = User.find.where().eq("projectId", id).findList();
         List<RatingCriteria> rcList = RatingCriteria.getAllRatingCriteria();
-        List<UploadRecord> screenShot = UploadRecord.find.where().eq("projectID", id).findList();
+        List<UploadRecord> screenShot = UploadRecord.find.where().eq("projectID", id).where().eq("type", screenshot ).findList();
         int currentUserID = Integer.parseInt(session().get("userID"));
         System.out.println("Current User ID: " + currentUserID);
         User currentUser = User.find.byId( currentUserID );
