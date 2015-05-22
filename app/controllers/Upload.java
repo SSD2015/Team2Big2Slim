@@ -74,7 +74,7 @@ public class Upload extends Controller{
                 UploadRecord uploadRecord = new UploadRecord(projectId, file, type);
             }
 
-            return ok("success!");
+            return redirect(routes.Application.index());
         }
     }
     public static Result getImage(int imgId){

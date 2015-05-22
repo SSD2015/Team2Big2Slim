@@ -29,27 +29,6 @@
             background-color: #706f6e;
             }
         </style>
-        <div>
-            <form action="@routes.EditPage.editProject(projectId)" method="post">
-                Project Name:         <input  type="text"  name="projectName"><br><br>
-                Project Description:  <input  type="text"  name="description"><br><br>
-                <button type="submit" name="action" class="Submit">Submit</button>
-            </form>
-        </div>
-        <h1>Upload banner</h1>
-        <form action="/upload" method = "post" enctype="multipart/form-data">
-            <input type="hidden" name="projectID" value=@projectId>
-            <input type="hidden" name="type" value=banner>
-            <input type="file" name="pic" accept="image/*">
-            <input type="submit" id = "submitUpload">
-        </form>
-        <h1>Upload screenshot</h1>
-        <form action="/upload" method = "post" enctype="multipart/form-data">
-            <input type="hidden" name="projectID" value=@projectId>
-            <input type="hidden" name="type" value=screenshot>
-            <input type="file" name="pic" accept="image/*">
-            <input type="submit" id = "submitUpload">
-        </form>
         <body>
             <!-- Modals -->
             <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
@@ -96,15 +75,21 @@
                     Project Description:  <input  type="text"  name="description"><br><br>
                     <button type="submit" name="action" class="btn btn-success Submit">Submit</button>
                 </form>
-            </div>
-            <br><br>
-            <div class="container-fluid">
-                <form action="/upload" method = "post" enctype="multipart/form-data">
-                    <input type="hidden" name="projectID" value=@projectId>
-                    <input type="file" name="pic" accept="image/*">
-                    <br>
-                    <input type="submit" id = "submitUpload" class="btn btn-success">
-                </form>
+                <br><br>
+            <h1>Upload banner</h1>
+            <form action="/upload" method = "post" enctype="multipart/form-data">
+                <input type="hidden" name="projectID" value=@projectId>
+                <input type="hidden" name="type" value=banner>
+                <input type="file" name="pic" accept="image/*">
+                <input type="submit" id = "submitUpload">
+            </form>
+            <h1>Upload screenshot</h1>
+            <form action="/upload" method = "post" enctype="multipart/form-data">
+                <input type="hidden" name="projectID" value=@projectId>
+                <input type="hidden" name="type" value=screenshot>
+                <input type="file" name="pic" accept="image/*">
+                <input type="submit" id = "submitUpload">
+            </form>
             </div>
         </body>
 
