@@ -120,6 +120,16 @@
                                 <a href="@routes.EditPage.typeCheck(currentUser.projectId)"><span class="glyphicon glyphicon-pencil"></span> <font color="#F0F0F0" style="font-size:large">Edit page</font></a>
                             </li>
                         }
+                        @if(Time.TimesUp() == true) {
+                            <li role="presentation" class="divider"></li>
+                            <li>
+                                <a href="/voteResult"><span class="glyphicon glyphicon-heart"></span> <font color="#F0F0F0" style="font-size:large">Vote Result</font></a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <li>
+                                <a href="/rateResult"><span class="glyphicon glyphicon-music"></span> <font color="#F0F0F0" style="font-size:large">Rate Result</font></a>
+                            </li>
+                        }
                         <li role="presentation" class="divider"></li>
                         <li>
                             <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>

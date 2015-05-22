@@ -1,21 +1,109 @@
 @main("Add Project") {
-
-    <html>
+<!DOCTYPE HTML>
+    <html lang="en">
         <head>
-            <form action="/admin">
-                <input type="submit" value="Back">
-            </form>
             <title>Generate Project</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         </head>
 
-        <h1>Generate Projectt</h1>
-        <div>
-            <form action="/admin/addProject" method="post">
-                Number of New Project:  <input  type="number"  name="amount"><br><br>
-                <button type="submit" name="action" class="Submit">Submit</button>
-            </form>
-        </div>
-        <br>
+        <style>
+            .jumbotron {
+            text-align: center;
+            margin-top: 50px;
+            }
+            .topbar {
+            height: 40px;
+            color: lightgrey;
+            font-size: large;
+            }
+            .dropdown-menu {
+            background-color: rgba(64, 63, 62, 0.78);
+            width: 25%;
+            }
+            .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+            background-image: none;
+            background-color: #706f6e;
+            }
+        </style>
+
+        <body>
+            <!-- Modals -->
+            <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><center>Are you sure ?</center></h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="location.href='/logout'" type="button" class="btn btn-default">Ok</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" style="width: 100%;">
+                <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                    <div class="navbar-headerll-left">
+                        <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
+                        <a class="navbar-brand" href="#"><clock></clock></a>
+                    </div>
+                    <div class="navbar-header pull-right" id="option-panel">
+                        <a class="navbar-brand" href ="/admin"><span class="glyphicon glyphicon-arrow-left"></span></a>
+                        <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
+                            <li>
+                                <a href="/"><span class="glyphicon glyphicon-home"></span> <font color="#F0F0F0" style="font-size:large">Main menu</font></a>
+                            </li>
+                            <li role="presentation" class="divider"></li>
+                            <li>
+                                <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="jumbotron">
+                <h1>Generate Project</h1>
+            </div>
+            <div class="container-fluid">
+                <form action="/admin/addProject" method="post">
+                    Number of New Project:  <input  type="number"  name="amount"><br><br>
+                    <button type="submit" name="action" class="btn btn-success Submit">Submit</button>
+                </form>
+            </div>
+            <br>
+        </body>
+
+        <script>
+            $(document).ready(function() {
+            //Clock Section
+            function getdate ( ) {
+            var today = new Date ( ) ;
+            var h = today.getHours ( ) ;
+            var m = today.getMinutes ( ) ;
+            var s = today.getSeconds ( ) ;
+            if ( h < 10 ) {
+            h = "0" + h ;
+            }
+            if ( m < 10 ) {
+            m = "0" + m ;
+            }
+            if ( s < 10 ) {
+            s = "0" + s ;
+            }
+            $ ( "clock" ).text ( h + " : " + m + " : " + s ) ;
+            setTimeout ( function ( ) { getdate ( ) }, 500 ) ;
+            }
+            getdate ( ) ;
+            });
+        </script>
 
 
     </html>

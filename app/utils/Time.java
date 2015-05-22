@@ -5,7 +5,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 
 public class Time {
-    public static int limitHour = 0;
+    public static int limitHour = 23;
     public static int limitMinute = 0;
     public static int limitSecond = 0;
 

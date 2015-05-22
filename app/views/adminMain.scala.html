@@ -1,43 +1,153 @@
 @main("Admin Page") {
-
-    <html>
+<!DOCTYPE HTML>
+    <html lang = "en">
         <head>
             <title>Admin Page</title>
+            <meta charset="utf-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+            <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
         </head>
+        <style>
+            .jumbotron {
+               text-align: center;
+               margin-top: 50px;
+            }
+            .row {
+                margin-bottom: 25px;
+            }
+            .linkButton {
+                font-size: large;
+                width: 100%;
+            }
+           .topbar {
+           height: 40px;
+           color: lightgrey;
+           font-size: large;
+           }
+           .dropdown-menu {
+           background-color: rgba(64, 63, 62, 0.78);
+           width: 25%;
+           }
+           .dropdown-menu li > a:hover, .dropdown-menu li > a:focus, .dropdown-submenu:hover > a {
+           background-image: none;
+           background-color: #706f6e;
+           }
+        </style>
 
-        <h1>Welcome Admin</h1>
+        <body>
 
-        <div>
-            <button onclick="location.href='/rateResult'" type="button" class="linkButton">Show Rate Result</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/voteResult'" type="button" class="linkButton">Show Vote Result</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/admin/addUser'" type="button" class="linkButton">Add new user</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/admin/addRatingCriteria'" type="button" class="linkButton">Add new rating criteria</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/admin/addVotingCriteria'" type="button" class="linkButton">Add new voting criteria</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/admin/addProject'" type="button" class="linkButton">Add new Project</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/admin/editProject'" type="button" class="linkButton">Edit Project</button>
-        </div>
-        <br>
-        <div>
-            <button onclick="location.href='/admin/setTime'" type="button" class="linkButton">Change due time</button>
-        </div>
+            <!-- Modals -->
+            <div id="logoutModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="Logout" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h2><center>Are you sure ?</center></h2>
+                        </div>
+                        <div class="modal-footer">
+                            <button onclick="location.href='/logout'" type="button" class="btn btn-default">Ok</button>
+                            <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="container-fluid" style="width: 100%;">
+                <nav class="navbar navbar-inverse navbar-fixed-top" id="topbar">
+                    <div class="navbar-headerll-left">
+                        <a class="navbar-brand hidden-xs" href="#"><h>ExceedVote</h></a>
+                        <a class="navbar-brand" href="#"><clock></clock></a>
+                    </div>
+                    <div class="navbar-header pull-right" id="option-panel">
+                        <a class="navbar-brand" href ="/"><span class="glyphicon glyphicon-arrow-left"></span></a>
+                        <a class="navbar-brand dropdown-toggle" id="optionmenu" data-toggle="dropdown" aria-expanded="true">
+                            <span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu" aria-labelledby="optionmenu">
+                            <li>
+                                <a data-toggle="modal" data-target="#logoutModal"><span class="glyphicon glyphicon-off"></span> <font color="#F0F0F0" style="font-size:large">Logout</font></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+
+            <div class="jumbotron">
+                <h1>Welcome Admin</h1>
+            </div>
+
+            <div class="container-fluid menu">
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/rateResult'" type="button" class="btn btn-default linkButton">Show Rate Result</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/voteResult'" type="button" class="btn btn-default linkButton">Show Vote Result</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/admin/addUser'" type="button" class="btn btn-default linkButton">Add new user</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/admin/addRatingCriteria'" type="button" class="btn btn-default linkButton">Add new rating criteria</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/admin/addVotingCriteria'" type="button" class="btn btn-default linkButton">Add new voting criteria</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/admin/addProject'" type="button" class="btn btn-default linkButton">Add new Project</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/admin/editProject'" type="button" class="btn btn-default linkButton">Edit Project</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <button onclick="location.href='/admin/setTime'" type="button" class="btn btn-default linkButton">Change due time</button>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+
+        </body>
+
+        <script>
+            $(document).ready(function() {
+            //Clock Section
+            function getdate ( ) {
+            var today = new Date ( ) ;
+            var h = today.getHours ( ) ;
+            var m = today.getMinutes ( ) ;
+            var s = today.getSeconds ( ) ;
+            if ( h < 10 ) {
+            h = "0" + h ;
+            }
+            if ( m < 10 ) {
+            m = "0" + m ;
+            }
+            if ( s < 10 ) {
+            s = "0" + s ;
+            }
+            $ ( "clock" ).text ( h + " : " + m + " : " + s ) ;
+            setTimeout ( function ( ) { getdate ( ) }, 500 ) ;
+            }
+            getdate ( ) ;
+            });
+        </script>
 
     </html>
 }

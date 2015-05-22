@@ -40,10 +40,10 @@ public class Application extends Controller {
     public static Result mockDatabase() {
 
         //Temp Banner Pic
-        String picProject1 = "assets/project/cat_temp.jpg";
-        String picProject2 = "assets/project/cat_temp.jpg";
-        String picProject3 = "assets/project/cat_temp.jpg";
-        String picProject4 = "assets/project/cat_temp.jpg";
+        String picProject1 = "assets/project/GG.jpg";
+        String picProject2 = "assets/project/manat.jpg";
+        String picProject3 = "assets/project/saint4.jpg";
+        String picProject4 = "assets/project/theFrank.jpg";
 
         //Temp ScreenShot
         String ss1 = "assets/ss/screenshot1.jpg";
